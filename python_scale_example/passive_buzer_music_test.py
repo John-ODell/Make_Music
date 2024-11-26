@@ -2,8 +2,8 @@ from machine import Pin, PWM
 from time import sleep
 
 # Define the buzzer pins
-buzzer1 = PWM(Pin(20))  # Reassigned to pin 20
-buzzer2 = PWM(Pin(19))  # Reassigned to pin 19
+buzzer1 = PWM(Pin(20)) 
+buzzer2 = PWM(Pin(19))
 
 # Define a dictionary of notes and their frequencies
 notes = {
