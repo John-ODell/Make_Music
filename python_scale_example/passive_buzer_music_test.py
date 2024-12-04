@@ -2,8 +2,8 @@ from machine import Pin, PWM
 from time import sleep
 
 # Define the buzzer pins
-buzzer1 = PWM(Pin(20))  # Reassigned to pin 20
-buzzer2 = PWM(Pin(19))  # Reassigned to pin 19
+buzzer1 = PWM(Pin(20)) 
+buzzer2 = PWM(Pin(19))
 
 # Define a dictionary of notes and their frequencies
 notes = {
@@ -35,7 +35,7 @@ def play_tone(buzzer, note, duration):
 # Define the C major scale
 scale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5']
 
-# Play the C major scale with Buzzer 1 (now on pin 20)
+# Play the C major scale with Buzzer 1
 for note in scale:
     play_tone(buzzer1, note, 0.2)
     sleep(0.1)
@@ -46,7 +46,7 @@ for note in scale_high:
     play_tone(buzzer1, note, 0.2)
     sleep(0.1)
 
-# Play the C major scale with Buzzer 2 (now on pin 19)
+# Play the C major scale with Buzzer 2 
 for note in scale:
     play_tone(buzzer2, note, 0.5)
     sleep(0.1)
