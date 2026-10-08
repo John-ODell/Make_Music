@@ -111,7 +111,7 @@ Pin Outs
     - It is easiest to "pick a side" for each module
         - Touch inputs
             - VCC -> 3.3v
-            - GND -> 3.3v
+            - GND -> GND
             - S -> GPIO 16 - GPIO 22, GPIO 26-28 
                 - 10 sequintial pins for easy orginization
         - Passive Buzzers
@@ -170,3 +170,8 @@ Practice Song:
         - |16 18 20|16 18 20|17 19 21|17 19 21|17 19 22|17 19 22|19 21 26|19 21 26|
     - (Refer to the Notes)
         -|C E G| C E G| D F A| D F A| D F B| D F B| E A C| E A C|
+
+
+## PCB development
+
+A battery-powered Pico carrier board is being designed with removable Pico sockets, ten touch controls, two buzzers, and GPIO expansion. See [hardware/README.md](hardware/README.md) for the current design state and requirements.
