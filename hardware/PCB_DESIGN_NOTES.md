@@ -5,11 +5,11 @@ Status: concept only; not a fabrication-ready schematic or PCB. No existing sour
 ## Working configuration
 
 - Two-layer carrier board with a removable non-wireless Pico/Pico 2 (model to confirm), plugged into two 1x20 female socket headers at 2.54 mm pitch. The sockets are soldered to the carrier PCB; the Pico has matching male header pins and can be inserted or removed without soldering. Use a Pico supplied with male headers, or fit male headers once to a bare Pico. Confirm socket row spacing, height, pin engagement and USB/BOOTSEL clearance against the selected Pico mechanical drawing before finalizing the footprint. Removal/insertion is done with power disconnected.
-- Eight note touch controls and two modifier touch controls.
-- Two passive buzzer modules. Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
-- Single-cell conventional 4.2 V-charge Li-ion/LiPo battery, protected cell or board-level protection.
+- Eight note touch controls and two left-hand modifier touch controls. User permits firmware changes, including adapting input polarity after actual modules are checked. Retain original behavior as the provisional baseline; reprogramming is available for later changes.
+- Two SunFounder ST0238 passive low-level-trigger buzzer modules selected by the user for the first prototype. Manufacturer PCB outline: 32 x 14 mm each; see [buzzer module evidence](components/BUZZER_MODULE.md). Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
+- First revision: removable protected 18350 Li-ion cell, charged in an external charger. User selected this simpler battery architecture on 2026-10-07. Exact cell, matching underside holder and charger remain to be verified; no onboard charger in this revision.
 - Power switch and exposed GPIO expansion headers.
-- Separate touch and buzzer modules retained for the first revision. The user supplied a HiLetgo TTP223-BA6 touch reference; see [touch module evidence](components/TOUCH_MODULE.md). Actual header orientation, mounting geometry and output configuration remain unverified. Buzzer identification is still pending.
+- Separate touch and buzzer modules retained for the first revision. The user supplied a HiLetgo TTP223-BA6 touch reference; see [touch module evidence](components/TOUCH_MODULE.md). Actual header orientation, mounting geometry and output configuration remain unverified. Buzzer model is selected; its connector and mounting geometry still need verification.
 
 ## Proposed GPIO allocation (existing firmware)
 
@@ -47,7 +47,7 @@ Battery runtime requires a measurement of average battery current; do not assume
 
 ## Placement concept
 
-- Front: eight note modules in a row.
+- Front: eight ascending note modules in a row. User requests approximately half-to-one finger of clear space between keys. Start with a proposed 10 mm clear gap between 24 mm module bodies (34 mm center pitch), then validate with a full-size paper fit test. Roughly 330 x 120 mm is a working reservation, not an approved outline.
 - Left side: semitone and octave modifiers, positioned for the left hand while the right hand plays notes.
 - Rear: USB-accessible Pico, buzzer modules, expansion headers and power switch.
 - Battery: plan a back/underside-mounted PCB holder if an 18350 is selected. A LiPo pouch instead uses a connector and enclosure restraint. Exact cell, holder footprint, mechanical clearance, and protection remain TBD. Add feet/standoffs so the battery and holder do not bear playing pressure.
@@ -59,8 +59,8 @@ The accompanying SVG is an arrangement sketch, not a scaled PCB drawing or a cop
 
 1. Exact Pico version and touch/buzzer module pinouts and measurements.
 2. Confirm existing modifier behavior versus independently pitched buzzers.
-3. Battery choice, capacity, protection, charging method, and physical dimensions.
-4. Preferred board/enclosure size and assembly method.
+3. Exact protected 18350 cell, matching holder and external charger; verify capacity, protection and physical dimensions. Battery form and external charging are selected.
+4. Final board/enclosure size from a paper fit test; user prefers factory assembly as much as possible, with a budget comparison against partial assembly.
 
 ## References
 
@@ -74,3 +74,11 @@ Bare PCB fabrication supplies the board without components. A separate PCB assem
 PCBWay documents both through-hole assembly and top/bottom/both-side assembly options:
 - https://www.pcbway.com/pcb_prototype/Through_Hole_Assembly.html
 - https://www.pcbway.com/quotesmt.aspx
+
+## Local Pico references
+
+User supplied official datasheets in `/Users/johnodell/Desktop/pico_datasheets/`: original Pico release 21 and Pico 2 release 5, both build date 03/07/2026. The Pico 2 mechanical Figure 3 was rendered and visually checked against socket geometry. PDFs remain outside the repository; manufacturer source URLs above are the portable references. The presence of both PDFs does not select the fitted Pico model.
+
+## Assembly preference
+
+Prioritize a quote for a factory-populated carrier, including sockets, headers, power components, and battery holder where accepted. Separately quote the named touch/buzzer modules as supplied/sourced subassemblies. Keep Pico insertion and protected 18350 fitting as user steps. See [assembly and budget comparison](ASSEMBLY_BUDGET.md). Build quantity remains pending user input.
