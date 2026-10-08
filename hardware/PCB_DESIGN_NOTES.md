@@ -1,0 +1,76 @@
+# Make Music — preliminary PCB plan
+
+Status: concept only; not a fabrication-ready schematic or PCB. No existing source code has been changed.
+
+## Working configuration
+
+- Two-layer carrier board with a removable non-wireless Pico/Pico 2 (model to confirm), plugged into two 1x20 female socket headers at 2.54 mm pitch. The sockets are soldered to the carrier PCB; the Pico has matching male header pins and can be inserted or removed without soldering. Use a Pico supplied with male headers, or fit male headers once to a bare Pico. Confirm socket row spacing, height, pin engagement and USB/BOOTSEL clearance against the selected Pico mechanical drawing before finalizing the footprint. Removal/insertion is done with power disconnected.
+- Eight note touch controls and two modifier touch controls.
+- Two passive buzzer modules. Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
+- Single-cell conventional 4.2 V-charge Li-ion/LiPo battery, protected cell or board-level protection.
+- Power switch and exposed GPIO expansion headers.
+- Touch and buzzer modules retained for the first revision, pending exact module identification.
+
+## Proposed GPIO allocation (existing firmware)
+
+| Function | GPIO |
+|---|---|
+| C4 | GP16 |
+| D4 | GP17 |
+| E4 | GP18 |
+| F4 | GP19 |
+| G4 | GP20 |
+| A4 | GP21 |
+| B4 | GP22 |
+| C5 | GP26 |
+| Semitone up | GP27 |
+| Octave up | GP28 |
+| Buzzer outputs, same pitch | GP12, GP13 |
+| Free expansion | GP0–GP11, GP14, GP15 |
+
+GPIO numbers are not physical header pin numbers. GP12/GP13 share a PWM frequency; independently pitched buzzers require a different allocation (for example GP12/GP14) and a firmware change.
+
+Expose unused GPIOs with labeled 2.54 mm headers, 3V3 and GND. GP0/GP1 can be reserved as an I2C expansion pair. Used signals may have labeled test points, but are shared with onboard circuitry and are not free GPIOs. Header orientation and pin order are not yet finalized.
+
+## Power architecture
+
+Battery -> protection -> power switch -> USB/battery source isolation -> Pico VSYS.
+Pico 3V3(OUT) -> touch modules and compatible buzzer modules, subject to total current budget.
+
+A conventional 3.7 V nominal cell reaches 4.2 V when fully charged. Do not connect raw battery voltage to 3V3 or GPIO. The Pico regulator supplies the regulated 3.3 V rail. USB/battery isolation must prevent USB from feeding the battery through VSYS.
+
+If USB charging is requested, use a single-cell charger with appropriate power-path management, protection, and charge current matched to the selected battery. A Pico USB port does not charge a cell by itself. If removable external charging is selected, retain source isolation for safe USB programming with the battery installed.
+
+Cell/holder dimensions, connector polarity, protection, regulator load budget, and charging method must be confirmed before selecting footprints. An 18350 holder must fit the actual cell, including any extra length from protection circuitry.
+
+Battery runtime requires a measurement of average battery current; do not assume runtime from voltage alone.
+
+## Placement concept
+
+- Front: eight note modules in a row.
+- Left side: semitone and octave modifiers, positioned for the left hand while the right hand plays notes.
+- Rear: USB-accessible Pico, buzzer modules, expansion headers and power switch.
+- Battery: plan a back/underside-mounted PCB holder if an 18350 is selected. A LiPo pouch instead uses a connector and enclosure restraint. Exact cell, holder footprint, mechanical clearance, and protection remain TBD. Add feet/standoffs so the battery and holder do not bear playing pressure.
+- Four mounting holes, with final positions based on module dimensions and enclosure.
+
+The accompanying SVG is an arrangement sketch, not a scaled PCB drawing or a copper layout.
+
+## Needed before schematic and layout
+
+1. Exact Pico version and touch/buzzer module pinouts and measurements.
+2. Confirm existing modifier behavior versus independently pitched buzzers.
+3. Battery choice, capacity, protection, charging method, and physical dimensions.
+4. Preferred board/enclosure size and assembly method.
+
+## References
+
+- https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf — power, pinout, source isolation, and charging examples.
+- https://learn.adafruit.com/li-ion-and-lipoly-batteries/voltages — conventional Li-ion cell voltage behavior.
+
+## Manufacturing and assembly
+
+Bare PCB fabrication supplies the board without components. A separate PCB assembly order can include a back-mounted battery holder if the chosen service accepts that part, bottom-side placement, and its through-hole or surface-mount mounting method. Include the exact holder part number in the BOM and clearly specify its side and orientation in assembly documentation. Confirm part sourcing and assembly support before ordering. The battery cell is a separate item unless explicitly included by the supplier.
+
+PCBWay documents both through-hole assembly and top/bottom/both-side assembly options:
+- https://www.pcbway.com/pcb_prototype/Through_Hole_Assembly.html
+- https://www.pcbway.com/quotesmt.aspx
