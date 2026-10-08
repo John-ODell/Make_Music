@@ -92,6 +92,8 @@ The selected circuit provides hardware UVLO and latched overload disconnect. Ado
 
 U2 uses input/open-collector/power-input/power-output/output pin types from its functions; other carrier contacts/passives remain passive. Pico regulation, module drivers and cell PCM are external and unmodeled. ERC cannot establish voltage/current compatibility, load/inrush, cable polarity, actual protection timing or thermal/fit suitability.
 
+The merged [staged assembly/bench procedure](../power/prototype-validation.md) applies using the native references above. After overload, remove the fault and USB, then keep S1 OFF until IN/enable discharge below the reset thresholds; measure the required OFF dwell. No measured results or immediate-reset promise is added by this schematic.
+
 ## Remaining integration gates
 
 1. Cold-fit the selected Pico H SC0917 male headers/socket engagement, finished holes and USB/BOOTSEL/insertion clearances; preserve J1 pad1/J2 pad20 at USB.
