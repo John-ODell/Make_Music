@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "MakeMusic") (type "KiCad") (uri "${KIPRJMOD}/../libraries/MakeMusic.pretty") (options "") (descr "Verified candidate geometry; physical fit and manufacturing review pending"))
+)

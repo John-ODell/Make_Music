@@ -1,10 +1,10 @@
-# Schematic review - provisional carrier P0
+# Schematic review - provisional carrier P1
 
 Reviewed 2026-10-07 using KiCad CLI 10.0.6. This assignment is complete as a provisional editable carrier schematic, with a readable A3 PDF; the integrated instrument is not ready for fabrication.
 
 ## Delivered
 
-Native project and schematic in `hardware/kicad/`, project-local symbols, complete socket mapping CSV, reproducible connectivity check, and `schematic-review.pdf`. There is no placeholder empty PCB or manufacturing export. No firmware changes were made.
+Native project and schematic in `hardware/kicad/`, project-local symbols and registered socket footprint library, complete socket mapping CSV, reproducible connectivity check, and `schematic-review.pdf`. There is no placeholder empty PCB or manufacturing export. No firmware changes were made.
 
 ## Verified socket mapping
 
@@ -19,7 +19,9 @@ The two physical 1x20 female sockets are J1 and J2, each with local numbers 1-20
 - Pico 30 RUN, 35 ADC_VREF and 37 3V3_EN are intentionally NC at the carrier; retain the Pico's internal defaults. This does not mean those signals are unconnected inside the Pico.
 - GPIO23, 24, 25 and 29 are internal Pico functions, absent from the two socket rows and excluded from expansion.
 
-Official Pico 2 Figure 3 (printed page 7) confirms 2.54 mm contact pitch, 17.78 mm between socket row centers, 48.26 mm between first/last contacts, and a 51 x 21 mm module body. These dimensions establish the socket placement contract, not approval of any selected socket footprint. Selected socket height, male-pin engagement, USB overhang, BOOTSEL access, insertion/removal clearance, battery clearance and carrier mounting remain for mechanical integration. No socket footprint was assigned without an exact part and drawing review.
+Official Pico 2 Figure 3 (printed page 7) confirms 2.54 mm contact pitch, 17.78 mm between socket row centers, 48.26 mm between first/last contacts, and a 51 x 21 mm module body. These dimensions establish the socket placement contract, not approval of any selected socket footprint. Selected socket height, male-pin engagement, USB overhang, BOOTSEL access, insertion/removal clearance, battery clearance and carrier mounting remain for mechanical integration. J1/J2 now carry the mechanically reviewed candidate `MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm`, registered by `hardware/kicad/fp-lib-table` at `${KIPRJMOD}/../libraries/MakeMusic.pretty`. The merged footprint has 20 pads, 2.54 mm pitch, 48.26 mm span, 1.02 mm drills and 1.52 mm pad diameter per the Samtec recommended layout. It remains a candidate pending male-post/engagement trial, fabricator finished-hole/annular-ring review and enclosure clearance checks. See the [mechanical review](../mechanical/README.md) for source drawings and stack dimensions.
+
+**Placement contract:** J1 pad 1 is at USB; J2 pad 20 is at USB, so rotate the assigned J2 footprint 180 degrees relative to J1. The schematic keeps J2 local n=Pico n+20. This explicitly supersedes the mechanical proposal's alternative convention placing right-row local pad 1 at USB. Do not copy that numbering or rotate both footprints alike. No PCB placement exists yet; actual pad-to-net orientation must be checked at placement and before routing.
 
 ## Firmware/interface allocation
 
@@ -48,7 +50,7 @@ J15 exposes exactly the fourteen unused GPIOs: contacts 1-12 map to GP0-GP11, co
 
 The PM supplied the [HiLetgo product reference](http://www.hiletgo.com/ProductDetail/1915450.html) and user image [`touchbutton.jpg`](../components/reference/touchbutton.jpg) (visually reviewed). The vendor page did not load in this review; PM-reported dimensions/specifications are 24 x 24 x 7.2 mm, four M2 holes, 2-5.5 V supply and 60/220 ms response. Hole centers, header pitch/orientation and exact module configuration remain unverified; keep footprints unassigned. Primary chat owns the fuller component evidence in [`hardware/components/TOUCH_MODULE.md`](../components/TOUCH_MODULE.md), incorporated from merged PR #2 (6a61587).
 
-The [manufacturer TTP223-BA6 datasheet](https://www.tontek.com.tw/uploads/product/243/TTP223-BA6_V2.1_EN.pdf), pages 2-4, confirms 2-5.5 V IC operation and a CMOS output: TOG=0 selects direct mode; AHLB=0 selects active-high, AHLB=1 active-low. The instrument's existing firmware requires direct active-high behavior, so TOG=0/AHLB=0 must be confirmed or an explicit firmware/configuration change agreed by primary. The supplied image appears to tie AHLB to VCC (active-low); this is an inference from the drawing, not verified actual board behavior. Its DI/VCC/GND interface labels do not establish physical contact numbers or orientation. The schematic now flags this conflict visibly and continues using regulated 3V3_OUT.
+The [manufacturer TTP223-BA6 datasheet](https://www.tontek.com.tw/uploads/product/243/TTP223-BA6_V2.1_EN.pdf), pages 2-4, confirms 2-5.5 V IC operation and a CMOS output: TOG=0 selects direct mode; AHLB=0 selects active-high, AHLB=1 active-low. The existing firmware assumes direct active-high behavior. The user now permits firmware changes: after confirming actual output mode and idle/touched levels, primary may adapt input handling for direct active-low (TOG=0/AHLB=1), or retain active-high where confirmed. Module modification to active-high is not required. This follow-up does not change firmware. The supplied image appears to tie AHLB to VCC (active-low); this is an inference from the drawing, not verified actual board behavior. Its DI/VCC/GND interface labels do not establish physical contact numbers or orientation. The schematic visibly records the polarity uncertainty and firmware flexibility and continues using regulated 3V3_OUT.
 
 Confirm module supply decoupling and measured latency/current, including indicator LED load. The manufacturer's no-load IC current is not the populated module current. The 220 ms low-power response and startup stabilization may affect musical responsiveness and should be tested on the actual module.
 
@@ -61,7 +63,8 @@ The power helper must provide protected single-cell supply, switching and USB/ba
 ## Actual validation and limits
 
 - `kicad-cli sch erc --severity-all --exit-code-violations --format json`: exit 0, **0 errors, 0 warnings, 0 excluded violations**. No explicit ERC exclusions or PWR_FLAG symbols. KiCad defaults leave single-global-label, four-way-junction, simulation-model and footprint-filter checks ignored; none establishes component suitability here.
-- Exported a fresh KiCad XML netlist and ran `verify_connectivity.py`: **all 95 endpoints match**, including all 40 socket contacts, 36 module contacts, 16 expansion contacts and 3 logical power contacts. Exactly 30 connected nets plus 3 intentional NC nets. The check rejects extra/missing connections, wrong GPIOs, changed power/ground assignments and unexpected footprints.
+- Exported a fresh KiCad XML netlist and ran `verify_connectivity.py`: **all 95 endpoints match**, including all 40 socket contacts, 36 module contacts, 16 expansion contacts and 3 logical power contacts. Exactly 30 connected nets plus 3 intentional NC nets. The check rejects extra/missing connections, wrong GPIOs, changed power/ground assignments and unexpected footprints. Only the exact SSQ candidate assignment is allowed on J1/J2; J3-J15 and X1 must remain unset. The registered local footprint file must exist.
+- Negative checks on temporary XML netlists confirmed the checker rejects a wrong J2 socket footprint, an unexpected J3 module footprint and a changed GP16 net.
 - Visually inspected the final PDF raster: all socket/contact numbers, interface labels, NC crosses, provisional notes and power boundaries are readable without overlaps or clipping.
 - KiCad emitted a system Fontconfig cache-version warning during CLI exports; export/ERC succeeded and visual review found no font defects. No cache or system font changes were made.
 
@@ -69,18 +72,23 @@ All carrier contacts are correctly typed passive. The inserted Pico, touch-modul
 
 ## Unresolved before routing/assembly
 
-1. Exact Pico model and male-header arrangement; socket MPN, footprint, orientation and all access/clearances.
-2. Confirm the exact HiLetgo/TTP223 module configuration and physical pin order. Resolve the apparent active-low reference versus active-high firmware, and verify decoupling, idle behavior, touch latency, cable length and noise behavior.
+1. Exact Pico model and male-header arrangement; confirm SSQ-120-01-G-S candidate sourcing, mating engagement, finished holes, insertion/removal and all access/clearances. Enforce J1 pad1/J2 pad20 at USB during placement.
+2. Confirm the exact HiLetgo/TTP223 module configuration and physical pin order. Use confirmed module polarity to select active-high or authorized active-low firmware handling, and verify decoupling, idle behavior, touch latency, cable length and noise behavior.
 3. Buzzer module MPN, actual pin count/order, PWM response, voltage/current and onboard driver. If bare piezo/magnetic devices are selected, design drivers with suitable protection rather than direct GPIO drive.
 4. Total 3V3_OUT budget: Pico plus ten touch modules, two buzzer drivers and any expansion loads. The Pico 2 datasheet recommends external load below 300 mA; actual available current also depends on VSYS and Pico load. This is not a completed budget.
 5. Protected battery, switch, source isolation, external versus onboard charging, charger power path and battery-matched charge current; actual cell/holder polarity, dimensions and protection.
 6. Whether both buzzers retain same-pitch behavior; expansion header MPN/order and optional I2C pull-ups.
 7. Verified footprints, board/enclosure dimensions, mounting, back-side holder/standoff clearance, final ERC/DRC and integrated power/PCB review.
 
+## Follow-up integration status
+
+Merged mechanical PR #3 and schematic PR #4 were fetched from primary/master for this follow-up. Only J1/J2 receive candidate footprints; all 95 net assignments and three intentional NC contacts remain unchanged. No PCB, routing, new module footprints or firmware edits are included. Socket physical fit is still a release gate. The netlist checker requires those two exact socket assignments and rejects any footprint on the other interfaces.
+
 ## Primary sources
 
 - [Raspberry Pi Pico datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf): Figure 2 header allocation, sections 2.1 and 4.4-4.6 for special pins/power. Downloaded and visually checked locally because browser extraction exceeded its size limit.
 - [Raspberry Pi Pico 2 datasheet](https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf): Figures 2-4; sections 3.1, 5.4-5.6 for pin functions, regulator output and USB/battery power. Figure 3 establishes the above socket placement dimensions.
+- [Samtec recommended PCB layout, revision A, Figure 1](https://suddendocs.samtec.com/prints/ssq-1xx-xx-xx-x-xx-xxx-xx-xx.pdf): 2.54 mm pitch, 1.02 mm holes, 1.52 mm pad diameter; inherited body/courtyard evidence is recorded in the mechanical review.
 - Repository firmware: `Pico_Synth/octave_half_8_key.py`; project requirements: `hardware/PCB_DESIGN_NOTES.md`.
 
 Primary chat should review and integrate this PR with the power and mechanical helpers, then rerun checks after any pinout/part changes. Leave merge and manufacturing approval to primary integration.
