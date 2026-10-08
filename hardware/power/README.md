@@ -8,6 +8,7 @@ Start with **A: removable protected conventional 4.2 V-charge single cell, exter
 
 - [Circuit connections and operating states](circuits.md)
 - [Candidate BOM and verification evidence](BOM.md)
+- [Protected battery budget comparison and stronger switch](candidate-comparison.md)
 - [Current and runtime worksheet](current-budget.md)
 - [Open decisions and integration checks](decisions.md)
 

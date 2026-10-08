@@ -6,7 +6,7 @@ Exact core part candidates below are electrically researched. Unselected interfa
 |---|---|---:|---|
 | B1 / A or B | Keeppower **P1835C2** | 1 | Protected 18350, conventional 4.2 V maximum charge. Manufacturer advertises overcharge/overdischarge/overcurrent/short protection. Candidate only; actual lot/specification and holder still required. |
 | D_EXT / A or B | Vishay **SS14-E3/61T** | 1 | SMA/DO-214AC Schottky, 40 V, 1 A with stated thermal conditions; cathode band toward VSYS. Reverse leakage is finite. |
-| S1 / A or B | C&K **JS102011SAQN** | 1 | SPDT right-angle gullwing slide, non-shorting, silver contacts; 0.3 A at 6 VDC. Conditional on measured switched input/inrush current, not 3V3 output current. Higher-current substitute may be necessary. |
+| S1 / A or B | NKK **MN12SS1W03** | 1 | Follow-up stronger candidate: SPDT ON–ON, straight PC pins/panel bushing, silver contacts, 4 A at 30 VDC resistive rating. Footprint, capacitive inrush and mounting remain unverified; see [comparison](candidate-comparison.md). Original C&K JS102011SAQN was only 0.3 A at 6 VDC. |
 | U1 / B only | Texas Instruments **BQ24074RGTR** | 1 | 16-pin 3×3 mm VQFN RGT with exposed pad, 4.2 V single-cell charger with separate BAT/OUT power path; default disable until cell selected. Do not substitute BQ24075/79 without re-review. |
 | NTC / B only | Semitec **103AT-2** | 1 | TI application example calls out this 10 kΩ NTC. Thermal coupling and allowed cell charge-temperature thresholds unresolved. Mechanical mounting not assigned. |
 | IN/BAT/OUT capacitors / B | TBD MPNs | 3 | Candidate 1 µF IN and 10 µF each BAT/OUT; effective capacitance and voltage rating to be verified. |
