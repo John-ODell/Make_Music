@@ -6,10 +6,10 @@ Status: concept only; not a fabrication-ready schematic or PCB. No existing sour
 
 - Two-layer carrier board with a removable non-wireless Pico/Pico 2 (model to confirm), plugged into two 1x20 female socket headers at 2.54 mm pitch. The sockets are soldered to the carrier PCB; the Pico has matching male header pins and can be inserted or removed without soldering. Use a Pico supplied with male headers, or fit male headers once to a bare Pico. Confirm socket row spacing, height, pin engagement and USB/BOOTSEL clearance against the selected Pico mechanical drawing before finalizing the footprint. Removal/insertion is done with power disconnected.
 - Eight note touch controls and two left-hand modifier touch controls. User permits firmware changes, including adapting input polarity after actual modules are checked. Retain original behavior as the provisional baseline; reprogramming is available for later changes.
-- Two passive buzzer modules. Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
+- Two SunFounder ST0238 passive low-level-trigger buzzer modules selected by the user for the first prototype. Manufacturer PCB outline: 32 x 14 mm each; see [buzzer module evidence](components/BUZZER_MODULE.md). Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
 - Single-cell conventional 4.2 V-charge Li-ion/LiPo battery, protected cell or board-level protection.
 - Power switch and exposed GPIO expansion headers.
-- Separate touch and buzzer modules retained for the first revision. The user supplied a HiLetgo TTP223-BA6 touch reference; see [touch module evidence](components/TOUCH_MODULE.md). Actual header orientation, mounting geometry and output configuration remain unverified. Buzzer identification is still pending.
+- Separate touch and buzzer modules retained for the first revision. The user supplied a HiLetgo TTP223-BA6 touch reference; see [touch module evidence](components/TOUCH_MODULE.md). Actual header orientation, mounting geometry and output configuration remain unverified. Buzzer model is selected; its connector and mounting geometry still need verification.
 
 ## Proposed GPIO allocation (existing firmware)
 
