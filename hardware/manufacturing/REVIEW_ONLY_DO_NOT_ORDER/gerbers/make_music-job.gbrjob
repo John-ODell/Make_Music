@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-10-08T08:34:56-05:00"
+    "CreationDate": "2026-10-08T08:39:05-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "make_music",
       "GUID": "6d616b65-5f6d-4757-9369-632e6b696361",
-      "Revision": "P0"
+      "Revision": "P1 routed - review hold"
     },
     "Size": {
       "X": 330.1,

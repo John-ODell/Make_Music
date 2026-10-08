@@ -8,9 +8,9 @@
 	)
 	(paper "A3")
 	(title_block
-		(title "Make Music - initial placement draft")
-		(date "2026-10-07")
-		(rev "P0")
+		(title "Make Music - routed prototype carrier")
+		(date "2026-10-08")
+		(rev "P1 routed - review hold")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -69,7 +69,7 @@
 			(svgprecision 4)
 			(plotframeref no)
 			(mode 1)
-			(useauxorigin no)
+			(useauxorigin yes)
 			(pdf_front_fp_property_popups yes)
 			(pdf_back_fp_property_popups yes)
 			(pdf_metadata yes)

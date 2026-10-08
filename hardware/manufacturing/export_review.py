@@ -49,7 +49,7 @@ with tempfile.TemporaryDirectory(prefix='make-music-review-') as temp:
     print(cli('sch', 'erc', '--severity-all', '--exit-code-violations', '--format', 'json', '-o', temp / 'erc.json', SCH))
     cli('sch', 'export', 'netlist', '--format', 'kicadxml', '-o', net, SCH)
     subprocess.run([sys.executable, str(KD / 'verify_connectivity.py'), str(net)], check=True)
-    print(cli('pcb', 'drc', '--schematic-parity', '--severity-all', '--exit-code-violations', '--format', 'json', '-o', temp / 'drc.json', PCB))
+    print(cli('pcb', 'drc', '--schematic-parity', '--all-track-errors', '--severity-all', '--exit-code-violations', '--format', 'json', '-o', temp / 'drc.json', PCB))
     erc = json.loads((temp / 'erc.json').read_text())
     drc = json.loads((temp / 'drc.json').read_text())
     assert not any(s.get('violations') for s in erc.get('sheets', [])), 'ERC violations must be zero'
