@@ -1,0 +1,10 @@
+id,mechanical_x_mm,mechanical_y_mm,kicad_x_mm,kicad_y_mm,npth_drill_mm,both_faces_keepout_diameter_mm,status
+F1,8,74,28,94,3.2,8,engineering_proposal
+F2,45,83,65,103,3.2,8,engineering_proposal
+F3,50,114,70,134,3.2,8,engineering_proposal
+F4,155,114,175,134,3.2,8,engineering_proposal
+F5,257,114,277,134,3.2,8,engineering_proposal
+F6,291,114,311,134,3.2,8,engineering_proposal
+F7,155,73,175,93,3.2,8,engineering_proposal
+F8,189,73,209,93,3.2,8,engineering_proposal
+F9,291,73,311,93,3.2,8,engineering_proposal
