@@ -6,10 +6,10 @@ Status: concept only; not a fabrication-ready schematic or PCB. No existing sour
 
 - Two-layer carrier board with a removable non-wireless Pico/Pico 2 (model to confirm), plugged into two 1x20 female socket headers at 2.54 mm pitch. The sockets are soldered to the carrier PCB; the Pico has matching male header pins and can be inserted or removed without soldering. Use a Pico supplied with male headers, or fit male headers once to a bare Pico. Confirm socket row spacing, height, pin engagement and USB/BOOTSEL clearance against the selected Pico mechanical drawing before finalizing the footprint. Removal/insertion is done with power disconnected.
 - Eight note touch controls and two left-hand modifier touch controls. User permits firmware changes, including adapting input polarity after actual modules are checked. Retain original behavior as the provisional baseline; reprogramming is available for later changes.
-- Two passive buzzer modules. Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
-- Single-cell conventional 4.2 V-charge Li-ion/LiPo battery, protected cell or board-level protection.
+- Two SunFounder ST0238 passive low-level-trigger buzzer modules selected by the user for the first prototype. Manufacturer PCB outline: 32 x 14 mm each; see [buzzer module evidence](components/BUZZER_MODULE.md). Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
+- First revision: removable protected 18350 Li-ion cell, charged in an external charger. User selected this simpler battery architecture on 2026-10-07. Exact cell, matching underside holder and charger remain to be verified; no onboard charger in this revision.
 - Power switch and exposed GPIO expansion headers.
-- Separate touch and buzzer modules retained for the first revision. The user supplied a HiLetgo TTP223-BA6 touch reference; see [touch module evidence](components/TOUCH_MODULE.md). Actual header orientation, mounting geometry and output configuration remain unverified. Buzzer identification is still pending.
+- Separate touch and buzzer modules retained for the first revision. The user supplied a HiLetgo TTP223-BA6 touch reference; see [touch module evidence](components/TOUCH_MODULE.md). Actual header orientation, mounting geometry and output configuration remain unverified. Buzzer model is selected; its connector and mounting geometry still need verification.
 
 ## Proposed GPIO allocation (existing firmware)
 
@@ -59,7 +59,7 @@ The accompanying SVG is an arrangement sketch, not a scaled PCB drawing or a cop
 
 1. Exact Pico version and touch/buzzer module pinouts and measurements.
 2. Confirm existing modifier behavior versus independently pitched buzzers.
-3. Battery choice, capacity, protection, charging method, and physical dimensions.
+3. Exact protected 18350 cell, matching holder and external charger; verify capacity, protection and physical dimensions. Battery form and external charging are selected.
 4. Final board/enclosure size from a paper fit test; user prefers factory assembly as much as possible, with a budget comparison against partial assembly.
 
 ## References
@@ -81,4 +81,4 @@ User supplied official datasheets in `/Users/johnodell/Desktop/pico_datasheets/`
 
 ## Assembly preference
 
-Prioritize a quote for a factory-populated carrier, including sockets, headers, power components, and battery holder where accepted. Separately quote the named touch/buzzer modules as supplied/sourced subassemblies. Keep Pico insertion and battery fitting as user steps. See [assembly and budget comparison](ASSEMBLY_BUDGET.md). Battery/charging choice and build quantity remain pending user input.
+Prioritize a quote for a factory-populated carrier, including sockets, headers, power components, and battery holder where accepted. Separately quote the named touch/buzzer modules as supplied/sourced subassemblies. Keep Pico insertion and protected 18350 fitting as user steps. See [assembly and budget comparison](ASSEMBLY_BUDGET.md). Build quantity remains pending user input.

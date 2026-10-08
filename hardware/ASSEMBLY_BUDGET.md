@@ -1,6 +1,6 @@
 # Prototype assembly and budget comparison
 
-Updated 2026-10-07. User preference: factory assembly as much as possible, with a cheaper comparison option. Exact battery, buzzer, quantity and all module footprints are not finalized. No complete supplier quote has been obtained or order placed.
+Updated 2026-10-07. User preference: factory assembly as much as possible, with a cheaper comparison option. Revision 1 uses removable protected 18350 with external charging and two SunFounder ST0238 buzzer modules. Exact cell, holder, charger, quantity and all module footprints are not finalized. No complete supplier quote has been obtained or order placed.
 
 ## Battery tradeoff
 
@@ -9,7 +9,7 @@ Updated 2026-10-07. User preference: factory assembly as much as possible, with 
 | Protected removable 18350, external charging | Simplest selected-topology candidate: switch and isolation into Pico VSYS, no onboard charger | Taller underside holder/compartment | Verified holder, matching protected cell, external charger |
 | Protected flat LiPo, onboard USB charging | More circuit/layout work: power path, charge-current/thermal/source policy | Potentially thinner, still needs an enclosure pocket/restraint | Pack connector, charger and supporting parts, charge port, battery temperature provisions as required |
 
-Recommendation for easiest electrical prototype: protected externally charged 18350. Recommendation for a thin integrated product: protected flat pack with a reviewed charging circuit. Neither battery is selected yet. Voltage alone does not establish protection, charging compatibility or runtime.
+Selected for the first electrical prototype: protected externally charged 18350. A protected flat pack with a reviewed charging circuit remains a future option for a thinner instrument. Exact cell and holder remain unresolved. Voltage alone does not establish protection, charging compatibility or runtime.
 
 ## Assembly routes
 
