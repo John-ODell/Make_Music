@@ -3,6 +3,7 @@
 Open `make_music.kicad_pro` in KiCad 10, then open the schematic. The project-local `MakeMusic.kicad_sym` library and `sym-lib-table` resolve all symbols without a third-party library installation. `fp-lib-table` registers the merged `../libraries/MakeMusic.pretty` socket library as `MakeMusic`. The schematic is the editable source of truth; do not regenerate it from the review PDF.
 
 - `make_music.kicad_sch`: one A3 sheet, two removable female sockets, ten touch interfaces, two buzzer interfaces, one expansion header, and the revision-1 battery switch/diode circuit.
+- `make_music.kicad_pcb`: initial placement draft with two socket footprints, schematic net assignments, proposed outline and non-fabrication reference body drawings. No tracks or remaining component footprints yet; see [PCB status](PCB_STATUS.md).
 - `schematic-review.pdf`: readable schematic export, marked provisional.
 - `pico-socket-map.csv`: all 40 Pico physical pins mapped to local socket pins and carrier nets.
 - `verify_connectivity.py`: checks every endpoint in a fresh XML netlist against the reviewed interface contract.
