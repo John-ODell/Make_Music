@@ -1,0 +1,22 @@
+# Exact parts needed to finish physical verification
+
+The native electrical project is routed and checked. The following measurements determine whether its proposed mechanical assembly can be finalized. All result fields remain blank because no parts were measured or energized during design. Do these checks with the battery removed and USB disconnected.
+
+| Item | Record from actual selected parts | Pass requirement | Result |
+|---|---|---|---|
+| Keeppower P1835C2 + Keystone 1101 | Cell overall length/diameter/button; holder insertion travel, contact compression, wrapper clearance and retention | Inserts/removes without force or wrapper damage; reliable contacts and retention; protected cell not bypassed | Pending |
+| External charger | Exact L1 revision/bay fit and selected 500 mA charge setting against cell specification | Fits protected cell and charges within its documented limits | Pending |
+| Pico H SC0917 + two SSQ-120-01-G-S | Male post dimensions/projection, socket engagement and body height | Both rows fully mate at 17.78 mm spacing without bottoming; USB/BOOTSEL and upward removal remain accessible | Pending |
+| Ten actual HiLetgo touch modules | Width/length/thickness, header type/order/orientation, top/bottom component projection, electrode and bare edge support regions | Proposed 24 mm seats and insulating tabs/keepers avoid all circuitry/electrodes; modify fixture seats when necessary | Pending |
+| Two actual ST0238 modules | Width/length/thickness, component/buzzer height, header termination and labels, clear support lands/sound opening | Proposed 32 × 14 mm seats fit; keepers avoid circuitry and sound opening | Pending |
+| Module cables | Exact module-end mating/solder method and polarity; dressed length/service slack and strain relief | Each adapted lead maps carrier 1 SIG /2 3V3 /3 GND to the actual module labels; no pinching or bare conductors | Pending |
+| Raised fixture | Mated carrier header height, module underside projection, screw tips, wires and loaded plate deflection | At least 2 mm actual remaining clearance including tolerance and deflection; proposed 24 mm spacers/28 mm support plane are adjustable | Pending |
+| Holder cassette/support | Holder lug insulation/strain relief, cover/door access, connector plug/bend space and actual cassette height | Cell and holder carry no playing load; proposed ≥35 mm underside support clears the 32 mm cassette | Pending |
+| NKK MN12SS1W03 | Exact switch case, travel/actuator/panel fit and finished carrier hole fit | Clears assembly and operates without stressing terminals; idle contact/load endurance checked during bench test | Pending |
+| Full paper fit | Proposed 330 × 120 mm outline, 34 mm note pitch, 10 mm body gaps and left modifiers | Comfortable reach and agreed size with actual module bodies before fabrication release | Pending |
+
+The module fixture avoids undocumented module mounting holes. That permits carrier routing now, but does not establish that unknown module edge regions are suitable for clamping. Do not drill the modules or force them into the proposal. See [fixture geometry](../mechanical/MODULE_FIXTURE.md) and [holder cassette](../mechanical/WIRED_HOLDER_PROPOSAL.md). Custom fixture, keepers, cassette door and support feet still require final manufacturing CAD/tolerances after measurement.
+
+After mechanical fit passes, follow the [staged current-limited power and functional procedure](../power/prototype-validation.md). Record module idle/touched logic and direct/momentary configuration; firmware can adapt polarity. Measure sound/current, battery branch/load response, USB/battery isolation, UVLO/restart, fault reset and temperature. Adopted limits are 0.70 A normal battery branch, 350 mA total 3V3 including Pico and 250 mA external 3V3; they are design limits, not measured performance. Holder/contact ampacity and effective ceramic capacitance also need qualification.
+
+An assembler may perform metrology, fit and electrical tests as a priced service. The factory preference includes soldering, crimping and mechanical attachment; user steps are final removable Pico/cell insertion and firmware loading. These checks are not silently assigned to a first-time PCB builder. No complete quote or supplier acceptance exists yet.

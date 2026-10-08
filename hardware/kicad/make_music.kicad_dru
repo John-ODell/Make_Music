@@ -1,0 +1,7 @@
+(version 1)
+# TI RPW0010A land pattern has 0.20mm copper gaps. 0.15mm clearance
+# applies to pads/short escape segments intersecting U2's courtyard.
+# Remaining signals/power use the 0.25mm net-class clearance.
+(rule "U2 pad and escape clearance"
+  (condition "A.intersectsCourtyard('U2') && B.intersectsCourtyard('U2')")
+  (constraint clearance (min 0.15mm)))

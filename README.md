@@ -174,4 +174,4 @@ Practice Song:
 
 ## PCB development
 
-A battery-powered Pico carrier board is being designed with removable Pico sockets, ten touch controls, two buzzers, and GPIO expansion. See [hardware/README.md](hardware/README.md) for the current design state and requirements.
+The first battery-powered Pico carrier is now an editable, routed KiCad project with removable Pico H sockets, ten touch controls, two buzzer module connectors and GPIO expansion. Electrical/board checks pass; exact-part fit, mechanical CAD and bench validation still hold fabrication. See [hardware/README.md](hardware/README.md) for the project and held review files.
