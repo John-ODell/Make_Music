@@ -10,7 +10,7 @@ This directory contains the developing design for a battery-powered touch instru
 - [Mechanical fit proposal](mechanical/README.md)
 - [Battery power alternatives](power/README.md)
 
-Current state: an editable provisional carrier schematic, candidate Pico socket footprint, mechanical reservation plan, and researched power alternatives. The complete instrument power circuit and PCB layout are not yet finalized or fabrication-ready.
+Current state: an editable schematic with the selected externally charged battery switch/isolation branch, candidate Pico socket footprints, and a native initial-placement PCB. The PCB contains only the two sockets and reference body drawings; remaining components and all routing are unfinished. See [PCB draft status](kicad/PCB_STATUS.md). The complete instrument is not fabrication-ready.
 
 ## Milestones
 
