@@ -22,7 +22,7 @@ Adopt these prototype design constraints now:
 |---|---|
 | Normal branch current through F1/S1/U2 | **≤0.70 A**, including converter input, startup and input-side leakage |
 | Total regulated load | **≤350 mA at 3V3**, including Pico; external loads **≤250 mA** and actual Pico regulator validation required |
-| All VSYS capacitance, including Pico and external additions | **≤200 µF** for the selected turn-on slope |
+| All VSYS capacitance, including Pico and external additions | **≤100 µF** for the selected turn-on slope |
 | Operating environment | 0–40°C ambient; resistor local temperature ≤70°C |
 | Connector / harness | PM's 2 A JST-PH/AWG24 candidate; do not equate connector rating with unknown holder-contact ampacity |
 | Protected cell | P1835C2 conventional 1S only; existing cell/charger qualifications remain in rev1-handoff.md |
@@ -31,7 +31,7 @@ At minimum computed cutoff 3.053 V on U2 IN, 0.70 A ×45 mΩ switch-path loss an
 
 ## Exact components and connections
 
-The [endpoint CSV](branch-endpoints.csv) is the pin-by-pin source for schematic/checker integration. Passive two-terminal pin1/2 assignments are a proposed symbol convention; verify their footprint mapping.
+The [endpoint CSV](branch-endpoints.csv) is the pin-by-pin source for schematic/checker integration. Passive two-terminal pin1/2 assignments are a proposed symbol convention; verify their footprint mapping. **These power-document references are role labels, not final native reference designators:** schematic PR #19 already uses R1/R2 for buzzer pulls and C1–C12 for connector bypass. The schematic helper must rename the power references and update its checker/BOM/PCB together. Suggested unused ranges after #19: document R1–R6 -> native R3–R8; document C1/C2/C3/C4 -> native C13/C14/C15/C16, subject to checking the complete native project. Do not overwrite the existing pulls/bypass or change their nets when integrating this CSV.
 
 | Ref | Exact MPN / value | Required connection / package |
 |---|---|---|
@@ -46,7 +46,6 @@ The [endpoint CSV](branch-endpoints.csv) is the pin-by-pin source for schematic/
 | R6 | YAGEO **RC0603FR-07100RL**, 100 Ω 1% | DVDT /U2.7 to DVDT_CAP; series damping for C3 |
 | C1 | TDK **C2012X7R1E475K125AB**, 4.7 µF 25 V X7R 10% | BAT_SW_PLUS to GND; nonpolar 0805, directly at IN/GND |
 | C2, C4 | same TDK **C2012X7R1E475K125AB** | VSYS to GND, parallel 9.4 µF nominal; directly at OUT/GND |
-| C5, C6 | Panasonic **10SVP47M**, each 47 µF 10 V ±20%, 50 mΩ ESR | Parallel VSYS (+) to GND (−); polarized SMT C6 case, 6.3 mm diameter /5.9 mm body length; hold-up for source transfer |
 | C3 | TDK **C1608C0G1H103J080AA**, 10 nF 50 V C0G 5% | DVDT_CAP to GND; 0603 |
 | D2 | Vishay **SS14-E3/61T** | Shunt only: anode GND, cathode/band VSYS; SMA/DO-214AC |
 | D3 | Littelfuse **SMAJ5.0CA** | Bidirectional TVS BAT_SW_PLUS to GND; SMA/DO-214AC; **CA**, not unidirectional A |
@@ -60,7 +59,7 @@ All resistors are 0603, 0.1 W, ±100 ppm/°C; dissipation here is far below rati
 
 `ILIM_nom = 3334/3320 = 1.004 A`. TI's table at RILM=3.32 kΩ gives 0.85–1.15 A. Allowing resistor initial tolerance plus a conservative 0.5% temperature allowance gives **0.837–1.168 A** by inverse resistance scaling. This is a calculation using the published table conditions (**VIN=12 V**), not a newly guaranteed 1S characterization. Use **1.2 A** as the branch coordination envelope and verify the selected assembly's fault response at 3.1–4.25 V. The 0.70 A normal limit leaves margin below the published low threshold.
 
-ITIMER open selects the shortest blanking. Overload disconnects/latches; clear the fault then switch OFF/ON. During startup the chip controls inrush/current. The nominal DVDT slope with 10 nF is 0.20 V/ms; 200 µF would add about 40 mA capacitive current. Datasheet timing includes approximately 2 µs breaker response and 500 ns severe-short response, **typical**, not maximum peak-current guarantees. Transient current can exceed ILIM; do not label this an instantaneous 1 A limiter or promise a bounded I²t from typical timing.
+ITIMER open selects the shortest blanking. Overload disconnects/latches; clear the fault then switch OFF/ON. During startup the chip controls inrush/current. The nominal DVDT slope with 10 nF is 0.20 V/ms; 100 µF would add about 20 mA capacitive current. Datasheet timing includes approximately 2 µs breaker response and 500 ns severe-short response, **typical**, not maximum peak-current guarantees. Transient current can exceed ILIM; do not label this an instantaneous 1 A limiter or promise a bounded I²t from typical timing.
 
 F1 is upstream of the switch, input capacitor and TVS, so it backs up input-component shorts and an eFuse failure. It is intentionally separate from electronic overload control. Published UMT-H data support 1.25 A/250 VDC and **1500 A breaking capacity**, greatly above common small chip-fuse interrupt ratings; 0.70 A is below its 0.60×In=0.75 A published 70°C endurance condition. F1 does not open at exactly 1.25 A: its series permits up to 120 s pre-arcing at 2×In and 10–100 ms at 10×In. Its opening time at a real cell fault is not established by the cell's 8 A operating rating. This proposal does not claim single-fault certification or coordinated clearing I²t for every conductor.
 
@@ -68,7 +67,7 @@ For layout/harness integration, qualify holder contacts for **0.70 A normal and 
 
 D3's 5 V standoff allows either polarity of a 4.25 V cell without deliberate shunting; rated clamp is 9.2 V at 43.5 A under its specified pulse conditions. It limits input inductive excursions, not continuous overvoltage; a failed-short D3 relies on F1/cell protection. D2 follows TI's recommended output negative-transient clamp. Its SS14 rating now applies to clamp pulses/leakage, not continuous instrument current. USB isolation is U2's back-to-back FET function; USB remains powered through Pico onboard D1, including when S1 is OFF or U2 is undervoltage-disabled.
 
-The direct eFuse OR path has a finite recovery delay after USB removal. Add C5/C6 rather than relying on tiny ceramic bypass alone: minimum initial combined capacitance is 75.2 µF. At the **typical** 50 µs reverse-block recovery and 0.70 A design current, a simple hold-up estimate is `ΔV = I*t/C + I*ESR ≈ 0.483 V`, leaving about 2.57 V from the minimum cutoff input before other losses. This is a calculated transient margin, not a guaranteed recovery time or seamless switchover. Include the Pico's own capacitance in the 200 µF ceiling. **Pico USB charging of these capacitors bypasses the battery eFuse**: check host-side plug-in current and source-transfer reset behavior; battery soft-start does not establish USB inrush compliance. No polymer capacitor goes on the reversible input.
+The direct eFuse OR path has a finite recovery delay after USB removal. **Stop playing before a source change; a reset/reboot may occur.** Seamless USB/battery transfer is not required for this prototype. C5/C6 polymer hold-up additions are removed from the default build; keep the specified local ceramic bypass only and verify >1 µF effective output capacitance. Include the Pico's own capacitance in the **100 µF** VSYS ceiling. Pico USB charging of that capacitance bypasses the battery eFuse, so battery soft-start does not establish USB plug-in inrush compliance. After changing source, let the instrument restart and settle before playing.
 
 ## Low-battery policy, adopted without firmware changes
 
@@ -92,5 +91,4 @@ Primary sources read on review date:
 - [SCHURTER UMT-H current datasheet](https://www.schurter.com/en/datasheet/typ_UMT-H.pdf) and [variant table](https://www.schurter.com/en/datasheet/UMT-H): exact order number, DC breaking rating, endurance, timing and fuse land/test-board condition. This bulky high-breaking backup is chosen for the prototype rather than inventing a safe interrupt rating for a small fuse.
 - YAGEO exact manufacturer spec sheets: [649 kΩ](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07649KL), [332 kΩ](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL), [1.05 MΩ](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071M05L), [3.32 kΩ](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-073K32L), [100 Ω](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL); PDFs downloaded/read.
 - TDK manufacturer characterization sheets: [4.7 µF X7R](https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/charasheet/c2012x7r1e475k125ab.pdf), [10 nF C0G](https://product.tdk.com/en/system/files/dam/doc/product/capacitor/ceramic/mlcc/charasheet/c1608c0g1h103j080aa.pdf). Nominal ratings read; effective capacitance is not bench-verified.
-- [Panasonic 10SVP47M manufacturer specification](https://industrial.panasonic.com/ww/products/pt/os-con/models/10SVP47M): capacitance/tolerance, ESR, rated voltage, polarity and case.
 - [Littelfuse SMAJ datasheet](https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf), [Vishay SS14](https://www.vishay.com/docs/88746/ss12.pdf), [NKK MN drawing](https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf). Keep previously verified switch/polarity conventions.

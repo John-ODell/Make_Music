@@ -4,7 +4,7 @@
 
 Exact core part candidates below are electrically researched. Unselected interfaces and footprints remain explicitly TBD.
 
-The active exact carrier BOM and pin connections are the table in [branch-protection.md](branch-protection.md). It selects F1 **3403.0275.23**, S1 **MN12SS1W03**, U2 **TPS259474LRPWR**, six specified 0603 resistors, four specified ceramic capacitors and two 10SVP47M polymer hold-up capacitors, D2 **SS14-E3/61T** as a shunt clamp and D3 **SMAJ5.0CA**. The old series D_EXT/PCB D1 is removed. No branch protection part/value is left TBD.
+The active exact carrier BOM and pin connections are the table in [branch-protection.md](branch-protection.md). It selects F1 **3403.0275.23**, S1 **MN12SS1W03**, U2 **TPS259474LRPWR**, six specified 0603 resistors, four specified ceramic capacitors, D2 **SS14-E3/61T** as a shunt clamp and D3 **SMAJ5.0CA**. The old series D_EXT/PCB D1 is removed. No branch protection part/value is left TBD.
 
 | Offboard / interface item | Exact review target | Status |
 |---|---|---|
