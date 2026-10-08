@@ -1,6 +1,6 @@
 # Power candidate and budget comparison
 
-Observed 2026-10-07 (America/Chicago). **Battery/charging choice remains open.** These are published USD retail listing prices, not a factory quotation or purchasing recommendation. Prices/stock can change; taxes, shipping, tariffs, power supplies, cables, carrier parts, assembly and enclosure are excluded unless stated. No parts were ordered, supplier contacted, charger instantiated or battery footprint assigned.
+Observed 2026-10-07 (America/Chicago). **Historical comparison: revision 1 now selects removable protected 18350/external charging. See [current exact-target handoff](rev1-handoff.md) for P1835C2 + L1 at 500 mA and stricter test-report limits.** These are published USD retail listing prices, not a factory quotation or purchasing recommendation. Prices/stock can change; taxes, shipping, tariffs, power supplies, cables, carrier parts, assembly and enclosure are excluded unless stated. No parts were ordered, supplier contacted, charger instantiated or battery footprint assigned.
 
 ## Comparable protected battery candidates
 
