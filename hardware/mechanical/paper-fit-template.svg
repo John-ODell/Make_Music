@@ -3,10 +3,12 @@
 <rect x="-12" y="-37" width="358" height="177" fill="#f8fafc"/>
 <text x="0" y="-30" class="title">Make Music: wider mechanical reservation plan</text>
 <text x="0" y="-24">330 x 120 assumed. 24 mm note bodies + 10 mm gaps = 34 mm pitch. Paper fit test PENDING.</text>
-<text x="0" y="-18" class="small">Top view: origin rear-left; x right, y front. Dashed = 26 mm module reservations; solid blue = 24 mm reference bodies.</text>
+<text x="0" y="-18" class="small">Top view: origin rear-left; x right, y front. Dashed = reservations; blue = 24 mm touch bodies; purple = selected 32 x 14 mm buzzer bodies.</text>
 <rect width="330" height="120" rx="2" fill="white" stroke="#172b40" stroke-width=".5"/>
 <rect x="150" y="15" width="60" height="30" fill="#fcd34d" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
-<text x="180.0" y="30.0" text-anchor="middle" class="small">UNDERSIDE 60 x 30 x 25</text>
+<rect x="157.425" y="19.675" width="45.15" height="20.65" fill="#fde68a" fill-opacity=".6" stroke="#475569" stroke-width=".3" class=""/>
+<text x="180.0" y="30.0" text-anchor="middle" class="small">1095P fit pending</text>
+<text x="180" y="48.5" text-anchor="middle" class="small">Underside reservation 60 x 30 x 25</text>
 <rect x="45" y="10" width="45" height="25" fill="#a7f3d0" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
 <text x="67.5" y="22.5" text-anchor="middle" class="small">GPIO 0-11,14,15; 3V3/GND</text>
 <rect x="109.5" y="0" width="21" height="51" fill="#93c5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class=""/>
@@ -62,10 +64,12 @@
 <text x="133" y="51" class="small">J2.1 / Pico21</text>
 <rect x="110.5" y="8" width="12" height="12" fill="#f9a8d4" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
 <text x="116.5" y="14.0" text-anchor="middle" class="small">BOOT</text>
-<rect x="45" y="42" width="20" height="16" fill="#c4b5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
-<text x="55.0" y="50.0" text-anchor="middle" class="small">Buzzer TBD</text>
-<rect x="75" y="42" width="20" height="16" fill="#c4b5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
-<text x="85.0" y="50.0" text-anchor="middle" class="small">Buzzer TBD</text>
+<rect x="43" y="54" width="36" height="20" fill="#e2e8f0" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<rect x="45" y="56" width="32" height="14" fill="#c4b5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class=""/>
+<text x="61.0" y="63.0" text-anchor="middle" class="small">ST0238: 32 x 14</text>
+<rect x="81" y="54" width="36" height="20" fill="#e2e8f0" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<rect x="83" y="56" width="32" height="14" fill="#c4b5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class=""/>
+<text x="99.0" y="63.0" text-anchor="middle" class="small">ST0238: 32 x 14</text>
 <rect x="170" y="50" width="50" height="10" fill="#cbd5e1" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
 <text x="195.0" y="55.0" text-anchor="middle" class="small">Power / switch TBD</text>
 <text x="138" y="65" class="small">J2 rotated 180 degrees: pad20 at USB; pad1 far end</text>
@@ -115,7 +119,7 @@
 <circle cx="324" cy="114" r="4" fill="none" stroke="#94a3b8" stroke-width=".3"/><circle cx="324" cy="114" r="1.6" fill="white" stroke="#334155" stroke-width=".4"/>
 <path d="M0 122v5 M330 122v5 M0 125H330" class="dim" fill="none"/><text x="165" y="124" text-anchor="middle">330 assumed</text>
 <path d="M332 0h8 M332 120h8 M337 0v120" class="dim" fill="none"/><text x="340" y="60" transform="rotate(90 340 60)" text-anchor="middle">120 assumed</text>
-<path d="M82 83v-7 M92 83v-7 M82 78H92" class="dim" fill="none"/><text x="87" y="75" text-anchor="middle" class="small">10 gap</text>
+<path d="M218 83v-7 M228 83v-7 M218 78H228" class="dim" fill="none"/><text x="223" y="75" text-anchor="middle" class="small">10 gap</text>
 <path d="M70 114v6 M104 114v6 M70 118H104" class="dim" fill="none"/><text x="87" y="117" text-anchor="middle" class="small">34 pitch</text>
 <text x="0" y="134" class="small">No copper / approved outline. Holder compatibility pending measured cell (reserve at least diameter18.7 x length39.3 mm).</text>
 <path d="M225 8v4 M325 8v4 M225 10H325" class="dim" fill="none"/><text x="275" y="17" text-anchor="middle">100 mm scale check - print at 100%</text><text x="275" y="24" text-anchor="middle">PAPER FIT TEST PENDING</text><text x="275" y="30" text-anchor="middle" class="small">24 mm bodies / 34 mm pitch / 10 mm gaps</text></svg>
