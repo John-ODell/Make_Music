@@ -2,6 +2,8 @@
 
 **2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
 
+The [factory assembly and current-limited bring-up record](prototype-validation.md) provides staged tests and a blank measurement table. No bench results are available; qualify reset dwell, 1S fault response and source isolation on the actual assembly.
+
 ## Selected architecture and remaining decisions
 
 User selected removable protected 18350 and external charging for the first design on 2026-10-07. Integrate option A; option B charging circuitry is not populated in this revision. The [revision 1 handoff](rev1-handoff.md) narrows review to P1835C2 and L1 at 500 mA, with explicit evidence gaps; this does not approve holder fit or complete charging compatibility.
@@ -13,6 +15,7 @@ User selected removable protected 18350 and external charging for the first desi
 | Pico | Non-wireless Pico/Pico 2 supported by reviewed interface | Exact model, header sockets, regulator/current validation |
 | Holder/connector | Leave unassigned | Actual protected-cell envelope; two manufacturer length values conflict; connector polarity verified by measurement; B requires reverse-insertion safeguard |
 | Switch behavior | Battery branch off; USB remains on | Decide whether instrument-off during USB needs 3V3_EN pole; current/inrush rating verified |
+| Switch low-load endurance | MN12SS1W03 silver contacts retained | NKK recommends 0.1 A at 2 V minimum; actual idle/startup current and low-load contact endurance remain unverified. Gold logic contacts cannot carry the 0.70 A branch. See prototype-validation.md. |
 | Isolation/protection | TPS259474LRPWR + 1.25 A upstream fuse specified | Integrate exact contract; validate current/reversal/transients on assembled circuit |
 | Onboard USB charging | Deferred to a future revision | B is research only; omit charger IC, charging receptacle and related circuitry from revision 1 |
 | Charge/input/termination/timer settings | Not applicable to carrier revision 1 | Verify external charger against selected cell limits |
@@ -23,7 +26,7 @@ User selected removable protected 18350 and external charging for the first desi
 
 A/B are alternatives, not two battery paths to populate simultaneously. The selected isolated output goes to physical VSYS pin 39; GND uses pin 38 and the ground net. The carrier must not short VBUS pin 40 to VSYS. Module power is pin 36. Only connect a switch to pin 37 if the agreed OFF behavior needs regulator disable. Show existing Pico D1 explicitly in the review, even though it is inside the removable module.
 
-For A require protected-cell/pack terminals, S1 and D_EXT with the cathode to VSYS. For B add U1, dedicated charge input and cell temperature sensing as circuits.md specifies; protected battery output is connected to BAT, OUT passes through S1/D_EXT. Do not make an unreviewed connector-pin-order choice. Footprints for diode/IC/switch must be checked against mechanical drawings during integration, and unresolved components must remain unassigned.
+For the selected A require protected-cell/pack terminals, F1, S1 and U2 with the support parts in branch-protection.md; U2 OUT connects directly to VSYS and the former series D_EXT is removed. D2 is a shunt clamp, cathode to VSYS. For future B add U1, dedicated charge input and cell temperature sensing as circuits.md specifies; protected battery output is connected to BAT, OUT passes through S1/D_EXT. Do not make an unreviewed connector-pin-order choice. Footprints for diode/IC/switch must be checked against mechanical drawings during integration, and unresolved components must remain unassigned.
 
 ## Validation performed for this proposal
 
