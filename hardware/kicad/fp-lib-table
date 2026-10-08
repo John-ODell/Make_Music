@@ -1,4 +1,7 @@
 (fp_lib_table
   (version 7)
   (lib (name "MakeMusic") (type "KiCad") (uri "${KIPRJMOD}/../libraries/MakeMusic.pretty") (options "") (descr "Verified candidate geometry; physical fit and manufacturing review pending"))
+  (lib (name "MakeMusicCarrier") (type "KiCad") (uri "${KIPRJMOD}/MakeMusicCarrier.pretty") (options "") (descr "Carrier connector and power footprints; evidence/release gates in carrier-interfaces.md"))
+  (lib (name "Connector_JST") (type "KiCad") (uri "${KICAD10_FOOTPRINT_DIR}/Connector_JST.pretty") (options "") (descr "Installed KiCad 10 standard JST PH library"))
+  (lib (name "Resistor_SMD") (type "KiCad") (uri "${KICAD10_FOOTPRINT_DIR}/Resistor_SMD.pretty") (options "") (descr "Installed KiCad 10 standard chip-resistor library"))
 )
