@@ -5,8 +5,12 @@ This directory contains the developing design for a battery-powered touch instru
 - [Design requirements and provisional pin allocation](PCB_DESIGN_NOTES.md)
 - [Component arrangement sketch](pcb-layout-concept.svg)
 - [Helper tasks and integration plan](HELPER_TASKS.md)
+- [Factory assembly and budget comparison](ASSEMBLY_BUDGET.md)
+- [Editable KiCad carrier schematic](kicad/README.md)
+- [Mechanical fit proposal](mechanical/README.md)
+- [Battery power alternatives](power/README.md)
 
-Current state: design concept and requirements only. There is no fabrication-ready schematic or PCB yet.
+Current state: an editable provisional carrier schematic, candidate Pico socket footprint, mechanical reservation plan, and researched power alternatives. The complete instrument power circuit and PCB layout are not yet finalized or fabrication-ready.
 
 ## Milestones
 
