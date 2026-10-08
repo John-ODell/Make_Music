@@ -4,7 +4,7 @@
 
 Read PCB_DESIGN_NOTES.md first. Build a two-layer Pico carrier for eight note touch controls and two left-hand modifiers, two passive buzzers, exposed unused GPIOs, a removable Pico in female sockets, and battery power. The SVG is a concept illustration, not a scaled footprint or approved board outline.
 
-Exact Pico version, touch/buzzer module part numbers, battery type and dimensions, charging preference, and final pitch behavior remain unresolved. Preserve the existing firmware pin assignment as the provisional baseline. Label assumptions visibly. Do not invent module pin orders, charger current, battery-holder dimensions, or manufacturing approval.
+Exact Pico version, touch/buzzer module part numbers, battery type and dimensions, charging preference, and final pitch behavior remain unresolved. Preserve the existing firmware pin assignment as the provisional baseline. The user permits firmware changes; adapt confirmed touch polarity in software when appropriate rather than insisting on module hardware changes. User prefers roughly half-to-one finger gaps between keys; 10 mm clear gap / 34 mm center pitch is the current proposal. Factory assembly as much as possible is preferred, with a partial-assembly budget comparison. Label assumptions visibly. Do not invent module pin orders, charger current, battery-holder dimensions, or manufacturing approval.
 
 ## Coordination
 
