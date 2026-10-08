@@ -1,0 +1,7 @@
+# KiCad local UI settings, locks and backups
+*.kicad_prl
+*.lck
+~*.kicad_*
+*-backups/
+*.bak
+__pycache__/
