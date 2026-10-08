@@ -36,7 +36,13 @@ expected.update({('X1', '1'): 'VSYS', ('X1', '2'): 'GND', ('X1', '3'): 'VBUS_USB
 assert actual == expected, f'Connectivity mismatch: {[(k, expected.get(k), actual.get(k)) for k in expected.keys() | actual.keys() if expected.get(k) != actual.get(k)]}'
 components = {comp.attrib['ref']: comp for comp in root.findall('./components/comp')}
 assert set(components) == {f'J{i}' for i in range(1, 16)} | {'X1'}
-assert all(not comp.findtext('footprint') for comp in components.values()), 'Unexpected footprint assignment'
+socket_footprint = 'MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm'
+for ref, comp in components.items():
+    expected_footprint = socket_footprint if ref in {'J1', 'J2'} else ''
+    assert (comp.findtext('footprint') or '') == expected_footprint, f'Unexpected footprint assignment on {ref}: {comp.findtext("footprint")}'
+footprint_path = Path(__file__).resolve().parent.parent / 'libraries' / 'MakeMusic.pretty' / (socket_footprint.split(':', 1)[1] + '.kicad_mod')
+assert footprint_path.is_file(), f'Assigned socket footprint missing: {footprint_path}'
 assert len(root.findall('./nets/net')) == 33
 print('PASS: 40 socket contacts, 12 module interfaces, 16 expansion pins and 3 logical power points.')
-print('PASS: all 95 endpoints match; 30 connected nets and 3 intentional NC nets; no assigned footprints.')
+print('PASS: all 95 endpoints match; 30 connected nets and 3 intentional NC nets.')
+print('PASS: only J1/J2 carry the expected local SSQ candidate footprint; all other footprints unset.')
