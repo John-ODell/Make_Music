@@ -11,4 +11,290 @@
 
 (symbol "Bias_Resistor" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "R" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Bias_Resistor" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "Buzzer reset pull-up; 10k 1% Yageo RC0603FR-0710KL" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "Bias_Resistor_0_1" (rectangle (start -1.27 -2.54) (end 1.27 2.54) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Bias_Resistor_1_1" (pin passive line (at 0 5.08 270) (length 2.54) (name "1" (effects (font (size 0.85 0.85)))) (number "1" (effects (font (size 0.85 0.85)))))(pin passive line (at 0 -5.08 90) (length 2.54) (name "2" (effects (font (size 0.85 0.85)))) (number "2" (effects (font (size 0.85 0.85)))))))
 (symbol "Carrier_Bypass_Capacitor" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "C" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Carrier_Bypass_Capacitor" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "Carrier_Bypass_Capacitor_0_1" (polyline (pts (xy -1.905 0.635)(xy 1.905 0.635)) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy -1.905 -0.635)(xy 1.905 -0.635)) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Carrier_Bypass_Capacitor_1_1" (pin passive line (at 0 3.81 270) (length 3.175) (name "1" (effects (font (size 0.85 0.85)))) (number "1" (effects (font (size 0.85 0.85)))))(pin passive line (at 0 -3.81 90) (length 3.175) (name "2" (effects (font (size 0.85 0.85)))) (number "2" (effects (font (size 0.85 0.85)))))))
+
+(symbol "Power_Resistor" (pin_names (offset 1.016) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "R" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Power_Resistor" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "Nonpolar programming resistor; exact MPN/value in instance" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "Power_Resistor_0_1" (rectangle (start -1.27 -2.54) (end 1.27 2.54) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Power_Resistor_1_1" (pin passive line (at 0 5.08 270) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 0 -5.08 90) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))))
+(symbol "Power_Capacitor" (pin_names (offset 1.016) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "C" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Power_Capacitor" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "Nonpolar ceramic bypass/timing capacitor; exact MPN in instance" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "Power_Capacitor_0_1" (polyline (pts (xy -1.905 0.635)(xy 1.905 0.635)) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy -1.905 -0.635)(xy 1.905 -0.635)) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Power_Capacitor_1_1" (pin passive line (at 0 3.81 270) (length 3.175) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 0 -3.81 90) (length 3.175) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))))
+(symbol "Fuse_UMT_H" (pin_names (offset 1.016) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "F" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Fuse_UMT_H" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "Symmetric backup fuse; carrier convention1 input2 fused output" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "Fuse_UMT_H_0_1" (rectangle (start -2.54 -1.27) (end 2.54 1.27) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy -2.54 0)(xy 2.54 0)) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Fuse_UMT_H_1_1" (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))))
+(symbol "TPS259474LRPWR" (pin_names (offset 1.016))  (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "TPS259474LRPWR" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "TI TPS259474L circuit breaker/latch off; RPW0010A ten physical terminals, IN5/OUT6; no pad11" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "TPS259474LRPWR_0_1" (rectangle (start -20.32 -17.78) (end 20.32 17.78) (stroke (width .254) (type default)) (fill (type background)))) (symbol "TPS259474LRPWR_1_1" (pin power_in line (at -25.4 10.16 0) (length 5.08) (name "IN" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))(pin input line (at -25.4 0 0) (length 5.08) (name "EN/UVLO" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin input line (at -25.4 -10.16 0) (length 5.08) (name "OVLO" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))(pin power_out line (at 25.4 10.16 180) (length 5.08) (name "OUT" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1)))))(pin output line (at 25.4 0 180) (length 5.08) (name "DVDT" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1)))))(pin output line (at 25.4 -10.16 180) (length 5.08) (name "ILM" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1)))))(pin input line (at -10.16 -22.86 90) (length 5.08) (name "PGTH" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))(pin power_in line (at 0 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1)))))(pin open_collector line (at 0 22.86 270) (length 5.08) (name "PG" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))(pin output line (at 10.16 22.86 270) (length 5.08) (name "ITIMER" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1)))))))
+(symbol "D_TVS"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "diode TVS thyrector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "D_TVS_0_1"
+			(polyline
+				(pts
+					(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_TVS_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 )

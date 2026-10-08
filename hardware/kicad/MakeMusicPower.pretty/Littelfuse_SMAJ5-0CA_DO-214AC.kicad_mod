@@ -1,0 +1,11 @@
+(footprint "Littelfuse_SMAJ5-0CA_DO-214AC" (version 20241229) (generator "pcbnew") (layer "F.Cu") (descr "Littelfuse SMAJ datasheet p5 pad basis:I>=1.8,J/L>=2.1,K<=2.3; pads2.1x1.8 gap2.3; CA bidirectional, no cathode band/polarity; numbered circuit1 BAT_SW_PLUS/2GND by carrier. See power-integration.md") (attr smd)
+(property "Reference" "REF**" (at 0 -2.8) (layer "F.SilkS") (effects (font (size 1 1) (thickness .15))))
+(property "Value" "Littelfuse_SMAJ5-0CA_DO-214AC" (at 0 2.8) (layer "F.Fab") (effects (font (size 1 1) (thickness .15))))
+(fp_rect (start -2.3 -1.395) (end 2.3 1.395) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+(fp_rect (start -3.75 -1.9) (end 3.75 1.9) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+(fp_line (start -3.35 -1.55) (end 3.35 -1.55) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+(fp_line (start -3.35 1.55) (end 3.35 1.55) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+(pad "1" smd rect (at -2.2 0) (size 2.1 1.8) (layers "F.Cu" "F.Mask" "F.Paste"))
+(pad "2" smd rect (at 2.2 0) (size 2.1 1.8) (layers "F.Cu" "F.Mask" "F.Paste"))
+
+)

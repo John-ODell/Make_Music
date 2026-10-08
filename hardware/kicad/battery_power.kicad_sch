@@ -1,0 +1,403 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "10.0") (uuid "56d4e208-bd0c-4961-b4ab-e6999b1d8aa3") (paper "A3") (title_block (title "Make Music - fused battery power") (date "2026-10-08") (rev "P4") (company "Prototype review - fit and bench validation pending")) (lib_symbols (symbol "MakeMusic:JST_PH_Battery_Harness" (pin_names (offset 0) (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "H" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "JST_PH_Battery_Harness" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "JST B2B-PH-K-S harness; carrier assignment circuit1 protected positive, circuit2 GND; not direct holder contacts" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "JST_PH_Battery_Harness_0_1" (rectangle (start 0 0) (end 10.16 -8.89) (stroke (width .254) (type default)) (fill (type background)))) (symbol "JST_PH_Battery_Harness_1_1" (pin passive line (at 13.97 -2.54 180) (length 3.81) (name "PROTECTED_PLUS" (effects (font (size 0.85 0.85)))) (number "1" (effects (font (size 0.85 0.85)))))(pin passive line (at 13.97 -7.62 180) (length 3.81) (name "PROTECTED_MINUS" (effects (font (size 0.85 0.85)))) (number "2" (effects (font (size 0.85 0.85)))))))
+(symbol "MakeMusic:Fuse_UMT_H" (pin_names (offset 1.016) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "F" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Fuse_UMT_H" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "Symmetric backup fuse; carrier convention1 input2 fused output" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "Fuse_UMT_H_0_1" (rectangle (start -2.54 -1.27) (end 2.54 1.27) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy -2.54 0)(xy 2.54 0)) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Fuse_UMT_H_1_1" (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))))
+(symbol "MakeMusic:NKK_MN12_Common2" (pin_names (offset 0) (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "S" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "NKK_MN12_Common2" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "NKK MN12 SPDT ON-ON: common2, throws1/3; no internal static connection modeled" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "NKK_MN12_Common2_0_1" (circle (center -1.27 -2.54) (radius 0.35) (stroke (width .254) (type default)) (fill (type none)))(circle (center 2.54 0) (radius 0.35) (stroke (width .254) (type default)) (fill (type none)))(circle (center 2.54 5.08) (radius 0.35) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy -1.27 -2.54)(xy 1.9 0)) (stroke (width .254) (type default)) (fill (type none)))) (symbol "NKK_MN12_Common2_1_1" (pin passive line (at -5.08 -2.54 0) (length 3.81) (name "COM" (effects (font (size 0.85 0.85)))) (number "2" (effects (font (size 0.85 0.85)))))(pin passive line (at 5.08 0 180) (length 2.54) (name "BAT_ON" (effects (font (size 0.85 0.85)))) (number "3" (effects (font (size 0.85 0.85)))))(pin passive line (at 5.08 5.08 180) (length 2.54) (name "BAT_OFF" (effects (font (size 0.85 0.85)))) (number "1" (effects (font (size 0.85 0.85)))))))
+(symbol "MakeMusic:TPS259474LRPWR" (pin_names (offset 1.016))  (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "TPS259474LRPWR" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "TI TPS259474L circuit breaker/latch off; RPW0010A ten physical terminals, IN5/OUT6; no pad11" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "TPS259474LRPWR_0_1" (rectangle (start -20.32 -17.78) (end 20.32 17.78) (stroke (width .254) (type default)) (fill (type background)))) (symbol "TPS259474LRPWR_1_1" (pin power_in line (at -25.4 10.16 0) (length 5.08) (name "IN" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))(pin input line (at -25.4 0 0) (length 5.08) (name "EN/UVLO" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin input line (at -25.4 -10.16 0) (length 5.08) (name "OVLO" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))(pin power_out line (at 25.4 10.16 180) (length 5.08) (name "OUT" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1)))))(pin output line (at 25.4 0 180) (length 5.08) (name "DVDT" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1)))))(pin output line (at 25.4 -10.16 180) (length 5.08) (name "ILM" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1)))))(pin input line (at -10.16 -22.86 90) (length 5.08) (name "PGTH" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))(pin power_in line (at 0 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1)))))(pin open_collector line (at 0 22.86 270) (length 5.08) (name "PG" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))(pin output line (at 10.16 22.86 270) (length 5.08) (name "ITIMER" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1)))))))
+(symbol "MakeMusic:Power_Resistor" (pin_names (offset 1.016) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "R" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Power_Resistor" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "Nonpolar programming resistor; exact MPN/value in instance" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "Power_Resistor_0_1" (rectangle (start -1.27 -2.54) (end 1.27 2.54) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Power_Resistor_1_1" (pin passive line (at 0 5.08 270) (length 2.54) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 0 -5.08 90) (length 2.54) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))))
+(symbol "MakeMusic:Power_Capacitor" (pin_names (offset 1.016) (hide yes)) (pin_numbers (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "C" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "Power_Capacitor" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "Nonpolar ceramic bypass/timing capacitor; exact MPN in instance" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(symbol "Power_Capacitor_0_1" (polyline (pts (xy -1.905 0.635)(xy 1.905 0.635)) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy -1.905 -0.635)(xy 1.905 -0.635)) (stroke (width .254) (type default)) (fill (type none)))) (symbol "Power_Capacitor_1_1" (pin passive line (at 0 3.81 270) (length 3.175) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 0 -3.81 90) (length 3.175) (name "2" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))))
+(symbol "MakeMusic:D_TVS"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "diode TVS thyrector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "D_TVS_0_1"
+			(polyline
+				(pts
+					(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_TVS_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "MakeMusic:SS14_K1_A2" (pin_names (offset 0) (hide yes)) (in_bom yes) (on_board yes) (property "Reference" "D" (at 0 4 0) (effects (font (size 1 1))))(property "Value" "SS14_K1_A2" (at 0 2 0) (effects (font (size 1 1))))(property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))(property "Description" "SS14 Schottky; terminal1=K band, terminal2=A by KiCad convention" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "SS14_K1_A2_0_1" (polyline (pts (xy -1.905 0.635)(xy -1.905 1.27)(xy -1.27 1.27)(xy -1.27 -1.27)(xy -0.635 -1.27)(xy -0.635 -0.635)) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy 1.27 1.27)(xy 1.27 -1.27)(xy -1.27 0)(xy 1.27 1.27)) (stroke (width .254) (type default)) (fill (type none)))(polyline (pts (xy -1.27 0)(xy 1.27 0)) (stroke (width .254) (type default)) (fill (type none)))) (symbol "SS14_K1_A2_1_1" (pin passive line (at -3.81 0 0) (length 2.54) (name "K" (effects (font (size 0.85 0.85)))) (number "1" (effects (font (size 0.85 0.85)))))(pin passive line (at 3.81 0 180) (length 2.54) (name "A" (effects (font (size 0.85 0.85)))) (number "2" (effects (font (size 0.85 0.85)))))))
+(symbol "MakeMusic:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(text "BATTERY BRANCH - FUSED, REVERSE-PROTECTED, EXTERNAL CHARGE ONLY" (at 15 15 0) (effects (font (size 1.5 1.5)) (justify left top)) (uuid "0a6c51bd-08fd-4ae7-8946-9cb5f5aa7ced"))
+(text "Prototype circuit from power PR #18. Physical fit, current, fault transients and source changes require bench validation." (at 15 23 0) (effects (font (size 1 1)) (justify left top)) (uuid "4fc4fbb8-68ac-44ca-873c-4db59ac4e284"))
+(text "ENTRY / BACKUP FUSE / SWITCH / LATCH-OFF eFUSE" (at 15 38 0) (effects (font (size 1.2 1.2)) (justify left top)) (uuid "6b16597e-2101-4993-ae84-7d90dd861490"))
+(symbol (lib_id "MakeMusic:JST_PH_Battery_Harness") (at 40.64 71.12 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "74de205e-ee7b-454c-90ba-bdf51bdac4cd") (property "Reference" "H1" (at 40.64 59.69 0) (effects (font (size 1 1))))(property "Value" "JST PH battery" (at 40.64 63.5 0) (effects (font (size 1 1))))(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" (at 40.64 71.12 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf" (at 40.64 71.12 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "B2B-PH-K-S(LF)(SN)" (at 40.64 71.12 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "H1") (unit 1)))))
+(symbol (lib_id "MakeMusic:Fuse_UMT_H") (at 76.2 73.66 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "336c77c4-892f-4e74-9a4a-0c7a33360779") (property "Reference" "F1" (at 76.2 65.0 0) (effects (font (size 1 1))))(property "Value" "1.25A T" (at 76.2 80.01 0) (effects (font (size 1 1))))(property "Footprint" "MakeMusicPower:Schurter_UMT-H_3403-0275-23" (at 76.2 73.66 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://www.schurter.com/en/datasheet/typ_UMT-H.pdf" (at 76.2 73.66 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "3403.0275.23" (at 76.2 73.66 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "F1") (unit 1)))))
+(symbol (lib_id "MakeMusic:NKK_MN12_Common2") (at 96.52 71.12 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fff96066-99c8-4494-a2c2-a8eca774191f") (property "Reference" "S1" (at 96.52 59.69 0) (effects (font (size 1 1))))(property "Value" "MN12SS1W03" (at 96.52 83.82 0) (effects (font (size 1 1))))(property "Footprint" "MakeMusicCarrier:NKK_MN12SS1W03_TerminalPattern_Candidate" (at 96.52 71.12 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf" (at 96.52 71.12 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "MN12SS1W03" (at 96.52 71.12 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "S1") (unit 1)))))
+(symbol (lib_id "MakeMusic:TPS259474LRPWR") (at 165.1 76.2 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "212f3880-6efe-4f17-b8a9-0c11b7945586") (property "Reference" "U2" (at 165.1 42 0) (effects (font (size 1 1))))(property "Value" "TPS259474LRPWR" (at 165.1 46 0) (effects (font (size 1 1))))(property "Footprint" "MakeMusicPower:TI_RPW0010A_TPS259474_2x2mm" (at 165.1 76.2 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps25947.pdf" (at 165.1 76.2 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "TPS259474LRPWR" (at 165.1 76.2 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "U2") (unit 1)))))
+(wire (pts (xy 54.61 73.66) (xy 71.12 73.66)) (stroke (width 0) (type default)) (uuid "121c5334-e939-459f-a507-fa7e66073057"))
+(label "BAT_PROT_PLUS" (at 54.61 73.66 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "152866c0-5165-45db-aff6-f2148e686d24"))
+(wire (pts (xy 81.28 73.66) (xy 91.44 73.66)) (stroke (width 0) (type default)) (uuid "42d6d529-0c62-496e-b213-42208166f013"))
+(label "BAT_FUSED_PLUS" (at 81.28 73.66 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "8fa7c65b-cac2-4191-9e81-1d7a202da398"))
+(wire (pts (xy 54.61 78.74) (xy 63.5 78.74)) (stroke (width 0) (type default)) (uuid "9f05f247-c74f-490a-b76f-d3df6f6ceb16"))
+(label "GND" (at 63.5 78.74 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "19ce91e2-1c17-42b1-be9a-b05071034f8b"))
+(wire (pts (xy 101.6 71.12) (xy 127 71.12)) (stroke (width 0) (type default)) (uuid "d687e22d-94b5-48ed-9805-892aa39b93e1"))
+(wire (pts (xy 127 71.12) (xy 127 66.04)) (stroke (width 0) (type default)) (uuid "c93b2e66-5411-4e4f-aec7-034ad3a84fc1"))
+(wire (pts (xy 127 66.04) (xy 139.7 66.04)) (stroke (width 0) (type default)) (uuid "9501a410-38d7-4f62-b4d6-e097dbfad3f0"))
+(label "BAT_SW_PLUS" (at 101.6 71.12 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "17c4687c-9f58-4def-8085-7b63ab8e420b"))
+(no_connect (at 101.6 66.04) (uuid "ec638930-83d8-4ab7-856a-3bd862e4c933"))
+(text "OFF:1 NC" (at 102.87 62.23 0) (effects (font (size 0.85 0.85)) (justify left top)) (uuid "dafa6b7b-ba95-47e5-a1b5-4d93a8f96ea5"))
+(wire (pts (xy 139.7 76.2) (xy 127 76.2)) (stroke (width 0) (type default)) (uuid "a2066866-53ce-49c2-a0a0-f9d1870db11f"))
+(label "EN_UVLO" (at 127 76.2 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "e943d34e-b68a-4a5a-a45a-f1acaa77721e"))
+(wire (pts (xy 139.7 86.36) (xy 127 86.36)) (stroke (width 0) (type default)) (uuid "ccb257d9-dfa1-4115-b911-8bf65fa9c9d9"))
+(label "OVLO" (at 127 86.36 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "4e976713-ccc7-4d15-831a-8d78b0104a7d"))
+(wire (pts (xy 190.5 66.04) (xy 220.98 66.04)) (stroke (width 0) (type default)) (uuid "0e7b96dc-f1fe-4667-a049-23c010e0e25b"))
+(hierarchical_label "VSYS" (shape bidirectional) (at 220.98 66.04 0) (effects (font (size 1 1)) (justify left)) (uuid "316693c6-35e7-4f90-a08f-f1a86f732809"))
+(wire (pts (xy 190.5 76.2) (xy 208.28 76.2)) (stroke (width 0) (type default)) (uuid "a5c88660-c2fd-432b-92dc-7b125f732f90"))
+(label "DVDT" (at 208.28 76.2 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "7c05a23c-676e-45a6-acf5-40c3845ace2f"))
+(wire (pts (xy 190.5 86.36) (xy 208.28 86.36)) (stroke (width 0) (type default)) (uuid "3077cb93-44a4-4bec-9109-2d6bf3a3d18d"))
+(label "ILM" (at 208.28 86.36 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "1d26b1de-4344-434e-b6e1-736e2325a43e"))
+(wire (pts (xy 154.94 99.06) (xy 154.94 106.68)) (stroke (width 0) (type default)) (uuid "0c8ce279-9c5c-4576-8653-c96e59e4bac9"))
+(label "GND" (at 154.94 106.68 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "016af4ea-fc38-439e-a593-bafaef22486a"))
+(wire (pts (xy 165.1 99.06) (xy 165.1 106.68)) (stroke (width 0) (type default)) (uuid "d003e5de-f68e-4c0f-9dd2-46064ec235ee"))
+(label "GND" (at 165.1 106.68 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "933c7410-58a3-4e68-a5e0-5418cc946039"))
+(no_connect (at 165.1 53.34) (uuid "46e87bce-aca0-46de-ad93-7cda0ee88027"))
+(no_connect (at 175.26 53.34) (uuid "7bf4c1b7-42a2-4d74-9f15-c9d738ed4d0c"))
+(symbol (lib_id "MakeMusic:PWR_FLAG") (at 127 66.04 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "85df5723-4176-423a-849b-077506c1885b") (property "Reference" "#FLG01" (at 119.38 55.88 0) (effects (font (size 1 1)) (hide yes)))(property "Value" "PWR_FLAG" (at 119.38 59.69 0) (effects (font (size 1 1))))(property "Footprint" "" (at 127 66.04 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 127 66.04 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "#FLG01") (unit 1)))))
+(symbol (lib_id "MakeMusic:PWR_FLAG") (at 165.1 106.68 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "5c66833f-4db3-4d08-aa0e-4d9418477f56") (property "Reference" "#FLG02" (at 177.8 111.76 0) (effects (font (size 1 1)) (hide yes)))(property "Value" "PWR_FLAG" (at 177.8 115.57 0) (effects (font (size 1 1))))(property "Footprint" "" (at 165.1 106.68 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "" (at 165.1 106.68 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "#FLG02") (unit 1)))))
+(text "PG3 / ITIMER10 NC; PGTH4 tied GND. No ground pad11." (at 145 124 0) (effects (font (size 1 1)) (justify left top)) (uuid "0002a0bd-c5a1-4a33-9704-d50c57218351"))
+(text "LOCAL NONPOLAR CERAMICS / SHUNT CLAMPS" (at 238 38 0) (effects (font (size 1.2 1.2)) (justify left top)) (uuid "a9284067-5023-4df3-b802-09c647ae5f4d"))
+(symbol (lib_id "MakeMusic:Power_Capacitor") (at 241.3 80.01 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "94eb3b99-0114-4c04-a271-90349d17a9f2") (property "Reference" "C14" (at 246.3 78.01 0) (effects (font (size 1 1))))(property "Value" "4u7 / 25V" (at 247.3 82.01 0) (effects (font (size 1 1))))(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 241.3 80.01 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB" (at 241.3 80.01 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "C2012X7R1E475K125AB" (at 241.3 80.01 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "C14") (unit 1)))))
+(wire (pts (xy 241.3 76.2) (xy 241.3 71.12)) (stroke (width 0) (type default)) (uuid "e4f9d51e-bada-4579-a87c-aea152a5dab2"))
+(label "VSYS" (at 241.3 71.12 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "3b66c4d0-b401-469c-bf0d-82e3df921db1"))
+(wire (pts (xy 241.3 83.82) (xy 241.3 88.9)) (stroke (width 0) (type default)) (uuid "cb30a17c-822d-4106-939b-5cc81668671f"))
+(label "GND" (at 241.3 88.9 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "11a114c2-5343-491a-a310-e779e1e00faf"))
+(symbol (lib_id "MakeMusic:Power_Capacitor") (at 266.7 80.01 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "55b788bc-b2fc-4305-a18f-bea674b06c6c") (property "Reference" "C16" (at 271.7 78.01 0) (effects (font (size 1 1))))(property "Value" "4u7 / 25V" (at 272.7 82.01 0) (effects (font (size 1 1))))(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 266.7 80.01 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB" (at 266.7 80.01 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "C2012X7R1E475K125AB" (at 266.7 80.01 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "C16") (unit 1)))))
+(wire (pts (xy 266.7 76.2) (xy 266.7 71.12)) (stroke (width 0) (type default)) (uuid "fb5f30eb-1c9e-4125-85ab-aee99b554576"))
+(label "VSYS" (at 266.7 71.12 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "32df6de7-8367-40e6-9ec6-1e7455dad17a"))
+(wire (pts (xy 266.7 83.82) (xy 266.7 88.9)) (stroke (width 0) (type default)) (uuid "acdeb506-f34f-49f5-a7be-fced32ea8cd4"))
+(label "GND" (at 266.7 88.9 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "8d237190-90f2-4d2b-85d0-9851d2789795"))
+(symbol (lib_id "MakeMusic:SS14_K1_A2") (at 299.72 80.01 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a88c54b9-9877-4adf-814b-e598155cacac") (property "Reference" "D2" (at 307.34 76.2 90) (effects (font (size 1 1))))(property "Value" "SS14-E3/61T" (at 312.42 83.82 90) (effects (font (size 1 1))))(property "Footprint" "MakeMusicCarrier:Vishay_SS14_SMA_K1_A2" (at 299.72 80.01 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://www.vishay.com/docs/88746/ss12.pdf" (at 299.72 80.01 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "SS14-E3/61T" (at 299.72 80.01 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "D2") (unit 1)))))
+(wire (pts (xy 299.72 76.2) (xy 299.72 71.12)) (stroke (width 0) (type default)) (uuid "d313216b-7fa9-402b-b1f2-35f49f25215a"))
+(label "VSYS" (at 299.72 71.12 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "58aff0ed-31ee-40bb-9b97-38bd43c10382"))
+(wire (pts (xy 299.72 83.82) (xy 299.72 88.9)) (stroke (width 0) (type default)) (uuid "5ad8fae9-268c-4cbc-a178-078282469d6c"))
+(label "GND" (at 299.72 88.9 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "77a6d859-786b-4954-ad68-0c8856d14417"))
+(text "D2 K1/band=VSYS, A2=GND; output shunt only." (at 238 99 0) (effects (font (size 1 1)) (justify left top)) (uuid "98bcdab9-bbba-4471-b5c0-2c4811abe7d4"))
+(symbol (lib_id "MakeMusic:Power_Capacitor") (at 114.3 113.03 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "280493d2-8492-4dcc-bbf4-22e8e15a55eb") (property "Reference" "C13" (at 119.3 111.03 0) (effects (font (size 1 1))))(property "Value" "4u7 / 25V" (at 120.3 115.03 0) (effects (font (size 1 1))))(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 114.3 113.03 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB" (at 114.3 113.03 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "C2012X7R1E475K125AB" (at 114.3 113.03 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "C13") (unit 1)))))
+(wire (pts (xy 114.3 109.22) (xy 114.3 104.14)) (stroke (width 0) (type default)) (uuid "9ceaaf28-efb6-4a36-85a8-7ed8ce4f31ac"))
+(label "BAT_SW_PLUS" (at 114.3 104.14 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "03374c72-46e1-40da-afbb-bb4e2f30d9b9"))
+(wire (pts (xy 114.3 116.84) (xy 114.3 121.92)) (stroke (width 0) (type default)) (uuid "d3db7a67-9fbb-423b-94d9-305d88079a20"))
+(label "GND" (at 114.3 121.92 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "11302253-0868-4440-871e-35a4066db60c"))
+(symbol (lib_id "MakeMusic:D_TVS") (at 83.82 113.03 270) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2a8a7a8d-5352-4285-ad88-4cb9b7184e96") (property "Reference" "D3" (at 72.39 111.76 90) (effects (font (size 1 1))))(property "Value" "SMAJ5.0CA" (at 69.85 117.0 90) (effects (font (size 1 1))))(property "Footprint" "MakeMusicPower:Littelfuse_SMAJ5-0CA_DO-214AC" (at 83.82 113.03 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf" (at 83.82 113.03 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "SMAJ5.0CA" (at 83.82 113.03 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "D3") (unit 1)))))
+(wire (pts (xy 83.82 109.22) (xy 83.82 104.14)) (stroke (width 0) (type default)) (uuid "325ccf2a-4ea4-4835-ac20-31b7d59720bd"))
+(label "BAT_SW_PLUS" (at 83.82 104.14 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "13c35c53-a3b4-4430-97f8-6f7f81935805"))
+(wire (pts (xy 83.82 116.84) (xy 83.82 121.92)) (stroke (width 0) (type default)) (uuid "f9ca93a6-c9fe-4df2-850d-38537564d044"))
+(label "GND" (at 83.82 121.92 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "b821fae8-0bab-4492-9896-5ef16d00a1dd"))
+(text "D3 CA bidirectional; no cathode polarity. Input clamp." (at 20 132 0) (effects (font (size 1 1)) (justify left top)) (uuid "d4bc5dff-8598-4c21-aa3c-8e2a968f80b0"))
+(text "UVLO DIVIDER" (at 25 137 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "b745568e-0aef-4b84-bdc2-0b668e01351a"))
+(text "OVLO DIVIDER" (at 76 137 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "7b085826-ef82-404d-a890-eb2a1205b449"))
+(text "BREAKER THRESHOLD" (at 130 137 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "53d6173c-a055-42f8-84fe-cec88003ff3d"))
+(text "TURN-ON SLOPE" (at 190 137 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "7f3b0fa1-5adf-480a-83ef-ec5881e199b1"))
+(symbol (lib_id "MakeMusic:Power_Resistor") (at 40.64 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ec5f724e-2724-41c9-a5d2-6fcda1845acf") (property "Reference" "R3" (at 45.64 150.4 0) (effects (font (size 1 1))))(property "Value" "649k" (at 46.64 154.4 0) (effects (font (size 1 1))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 40.64 152.4 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07649KL" (at 40.64 152.4 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "RC0603FR-07649KL" (at 40.64 152.4 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "R3") (unit 1)))))
+(symbol (lib_id "MakeMusic:Power_Resistor") (at 40.64 175.26 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2a19a9b9-f26f-4db4-931c-b8ee4564ffee") (property "Reference" "R4" (at 45.64 173.26 0) (effects (font (size 1 1))))(property "Value" "332k" (at 46.64 177.26 0) (effects (font (size 1 1))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 40.64 175.26 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL" (at 40.64 175.26 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "RC0603FR-07332KL" (at 40.64 175.26 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "R4") (unit 1)))))
+(symbol (lib_id "MakeMusic:Power_Resistor") (at 86.36 152.4 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a688c813-48db-4728-9db0-0d75938b131e") (property "Reference" "R5" (at 91.36 150.4 0) (effects (font (size 1 1))))(property "Value" "1.05M" (at 92.36 154.4 0) (effects (font (size 1 1))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 86.36 152.4 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071M05L" (at 86.36 152.4 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "RC0603FR-071M05L" (at 86.36 152.4 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "R5") (unit 1)))))
+(symbol (lib_id "MakeMusic:Power_Resistor") (at 86.36 175.26 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a64f014e-df66-45b3-aeb2-697e8c9a8fd3") (property "Reference" "R6" (at 91.36 173.26 0) (effects (font (size 1 1))))(property "Value" "332k" (at 92.36 177.26 0) (effects (font (size 1 1))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 86.36 175.26 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL" (at 86.36 175.26 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "RC0603FR-07332KL" (at 86.36 175.26 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "R6") (unit 1)))))
+(symbol (lib_id "MakeMusic:Power_Resistor") (at 139.7 157.48 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "01bde884-4d79-4272-904a-268f82870ea3") (property "Reference" "R7" (at 144.7 155.48 0) (effects (font (size 1 1))))(property "Value" "3.32k" (at 145.7 159.48 0) (effects (font (size 1 1))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 139.7 157.48 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-073K32L" (at 139.7 157.48 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "RC0603FR-073K32L" (at 139.7 157.48 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "R7") (unit 1)))))
+(symbol (lib_id "MakeMusic:Power_Resistor") (at 190.5 154.94 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a23a8b4f-da59-495c-8aa3-7486406cde67") (property "Reference" "R8" (at 190.5 149.86 270) (effects (font (size 1 1))))(property "Value" "100" (at 190.5 161.29 270) (effects (font (size 1 1))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 190.5 154.94 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL" (at 190.5 154.94 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "RC0603FR-07100RL" (at 190.5 154.94 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "R8") (unit 1)))))
+(wire (pts (xy 40.64 147.32) (xy 40.64 142.24)) (stroke (width 0) (type default)) (uuid "64261cd2-acf7-4b0e-b6aa-2914f5bc25d9"))
+(label "BAT_SW_PLUS" (at 40.64 142.24 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "0fc3af09-1554-4cf1-a260-0a0df2bfdfd7"))
+(wire (pts (xy 40.64 157.48) (xy 40.64 161.29)) (stroke (width 0) (type default)) (uuid "625f003f-7b38-4153-b59c-908aa2db2cb7"))
+(wire (pts (xy 40.64 161.29) (xy 40.64 170.18)) (stroke (width 0) (type default)) (uuid "d9e62222-de98-4380-83b3-a424ab2e699c"))
+(label "EN_UVLO" (at 40.64 161.29 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "6fa3f5fa-cf4d-46da-9e8d-183ee6a585d4"))
+(wire (pts (xy 40.64 180.34) (xy 40.64 185.42)) (stroke (width 0) (type default)) (uuid "25c780f3-203e-4888-8a13-163f3bf6657d"))
+(label "GND" (at 40.64 185.42 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "a8579cb3-8077-4c61-b7c4-fea00281a18a"))
+(wire (pts (xy 86.36 147.32) (xy 86.36 142.24)) (stroke (width 0) (type default)) (uuid "4e6f15d9-be34-4d9a-b136-f9a2214caf99"))
+(label "BAT_SW_PLUS" (at 86.36 142.24 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "76e21f0f-0db2-498b-9d54-4028fd3a35cf"))
+(wire (pts (xy 86.36 157.48) (xy 86.36 161.29)) (stroke (width 0) (type default)) (uuid "c1b4898d-6c11-4695-b6ba-3a031b806bfb"))
+(wire (pts (xy 86.36 161.29) (xy 86.36 170.18)) (stroke (width 0) (type default)) (uuid "dc777025-29ba-460f-87ff-a824958d01a0"))
+(label "OVLO" (at 86.36 161.29 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "746f4b4c-e8d1-41d0-8fe2-139ae7bac34a"))
+(wire (pts (xy 86.36 180.34) (xy 86.36 185.42)) (stroke (width 0) (type default)) (uuid "b2ee5e94-e90a-460b-a904-095e716563ba"))
+(label "GND" (at 86.36 185.42 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "9561d88b-d72f-47e4-9352-5675c8ad8dae"))
+(wire (pts (xy 139.7 152.4) (xy 139.7 147.32)) (stroke (width 0) (type default)) (uuid "62bc29ba-1836-42e5-b59f-24be32c05c0a"))
+(label "ILM" (at 139.7 147.32 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "fc46a078-6b9f-459a-b26f-26cbbe139a0f"))
+(wire (pts (xy 139.7 162.56) (xy 139.7 167.64)) (stroke (width 0) (type default)) (uuid "dd493fcc-6c31-4348-9eb6-f219019ddc11"))
+(label "GND" (at 139.7 167.64 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "86413b3d-a7a4-4d44-b762-6b43e4d3ac3e"))
+(wire (pts (xy 185.42 154.94) (xy 175.26 154.94)) (stroke (width 0) (type default)) (uuid "ac4dec03-4821-4e09-b53c-cfb46c445276"))
+(label "DVDT" (at 175.26 154.94 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "72ebfbca-1f62-4225-9086-91ed57d12161"))
+(wire (pts (xy 195.58 154.94) (xy 201.93 154.94)) (stroke (width 0) (type default)) (uuid "47432a7c-aa13-4558-a602-269ad942544c"))
+(wire (pts (xy 201.93 154.94) (xy 210.82 154.94)) (stroke (width 0) (type default)) (uuid "f7433f12-f57e-4dd1-bb1e-0870f809c34e"))
+(label "DVDT_CAP" (at 201.93 154.94 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "0b1ff688-2b82-48bd-a99d-a42e4228c3f4"))
+(wire (pts (xy 210.82 154.94) (xy 210.82 166.37)) (stroke (width 0) (type default)) (uuid "140dabb4-fbbe-4243-8b2e-e0a2beb8b801"))
+(symbol (lib_id "MakeMusic:Power_Capacitor") (at 210.82 170.18 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9c2b7620-b3d1-4aa1-9efd-74188e7d5c91") (property "Reference" "C15" (at 215.82 168.18 0) (effects (font (size 1 1))))(property "Value" "10n / 50V" (at 216.82 172.18 0) (effects (font (size 1 1))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 210.82 170.18 0) (effects (font (size 1 1)) (hide yes)))(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H103J080AA" (at 210.82 170.18 0) (effects (font (size 1 1)) (hide yes)))(property "MPN" "C1608C0G1H103J080AA" (at 210.82 170.18 0) (effects (font (size 1 1)) (hide yes)))(instances (project "make_music" (path "/5995f2d1-432c-44d0-9b47-cbcfcb78564f/651cdef3-5948-45fc-af76-1af6b33bcc1a" (reference "C15") (unit 1)))))
+(wire (pts (xy 210.82 173.99) (xy 210.82 179.07)) (stroke (width 0) (type default)) (uuid "ecaad1f5-05ab-4cbe-aa74-91ecb918335d"))
+(label "GND" (at 210.82 179.07 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "5044789c-c528-47ad-916c-53d8d6903a6f"))
+(wire (pts (xy 210.82 190.5) (xy 220.98 190.5)) (stroke (width 0) (type default)) (uuid "8ac1b97b-7566-443a-be26-fa4ae8c21069"))
+(label "GND" (at 210.82 190.5 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "eb00c3c3-d668-41cc-812c-ba81bd363c72"))
+(hierarchical_label "GND" (shape bidirectional) (at 220.98 190.5 0) (effects (font (size 1 1)) (justify left)) (uuid "4ce82a37-293b-4ddb-a0fd-b5248d7042a1"))
+(text "DESIGN LIMITS: branch <=0.70A; total3V3 <=350mA including Pico / external <=250mA; ambient0-40C." (at 15 204 0) (effects (font (size 1 1)) (justify left top)) (uuid "5427360f-a094-4a33-b138-c2aa3078d799"))
+(text "All VSYS capacitance including Pico <=100uF; effective output ceramics >1uF. No polymer hold-up parts." (at 15 211 0) (effects (font (size 1 1)) (justify left top)) (uuid "4bdb1636-11dd-4027-a735-530101146b83"))
+(text "UVLO nominal3.221V off /3.546V restart at IN; breaker nominal1.004A. Tolerance/1S fault response need bench checks." (at 15 218 0) (effects (font (size 1 1)) (justify left top)) (uuid "afdf9910-c380-4102-be2a-bb3492991c86"))
+(text "Stop playing before USB/battery changes; reboot may occur. S1 OFF / USB removal before service; external cell charging only." (at 15 225 0) (effects (font (size 1 1)) (justify left top)) (uuid "7b563b97-91e9-4b25-b5e0-5e36e0f633fc"))
+(text "F1 first at entry, before branches; 5mm-wide /35um copper approach lands per power contract. Keep unfused harness short/insulated." (at 15 232 0) (effects (font (size 1 1)) (justify left top)) (uuid "9f19c7f5-cf03-40c8-95d9-d40d1488c63a"))
+(text "Local C13 at IN/GND, C14/C16 at OUT/GND; short clamp/control loops. RPW IN5/OUT6 are large power contacts." (at 15 239 0) (effects (font (size 1 1)) (justify left top)) (uuid "3bbaef02-267c-453e-bd11-99c8e637b11e"))
+(text "PWR_FLAGs declare external switched supply and return for ERC only; they do not add hardware or prove live power." (at 15 246 0) (effects (font (size 1 1)) (justify left top)) (uuid "be06c9a5-a73f-47d6-ad37-5022a2372bee"))
+(text "Reviewed candidate footprints and circuit are not fabrication approval. See power-integration.md and power/branch-protection.md." (at 15 253 0) (effects (font (size 1 1)) (justify left top)) (uuid "9aa06aee-3158-415d-8da6-b8a6a3a8aaa3"))
+(embedded_fonts no))

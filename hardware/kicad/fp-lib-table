@@ -4,4 +4,7 @@
   (lib (name "MakeMusicCarrier") (type "KiCad") (uri "${KIPRJMOD}/MakeMusicCarrier.pretty") (options "") (descr "Carrier connector and power footprints; evidence/release gates in carrier-interfaces.md"))
   (lib (name "Connector_JST") (type "KiCad") (uri "${KICAD10_FOOTPRINT_DIR}/Connector_JST.pretty") (options "") (descr "Installed KiCad 10 standard JST PH library"))
   (lib (name "Resistor_SMD") (type "KiCad") (uri "${KICAD10_FOOTPRINT_DIR}/Resistor_SMD.pretty") (options "") (descr "Installed KiCad 10 standard chip-resistor library"))
+  (lib (name "MakeMusicPower") (type "KiCad") (uri "${KIPRJMOD}/MakeMusicPower.pretty") (options "") (descr "Manufacturer-land-based prototype power candidates; see power-integration.md"))
+  (lib (name "Capacitor_SMD") (type "KiCad") (uri "${KICAD10_FOOTPRINT_DIR}/Capacitor_SMD.pretty") (options "") (descr "Installed KiCad 10 standard ceramic-capacitor library"))
+  (lib (name "TestPoint") (type "KiCad") (uri "${KICAD10_FOOTPRINT_DIR}/TestPoint.pretty") (options "") (descr "Installed KiCad 10 bare copper test pads"))
 )
