@@ -1,17 +1,19 @@
 # PM decisions and integration handoff
 
-## Decisions still open
+## Selected architecture and remaining decisions
+
+User selected removable protected 18350 and external charging for the first design on 2026-10-07. Integrate option A; option B charging circuitry is not populated in this revision. Selection of a battery form does not select the candidate cell or approve holder fit.
 
 | Decision | Recommended starting point | Release dependency |
 |---|---|---|
-| Charging | A external charging | User chooses external vs onboard; no charger fitted by default |
-| Battery form | Protected 18350 P1835C2 is a candidate; protected pouch remains possible | Exact cell/lot datasheet, protection thresholds, current limits, recovery and mechanical measurements |
+| Charging | A external charging selected | Verify compatible external charger; no onboard charger in revision 1 |
+| Battery form | Protected 18350 selected; P1835C2 remains an exact-cell candidate | Exact cell/lot datasheet, protection thresholds, current limits, recovery and mechanical measurements |
 | Pico | Non-wireless Pico/Pico 2 supported by reviewed interface | Exact model, header sockets, regulator/current validation |
 | Holder/connector | Leave unassigned | Actual protected-cell envelope; two manufacturer length values conflict; connector polarity verified by measurement; B requires reverse-insertion safeguard |
 | Switch behavior | Battery branch off; USB remains on | Decide whether instrument-off during USB needs 3V3_EN pole; current/inrush rating verified |
 | Isolation loss | Schottky first revision | Measure low-battery margin, leakage and thermal behavior; P-FET improvement can be reviewed later |
-| Onboard USB charging | B dedicated input with BQ24074 | Accept second receptacle or review single-port aggregate USB policy and Pico onboard D1 bypass |
-| Charge/input/termination/timer settings | Charging disabled pending cell | Cell-matched settings with tolerances; entitled USB source current; NTC window and mounting |
+| Onboard USB charging | Deferred to a future revision | B is research only; omit charger IC, charging receptacle and related circuitry from revision 1 |
+| Charge/input/termination/timer settings | Not applicable to carrier revision 1 | Verify external charger against selected cell limits |
 | Module supply and buzzers | Pico 3V3 for compatible modules | TTP223 touch supply supports 3.3 V per merged PM reference; measure full module LED loads, confirm polarity; identify buzzers and review driver if needed |
 | Low battery shutdown | Normal shutdown above protection trip | Chosen endpoint/hysteresis and firmware/hardware policy; protection is a fault boundary |
 

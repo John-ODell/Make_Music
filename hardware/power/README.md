@@ -1,13 +1,14 @@
 # Battery and USB power proposal
 
-Review date: 2026-10-07. Branch: `codex/pcb-power`. **Proposal only; no fabrication release, selected battery, routed PCB, or bench validation.** Only `hardware/power/` is owned by this review. The main KiCad project is untouched.
+Review date: 2026-10-07. **Architecture A selected by the user for the first revision: removable protected 18350 with external charging. Exact cell/holder/charger remain candidates; no fabrication release, routed PCB, or bench validation.** The power circuit still needs integration into the main KiCad project.
 
 ## Recommendation
 
-Start with **A: removable protected conventional 4.2 V-charge single cell, externally charged, switched through a Schottky diode into Pico VSYS**. This follows Raspberry Pi's documented diode OR circuit and preserves an unmodified removable Pico. Keep **B: separate USB charge input + BQ24074 power path + protected cell** as the onboard charging option. The final cell, modules, charger settings and holder remain decisions for the PM.
+Implement **A: removable protected conventional 4.2 V-charge 18350 cell, externally charged, switched through a Schottky diode into Pico VSYS**. This follows Raspberry Pi's documented diode OR circuit and preserves an unmodified removable Pico. **B: separate USB charge input + BQ24074 power path + protected cell** remains reference material for a future revision, not part of the first-revision BOM. Exact cell, holder, switch and compatible external charger still require verification. The Pico USB port is for programming and USB power; it does not charge the battery.
 
 - [Circuit connections and operating states](circuits.md)
 - [Candidate BOM and verification evidence](BOM.md)
+- [Protected battery budget comparison and stronger switch](candidate-comparison.md)
 - [Current and runtime worksheet](current-budget.md)
 - [Open decisions and integration checks](decisions.md)
 

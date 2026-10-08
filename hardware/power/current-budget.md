@@ -25,7 +25,7 @@ Approximate battery-only estimates (not measured runtime):
 - `I_BAT ≈ P_3V3 / (eta_PICO * V_SYS) + I_CHARGER_IDLE + I_OTHER_BAT`. Use measured conversion efficiency at low cell voltage; do not assume it is unity or add measured whole-system input and internal Pico current twice.
 - `runtime_h ≈ usable_capacity_Ah / measured_average_battery_A`. Capacity depends on endpoint, temperature, aging and load; estimate from the selected cell's discharge curve and verify by test.
 
-**Illustration only:** 100 mA total 3V3 load, 3.0 V cell, assumed 0.50 V diode drop, assumed 85% regulator efficiency and zero extra losses gives `I_BAT ≈ 3.3*0.100/(0.85*2.5) = 155 mA`. At 200 mA total it is about 311 mA, already above the candidate 0.3 A switch rating before transients. This demonstrates why selecting a switch from 3V3 current alone is insufficient. The efficiencies, currents and diode drop are calculation inputs, not instrument specifications.
+**Illustration only:** 100 mA total 3V3 load, 3.0 V cell, assumed 0.50 V diode drop, assumed 85% regulator efficiency and zero extra losses gives `I_BAT ≈ 3.3*0.100/(0.85*2.5) = 155 mA`. At 200 mA total it is about 311 mA, already above the original 0.3 A slide-switch rating before transients. This demonstrates why selecting a switch from 3V3 current alone is insufficient. The efficiencies, currents and diode drop are calculation inputs, not instrument specifications.
 
 The [Tontek TTP223-BA6 datasheet](https://www.tontek.com.tw/uploads/product/243/TTP223-BA6_V2.1_EN.pdf) supports 2.0–5.5 V IC supply. Its no-load low-power current at 3 V is 1.5 µA typical / 3 µA maximum; these values exclude the module indicator LED and output load and must not be used as the module budget. Confirm local bypassing on each actual module and test false touches during USB/battery changes, as the datasheet warns about rapidly shifting supplies.
 
@@ -40,3 +40,5 @@ For the unresolved single Pico-port alternative:
 U1's input limit only constrains its own branch. Measure and enforce the aggregate under USB connection, enumeration, suspend, bootloader and charger startup. The optional dedicated charge port does not limit current drawn from a separate Pico programming port; that port also needs its own reviewed module/Pico USB budget.
 
 Record charger worst-case heat at low V_BAT/high V_IN, enclosure temperature, switch/diode temperatures, 3V3 minimum during hot-plug and buzzing, and ripple affecting touch detection. Off current must be measured with switch off, with/without USB, and with the optional charger populated. A BQ-connected cell is not electrically disconnected by S1 after OUT.
+
+The follow-up [comparison](candidate-comparison.md) uses a provisional 1 A input-branch design allowance and a stronger NKK switch candidate. These are sizing assumptions, not measured loads or approval of the rest of the power chain.
