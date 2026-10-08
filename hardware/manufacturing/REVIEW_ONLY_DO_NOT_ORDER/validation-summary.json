@@ -1,0 +1,12 @@
+{
+  "status": "REVIEW ONLY - DO NOT ORDER",
+  "kicad_version": "10.0.6",
+  "erc_violations": 0,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity_issues": 0,
+  "purchased_carrier_parts": 45,
+  "physical_fit_verified": false,
+  "bench_validation_complete": false,
+  "fabrication_release": false
+}

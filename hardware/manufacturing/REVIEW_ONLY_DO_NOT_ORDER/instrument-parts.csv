@@ -1,0 +1,28 @@
+Quantity per instrument,Category,Manufacturer,Part,Status,Assembly scope
+1,Controller,Raspberry Pi,Pico H SC0917,Selected prototype candidate; male/socket engagement untested,User removable insertion after factory carrier assembly
+10,Touch modules,HiLetgo,TTP223-BA6 reference 1915450,User supplied 24x24x7.2 body; actual revision and header termination pending,Factory fixture mounting and adapted module cables
+2,Buzzer modules,SunFounder,ST0238,Selected; 32x14 outline verified; height/header engagement pending,Factory fixture mounting and adapted module cables
+1,Holder,Keystone,1101,Exact solder-lug holder candidate; protected-cell fit and ampacity pending,Factory solder and insulate holder leads with cell absent
+1,Battery plug housing,JST,PHR-2,Manufacturer matched to carrier H1,Factory crimped harness and polarity test
+2,Battery contacts,JST,SPH-002T-P0.5S,Manufacturer matched; AWG24 within insulation range,Factory crimped harness
+0.30 m,Battery wire,Assembler specification,AWG24 red and black stranded,150mm per lead engineering cut allowance; installed length by fit trial,Factory insulated harness and strain relief
+12,Module cable housings,Harwin,M20-1060300,Verified carrier-end candidate; unkeyed orientation control required,Factory twelve 3-wire carrier connectors
+36,Module cable contacts,Harwin,M20-1180046,Verified AWG26-compatible loose tin contact,Factory crimp qualification and harness continuity
+3.60 m,Module cable wire,Assembler specification,AWG26 white red black stranded,100mm per conductor engineering allowance; not measured installed length,Factory twelve adapted module cables
+4,Cassette bolts,Essentra,50M030050P012,Verified M3x12 nylon dimensional candidate,Factory mechanical assembly
+4,Cassette nuts,Essentra,04M030050HNDIN34814,Verified M3 nylon dimensional candidate,Factory mechanical assembly
+8,Cassette washers,Essentra,MFW030A,Verified ID3.2 OD7 thickness0.5 nylon,Factory mechanical assembly
+4,Cassette spacers,Essentra,13ME036,Verified ID3.2 OD8 length3 nylon,Factory mechanical assembly
+1,Cassette,Custom,Insulating 1101 cassette,Proposed 70x36x32; clamp/door details require actual parts,Factory mechanical subassembly after fit validation
+1,Module fixture,Custom,Raised insulating module fixture,Dimensioned proposal pending final actual-part fit,Factory mechanical subassembly after fit validation
+1,Cell,Keeppower,P1835C2,Protected removable candidate; 1101 fit and matched charging qualification pending,Separate cell; user insertion only after tested polarity and branch load
+1 per user,External charger,Keeppower,L1 at 500mA,Candidate; protected-cell bay fit and electrical compatibility pending,Separate external charger; no onboard charging
+9,Fixture bolts,Essentra,50M030050P035,Verified M3x35 nylon dimensional candidate,Factory fixture assembly
+9,Fixture nuts,Essentra,04M030050HNDIN34814,Verified M3 nylon dimensional candidate,Factory fixture assembly
+18,Fixture washers,Essentra,MFW030A,Verified ID3.2 OD7 thickness0.5 nylon,Factory fixture assembly
+9,Fixture spacers,Custom,Acetal OD8 ID3.2 length24mm,Engineering proposal; final height by fit,Factory custom machining and assembly
+24,Keeper bolts,Essentra,50M020040P010,Verified M2x10 nylon dimensional candidate,Factory module retention
+24,Keeper nuts,Essentra,04M020040HN,Verified M2 nylon dimensional candidate,Factory module retention
+48,Keeper washers,Essentra,MFW010A,Verified ID2.2 OD5 thickness0.3 nylon,Factory module retention
+24,Module keepers,Custom,Stepped insulating keeper,20 touch and4 buzzer; pedestal thickness measured per module lot,Factory custom machining and assembly
+4,Corner support feet,Custom,Insulating supports at corner holes,Engineering reservation >=35mm below underside; final fasteners/enclosure pending,Factory mechanical assembly; cell must carry no playing load

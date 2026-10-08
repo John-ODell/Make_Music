@@ -1,0 +1,46 @@
+Reference,Quantity,Manufacturer,MPN,Value,Footprint,Assembly,Side,Datasheet
+C1,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C2,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C3,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C4,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C5,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C6,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C7,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C8,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C9,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C10,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C11,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C12,1,KEMET,C0603C104K5RACTU,100n,MakeMusicCarrier:KEMET_C0603_1608_LevelB,SMT,Top,https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU
+C13,1,TDK,C2012X7R1E475K125AB,4u7 / 25V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB
+C14,1,TDK,C2012X7R1E475K125AB,4u7 / 25V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB
+C15,1,TDK,C1608C0G1H103J080AA,10n / 50V,Capacitor_SMD:C_0603_1608Metric,SMT,Top,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H103J080AA
+C16,1,TDK,C2012X7R1E475K125AB,4u7 / 25V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB
+D2,1,Vishay,SS14-E3/61T,SS14-E3/61T,MakeMusicCarrier:Vishay_SS14_SMA_K1_A2,SMT,Top,https://www.vishay.com/docs/88746/ss12.pdf
+D3,1,Littelfuse,SMAJ5.0CA,SMAJ5.0CA,MakeMusicPower:Littelfuse_SMAJ5-0CA_DO-214AC,SMT,Top,https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf
+F1,1,SCHURTER,3403.0275.23,1.25A T,MakeMusicPower:Schurter_UMT-H_3403-0275-23,SMT,Top,https://www.schurter.com/en/datasheet/typ_UMT-H.pdf
+H1,1,JST,B2B-PH-K-S(LF)(SN),JST PH battery,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,THT,Bottom,https://www.jst-mfg.com/product/pdf/eng/ePH.pdf
+J1,1,Samtec,SSQ-120-01-G-S,LEFT / Pico 1-20,MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm,THT,Top,https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf
+J2,1,Samtec,SSQ-120-01-G-S,RIGHT / Pico 21-40,MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm,THT,Top,https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf
+J3,1,Harwin,M20-9990346,C4 / GP16,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J4,1,Harwin,M20-9990346,D4 / GP17,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J5,1,Harwin,M20-9990346,E4 / GP18,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J6,1,Harwin,M20-9990346,F4 / GP19,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J7,1,Harwin,M20-9990346,G4 / GP20,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J8,1,Harwin,M20-9990346,A4 / GP21,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J9,1,Harwin,M20-9990346,B4 / GP22,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J10,1,Harwin,M20-9990346,C5 / GP26,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J11,1,Harwin,M20-9990346,Semitone up / GP27,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J12,1,Harwin,M20-9990346,Octave up / GP28,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J13,1,Harwin,M20-9990346,Buzzer 1 / PWM / GP13,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J14,1,Harwin,M20-9990346,Buzzer 2 / PWM / GP12,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top,
+J15,1,Harwin,M20-9991646,GPIO / Harwin 16-way,MakeMusicCarrier:Harwin_M20-9991646_1x16_P2.54mm,THT,Top,
+R1,1,Yageo,RC0603FR-0710KL,10k,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+R2,1,Yageo,RC0603FR-0710KL,10k,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+R3,1,Yageo,RC0603FR-07649KL,649k,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07649KL
+R4,1,Yageo,RC0603FR-07332KL,332k,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL
+R5,1,Yageo,RC0603FR-071M05L,1.05M,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071M05L
+R6,1,Yageo,RC0603FR-07332KL,332k,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL
+R7,1,Yageo,RC0603FR-073K32L,3.32k,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-073K32L
+R8,1,Yageo,RC0603FR-07100RL,100,Resistor_SMD:R_0603_1608Metric,SMT,Top,https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL
+S1,1,NKK,MN12SS1W03,MN12SS1W03,MakeMusicCarrier:NKK_MN12SS1W03_TerminalPattern_Candidate,THT,Top,https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf
+U2,1,Texas Instruments,TPS259474LRPWR,TPS259474LRPWR,MakeMusicPower:TI_RPW0010A_TPS259474_2x2mm,SMT,Top,https://www.ti.com/lit/ds/symlink/tps25947.pdf
