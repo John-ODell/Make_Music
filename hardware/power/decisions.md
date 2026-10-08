@@ -1,5 +1,7 @@
 # PM decisions and integration handoff
 
+**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+
 ## Selected architecture and remaining decisions
 
 User selected removable protected 18350 and external charging for the first design on 2026-10-07. Integrate option A; option B charging circuitry is not populated in this revision. The [revision 1 handoff](rev1-handoff.md) narrows review to P1835C2 and L1 at 500 mA, with explicit evidence gaps; this does not approve holder fit or complete charging compatibility.
@@ -11,11 +13,11 @@ User selected removable protected 18350 and external charging for the first desi
 | Pico | Non-wireless Pico/Pico 2 supported by reviewed interface | Exact model, header sockets, regulator/current validation |
 | Holder/connector | Leave unassigned | Actual protected-cell envelope; two manufacturer length values conflict; connector polarity verified by measurement; B requires reverse-insertion safeguard |
 | Switch behavior | Battery branch off; USB remains on | Decide whether instrument-off during USB needs 3V3_EN pole; current/inrush rating verified |
-| Isolation loss | Schottky first revision | Measure low-battery margin, leakage and thermal behavior; P-FET improvement can be reviewed later |
+| Isolation/protection | TPS259474LRPWR + 1.25 A upstream fuse specified | Integrate exact contract; validate current/reversal/transients on assembled circuit |
 | Onboard USB charging | Deferred to a future revision | B is research only; omit charger IC, charging receptacle and related circuitry from revision 1 |
 | Charge/input/termination/timer settings | Not applicable to carrier revision 1 | Verify external charger against selected cell limits |
 | Module supply and buzzers | Pico 3V3 for compatible modules | TTP223 touch supply supports 3.3 V per merged PM reference; measure full module LED loads, confirm polarity; SunFounder ST0238 selected at 3.3 V; driver/load current and peaks still unverified |
-| Low battery shutdown | Normal shutdown above protection trip | Chosen endpoint/hysteresis and firmware/hardware policy; protection is a fault boundary |
+| Low battery shutdown | Hardware UVLO nominal 3.221 V off /3.546 V restart | Adopted in branch-protection.md with tolerances; no firmware ADC changes |
 
 ## Schematic integration instructions
 
