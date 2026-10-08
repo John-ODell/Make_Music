@@ -9,7 +9,7 @@ Status: concept only; not a fabrication-ready schematic or PCB. No existing sour
 - Two passive buzzer modules. Existing firmware drives both at the same pitch; independent pitch operation remains an open choice.
 - Single-cell conventional 4.2 V-charge Li-ion/LiPo battery, protected cell or board-level protection.
 - Power switch and exposed GPIO expansion headers.
-- Touch and buzzer modules retained for the first revision, pending exact module identification.
+- Separate touch and buzzer modules retained for the first revision. The user supplied a HiLetgo TTP223-BA6 touch reference; see [touch module evidence](components/TOUCH_MODULE.md). Actual header orientation, mounting geometry and output configuration remain unverified. Buzzer identification is still pending.
 
 ## Proposed GPIO allocation (existing firmware)
 
