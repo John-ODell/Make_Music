@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="-12 -37 358 358">
+<svg xmlns="http://www.w3.org/2000/svg" width="330mm" height="120mm" viewBox="0 0 330 120">
 <style>text{font:3.4px sans-serif;fill:#172b40}.small{font-size:2.8px}.title{font-size:5px;font-weight:bold}.dim{stroke:#334155;stroke-width:.3}.assumed{stroke-dasharray:2 1}</style>
 <rect x="-12" y="-37" width="358" height="177" fill="#f8fafc"/>
 <text x="0" y="-30" class="title">Make Music: wider mechanical reservation plan</text>
@@ -118,4 +118,4 @@
 <path d="M82 83v-7 M92 83v-7 M82 78H92" class="dim" fill="none"/><text x="87" y="75" text-anchor="middle" class="small">10 gap</text>
 <path d="M70 114v6 M104 114v6 M70 118H104" class="dim" fill="none"/><text x="87" y="117" text-anchor="middle" class="small">34 pitch</text>
 <text x="0" y="134" class="small">No copper / approved outline. Holder compatibility pending measured cell (reserve at least diameter18.7 x length39.3 mm).</text>
-</svg>
+<path d="M225 8v4 M325 8v4 M225 10H325" class="dim" fill="none"/><text x="275" y="17" text-anchor="middle">100 mm scale check - print at 100%</text><text x="275" y="24" text-anchor="middle">PAPER FIT TEST PENDING</text><text x="275" y="30" text-anchor="middle" class="small">24 mm bodies / 34 mm pitch / 10 mm gaps</text></svg>
