@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="-12 -35 300 300">
+<style>text{font:3.4px sans-serif;fill:#172b40}.small{font-size:2.8px}.title{font-size:5px;font-weight:bold}.dim{stroke:#334155;stroke-width:.3} .assumed{stroke-dasharray:2 1}</style>
+<rect x="-12" y="-35" width="300" height="157" fill="#f8fafc"/>
+<text x="0" y="-28" class="title">Make Music: mechanical reservation plan</text>
+<text x="0" y="-22">All dimensions mm. Assumed board/modules/enclosure; no copper or production outline.</text>
+<rect width="272" height="112" rx="2" fill="white" stroke="#172b40" stroke-width=".5"/>
+<rect x="150" y="15" width="60" height="30" fill="#fcd34d" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="180.0" y="30.0" text-anchor="middle" class="small">UNDERSIDE 60 x 30 x 25</text>
+<rect x="45" y="10" width="45" height="25" fill="#a7f3d0" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="67.5" y="22.5" text-anchor="middle" class="small">GPIO 0-11,14,15; 3V3/GND</text>
+<rect x="109.5" y="0" width="21" height="51" fill="#93c5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class=""/>
+<text x="120.0" y="25.5" text-anchor="middle" class="small">Pico 21 x 51</text>
+<rect x="102" y="-18" width="36" height="18" fill="#cbd5e1" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="120.0" y="-9.0" text-anchor="middle" class="small">USB approach: 25 deep</text>
+<text x="139" y="-8" class="small">USB region y=-25..0 (cropped)</text>
+<rect x="109.905" y="-.225" width="2.41" height="51.31" fill="#475569"/>
+<circle cx="111.11" cy="1.30" r=".51" fill="white"/>
+<circle cx="111.11" cy="3.84" r=".51" fill="white"/>
+<circle cx="111.11" cy="6.38" r=".51" fill="white"/>
+<circle cx="111.11" cy="8.92" r=".51" fill="white"/>
+<circle cx="111.11" cy="11.46" r=".51" fill="white"/>
+<circle cx="111.11" cy="14.00" r=".51" fill="white"/>
+<circle cx="111.11" cy="16.54" r=".51" fill="white"/>
+<circle cx="111.11" cy="19.08" r=".51" fill="white"/>
+<circle cx="111.11" cy="21.62" r=".51" fill="white"/>
+<circle cx="111.11" cy="24.16" r=".51" fill="white"/>
+<circle cx="111.11" cy="26.70" r=".51" fill="white"/>
+<circle cx="111.11" cy="29.24" r=".51" fill="white"/>
+<circle cx="111.11" cy="31.78" r=".51" fill="white"/>
+<circle cx="111.11" cy="34.32" r=".51" fill="white"/>
+<circle cx="111.11" cy="36.86" r=".51" fill="white"/>
+<circle cx="111.11" cy="39.40" r=".51" fill="white"/>
+<circle cx="111.11" cy="41.94" r=".51" fill="white"/>
+<circle cx="111.11" cy="44.48" r=".51" fill="white"/>
+<circle cx="111.11" cy="47.02" r=".51" fill="white"/>
+<circle cx="111.11" cy="49.56" r=".51" fill="white"/>
+<rect x="127.68499999999999" y="-.225" width="2.41" height="51.31" fill="#475569"/>
+<circle cx="128.89" cy="1.30" r=".51" fill="white"/>
+<circle cx="128.89" cy="3.84" r=".51" fill="white"/>
+<circle cx="128.89" cy="6.38" r=".51" fill="white"/>
+<circle cx="128.89" cy="8.92" r=".51" fill="white"/>
+<circle cx="128.89" cy="11.46" r=".51" fill="white"/>
+<circle cx="128.89" cy="14.00" r=".51" fill="white"/>
+<circle cx="128.89" cy="16.54" r=".51" fill="white"/>
+<circle cx="128.89" cy="19.08" r=".51" fill="white"/>
+<circle cx="128.89" cy="21.62" r=".51" fill="white"/>
+<circle cx="128.89" cy="24.16" r=".51" fill="white"/>
+<circle cx="128.89" cy="26.70" r=".51" fill="white"/>
+<circle cx="128.89" cy="29.24" r=".51" fill="white"/>
+<circle cx="128.89" cy="31.78" r=".51" fill="white"/>
+<circle cx="128.89" cy="34.32" r=".51" fill="white"/>
+<circle cx="128.89" cy="36.86" r=".51" fill="white"/>
+<circle cx="128.89" cy="39.40" r=".51" fill="white"/>
+<circle cx="128.89" cy="41.94" r=".51" fill="white"/>
+<circle cx="128.89" cy="44.48" r=".51" fill="white"/>
+<circle cx="128.89" cy="47.02" r=".51" fill="white"/>
+<circle cx="128.89" cy="49.56" r=".51" fill="white"/>
+<text x="108" y="4" text-anchor="end" class="small">1</text><text x="133" y="4" class="small">40</text><text x="108" y="50" text-anchor="end" class="small">20</text><text x="133" y="50" class="small">21</text>
+<rect x="110.5" y="8" width="12" height="12" fill="#f9a8d4" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="116.5" y="14.0" text-anchor="middle" class="small">BOOT</text>
+<rect x="45" y="42" width="20" height="16" fill="#c4b5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="55.0" y="50.0" text-anchor="middle" class="small">Buzzer TBD</text>
+<rect x="75" y="42" width="20" height="16" fill="#c4b5fd" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="85.0" y="50.0" text-anchor="middle" class="small">Buzzer TBD</text>
+<rect x="170" y="50" width="50" height="10" fill="#cbd5e1" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="195.0" y="55.0" text-anchor="middle" class="small">Power / switch TBD</text>
+<rect x="39" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="52.0" y="90.0" text-anchor="middle" class="small">C4</text>
+<text x="52" y="109" text-anchor="middle" class="small">x=52</text>
+<rect x="67" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="80.0" y="90.0" text-anchor="middle" class="small">D4</text>
+<text x="80" y="109" text-anchor="middle" class="small">x=80</text>
+<rect x="95" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="108.0" y="90.0" text-anchor="middle" class="small">E4</text>
+<text x="108" y="109" text-anchor="middle" class="small">x=108</text>
+<rect x="123" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="136.0" y="90.0" text-anchor="middle" class="small">F4</text>
+<text x="136" y="109" text-anchor="middle" class="small">x=136</text>
+<rect x="151" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="164.0" y="90.0" text-anchor="middle" class="small">G4</text>
+<text x="164" y="109" text-anchor="middle" class="small">x=164</text>
+<rect x="179" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="192.0" y="90.0" text-anchor="middle" class="small">A4</text>
+<text x="192" y="109" text-anchor="middle" class="small">x=192</text>
+<rect x="207" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="220.0" y="90.0" text-anchor="middle" class="small">B4</text>
+<text x="220" y="109" text-anchor="middle" class="small">x=220</text>
+<rect x="235" y="77" width="26" height="26" fill="#bfdbfe" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="248.0" y="90.0" text-anchor="middle" class="small">C5</text>
+<text x="248" y="109" text-anchor="middle" class="small">x=248</text>
+<rect x="9" y="41" width="26" height="26" fill="#fbcfe8" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="22.0" y="54.0" text-anchor="middle" class="small">Semitone +</text>
+<rect x="9" y="77" width="26" height="26" fill="#fbcfe8" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
+<text x="22.0" y="90.0" text-anchor="middle" class="small">Octave +</text>
+<text x="20" y="33" text-anchor="middle">LEFT HAND</text>
+<circle cx="6" cy="6" r="4" fill="none" stroke="#94a3b8" stroke-width=".3"/><circle cx="6" cy="6" r="1.6" fill="white" stroke="#334155" stroke-width=".4"/>
+<circle cx="266" cy="6" r="4" fill="none" stroke="#94a3b8" stroke-width=".3"/><circle cx="266" cy="6" r="1.6" fill="white" stroke="#334155" stroke-width=".4"/>
+<circle cx="6" cy="106" r="4" fill="none" stroke="#94a3b8" stroke-width=".3"/><circle cx="6" cy="106" r="1.6" fill="white" stroke="#334155" stroke-width=".4"/>
+<circle cx="266" cy="106" r="4" fill="none" stroke="#94a3b8" stroke-width=".3"/><circle cx="266" cy="106" r="1.6" fill="white" stroke="#334155" stroke-width=".4"/>
+<path d="M0 114v5 M272 114v5 M0 117H272" class="dim" fill="none"/><text x="136" y="116" text-anchor="middle">272 assumed</text>
+<path d="M274 0h8 M274 112h8 M279 0v112" class="dim" fill="none"/><text x="281" y="56" transform="rotate(90 281 56)" text-anchor="middle">112 assumed</text>
+<text x="0" y="-16" class="small">Top view, origin rear-left; x right, y front. Dashed = assumed reservation.</text>
+<text x="138" y="72" class="small">Socket rows 17.78; pitch 2.54; span 48.26</text>
+</svg>
