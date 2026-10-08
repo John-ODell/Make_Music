@@ -1,5 +1,7 @@
 # Revision 1 power integration handoff
 
+**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+
 Reviewed 2026-10-07 against origin/master including PRs #10 and #11. User selected removable protected 18350 with external charging. **Exact review targets: Keeppower P1835C2 cell and Keeppower L1 external charger at 500 mA. Electrical ratings support this candidate pairing subject to the gaps below; neither physical fit nor complete charging compatibility has been verified.** No onboard charging parts belong in revision 1.
 
 ## Exact cell and external charger
@@ -18,37 +20,19 @@ Sources: [Keeppower China cell page](https://www.keeppower.com.cn/products_detai
 
 ## Connection contract for schematic helper
 
-```text
-P1835C2 protected + -> HOLDER_PLUS -> BAT_PROT_PLUS -> S1 common 2
-S1 throw 3 -> BAT_SW_PLUS -> D_EXT anode
-S1 throw 1 -> unconnected (OFF)
-D_EXT cathode/band -> VSYS -> J2.19 -> Pico physical 39
-P1835C2 protected - -> HOLDER_MINUS -> GND -> J2.18 / other GND
-Pico USB -> onboard D1 -> VSYS (inside removable Pico)
-J2.20 / physical 40 -> VBUS_USB (existing separate net)
-J2.16 / physical 36 -> 3V3_OUT -> module/expansion supplies
-J2.17 / physical 37 -> retain current NC (Pico internal enable default)
-```
-
-S1 is NKK **MN12SS1W03**, SPDT ON–ON, manufacturer common terminal 2; verify symbol numbering against the drawing rather than assuming a generic SW_SPDT symbol has this map. The unconnected throw creates battery OFF. Mechanical orientation/label positions follow the manufacturer's keyway drawing and actual mounting. Rating: 4 A at 30 VDC resistive; capacitive inrush remains a separate check. D_EXT is Vishay **SS14-E3/61T**, SMA/DO-214AC, 40 V / 1 A under datasheet thermal conditions. Cathode faces VSYS. See [NKK drawing](https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf) and [Vishay datasheet](https://www.vishay.com/docs/88746/ss12.pdf).
-
-Replace logical X1 with these real parts; X1 is not a physical three-pin connector. Preserve VBUS_USB separately; add no carrier bridge to VSYS, cell or 3V3_OUT. Existing Pico D1 and regulator stay inside the module. Carrier holder pad numbers are **not assigned** by this contract: mechanical helper must establish actual plus/minus pads and verify contacts before mapping. Battery negative is the protected assembly's external negative, never a bypass connection to its internal cell.
-
-Battery-only uses D_EXT; nominal USB power uses Pico D1. Both may be connected with finite diode leakage. S1 OFF disconnects the battery branch but USB still powers the instrument. Pico USB does not charge the cell. If full OFF with USB attached is wanted, PM must authorize a revised enable/switch circuit. Disconnect USB and switch OFF before removing/inserting the cell or Pico. Remove the cell for external charging; no charger leads attach to the carrier.
-
-After integration update the schematic helper's connectivity checker to replace its three logical X1 endpoints with the actual power endpoints. Preserve all socket mappings and intentional NC contacts. Run integrated ERC and review the source paths; an ERC pass does not certify load limits, polarity or fit. This helper has not edited KiCad or run integrated ERC.
+The basic branch was integrated in PR #14. For the next revision use [branch-protection.md](branch-protection.md) and [branch-endpoints.csv](branch-endpoints.csv): fuse before S1, TPS259474LRPWR after S1, U2 OUT directly to VSYS, carrier series diode removed. The complete support-part pin map and current/voltage limits are defined there. Preserve the socket power mappings and Pico's onboard USB diode. USB remains on with the battery switch OFF; external charging remains off-board.
 
 ## Holder and load handoff
 
-Keep the largest previously observed manufacturer tolerance envelope, **39.3 mm length × 18.7 mm diameter**, as a lower planning bound. Public dimensional snapshots conflict; add verified contact travel, insertion and insulation clearances rather than treating this as a footprint or measured fit. Keystone 1095/1096 remain mechanical candidates, not approved P1835C2 holders. Mechanical helper owns exact holder, pad polarity, footprint, underside mounting, retention, reverse-insertion handling and charger-bay fit evidence. Existing enclosure reservations are provisional.
+Keep the largest previously observed manufacturer tolerance envelope, **39.3 mm length × 18.7 mm diameter**, as a lower planning bound. Public dimensional snapshots conflict; add verified contact travel, insertion and insulation clearances rather than treating this as a footprint or measured fit. PM now approves an offboard Keystone 1101 candidate in an insulated underside cassette with a factory-assembled JST-PH harness, not exact protected-cell fit certification. The withdrawn 1095P footprint is not usable. Mechanical helper owns exact holder, pad polarity, footprint, underside mounting, retention, reverse-insertion handling and charger-bay fit evidence. Existing enclosure reservations are provisional.
 
 SunFounder **ST0238**, two modules, is now selected; its documented 3.3 V supply is appropriate for the intended 3V3_OUT rail. Actual idle, PWM, startup and simultaneous peak current remain unknown, including its onboard driver. Active-low behavior needs the module/firmware integration review. Do not replace unknown current with bare-buzzer or touch-IC current. See [buzzer evidence](../components/BUZZER_MODULE.md) and [current worksheet](current-budget.md).
 
-The provisional 1 A input allowance is a sizing assumption, not consumption or a current limiter. SS14 thermal/headroom checks and Pico regulator validation remain necessary. An 8 A cell operating rating does not protect a 1 A diode or establish PCM fault cutoff: obtain PCM trip/recovery data and coordinate a branch fuse or other current limit with holder, switch, wiring and diode before fabrication. No fuse MPN/rating is assigned without those limits and measured inrush. Choose a normal low-battery shutdown above the cell's 2.5 V fault boundary. No runtime promise is supported.
+Active design limits and exact fuse/eFuse, reverse-insertion mitigation and normal hardware low-battery policy are now set in branch-protection.md. Cell PCM trip data remains unknown, without deferring downstream branch protection. No runtime promise is supported.
 
 ## PM decisions still required
 
 - Approve current-lot cell/charger limits, termination, temperature policy and protection recovery; current documents do not fully establish compatibility.
-- Select and verify holder, polarity/reverse-insertion mitigation, contact rating and fit; determine branch fault protection.
-- Decide USB-connected OFF behavior, exact Pico model, low-battery endpoint and expansion budget.
+- Verify holder ampacity against the chosen branch limits, harness polarity and fit; implement the selected fuse/eFuse protection.
+- Preserve battery-only OFF behavior and adopted hardware UVLO; confirm exact Pico and constrain expansion within the selected budget.
 - Measure full instrument load and hot-plug behavior, then complete integrated electrical and mechanical checks before routing/fabrication release.

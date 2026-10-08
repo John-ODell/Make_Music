@@ -1,5 +1,7 @@
 # Proposed circuit connections
 
+**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+
 These editable text drawings specify functional connections. Connector numbering and final footprints are intentionally not assigned. `|>|` means anode on the left, cathode/bar on the right. Use a **protected cell/pack output** for BAT_PROT+ and GND; never bypass its protection by grounding an internal cell negative terminal.
 
 ## A — external charging, baseline
