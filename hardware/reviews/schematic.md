@@ -1,14 +1,14 @@
-# Schematic review - provisional carrier P3
+# Schematic review - prototype carrier P4
 
-Reviewed 2026-10-08 using KiCad CLI 10.0.6. This assignment is complete as a provisional editable carrier schematic, with a readable A3 PDF; the integrated instrument is not ready for fabrication.
+Reviewed 2026-10-08 using KiCad CLI 10.0.6. This assignment is complete as a provisional editable carrier schematic, with a readable two-page A3 PDF; the integrated instrument is not ready for fabrication.
 
 ## Delivered
 
-Native project/schematic, local symbols and socket/carrier footprint libraries, physical socket CSV, reproducible connectivity check, and readable A3 `schematic-review.pdf`. P3 adds carrier cable/expansion header footprints, a physical JST battery harness connector, switch/diode candidate footprints, two buzzer reset pull-ups and twelve header bypass capacitors. The existing PM PCB draft and project settings are preserved; PM must update PCB from this schematic before further placement/DRC. No manufacturing export or firmware edits are included in this PR.
+Native root/child schematics, local symbols and socket/carrier/power footprint libraries, physical socket CSV, reproducible connectivity checker and two-page A3 `schematic-review.pdf`. P4 implements the merged power contract: upstream fuse, TPS259474L protection, divider/current/turn-on parts, ceramic bypass and shunt clamps. It removes carrier series D1, adds TP1's 2mm test pad, and preserves every instrument/expansion/reset-bias/header-bypass assignment. Pico H SC0917 is the selected prototype module. All 46 physical components have assigned native footprints. The PM must update PCB from this root schematic; PCB/project settings and firmware are unchanged. No manufacturing exports are included.
 
 ## Verified socket mapping
 
-Checked the official Raspberry Pi Pico and Pico 2 datasheets, Figure 2 pin allocation (printed page 4 in both), against every entry in `pico-socket-map.csv`. Both non-wireless models have the same relevant 40-pin header mapping. The exact fitted model remains a user decision.
+Checked the official Raspberry Pi Pico and Pico 2 datasheets, Figure 2 pin allocation (printed page 4 in both), against every entry in `pico-socket-map.csv`. Both non-wireless models have the same relevant 40-pin header mapping. The PM selected original non-wireless RP2040 Pico H SC0917 with manufacturer-fitted male headers as the default prototype. The original Pico datasheet ordering table confirms SC0917. Model selection is resolved; actual socket engagement still needs cold-fit verification.
 
 The two physical 1x20 female sockets are J1 and J2, each with local numbers 1-20, rather than an SMT Pico footprint or a duplicate module with nonexistent carrier pads:
 
@@ -60,43 +60,48 @@ Confirm module supply decoupling and measured latency/current, including indicat
 
 ## Power and footprint integration
 
-P3 preserves the existing Option A switch/diode path from [rev1-handoff.md](../power/rev1-handoff.md). H1 now represents physical JST B2B-PH-K-S(LF)(SN), matching the PM-approved off-board wired 1101 cassette proposal, rather than logical holder '+'/'-' contacts. Circuit 1=BAT_PROT_PLUS, circuit 2=GND; the connector convention is ours, not a universal JST battery polarity. The installed native Connector_JST footprint was checked against the JST mounting-surface view and circuit 1 mark. PM places it with KiCad Flip on the underside, outside the cassette with plug/wire/service clearance. No direct holder holes or inferred cell-fit approval are introduced. The holder harness is a separately factory-assembled/tested subassembly; exact cell/holder cold fit remains pending.
+P4 implements [branch-protection.md](../power/branch-protection.md) and all41 CSV endpoints on the native `battery_power.kicad_sch` child sheet. H1 remains the physical JST B2B-PH-K-S(LF)(SN) for the off-board wired1101 cassette. Circuit1=BAT_PROT_PLUS, circuit2=GND is the project's convention. Place H1 underneath using KiCad Flip, outside the cassette with plug/wire/service clearance. The factory-assembled harness and protected-cell fit still need continuity/polarity/cold-fit inspection; no holder holes are added.
 
 | Endpoint | Carrier net / role |
 |---|---|
-| H1 circuit 1 | BAT_PROT_PLUS: protected assembly external positive |
-| H1 circuit 2 | GND: protected assembly external negative |
-| S1 terminal 2 | BAT_PROT_PLUS, manufacturer common |
-| S1 terminal 3 | BAT_SW_PLUS, battery ON throw |
-| S1 terminal 1 | Intentional NC, battery OFF throw |
-| D1 terminal 2/A | BAT_SW_PLUS, diode anode |
-| D1 terminal 1/K | VSYS, banded cathode -> J2.19/Pico physical 39 |
-| TP1 terminal 1 | VBUS_USB only -> J2.20/Pico physical 40 |
+| H1.1 /F1.1 | BAT_PROT_PLUS, protected external positive |
+| F1.2 /S1.2 common | BAT_FUSED_PLUS |
+| S1.3 /U2.5 IN | BAT_SW_PLUS |
+| S1.1 | NC, battery OFF throw |
+| U2.6 OUT /D2.1 K | VSYS -> J2.19/Pico39 |
+| U2.8 /D2.2 A /H1.2 | GND |
+| D3.1 /D3.2 | BAT_SW_PLUS /GND, bidirectional SMAJ5.0CA |
+| U2.4 PGTH | GND |
+| U2.3 PG /U2.10 ITIMER | Explicit NC |
+| TP1.1 | VBUS_USB only -> J2.20/Pico40 |
 
-S1 is NKK MN12SS1W03, with a local straight PC03 terminal-pattern candidate: common 2, ON 3, OFF 1. D1 is SS14-E3/61T with local manufacturer-land-based SMA candidate: banded K1 to VSYS, A2 to battery switch. JST H1 and Yageo resistors use installed KiCad 10 libraries. All other newly assigned carrier footprints are project-local. See [dimensional evidence/release limits](../kicad/carrier-interfaces.md) for exact coordinates, source pages and distinction between manufacturer dimensions and engineering pad/courtyard choices. NKK exact 03 case/bushing/lever fit remains open; the case outline is explicitly a reference.
+Power-document R1–R6 map to native R3–R8; power C1–C4 map to C13–C16. Existing buzzer R1/R2 and header C1–C12 retain their values/nets. The removed power-document polymer C5/C6 are not the native C5/C6 header capacitors. Carrier series D1 is deleted; D2 now uses the reviewed SS14 footprint as a shunt clamp. U2 has10 pins, including power lands5/6, and no pad11. [Native power integration](../kicad/power-integration.md) records every value/MPN/connection, actual TI L-shaped copper/anchor/centroid interpretation, stencil example, manufacturer fuse/TVS pattern and registered footprints. S1 retains the reviewed NKK straight PC03 terminal candidate; exact case/panel fit remains open. TP1 uses TestPoint_Pad_D2.0mm and is excluded from BOM.
 
-VBUS_USB, BAT_PROT_PLUS, BAT_SW_PLUS, VSYS and 3V3_OUT remain distinct. TP1 footprint is still unset and is only VBUS measurement access. Pico's USB diode and regulator remain external and unmodeled. Battery OFF still permits USB operation; remove the cell for external charging, with no onboard charger. No withdrawn 1095P footprint or electrical pad interpretation is used.
+Only VSYS/GND cross hierarchical ports; branch control/input nets are private under `/Battery protection/`. H1/S1 retain their symbol UUIDs but acquire the new child path. Check the PM PCB update for relocated hierarchy matches and removal of old D1. The checker strips the hierarchy prefix for contract comparison and rejects disjoint nets sharing a contract basename.
 
-**Branch fault protection remains unresolved in P3.** The PM has requested a subsequent integration from the power helper's incoming verified eFuse/fuse contract; that replacement is deliberately outside this focused connector/bias PR. Protected-cell PCM/recovery thresholds, reverse insertion, thermal/headroom/load/inrush and actual protected-cell/1101 fit still require evidence/testing. P1835C2 and L1 at 500 mA remain review targets rather than approved purchase/fit/charging selections.
+The selected circuit provides hardware UVLO and latched overload disconnect. Adopted limits are ≤0.70A battery branch, ≤350mA total3V3 including Pico, ≤250mA external3V3, ≤100µF totalVSYS capacitance including Pico, ambient0–40°C and resistor local temperature≤70°C. Nominal UVLO is3.221V disconnect/3.546V restart at U2 IN and nominal breaker threshold1.004A; published extrema/coordination remain in the power review. Output ceramics must provide >1µF effective. F1 is upstream backup and USB supply bypasses the battery eFuse. Stop playing before a source change; reboot is acceptable, then let the instrument restart/settle. Battery OFF permits USB operation; remove the cell for external charging. Assembly-specific fault response, PCM/recovery, reverse input, thermal/headroom/load/inrush and actual protected-cell/1101 fit remain bench gates. P1835C2 and L1 at500mA remain review targets.
 
 ## Actual validation and limits
 
-- KiCad CLI 10.0.6 ERC with `--severity-all --exit-code-violations --format json`: exit 0, **0 errors, 0 warnings, 0 excluded violations**. No explicit ERC exclusions or PWR_FLAG symbols. Ordinary ignored/default rule categories do not establish component suitability.
-- Fresh native XML export passes `verify_connectivity.py`: **128 endpoints**, comprising 40 socket,36 cable-header,16 expansion,8 power/test and28 resistor/capacitor contacts. Exactly 32 connected nets plus 4 intentional NC records. Every original GPIO/socket/ground/NC assignment is preserved. Checks include diode K1/A2, switch common/throws, H1 circuits/polarity, GP13/12 bias, all 12 caps, exact carrier-header/R/C/H1 MPNs/values/associations and assigned footprint files/pad numbers. TP1 stays unset.
-- Negative temporary-netlist checks reject reversed H1 polarity, a pull-up on the wrong GPIO, a capacitor on battery voltage, wrong reset resistance, missing bypass, reversed diode roles, a battery-to-VBUS bridge and an incorrect assigned footprint. Generated netlists/logs remain outside the repository.
-- The updated A3 PDF raster was visually inspected: socket numbers, header roles, physical H1 contact numbers, switch/diode polarity, reset bias, cap rails and provisional notes are readable without overlap/clipping. Manufacturer source diagrams and exported footprint previews were visually inspected as documented in the carrier contract.
-- This PR leaves `make_music.kicad_pcb`, `PCB_STATUS.md` and `make_music.kicad_pro` unchanged. No PCB DRC or netlist-to-board agreement is claimed for this newer schematic; PM must update the existing PCB and run those checks.
+- KiCad CLI10.0.6 root ERC, `--severity-all --exit-code-violations --format json`: exit0, **0 errors, 0 warnings, 0 excluded violations** across both sheets. Two nonphysical PWR_FLAG symbols declare external switched-battery power and ground; there are no explicit ERC exclusions.
+- Fresh native XML passes `verify_connectivity.py`: **162 physical endpoints /46 components /38 connected nets /6 intentional NC nets**. All41 mapped power endpoints, U2 pin roles/electrical types, component values/MPNs, every original GPIO/socket/ground/NC/bias/bypass assignment, and all46 footprint files/pad-number sets are checked. Neither carrier D1 nor U2 pad11 is present.
+- Eleven temporary negative netlists are rejected for swapped U2 IN/OUT, floating PGTH, extra U2.11, restored carrier D1, incorrect ILM resistance, polymer substitution, reversed DVDT damping endpoints, overwritten buzzer bias, battery-to-VBUS bridge disjoint hierarchical VSYS nets and an incorrect passive U2 power-input type. Generated test inputs/reports remain outside the repository.
+- Both final A3 PDF pages were rasterized and visually inspected. Custom RPW copper/paste, UMT-H fuse and bidirectional TVS previews were inspected; TI/fuse drawings and exact coordinate evidence are recorded in the power contract.
+- An isolated native PCB fixture with all14 U2/F1/D3 copper pads on distinct nets passes DRC at **0.15mm clearance/minimum:0 violations,0 unconnected items**. It checks the custom pad geometry, not the integrated carrier board. Minimum RPW copper gap is0.20mm; requested0.15mm local rules are required for these pads rather than the general0.25mm default.
+- `make_music.kicad_pcb`, `PCB_STATUS.md` and `make_music.kicad_pro` are unchanged. No integrated PCB DRC or schematic-to-board agreement is claimed; PM must synchronize/place/route and run those checks.
 
-All carrier contacts/passives have passive electrical pin types. Pico sourcing/regulation, module drivers/output configuration and cell PCM are external and unmodeled. ERC cannot determine voltage/current compatibility, load budget, startup behavior, cable polarity or protection coordination. Passing ERC verifies this connection drawing only.
+U2 uses input/open-collector/power-input/power-output/output pin types from its functions; other carrier contacts/passives remain passive. Pico regulation, module drivers and cell PCM are external and unmodeled. ERC cannot establish voltage/current compatibility, load/inrush, cable polarity, actual protection timing or thermal/fit suitability.
+
+The merged [staged assembly/bench procedure](../power/prototype-validation.md) applies using the native references above. After overload, remove the fault and USB, then keep S1 OFF until IN/enable discharge below the reset thresholds; measure the required OFF dwell. No measured results or immediate-reset promise is added by this schematic.
 
 ## Remaining integration gates
 
-1. Confirm exact Pico/male headers, socket engagement, finished holes and USB/BOOTSEL/insertion clearances; preserve J1 pad 1/J2 pad 20 at USB.
-2. Verify actual touch revision/polarity/direct mode, physical label-to-cable mapping, response latency/current, cable noise and far-end bypass; PM owns firmware adaptation.
-3. Verify delivered ST0238 revision, mapped cable, HIGH idle/reset silence, PWM response/current and module mounting geometry. Select mating female Harwin cable parts and cable length/strain relief; avoid reversed/unkeyed connections.
-4. Complete measured 3V3 load/inrush budget including Pico, ten touch modules, two drivers, added bias and expansion. Pico 2 guidance recommends external load below 300 mA; available current also depends on VSYS/Pico consumption.
-5. Integrate the verified branch-protection replacement; validate reverse insertion, cell/charger compatibility, actual 1101 fit, harness continuity/polarity, switch exact case/panel fit, thermal/headroom and low-battery/hot-plug behavior.
-6. Update PM PCB from schematic, place local bypass/reset parts and underside H1, finish TP1, actual module/holder clearances, routing, final ERC/DRC and visual/mechanical review. No fabrication release yet.
+1. Cold-fit the selected Pico H SC0917 male headers/socket engagement, finished holes and USB/BOOTSEL/insertion clearances; preserve J1 pad1/J2 pad20 at USB.
+2. Verify actual touch revision/polarity/direct mode, physical label-to-cable mapping, response/current, cable noise and far-end bypass; PM owns firmware adaptation.
+3. Verify delivered ST0238 revision, mapped cable, HIGH idle/reset silence, PWM response/current and mounting geometry. Select mating female Harwin cable parts and cable length/strain relief.
+4. Measure regulated loads/inrush including Pico, ten touch modules, two drivers, bias and expansion against the adopted350mA total/250mA external limits; verify effective ceramics and VSYS capacitance≤100µF.
+5. Bench-check 1S overload/short/reverse input with/without USB, UVLO rebound/restart and source changes. Qualify holder≥0.70A normal/≥1.2A continuous, PCM/cell/charger compatibility, actual1101 fit, harness polarity, switch case/panel fit and thermal/headroom. Unfused holder-to-F1 leads need short insulated restrained wiring and cell PCM protection.
+6. Update PM PCB from root schematic; remove old D1, inspect hierarchy reference matching, place local bypass/reset/power parts and underside H1/TP1, review ≥2A copper and5mm/35µm F1 approach, and complete routing, ERC/DRC, mask/stencil/assembler and mechanical review before fabrication.
 
 ## Primary sources
 
@@ -106,6 +111,7 @@ All carrier contacts/passives have passive electrical pin types. Pico sourcing/r
 - [NKK Series M drawing](https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf), printed page A56: common 2, ON-ON terminal pairs2-3/2-1, keyway orientation and unmarked physical terminals; [exact MN12SS1W03 page](https://www.nkkswitches.com/wp-content/themes/impress-blank/search/inc/part.php?part_no=MN12SS1W03): MPN, SPDT/ON-ON, PC-pin termination and 4 A/30 VDC resistive rating.
 - [Vishay SS12-SS16 datasheet](https://www.vishay.com/docs/88746/ss12.pdf), page 1: SMA package, cathode band and SS14 ratings. Detailed load/thermal and leakage review is still required.
 - [Carrier footprint/component/cable source register](../kicad/carrier-interfaces.md): Harwin, JST, ST0238, Yageo and KEMET primary sources and exact dimensional evidence.
+- [P4 power part/footprint source register](../kicad/power-integration.md): TI RPW0010A, SCHURTER UMT-H, Littelfuse SMAJ, TDK capacitors and native reference mapping.
 - Repository firmware: `Pico_Synth/octave_half_8_key.py`; project requirements: `hardware/PCB_DESIGN_NOTES.md`.
 
 Primary chat should review and integrate this PR with the power and mechanical helpers, then rerun checks after any pinout/part changes. Leave merge and manufacturing approval to primary integration.
