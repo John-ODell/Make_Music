@@ -1,15 +1,17 @@
 # Candidate BOM — no purchasing or assembly release
 
+**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+
 Exact core part candidates below are electrically researched. Unselected interfaces and footprints remain explicitly TBD.
 
-| Ref / revision 1 | Manufacturer / exact MPN | Quantity | Evidence and limits |
-|---|---|---:|---|
-| B1 | Keeppower **P1835C2** | 1 | Exact protected-cell review target; current-lot ratings and fit pending. See [handoff](rev1-handoff.md), including conflicting charge limits. |
-| D_EXT | Vishay **SS14-E3/61T** | 1 | SMA/DO-214AC Schottky, 40 V, 1 A with stated thermal conditions; cathode band toward VSYS. Reverse leakage is finite. |
-| S1 | NKK **MN12SS1W03** | 1 | SPDT ON–ON, straight PC pins/panel bushing, 4 A at 30 VDC resistive. Common 2; throw 3 supplies diode; throw 1 NC. Footprint, orientation and inrush pending. |
-| Holder | TBD, mechanical helper owns | 1 | Actual protected-cell envelope, contact current, insertion polarity/reversal handling and footprint unverified. No invented pad numbers. |
-| Branch fault protection | TBD after coordination | TBD | PCM trip data and holder/wiring/diode limits required; operating current rating is not a fault limiter. |
-| External charger | Keeppower **L1**, off-board | 1 | Exact review target at **500 mA only**, Micro-USB 5 V/1 A supply. Complete compatibility still pending as detailed in handoff; not carrier BOM. |
+The active exact carrier BOM and pin connections are the table in [branch-protection.md](branch-protection.md). It selects F1 **3403.0275.23**, S1 **MN12SS1W03**, U2 **TPS259474LRPWR**, six specified 0603 resistors, four specified ceramic capacitors and two 10SVP47M polymer hold-up capacitors, D2 **SS14-E3/61T** as a shunt clamp and D3 **SMAJ5.0CA**. The old series D_EXT/PCB D1 is removed. No branch protection part/value is left TBD.
+
+| Offboard / interface item | Exact review target | Status |
+|---|---|---|
+| Protected cell | Keeppower P1835C2 | Current-lot ratings/charging compatibility and actual fit pending |
+| Charger | Keeppower L1 at 500 mA only | External equipment; complete compatibility pending as documented |
+| Holder | Keystone 1101 in insulated cassette | PM-approved candidate; ampacity/fit unverified; no direct PCB footprint |
+| Carrier battery header | JST B2B-PH-K-S(LF)(SN), circuit1 positive /2 GND | PM-directed candidate; 2 A harness design basis, assembled polarity must be checked |
 
 BQ24074, NTC, charge-input connector and configuration parts are **omitted from revision 1**. Option B in circuits.md is future research only. Charger USB cable is external equipment; its 5 V adapter is separately required. No ordering or assembly release is authorized by this candidate BOM.
 

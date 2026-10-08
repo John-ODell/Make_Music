@@ -1,5 +1,7 @@
 # Current-budget worksheet
 
+Active prototype constraints: **0.70 A normal battery branch; 350 mA total 3V3 including Pico; 250 mA external ceiling; 200 µF total VSYS capacitance.** These are design limits from [branch-protection.md](branch-protection.md), not measured consumption. The active eFuse path replaces the carrier series diode; diode-drop illustrations below are historical sizing examples.
+
 No component current has been measured. Blank values are **unknown**, not zero. Populate from the actual selected hardware at 3V3 with both buzzers operating, all touch LEDs active, expansion load connected and the intended firmware/clock. Record steady average, startup and coincident peak separately.
 
 | 3V3 load | Quantity | Per-unit average mA | Per-unit peak mA | Evidence / measurement |
