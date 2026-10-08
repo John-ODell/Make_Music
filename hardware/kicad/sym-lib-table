@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "MakeMusic") (type "KiCad") (uri "${KIPRJMOD}/MakeMusic.kicad_sym") (options "") (descr "Provisional carrier interfaces and verified Pico socket pin mapping")))
