@@ -2,27 +2,25 @@
 
 Exact core part candidates below are electrically researched. Unselected interfaces and footprints remain explicitly TBD.
 
-| Ref / option | Manufacturer / exact MPN | Quantity | Evidence and limits |
+| Ref / revision 1 | Manufacturer / exact MPN | Quantity | Evidence and limits |
 |---|---|---:|---|
-| B1 / A or B | Keeppower **P1835C2** | 1 | Protected 18350, conventional 4.2 V maximum charge. Manufacturer advertises overcharge/overdischarge/overcurrent/short protection. Candidate only; actual lot/specification and holder still required. |
-| D_EXT / A or B | Vishay **SS14-E3/61T** | 1 | SMA/DO-214AC Schottky, 40 V, 1 A with stated thermal conditions; cathode band toward VSYS. Reverse leakage is finite. |
-| S1 / A or B | NKK **MN12SS1W03** | 1 | Follow-up stronger candidate: SPDT ON–ON, straight PC pins/panel bushing, silver contacts, 4 A at 30 VDC resistive rating. Footprint, capacitive inrush and mounting remain unverified; see [comparison](candidate-comparison.md). Original C&K JS102011SAQN was only 0.3 A at 6 VDC. |
-| U1 / B only | Texas Instruments **BQ24074RGTR** | 1 | 16-pin 3×3 mm VQFN RGT with exposed pad, 4.2 V single-cell charger with separate BAT/OUT power path; default disable until cell selected. Do not substitute BQ24075/79 without re-review. |
-| NTC / B only | Semitec **103AT-2** | 1 | TI application example calls out this 10 kΩ NTC. Thermal coupling and allowed cell charge-temperature thresholds unresolved. Mechanical mounting not assigned. |
-| IN/BAT/OUT capacitors / B | TBD MPNs | 3 | Candidate 1 µF IN and 10 µF each BAT/OUT; effective capacitance and voltage rating to be verified. |
-| CE pull-up / B | TBD 100 kΩ MPN | 1 | OUT to CE; high disables charging. |
-| ISET / ILIM / B | TBD resistor MPNs and values | 2 | ISET initially DNP; ILIM required before charging. Values depend on actual battery/source limits. |
-| J_BAT / A or B | TBD holder or keyed pack connector | 1 | Protected-cell envelope, contact current, insertion polarity, pin order and footprint not selected. A keyed connector does not establish polarity without checking the actual pack. |
-| J_CHARGE / B | TBD dedicated USB connector and ESD parts | 1 set | Dedicated input; never bridge to Pico VBUS. USB-C CC/current policy or micro-B source policy must be specified. |
-| External charger / A | TBD compatible 4.2 V single-cell charger | 1, off-board | Must accept actual protected 18350 length and provide cell-matched CC/CV, temperature and recovery behavior. Not a carrier BOM component. |
+| B1 | Keeppower **P1835C2** | 1 | Exact protected-cell review target; current-lot ratings and fit pending. See [handoff](rev1-handoff.md), including conflicting charge limits. |
+| D_EXT | Vishay **SS14-E3/61T** | 1 | SMA/DO-214AC Schottky, 40 V, 1 A with stated thermal conditions; cathode band toward VSYS. Reverse leakage is finite. |
+| S1 | NKK **MN12SS1W03** | 1 | SPDT ON–ON, straight PC pins/panel bushing, 4 A at 30 VDC resistive. Common 2; throw 3 supplies diode; throw 1 NC. Footprint, orientation and inrush pending. |
+| Holder | TBD, mechanical helper owns | 1 | Actual protected-cell envelope, contact current, insertion polarity/reversal handling and footprint unverified. No invented pad numbers. |
+| Branch fault protection | TBD after coordination | TBD | PCM trip data and holder/wiring/diode limits required; operating current rating is not a fault limiter. |
+| External charger | Keeppower **L1**, off-board | 1 | Exact review target at **500 mA only**, Micro-USB 5 V/1 A supply. Complete compatibility still pending as detailed in handoff; not carrier BOM. |
+
+BQ24074, NTC, charge-input connector and configuration parts are **omitted from revision 1**. Option B in circuits.md is future research only. Charger USB cable is external equipment; its 5 V adapter is separately required. No ordering or assembly release is authorized by this candidate BOM.
 
 ## Primary evidence
 
 - [Vishay SS12–SS16 datasheet, document 88746](https://www.vishay.com/docs/88746/ss12.pdf): ratings, polarity band, SMA package and E3/61T ordering scheme. [SS14 product page](https://www.vishay.com/en/product/88746/) is the family entry point. Verify final landing pattern against its mechanical drawing.
-- [C&K JS datasheet](https://www.ckswitches.com/media/1422/js.pdf), revised 2026-01-14: rating and JS102011SAQN drawing on page 4. No switch footprint has been assigned.
+- [NKK MN toggle drawing](https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf): MN12SS1W03 terminal arrangement, 4 A / 30 VDC resistive rating and straight PC terminal geometry.
+- Historical / future-option references: [C&K JS datasheet](https://www.ckswitches.com/media/1422/js.pdf), revised 2026-01-14: rating and JS102011SAQN drawing on page 4. No switch footprint has been assigned.
 - [TI BQ24074 datasheet](https://www.ti.com/lit/ds/symlink/bq24074.pdf), SLUS810N, October 2021: pin mapping, RGT package, charger programming and thermal/layout requirements. NTC identification is from TI's application example; cell-temperature compatibility remains unverified.
 - [Semitec AT thermistor datasheet](https://www.semitec-global.com/uploads/2022/01/P12-13-AT-Thermistor.pdf): 103AT-2 is 10 kΩ at 25°C, with the AT-2 mechanical form; thermal mounting and cell limits still need review.
-- [Keeppower China P1835C2](https://www.keeppower.com.cn/products_detail.php?id=566) and [Keeppower P1835C2](https://www.keeppower.com/product/keeppower-18350-1200mah-protected-li-ion-rechargeable-battery-p1835c2/): candidate properties checked on review date. Both list standard charge 220 mA and maximum 1.1 A, but these do not set our charger current. Obtain a lot-specific specification before use.
+- [Keeppower China P1835C2](https://www.keeppower.com.cn/products_detail.php?id=566) and [Keeppower P1835C2](https://www.keeppower.com/product/keeppower-18350-1200mah-protected-li-ion-rechargeable-battery-p1835c2/): candidate properties checked on review date. Both list standard charge 220 mA and maximum 1.1 A, but the older model-specific test report gives a stricter 770 mA maximum; the L1 review target uses 500 mA only. Obtain a lot-specific specification before use.
 
 ## Battery evidence conflict
 

@@ -7,7 +7,7 @@ No component current has been measured. Blank values are **unknown**, not zero. 
 | Pico processor + onboard loads | 1 | TBD | TBD | Selected Pico, clock, code; internal part of regulator load |
 | Note touch modules | 8 | TBD | TBD | Exact module + LED state unknown |
 | Modifier touch modules | 2 | TBD | TBD | Exact module + LED state unknown |
-| Buzzer modules | 2 | TBD | TBD | Confirm passive/module driver, current and 3.3 V compatibility |
+| Buzzer modules | 2 | TBD | TBD | SunFounder ST0238 selected, 3.3 V supply documented; onboard driver current/peaks unverified |
 | Expansion | 1 budget | TBD | TBD | User-specified allowance; do not treat free GPIO as unlimited power |
 | Added indicators / other rails | As fitted | TBD | TBD | Include optional indicators and external regulators |
 
