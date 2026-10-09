@@ -1,5 +1,7 @@
 # Underside protected-18350 holder: corrected drawing review
 
+**Historical superseded 18350 research.** On 2026-10-09 the user corrected the requirement to protected removable 18650. Current holder/cassette specs are in [WIRED_HOLDER_PROPOSAL.md](WIRED_HOLDER_PROPOSAL.md); no dimensions or cell-fit assumptions here apply to that 18650 assembly.
+
 Review date 2026-10-07. Revision one uses a removable protected 18350 with **external charging**, as selected in merged PR #11; this review incorporates the power contract in [rev1-handoff.md](../power/rev1-handoff.md) from merged PR #12. Cell model/lot and holder are still candidates. The previously supplied **Keystone 1095P** footprint has been withdrawn after PM review identified a mounting-layout interpretation error. The corrected five-hole geometry is recorded below, but **no native holder footprint or verified electrical pad map is supplied**. Fit for the conservative 39.3 x 18.7 mm cell envelope also remains unverified.
 
 ## Evidence and document provenance
@@ -48,7 +50,7 @@ The polarized end also requires a compatible positive button shape. Measure the 
 
 ## Underside assembly proposal
 
-Historical direct-mount proposal (superseded in the current SVGs by the separately proposed [wired 1101 cassette](WIRED_HOLDER_PROPOSAL.md)): 60 x 30 x 25 mm underside reservation at x=150..210, y=15..45. The nominal 45.15 x 20.65 mm body fits that planar reservation; no holder courtyard is released. A proposed holder body center at (180,30) leaves space around it. Final pad/hole coordinates and top/bottom transform remain unresolved. A future verified footprint must be placed with KiCad's Flip command, then checked in both views against the source polarity and power contract. The current SVG rectangle is only a nominal body reservation, not a placement or hole template.
+Historical direct-mount proposal (later superseded by the 1101 cassette, then by the current [18650 cassette](WIRED_HOLDER_PROPOSAL.md)): 60 x 30 x 25 mm underside reservation at x=150..210, y=15..45. The nominal 45.15 x 20.65 mm body fits that planar reservation; no holder courtyard is released. A proposed holder body center at (180,30) leaves space around it. Final pad/hole coordinates and top/bottom transform remain unresolved. A future verified footprint must be placed with KiCad's Flip command, then checked in both views against the source polarity and power contract. The current SVG rectangle is only a nominal body reservation, not a placement or hole template.
 
 Through-hole leads and plastic bosses enter from the underside; solder contacts from the carrier top side. With a provisional 1.6 mm carrier, contact projection beyond the opposite face is approximately 3.43-1.6 = **1.83 mm**, and boss projection is 3.55-1.6 = **1.95 mm**, before tolerances. Reserve at least 2.5 mm top-side vertical clearance over this assembly as an engineering allowance and revise after joint/part measurements. The existing reservation is clear of the Pico footprint and expansion area. Do not place power components, screw heads or other top components over those protrusions without a verified clearance stack.
 

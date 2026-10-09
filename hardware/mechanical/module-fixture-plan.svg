@@ -5,8 +5,8 @@
 <text x="0" y="-17" class="" text-anchor="start">All dimensions mm. Nine carrier mounts; no module mounting-hole pattern used.</text>
 <text x="0" y="-10" class="small" text-anchor="start">Actual-part support lands, headers, components, touch response and retention require fit checks.</text>
 <rect x="0" y="0" width="330" height="120" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
-<rect x="145" y="12" width="70" height="36" fill="#ffedd5" fill-opacity="0.6" stroke="#64748b" stroke-width=".25" class="dash"/>
-<text x="180" y="30" class="small" text-anchor="middle">Underside cassette</text>
+<rect x="145" y="12" width="112" height="36" fill="#ffedd5" fill-opacity="0.6" stroke="#64748b" stroke-width=".25" class="dash"/>
+<text x="201" y="30" class="small" text-anchor="middle">18650 cassette 112 x 36</text>
 <rect x="216" y="44" width="48" height="24" fill="#fde68a" fill-opacity="0.6" stroke="#64748b" stroke-width=".25" class="dash"/>
 <text x="240" y="57" class="small" text-anchor="middle">Power / switch</text>
 <rect x="104.5" y="0" width="31" height="56" fill="none" fill-opacity="1" stroke="#64748b" stroke-width=".25" class="dash"/>
