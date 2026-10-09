@@ -2,7 +2,7 @@
 
 Updated 2026-10-09. The editable [generator](cassette_interfaces.py) and [parameter record](cassette-interfaces.json) produce two nominal DXF interface drawings and a [plan/section review](cassette-interface-review.svg). These are **review CAD, not released machining/CAM instructions or a completed enclosure**. They complete geometry that is independent of the unmeasured modules and exact protected cell. No module mounting holes, extra carrier holes or native KiCad changes are introduced.
 
-The drawings retain the established **legacy** mechanical datum native (20,20). For the proposed 330 x121.5 board, its rear is legacy y=-1.5; cassette x145..257/y12..48 and all mounting centres stay fixed in that frame. If root adopts the new y18.5 outline's top-left origin, the offset becomes **(+20,+18.5)** and cassette y becomes **13..49**; all native positions stay unchanged. See [datum table](DATUMS.md). The DXFs use **x right/y up = (legacy mechanical x, -legacy mechanical y)**, units millimetres. Nominal model z is positive **down** from carrier underside; the upper fixture uses a different z datum.
+The drawings retain the established **legacy** mechanical datum native (20,20). For the proposed 330 x121.5 board, its rear is legacy y=-1.5; cassette x145..257/y12..48 and all mounting centres stay fixed in that frame. If root adopts the new y18.5 outline's top-left origin, the offset becomes **(+20,+18.5)** and cassette y becomes **13.5..49.5**; all native positions stay unchanged. See [datum table](DATUMS.md). The DXFs use **x right/y up = (legacy mechanical x, -legacy mechanical y)**, units millimetres. Nominal model z is positive **down** from carrier underside; the upper fixture uses a different z datum.
 
 ## Interfaces from known evidence
 
