@@ -78,7 +78,7 @@ for number, start in enumerate((0, 150), 1):
               *[(70 + 34 * n, 94, note) for n, note in
                 enumerate(('C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'))],
               (60, 67.5, 'BUZZER 1'), (98, 67.5, 'BUZZER 2'),
-              (120, 30, 'PICO H'), (180, 30, 'BATTERY BELOW')]
+              (120, 30, 'PICO H'), (201, 30, '18650 BELOW')]
     for x, y, text in bodies:
         label(ox + x - start, oy + y, text, 7, True, True)
     c.restoreState()

@@ -1,6 +1,6 @@
 # Make Music PCB
 
-The first-prototype electrical project is now an editable, fully routed KiCad10 carrier with protected battery power, removable Pico H sockets, eight notes/two left-hand modifiers, two passive buzzer module connectors and exposed GPIO. Native ERC and integrated DRC/parity pass with **0 violations /0 unconnected items /0 schematic mismatches**. Exact-part fit and built-hardware tests remain pending; fabrication is held.
+The first-prototype project is an editable KiCad10 carrier with protected battery power, removable Pico H sockets, eight notes/two left-hand modifiers, two passive buzzer module connectors and exposed GPIO. The schematic has passed independent ERC/connectivity review. Final capacitor/18650 PCB integration is in progress; see current PCB status for the actual remaining findings. Exact-part fit and built-hardware tests remain pending; fabrication is held.
 
 Open [kicad/make_music.kicad_pro](kicad/make_music.kicad_pro) in KiCad10. Keep the entire hardware directory so project-local symbols/footprints resolve. The two editable schematic sheets and routed PCB are sources; PDFs/SVGs are review aids.
 
@@ -14,7 +14,7 @@ Open [kicad/make_music.kicad_pro](kicad/make_music.kicad_pro) in KiCad10. Keep t
 - [Raised module fixture](mechanical/MODULE_FIXTURE.md) and [wired underside holder cassette](mechanical/WIRED_HOLDER_PROPOSAL.md)
 - [Protected power circuit](power/branch-protection.md) and [staged validation procedure](power/prototype-validation.md)
 
-The proposed carrier is330 ×120 mm with a removable externally charged protected18350. The wired Keystone1101 holder/cassette and raised module fixture are engineering proposals. Protected-cell fit, connector engagement, module support regions, final mechanical CAD, power/load/thermal behavior and fabricator/assembler acceptance remain required. See the fit checklist for precise measurements; do not order from either the old concept sketch or the held exports.
+The proposed carrier is330 ×120 mm with a removable externally charged protected **18650**. MPD BH-18650-W and its larger lowered cassette/47 mm supports are engineering proposals. Protected-cell fit, connector engagement, module support regions, final mechanical CAD, power/load/thermal behavior and fabricator/assembler acceptance remain required. Five complete instruments plus an optional additional bare keepsake are the selected factory scope. See the fit checklist for precise measurements; do not order from the old concept sketch or obsolete held exports.
 
 `../Pico_Synth/carrier_prototype.py` provides the carrier pin map, configurable touch polarity and active-low ST0238 idle behavior. It preserves the original firmware; seven host logic tests pass, but no assembled instrument has been tested. Both buzzers play the same pitch, modified by held left semitone/octave controls. Independent voices require a pin/firmware change.
 

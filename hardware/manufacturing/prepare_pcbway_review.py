@@ -34,6 +34,19 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def design_inputs():
+    paths = [KD / p for p in ('make_music.kicad_sch', 'battery_power.kicad_sch',
+        'make_music.kicad_pcb', 'make_music.kicad_pro', 'make_music.kicad_dru',
+        'MakeMusic.kicad_sym', 'sym-lib-table', 'fp-lib-table')]
+    paths += list(KD.glob('*.pretty/*.kicad_mod'))
+    paths += list((HW / 'libraries').glob('*.pretty/*.kicad_mod'))
+    return sorted(paths)
+
+
+def design_hashes():
+    return {str(p.relative_to(HW)): digest(p) for p in design_inputs()}
+
+
 def response(path):
     raw = json.loads(path.read_text())
     if 'content' not in raw:
@@ -42,12 +55,17 @@ def response(path):
     return json.loads(''.join(p['text'] for p in raw['content'] if p['type'] == 'text'))
 
 
-def prepare(native_dir, netlist, erc_path, drc_path, destination):
+def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot):
     assert not destination.exists(), 'Output must be a fresh directory'
+    before = json.loads(snapshot.read_text())
+    assert before['design_sha256'] == design_hashes(), 'Native sources changed since export checkpoint'
     erc, drc = response(erc_path), response(drc_path)
     assert erc['total'] == 0, erc
     assert drc['total_violations'] == 0 and not drc['categories_not_reported'], drc
     assert drc['schematic_parity'] == drc['unconnected_items'] == 0, drc
+    assert drc['source'] == 'saved_file' and drc['live_board_synced'], drc
+    assert drc['zones_refilled'] and drc['zone_refill_source'] == 'ipc', drc
+    assert not drc['truncated'] and drc['severity_filter'] == 'info', drc
     xml = ET.parse(netlist).getroot()
     parts = []
     for comp in xml.findall('components/comp'):
@@ -92,6 +110,7 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination):
     pos = {p['Ref']: p for p in positions}
     assert (float(pos['J3']['PosX']), float(pos['J3']['PosY'])) == (87.46, -98)
     assert (float(pos['J4']['PosX']), float(pos['J4']['PosY'])) == (121.46, -98)
+    assert (float(pos['H1']['PosX']), float(pos['H1']['PosY'])) == (289, -40)
     # All geometry uses the served native export origin, NOT the old held
     # package's auxiliary origin. No Gerber/drill coordinates are rewritten.
     edge = (native_dir / 'gerbers/make_music-Edge_Cuts.gm1').read_text()
@@ -134,11 +153,7 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination):
         'physical_fit_verified': False, 'bench_validation_complete': False,
         'supplier_acceptance_complete': False, 'fabrication_release': False
     }, indent=2) + '\n')
-    inputs = [KD / p for p in ('make_music.kicad_sch', 'battery_power.kicad_sch',
-        'make_music.kicad_pcb', 'make_music.kicad_pro', 'make_music.kicad_dru',
-        'MakeMusic.kicad_sym', 'sym-lib-table', 'fp-lib-table')]
-    inputs += list(KD.glob('*.pretty/*.kicad_mod'))
-    inputs += list((HW / 'libraries').glob('*.pretty/*.kicad_mod'))
+    inputs = design_inputs()
     inputs += [HW / p for p in ('assembly/instrument-parts.csv',
         'assembly/MODULE_HARNESSES.md', 'assembly/FIT_CHECKLIST.md',
         'assembly/PCBWAY_HANDOFF.md', 'manufacturing/prepare_pcbway_review.py')]
@@ -147,10 +162,12 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination):
     evidence.mkdir()
     for source, name in ((netlist, 'netlist.xml'), (erc_path, 'erc-mcp.json'), (drc_path, 'drc-mcp.json')):
         shutil.copyfile(source, evidence / name)
+    shutil.copyfile(snapshot, evidence / 'source-checkpoint.json')
     for p in destination.rglob('*'):
         if p.is_file():
             assert p.stat().st_size, f'Empty output: {p}'
     outputs = {str(p.relative_to(destination)): digest(p) for p in sorted(destination.rglob('*')) if p.is_file()}
+    assert before['design_sha256'] == design_hashes(), 'Native sources changed during packaging'
     # External temporary evidence is copied into verification/; its hashes
     # are recorded there. Only durable project inputs enter input_sha256.
     (destination / 'manifest.json').write_text(json.dumps({
@@ -165,5 +182,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('native_dir', 'netlist', 'erc', 'drc', 'output_dir'):
         parser.add_argument(name, type=Path)
+    parser.add_argument('--source-snapshot', required=True, type=Path,
+        help='Hash checkpoint taken after saved/refilled checks and before native exports')
     args = parser.parse_args()
-    prepare(args.native_dir, args.netlist, args.erc, args.drc, args.output_dir)
+    prepare(args.native_dir, args.netlist, args.erc, args.drc, args.output_dir, args.source_snapshot)

@@ -1,5 +1,12 @@
 # Held first-prototype review package — do not order
 
+**OBSOLETE CHECKPOINT — 2026-10-09:** the files below predate J3/J4 clearance,
+the moved H1, protected 18650 cassette and C17/C18 integration. Their old hashes
+and zero-finding summary are historical, not evidence for the current sources.
+Do not upload or order them. Final regeneration is pending the current
+[PCB integration findings](../../kicad/PCB_STATUS.md); use the new
+[Konnect export procedure](../README.md). The legacy `export_review.py` is retired.
+
 This package is for inspection and assembly planning. It is **not a fabrication release**. Native KiCad ERC, full board DRC and schematic parity must pass before the generator produces files, but actual hardware fit and electrical behavior remain untested. See [PCB status](../../kicad/PCB_STATUS.md) and the [physical verification record](../../assembly/FIT_CHECKLIST.md).
 
 ## Included files

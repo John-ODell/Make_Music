@@ -1,17 +1,17 @@
 # Exact parts needed to finish physical verification
 
-The native electrical project is routed and checked. The following measurements determine whether its proposed mechanical assembly can be finalized. All result fields remain blank because no parts were measured or energized during design. Do these checks with the battery removed and USB disconnected.
+The native electrical project is under final capacitor/18650 integration; see current PCB status for fresh checks and remaining findings. The following measurements determine whether its proposed mechanical assembly can be finalized. All result fields remain blank because no parts were measured or energized during design. Do these checks with the battery removed and USB disconnected.
 
 | Item | Record from actual selected parts | Pass requirement | Result |
 |---|---|---|---|
-| Keeppower P1835C2 + Keystone 1101 | Cell overall length/diameter/button; holder insertion travel, contact compression, wrapper clearance and retention | Inserts/removes without force or wrapper damage; reliable contacts and retention; protected cell not bypassed | Pending |
-| External charger | Exact L1 revision/bay fit and selected 500 mA charge setting against cell specification | Fits protected cell and charges within its documented limits | Pending |
+| Keeppower P1835J + MPD BH-18650-W | Confirm ordinary opposite-end terminals/lot; cell overall length/diameter; holder insertion travel, contact compression, wrapper clearance and retention | Inserts/removes without force or wrapper damage; reliable contacts and retention; protected cell not bypassed | Pending |
+| External charger | Exact revision/bay fit, CC/CV tolerances, termination and charge-current setting against current cell-lot specification | Fits protected cell and charges within its documented limits; L1 remains held for the 4.242V upper-tolerance conflict | Pending |
 | Pico H SC0917 + two SSQ-120-01-G-S | Male post dimensions/projection, socket engagement and body height | Both rows fully mate at 17.78 mm spacing without bottoming; USB/BOOTSEL and upward removal remain accessible | Pending |
 | Ten actual HiLetgo touch modules | Width/length/thickness, header type/order/orientation, top/bottom component projection, electrode and bare edge support regions | Proposed 24 mm seats and insulating tabs/keepers avoid all circuitry/electrodes; modify fixture seats when necessary | Pending |
 | Two actual ST0238 modules | Width/length/thickness, component/buzzer height, header termination and labels, clear support lands/sound opening | Proposed 32 × 14 mm seats fit; keepers avoid circuitry and sound opening | Pending |
 | Module cables | Exact module-end mating/solder method and polarity; dressed length/service slack and strain relief | Each adapted lead maps carrier 1 SIG /2 3V3 /3 GND to the actual module labels; no pinching or bare conductors | Pending |
 | Raised fixture | Mated carrier header height, module underside projection, screw tips, wires and loaded plate deflection | At least 2 mm actual remaining clearance including tolerance and deflection; proposed 24 mm spacers/28 mm support plane are adjustable | Pending |
-| Holder cassette/support | Holder lug insulation/strain relief, cover/door access, connector plug/bend space and actual cassette height | Cell and holder carry no playing load; proposed ≥35 mm underside support clears the 32 mm cassette | Pending |
+| Holder cassette/support | Factory AWG24 lead insulation OD/JST compatibility, strain relief, lowered platform/bolt tips, cover/door access, connector plug/bend space and actual loaded height | Cell/holder carry no playing load; proposed ≥47 mm supports clear 44 mm cassette with ≥2 mm fitted/loaded internal clearance | Pending |
 | NKK MN12SS1W03 | Exact switch case, travel/actuator/panel fit and finished carrier hole fit | Clears assembly and operates without stressing terminals; idle contact/load endurance checked during bench test | Pending |
 | Full paper fit | Proposed 330 × 120 mm outline, 34 mm note pitch, 10 mm body gaps and left modifiers | Comfortable reach and agreed size with actual module bodies before fabrication release | Pending |
 
