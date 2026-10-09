@@ -1,0 +1,47 @@
+# Physical-fit checklist for five complete instruments
+
+2026-10-08. Selected delivery: **five fully assembled instruments**, plus an **optional sixth bare carrier keepsake**. The user currently has none of the actual touch/buzzer boards, Pico, cell or holder and has an ordinary tape measure, possibly marked only in quarter inches. All actual-part results below are **pending**. This checklist requests a priced assembler metrology/assembly service; it is not a sourcing instruction, purchase, quote acceptance or manufacturing release.
+
+Use the [build-readiness audit](BUILD_READINESS.md), [fixture proposal](MODULE_FIXTURE.md), [cassette proposal](WIRED_HOLDER_PROPOSAL.md) and PM's current carrier exports together. PM reported the J3/J4 correction saved at mechanical y78/native y98 with full native DRC, zero unconnected items and zero parity errors. That establishes a reported native check, not physical fit of the selected parts.
+
+## User: overall paper fit and reach
+
+Use the full-size tiled print PDF prepared by PM. Print at **100% / actual size**, disable fit-to-page, and align the tile marks without stretching the paper. The overall carrier proposal is **330 x 120 mm**, roughly **13 x 4¾ inches**. A coarse tape measurement can catch a major print-size mistake and judge desk/lap space; those rounded inch values cannot establish accurate print scale. Have PM or the print shop verify the PDF's scale marks with a readable metric ruler if the available tape cannot resolve them.
+
+| Trial | Record | Meaning of acceptance |
+|---|---|---|
+| Overall size | Comfortable location, space around the paper and any preferred width/depth change | User accepts the approximate 330 x 120 footprint; no exact-part conclusion |
+| Eight note positions | Reach C4 through C5 in order, including far-right C5; mark awkward reaches | All eight can be reached comfortably without moving their intended order |
+| Left modifiers | Hold each left modifier while reaching the note row; try the intended hand posture | Both modifiers remain usable at their fixed left-hand positions |
+| Spacing | Try adjacent and rapid note changes; record preference | Nominal touch-board gap is 10 mm at 34 mm pitch; proposed fences leave only 6 mm between their envelopes |
+| Height assumption | Record whether a raised playing surface seems comfortable; leave actual-height fit pending | Paper is flat and cannot test the z28 support plane, finger interference, touch response or support stability |
+
+Return comfort observations and marked positions to PM. No caliper purchase, component purchase, soldering, crimping or live electrical test is requested of the user by this checklist.
+
+## Assembler: exact-part metric record before machining
+
+Agree and price this work explicitly. Record part MPN/lot, measurement date, instrument resolution/accuracy, units in **mm**, values/ranges, annotated top/bottom/side photos and pass/fail against the eventual toleranced CAD. Use calipers or an appropriate metric measuring fixture for thickness, small projections and fit margins; a readable 1 mm ruler can document coarse outlines/pitch and photos but cannot certify 0.3 mm seat clearance. Quarter-inch tape increments are 6.35 mm and cannot resolve these connector/keeper dimensions. Do not treat a nominal catalogue dimension as a measurement.
+
+| Item | Required recorded measurements/checks | Decision unlocked |
+|---|---|---|
+| Touch boards, exact supplied design/lot | X/Y outline, thickness at all support/keeper lands, top/bottom component heights, header location/pitch/post height, electrode boundary, actual labels and configuration | 24.6 x 24.6 proposed openings; measured-thickness keeper stops; complete module-end connector and harness mapping |
+| Touch support lands | Annotate four proposed underside 2.7 x 2.7 contacts and two top 5.5 x 1.5 contacts near diagonal corners; verify no circuitry, joints or active electrode beneath contacts | Tabs/keepers may stay only where actual boards provide bare lands; otherwise revise seat before machining |
+| Two ST0238 per instrument | Full outline/thickness, sound opening position/diameter/height, all top/bottom projections, header geometry and actual pin labels; inspect four underside support areas and two top keeper lands | Confirm 32.6 x 14.6 opening, proposed ≥2.7 x 1.5 underside overlap and 6 x 1.5 top contacts, sound clearance and lead route |
+| Pico H SC0917 and two SSQ-120-01-G-S | Actual male engagement, socket body/height/tails, alignment, rear plastic lip/case clearance, USB plug, BOOTSEL, exposed GPIO and upward removal access | Confirm removable 40-pin assembly; nominal rear body overhang 0.225 mm is not a measured fit approval |
+| Twelve complete module harnesses per instrument | Exact carrier/module connector and wire identities, cavity mapping, wire OD, installed height **including bend/strain relief/mating gap**, service-loop length and unplugging access | The candidate rigid carrier plug is 16.54 mm nominal; the 18 mm dressed envelope remains unverified |
+| Complete upper fixture stack | Actual spacer/plate/module thickness, maximum downward projection P, cable height H, screw/nut/tip envelope and deflection under intended playing use | Verify `min(S,S+4-P)-H-D-dimensional_allowance ≥2 mm`; proposed S24/P6/H18/D0.5 gives 3.5 mm before dimensional allowance |
+| P1835C2 and Keystone 1101 | Exact cell lot, diameter, overall button-to-terminal length, holder body/locators/lugs, fitted-cell height, contact compression, cold insertion/removal, wrapper clearance and retention | Confirm or reject this exact pairing; 18.7 x 39.3 is only a conservative cell planning envelope, not a demonstrated holder capacity |
+| Complete lower cassette | Lug joints/insulating boots, PH plug/bend/strain relief, retainers/door, four mount stacks, fastener tips, full fitted height and service access | Finish toleranced cassette CAD; check actual 32 mm reservation and ≥35 mm support proposal under load |
+| Footprint/process fit | Finished plated holes/header fit, annular-ring and pad-to-edge tolerance, socket support/rails, switch fit and both-side solder access | PM/fabricator accept hole/edge/process geometry, including the audit's 0.25 mm socket-ring process comparison; sockets must not interfere with temporary rails or depaneling |
+
+Measure representative exact parts to establish the design, then inspect the supplied lot against the agreed limits. Five complete instruments contain **50 touch boards, 10 buzzers and five Pico/holder/cell assemblies**; every fitted board must meet the accepted support/clearance limits. The optional sixth bare carrier has none of those fitted parts. Reinspect substituted parts or a changed module design before using the same CAD/harness record.
+
+## Assembler: finish, qualify and deliver
+
+1. Issue toleranced manufacturing CAD after metrology for the acetal plate/windows/fences, keepers, spacers, cassette retainers/door/feet and strain relief. SVGs are review drawings. Agree machining tolerances, minimum clearances, tool access and fastener guidance; preserve all ten touch centres, left modifiers, Pico removal and exposed GPIO.
+2. Quote **five complete instruments**, including factory component installation, 60 complete module harnesses, five tested holder harnesses/cassettes, metrology, mechanical installation and unit-level acceptance. Quote the optional sixth bare carrier separately. Partial assembly may be compared for budget, but the user-selected delivery includes this work and must not depend on user soldering. Confirm how removable Pico/cell insertion and separate external charging will be handled in delivery instructions; do not ship an unqualified energized assembly.
+3. Qualify the **first instrument within the five** before repeating the same fixture build on the remaining four. With power disconnected, verify harness pin mapping/continuity/polarity, secure non-rocking module retention, no clamping of circuitry, loaded ≥2 mm clearance, fastener/support stability, cassette access and Pico/GPIO/USB access. Keep soldering/crimping and any needed rework with the assembler.
+4. Perform the power owner's controlled [prototype validation](../power/prototype-validation.md) using suitable bench equipment before real-cell use. Record actual touch configuration/current, reliable eight-note operation, held left modifiers, neighbor triggering, both buzzers, USB/battery isolation and required protection behavior. Holder ampacity/solder-process evidence remains a power/process gate; neither the cell's 8 A rating nor the PH connector's 2 A rating closes it.
+5. Apply the agreed unit-level acceptance to all five instruments and provide measurements/test results plus operating, cell-removal/external-charging and service instructions. The user can perform the normal-use fit check on delivery. The optional keepsake is a bare PCB, not a sixth playable instrument.
+
+Mandatory before playing: secure retention/support, loaded clearance, correct wiring/polarity, safe first power and reliable basic notes/modifiers. Optional characterization: the proposed 10 N/20 N dummy-board targets, extended service/creep testing, drop/vibration studies and detailed performance optimization. Record optional tests as unperformed unless actually completed; no certification/endurance claim follows from this checklist. Existing order/release holds remain in force, while an explicitly scoped review/quotation can proceed.
