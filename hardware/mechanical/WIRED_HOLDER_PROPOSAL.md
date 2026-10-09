@@ -22,7 +22,7 @@ The open holder/cassette door provide the proposed replacement path with the ins
 
 ## Revised cassette geometry
 
-See [plan/section](wired-holder-cassette.svg) and [handoff CSV](cassette-18650-geometry.csv). Plan uses carrier rear-left, x right/y forward; native KiCad adds (20,20). **z is positive down from the carrier underside**, unlike the upper fixture. These are review geometry/factory measurement targets, not toleranced machining CAD or measured fit.
+See [plan/section](wired-holder-cassette.svg) and [handoff CSV](cassette-18650-geometry.csv). Plan retains the legacy service datum, x right/y forward; native KiCad adds (20,20). For the proposed 330 x121.5 carrier the rear is legacy y=-1.5/native y18.5; cassette and all native mounting positions stay fixed. See DATUMS.md for the physical upper-left and optional new-origin conversion, and CASSETTE_INTERFACES.md for independent nominal interface CAD. **z is positive down from the carrier underside**, unlike the upper fixture. These are review geometry/factory measurement targets, not toleranced machining CAD or measured fit.
 
 | Item | Revised geometry / status |
 |---|---|
@@ -39,11 +39,13 @@ See [plan/section](wired-holder-cassette.svg) and [handoff CSV](cassette-18650-g
 
 The four carrier mounts can stay as a **three-dimensional proposal**, not a flat plate substitution. Right-hand Ø8 bolt exclusions overlap the bigger holder's plan projection. The lowered z16 holder platform separates them vertically: M3x12 minus 0.5 top washer/1.6 carrier gives 9.9 mm nominal tip depth; platform upper face z14 is 4.1 mm below it before tolerances. Measure actual screw tips, holder projections and deflection. Do not put bolts through the cell bay. The 47 mm cassette overhang beyond the x210 mounts needs a stiffened insulating load path and factory retention/load inspection; ribs/material/fastening remain final CAD work.
 
-Current H1 is inside the enlarged backplate/holder area. **Move H1** rather than inventing an access cutout with unknown installed plug clearance. Proposed access x265..275/y15..27 clears cassette by 8 mm and power/switch reservation x216..264/y44..68 by 17 mm in y; right corner support (324,6) remains clear. Verify plug direction, lead bend and reachable disconnect.
+Former H1 was inside the enlarged backplate/holder area. Root moved it to native (289,40), as present in the held 806457b inventory, avoiding an invented access cutout with unknown installed plug clearance. Proposed access x265..275/y15..27 clears cassette by 8 mm and power/switch reservation x216..264/y44..68 by 17 mm in y; right corner support (324,6) remains clear. Verify plug direction, lead bend and reachable disconnect.
 
 Cassette y48 shares y44..48 with top-side power geometry and now overlaps it in x. Opposite-face placement requires the insulating backplate and actual tail/copper/wire clearance to be checked. Pico service ends x135.5,9.5 mm before cassette x145; upper fixture starts y68 here,20 mm beyond cassette y48. No relocation of Pico, switch, GPIO, modifiers, note/buzzer seats, nine fixture mounts or four cassette carrier holes is requested.
 
-## Exact PM native-CAD handoff
+## Exact PM native-CAD handoff and held-checkpoint status
+
+The held root 806457b IPC inventory confirms H1 at native (289,40), bottom/0 degrees, and all four carrier mounts retained. This helper reviewed that exported inventory; no fresh live readback, routed-net audit or physical harness fit is claimed here. The following records the native handoff for root; the move is already present in that checkpoint.
 
 1. Through Konnect move **H1 pad1 native (249,40)->(289,40)**, delta(+40,0). Preserve bottom side, rotation, circuit1 BAT_PROT_PLUS/circuit2 GND and exact JST PH footprint. Reroute/refill affected battery nets and inspect underside service access.
 2. Retain every carrier NPTH centre/drill. Update reservations to 112 x 36 x 44 and ≥47 supports, including lowered holder platform and bolt separation.

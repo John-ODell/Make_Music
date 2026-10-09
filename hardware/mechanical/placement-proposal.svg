@@ -2,9 +2,9 @@
 <style>text{font:3.4px sans-serif;fill:#172b40}.small{font-size:2.8px}.title{font-size:5px;font-weight:bold}.dim{stroke:#334155;stroke-width:.3}.assumed{stroke-dasharray:2 1}</style>
 <rect x="-12" y="-37" width="358" height="177" fill="#f8fafc"/>
 <text x="0" y="-30" class="title">Make Music: wider mechanical reservation plan</text>
-<text x="0" y="-24">330 x 120 assumed. 24 mm note bodies + 10 mm gaps = 34 mm pitch. Paper fit test PENDING.</text>
-<text x="0" y="-18" class="small">Top view: origin rear-left; x right, y front. Dashed = reservations; blue = 24 mm touch bodies; purple = selected 32 x 14 mm buzzer bodies.</text>
-<rect width="330" height="120" rx="2" fill="white" stroke="#172b40" stroke-width=".5"/>
+<text x="0" y="-24">330 x 121.5 proposed; native parts fixed. 24 mm note bodies + 10 mm gaps = 34 mm pitch. Paper fit test PENDING.</text>
+<text x="0" y="-18" class="small">Legacy service datum (+20,+20); new rear y=-1.5. Physical upper-left native (20,18.5). Dashed = reservations; blue = 24 mm touch bodies; purple = selected 32 x 14 mm buzzer bodies.</text>
+<rect x="0" y="-1.5" width="330" height="121.5" rx="2" fill="white" stroke="#172b40" stroke-width=".5"/>
 <rect x="145" y="12" width="112" height="36" fill="#fcd34d" fill-opacity=".6" stroke="#475569" stroke-width=".3" class="assumed"/>
 <rect x="162.15" y="19.55" width="77.7" height="20.9" fill="#fde68a" fill-opacity=".6" stroke="#475569" stroke-width=".3" class=""/>
 <text x="201" y="34" text-anchor="middle" class="small">BH-18650-W body</text>
@@ -124,8 +124,8 @@
 <circle cx="6" cy="114" r="4" fill="none" stroke="#94a3b8" stroke-width=".3"/><circle cx="6" cy="114" r="1.6" fill="white" stroke="#334155" stroke-width=".4"/>
 <circle cx="324" cy="114" r="4" fill="none" stroke="#94a3b8" stroke-width=".3"/><circle cx="324" cy="114" r="1.6" fill="white" stroke="#334155" stroke-width=".4"/>
 <path d="M0 122v5 M330 122v5 M0 125H330" class="dim" fill="none"/><text x="165" y="124" text-anchor="middle">330 assumed</text>
-<path d="M332 0h8 M332 120h8 M337 0v120" class="dim" fill="none"/><text x="340" y="60" transform="rotate(90 340 60)" text-anchor="middle">120 assumed</text>
+<path d="M332 -1.5h8 M332 120h8 M337 -1.5v121.5" class="dim" fill="none"/><text x="340" y="60" transform="rotate(90 340 60)" text-anchor="middle">121.5 proposed</text>
 <path d="M218 83v-7 M228 83v-7 M218 78H228" class="dim" fill="none"/><text x="223" y="75" text-anchor="middle" class="small">10 gap</text>
 <path d="M70 114v6 M104 114v6 M70 118H104" class="dim" fill="none"/><text x="87" y="117" text-anchor="middle" class="small">34 pitch</text>
-<text x="0" y="134" class="small">18650 proposal: four cassette mounts retained; H1 +40 mm right pending PM. Cell fit/platform/CAD/load gates open; feet >=47.</text>
+<text x="0" y="134" class="small">18650 proposal: four cassette mounts retained; H1 +40 mm: root 806457b held export. Cell fit/platform/CAD/load gates open; feet >=47.</text>
 </svg>

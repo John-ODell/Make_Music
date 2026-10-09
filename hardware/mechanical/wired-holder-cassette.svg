@@ -3,7 +3,7 @@
 <rect width="300" height="300" fill="#f8fafc"/>
 <text x="12" y="12" class="title">Protected 18650 wired cassette — review proposal</text>
 <text x="12" y="21">MPD BH-18650-W drawing G, 2024-08-21. Updated 2026-10-09; units mm.</text>
-<text x="12" y="28" class="small">Factory metrology/CAD/load/cell fit remain pending. Four carrier mounts stay; H1 move is PM work.</text>
+<text x="12" y="28" class="small">Factory metrology/CAD/load/cell fit remain pending. Four carrier mounts stay; H1 move appears in root 806457b held export.</text>
 <text x="12" y="38" class="head">Plan — carrier top-view coordinates; components on opposite faces</text>
 <g transform="translate(12 43) scale(1.4) translate(-145 -5)">
  <rect x="216" y="44" width="48" height="24" fill="#fef3c7" stroke="#d97706" stroke-width=".25" class="dash"/>
@@ -32,6 +32,7 @@
 <text x="218" y="96" class="small">Native (249,40) → (289,40)</text>
 <text x="218" y="103" class="small">Same side / rotation / nets</text>
 <text x="218" y="114" class="small">Pico/GPIO/modifiers stay.</text>
+<text x="12" y="132" class="small">330 x 121.5 proposed; retained service datum native(20,20), physical rear native y18.5.</text>
 <text x="12" y="139" class="small">Right bolt/holder plan projections overlap: separate vertically, then measure loaded clearance.</text>
 <text x="12" y="147" class="small">Maximum body 78.20 x 21.40. Wire/retainer region 94 x 26 is an allowance; no cell-length limit inferred.</text>
 <text x="12" y="157" class="head">Section — schematic; z positive down from carrier underside</text>

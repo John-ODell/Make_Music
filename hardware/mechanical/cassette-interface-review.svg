@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1000" viewBox="0 0 1100 1000">
+<style>text{font:16px sans-serif;fill:#243449}.head{font-size:22px;font-weight:bold}.small{font-size:14px}.dash{stroke-dasharray:5 4}</style>
+<rect width="1100" height="1000" fill="#f8fafc"/>
+<text x="35" y="40" class="head">Cassette interface CAD - REVIEW ONLY</text>
+<text x="35" y="68" class="">2026-10-09 | original mechanical x right / y down | dimensions mm; not full-size</text>
+<text x="35" y="95" class="">Factory fit, fastening, retention, shell/rib load path and tolerances remain pending.</text>
+<text x="35" y="137" class="head">Backplate z3..5 / unchanged four carrier holes</text>
+<rect x="70" y="175" width="448" height="144" fill="#e2e8f0" stroke="#334155" stroke-width="1.5" class=""/>
+<circle cx="90" cy="195" r="16.0" fill="none" stroke="#64748b" stroke-width="1.5" class="dash"/>
+<circle cx="90" cy="195" r="6.4" fill="none" stroke="#2563eb" stroke-width="1.5" class=""/>
+<text x="109" y="200" class="small">(150,17)</text>
+<circle cx="330" cy="195" r="16.0" fill="none" stroke="#64748b" stroke-width="1.5" class="dash"/>
+<circle cx="330" cy="195" r="6.4" fill="none" stroke="#2563eb" stroke-width="1.5" class=""/>
+<text x="349" y="200" class="small">(210,17)</text>
+<circle cx="90" cy="299" r="16.0" fill="none" stroke="#64748b" stroke-width="1.5" class="dash"/>
+<circle cx="90" cy="299" r="6.4" fill="none" stroke="#2563eb" stroke-width="1.5" class=""/>
+<text x="109" y="294" class="small">(150,43)</text>
+<circle cx="330" cy="299" r="16.0" fill="none" stroke="#64748b" stroke-width="1.5" class="dash"/>
+<circle cx="330" cy="299" r="6.4" fill="none" stroke="#2563eb" stroke-width="1.5" class=""/>
+<text x="349" y="294" class="small">(210,43)</text>
+<text x="255" y="165" class="">112 x 36</text>
+<text x="570" y="190" class="">3.2 nominal carrier-compatible holes</text>
+<text x="570" y="217" class="">60 x 26 centre pattern; 5 minimum edge distance</text>
+<text x="570" y="244" class="">Dashed diameter 8 hardware projections</text>
+<text x="570" y="271" class="">DXF axes: x mechanical, y = -mechanical y</text>
+<text x="570" y="298" class="small">Legacy native offset (+20,+20); physical top-left (+20,+18.5).</text>
+<text x="570" y="321" class="small">Optional physical-local y = legacy y + 1.5; native parts fixed.</text>
+<text x="35" y="379" class="head">Lower platform z14..16 / holder hole references pending</text>
+<rect x="70" y="420" width="376" height="104" fill="#e2e8f0" stroke="#334155" stroke-width="1.5" class=""/>
+<rect x="101.60000000000002" y="429.2" width="312.8" height="85.6" fill="#dcfce7" stroke="#059669" stroke-width="1.5" class="dash"/>
+<circle cx="145.32000000000005" cy="472" r="6.4" fill="none" stroke="#dc2626" stroke-width="1.5" class=""/>
+<circle cx="145.32000000000005" cy="472" r="10.16" fill="none" stroke="#dc2626" stroke-width="1.5" class="dash"/>
+<text x="96.32000000000005" y="550" class="small">(172.83,30)</text>
+<circle cx="367.76" cy="472" r="6.4" fill="none" stroke="#dc2626" stroke-width="1.5" class=""/>
+<circle cx="367.76" cy="472" r="10.16" fill="none" stroke="#dc2626" stroke-width="1.5" class="dash"/>
+<text x="318.76" y="550" class="small">(228.44,30)</text>
+<text x="215" y="410" class="">94 x 26</text>
+<text x="570" y="433" class="">Maximum bare holder 78.20 x 21.40 x 21.81</text>
+<text x="570" y="460" class="">10.68 from nominal left end; pitch 55.61</text>
+<text x="570" y="487" class="">MPD general decimal tolerance +/-0.5</text>
+<text x="570" y="514" class="">Red holes 3.20 / recess reference 5.08</text>
+<text x="570" y="541" class="">Confirm actual part and 2-56 fastener before drilling.</text>
+<text x="35" y="600" class="head">Section reference / z down from carrier underside</text>
+<rect x="70" y="634" width="350" height="8" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5" class=""/>
+<rect x="70" y="657" width="350" height="10" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" class=""/>
+<rect x="99" y="712" width="293" height="10" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" class=""/>
+<rect x="124" y="722" width="243" height="109.05" fill="#dcfce7" stroke="#059669" stroke-width="1.5" class="dash"/>
+<rect x="86" y="642" width="3" height="49.5" fill="#9d174d" stroke="#9d174d" stroke-width="1.5" class=""/>
+<rect x="272" y="642" width="3" height="49.5" fill="#9d174d" stroke="#9d174d" stroke-width="1.5" class=""/>
+<path d="M70 842H420" stroke="#dc2626" stroke-width="2" class="dash"/>
+<rect x="70" y="852" width="350" height="10" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" class=""/>
+<path d="M60 877H430" stroke="#334155" stroke-width="2"/>
+<text x="470" y="644" class="">Carrier underside z0; board thickness 1.6 assumed</text>
+<text x="470" y="674" class="">Backplate z3..5; carrier bolt tips z9.9 nominal</text>
+<text x="470" y="710" class="">Platform z14..16; 4.1 nominal tip clearance</text>
+<text x="470" y="744" class="">Maximum bare body ends z37.81 (green)</text>
+<text x="470" y="778" class="">Complete fitted/loaded limit z40 (red)</text>
+<text x="470" y="812" class="">Door z42..44; closure and retainers pending</text>
+<text x="470" y="846" class="">Support surface &gt;=47; 3 nominal to cassette</text>
+<text x="35" y="925" class="">No additional carrier or module holes. Platforms alone are not a retained enclosure.</text>
+<text x="35" y="955" class="">CASSETTE_INTERFACES.md records sources, nominal tolerances, DXF layers and pending gates.</text>
+</svg>
