@@ -1,126 +1,91 @@
 # Make Music working checkpoint
 
-Updated2026-10-09 during continuation. Workspace /Users/johnodell/Desktop/Make_Music,
-branch codex/pcbway-prototype-package, draftPR28:
-https://github.com/John-ODell/Make_Music/pull/28. Current pre-save HEADfaafb58;
-origin/masterbd593fb. Read actual git log on wake; this checkpoint is committed
-and pushed with the final native rear-edge revision and fresh evidence.
+Updated 2026-10-09 at usage guard. Root branch codex/pcbway-prototype-package.
+Published/pushed package commit d987896; native CAD commit21b2108 remains current.
+PR28 open/draft: https://github.com/John-ODell/Make_Music/pull/28
+Title/body updated to final held five-instrument scope. PR34 reviewed/merged
+484b73e on master; root merged it in0fc598b (paper script/PDF conflicts resolved
+with reviewed PR34 versions). CSV line endings abea01d; PR31/32/33 already merged.
 
-## Agreed scope
+## Stop/resume status
 
-Protected removable LONG18650, externally charged; original Pico H SC0917 in
-removable female sockets; eight notes, two left modifiers, two ST0238 passive
-modules, exposedGPIO. FIVE complete factory instruments including SMT/THT,
-harness/mechanics/programming/tests; optional sixth bare keepsake. Screen,
-keypad/percussion/otherPicos deferred. No physical parts/coarse tape only;
-assembler metrology can be priced. No purchase, supplier messages or PCBWay
-uploads. Preserve unrelatedMOV and hardware/kicad/.history/.
+Five-hour limit96% used/4% remaining; substantive work stopped. Actual
+resetsAt1791587978 =2026-10-09 18:19:38 America/Chicago. Same heartbeat
+resume-make-music-pcb-at-1-am rearmed18:21 Central. Check actual limits on wake;
+no reset credits. All three authorized helpers asked to checkpoint/stop.
+Konnect save_project returned Board saved successfully; bounded hash check
+confirmed protected source/package inputs unchanged. KiCad/Viewer quit.
 
-## Usage and resume
+## Completed this continuation
 
-Check signed-in account limits at start and between stages. Use300-minute
-remaining100-usedPercent; at<=5% onlybounded save/checkpoint/push, ask helpers
-checkpoint/stop, rearm SAME heartbeat afteractualresetsAt, endturn. No reset
-credits. Latest63%used/37%remaining, weekly79%;reset1791587978 =Oct9
-18:19:38 America/Chicago. Existing heartbeat resume-make-music-pcb-at-1-am
-already ACTIVE for18:21CentralOct9 as fallback. Verify actualreset onwake.
-Pause once allindependent work is complete and onlyexternalrequirements remain.
-Computer must be awake withCodexopen forlocalwake.
+330x121.5 native outline(20,18.5)..(350,140), service datum(20,20) unchanged.
+48 electrical parts/166 physical endpoints; board65 footprints/405 tracks/33vias.
+Fresh saved/refilled ERC0; copper/layout DRC0; unconnected/parity0; exact four
+metadata warnings retained (C17/C18 Header, J1/J2 MPN). Full live net/value/
+footprint identity checks pass and identity preview is a no-op. Source-bound
+hardware/review/rear-edge-20261009 is current; older integration evidence is
+historical and must not be used to validate current sources.
 
-## Saved native design and checks
+Final managed hardware/manufacturing/REVIEW_ONLY_DO_NOT_ORDER replaced as one
+coherent held revision:65 hashed outputs plus manifest,47 purchased parts,
+30 top SMT/17 THT, five-board235 carrier-part total. All durable input/output
+hashes pass; all15 placement guard tests pass after LF table writer change.
+Independent helper checked47 coordinates/angles/sides,8 layer aperture/macro
+references, closed outline,130 PTH(97 component+33via) and17 NPTH3.2mm hits.
+Actual U2rotation/C17displacement negative controls reject before output.
+Whole final Gerber/drill front/back registration and paste reviewed. Actual
+Gerber Viewer vector prints resolved navigation trouble: enlarged front Cu,
+mask,paste,legend checked. All5 native PDF pages and both revised Letter
+paper-fit pages rendered/inspected. Scope in review/manufacturing-20261009
+and package/export-review.md; fit-to-page inspection PDFs are not fab drawings.
+Mechanical PR34 adds corrected datums/socket margins/nominal cassette DXFs,
+SVG and 330x121.5 actual-size paper fit. Generator reproduction agrees; no
+physical/toleranced machining approval. No native edits by helpers.
 
-Reviewed/merged PR31power/procurement, PR32designnotes and PR33fullplacement
-guard thisturn, in addition toprevious24/25/26/27/29/30. Current schematic
-48electricalparts/166endpoints. Board65footprints,405trace segments/33vias.
-C17/C18integration was alreadycomplete; doNOTredo.
+## Next independent work
 
-Root extended rear Edge.Cuts through Konnect fromy20 toFINALy18.5:
-boardnative(20,18.5)..(350,140),330x121.5mm. Existingservice/mechanicaldatum
-native(20,20)retained;rearmechanicaly=-1.5. All65 placements/fullIDs/values
-and405tracksbyUUID unchanged. Firstinterimy19 exposedJ1pin1silk-edgewarning;
-finaly18.5 clears it. Socketnominalbodymargin1.275mm/courtyard0.77mm;
-actualfit/engagement/handling notverified. C17/C18reloadinactivechamfer/zero
-SMTdrillmetadataexplicit;operativelands unchanged,notfullpayloadbitidentity.
+1. Read final schematic helper report (final read-only review of d987896 was
+started just before limit guard; may be incomplete). Resolve any actionable
+manifest/reference issue without repeating completed CAD/export work.
+2. Finish final PR28 review and authorized merge as a HELD review project;
+retain all external gates. Verify actual GitHub head/master on wake.
+3. Once no independent work remains, pause this heartbeat and report exact
+external measurement/process requirements. No purchases/uploads/suppliers.
 
-Fresh hardware/review/rear-edge-20261009 containsnativeXML,all166IPCpadnets,
-48values/fullIDs,identitysyncnoop,fullsaved/refilledERC/DRC,outlinemutation
-responses/readback/scorer. ERC0,copper/layoutDRC0,unconnected0;overallDRC
-FOURmetadatawarningsC17/C18Header,J1/J2MPN. Norules/results suppressed.
-Placementzero hardfailures;internalconnector-edgeheuristic30point deduction.
-verify_board.py andverify_connectivity.py pass;oldintegration-20261009 is
-historical806457b andmustnotbeusedforcurrenthashvalidation.
+## Helper state
+
+Schematic01a11931-3d20-7733-8e7e-296b88ba9abd: final minimal package review
+started; stop requested at guard. Power01a11931-cb05-7f20-8e09-075ef0c4c9c1:
+independent final export audit complete, no discrepancies, idle/stop requested.
+Mechanical01a11931-eed2-7820-85eb-496cfc97903b: PR34 merged, print/nominal
+cassette work complete, idle/stop requested. Read statuses, do not restart.
+
+## Scope and external holds
+
+Protected removable LONG18650/external charging, original Pico H SC0917 in
+female sockets,8 notes+2 left modifiers,2 ST0238,exposedGPIO,FIVE fully
+factory-built instruments plus optional sixth bare keepsake. Expansions deferred.
+No actual parts/coarse tape: assembler metrology can be priced. Preserve MOV
+and hardware/kicad/.history; all native mutations only Konnect, root sole owner.
+
+Exact touch/ST0238 outlines/header order/support lands/dressed harnesses;
+Pico engagement/removal/USB/BOOTSEL; P1835J protected button-top opposite-end
+cell/BH18650W cold fit/contacts/ampacity; JST AWG24 TR64 OD0.8..1.5/crimps;
+112x36x44 cassette,z16 platform,>=47supports,>=2 loaded clearance/retention;
+final toleranced fixture/door/feet depend measurements. Partial underside rule
+area unchanged. L1 charger pairing HELD:4.2+/-1% upper4.242V vs unqualified
+P1835J4.20Vmax;500mA does not resolve it. One shared charger/input set is a
+proposed quote assumption. U2 mask0.10/stencil0.100, socket ring0.25 vs normal
+0.254, TDK0805 lands, panel rails/fiducials/depanel/THT/orientation need factory
+acceptance. First-article and all-five powered tests remain. No actual quote,
+runtime, hardware success or fabrication release. $67.54 was only setup/example.
 
 ## Tooling
 
-Allnative changesonlyKonnectMCP,oneownerroot;nopcbnew/SWIG/textediting.
-InstalledKonnectv0.13.0 normalwrapper /tmp/make-music-pcbway/mcp_call.py,
-schemas tools.json. Guardedidentityadapter /tmp/music-konnect-identity-adapter/
-21tests previouslyreviewed;root finaladaptedidentitypreviewnoop. Installed
-binary/configunchanged. Allprotectedsource17SHA retainedinevidence.
-
-PR33merged0a8643f adds47placementfullcoverage/identity/side/finiteX/Y/rotation
-againstverifiedIPC. All15tests pass, meaningfulrotationnegativecontrol.
-Finalexpectedmachinecorners20,-18.5..350,-140. Rootfullfreshpipeline passed
-47parts/30topSMT/17THT;no fabrication release. Run testsagainafterchangesonly.
-
-## Current export/package progress
-
-NEW /tmp/make-music-pcbway/raw-held-rear-edge-20261009:8Gerbers+job,
-PTH/NPTHdrills,47positions/BOM,2sheetschematicPDF,topassemblyPDF,
-bottom-through-topPDF,copperlayoutPDF,IPC2581XML. FullMCPresponses report
-complete/nonempty/no warnings;sourcecheckpointrear-edge-export-source-checkpoint.json.
-Newpackage stage /tmp/make-music-pcbway/held-package-stage-rear-edge-20261009
-passed59heldfiles. NOTyetreviewed/published;docs maychange so regenerateNEW
-stageafterfinaldocs. OldcheckedinREVIEW_ONLY_DO_NOT_ORDER isOBSOLETE.
-
-Old806457b GerbViewvisualwholelayers/registrationdrills/pastecheckedTHISturn,
-but oldy20geometryissuperseded. Criticalaperturezoomfailed;nodetailedprocess
-passclaimed. NeedNEWfinalnativeGerber/drillviewer andALLPDFpage review before
-replacingheldoutputs. Don'tclaimreviewfromoldraworPCBPDF alone.
-NoIPC-D356exportavailable;installedformatipc fails.IPC2581issupplemental.
-
-## Next independent actions
-
-1. FreshfinalGerber/drillviewerregistration/edge/socketmarkers/mask/paste/
-polarity,renderALL5PDFpages. Verifyactualhole/apertureinventories.
-2. Review/merge mechanicalhelpernewordinarydocs/modelPR. Currentrootdocs
-updated330x121.5/long18650/fivecomplete/sharedonecharger-inputsetPROPOSED/HOLD.
-Reconcileallremainingcurrentreferences;don'trewritehistoricalevidence.
-3. RegeneratefreshcompleteheldstageincludingallrawPDF/IPC/currentevidence,
-47/30/17tables/fivequantitytotals/SHAmanifestandviewerrecord. Replacerootheld
-packageonlyasonecoherentrevision. Testsnegativecontrolsagainstactualexports.
-4. FinalindependentreviewPR28/fullsource+packagechecks,updatePRbodyandmerge
-whenindependentworkcomplete,retainphysical/processHOLD. Don'torder/upload.
-
-## Helpers
-
-Schematic01a11931-3d20-7733-8e7e-296b88ba9abd idlePR32merged;frozen806
-independentaudit10/10hierarchy/ERC0/DRC4/166pads/7firmwaretests,liveIPCtimeout
-truthfullyunavailable. CurrentroothasfreshIPC.
-Power01a11931-cb05-7f20-8e09-075ef0c4c9c1 idlePR31/33merged;
-cursor0dbab81f-2e02-49b9-ad26-8edcb34ecbf6:11.
-Mechanical01a11931-eed2-7820-85eb-496cfc97903b activeordinarysocket/paperfit/
-parametriccassetteinterfaces fory18.5,nativeCADforbidden. Lastcursor
-2468e8d2-7a8a-47e1-8fad-363a763a3f5c:8. AwaitnewPR.
-
-## Exact external holds
-
-Pico/socketengagement/removal/USB/BOOTSEL;actualtouch/ST0238headerorder,
-modulebody/supportlands/cabledressing;qualifiedcrimps/polarity;protected
-button-topopposite-endP1835J/BH18650Wfit/contactampacity/retention.
-MPDfactoryAWG24TR64leads150+/-5mm,JSTOD0.8..1.5mmqualification;
-112x36x44cassette,z16holderplane,>=47mmsupports,>=2mmloadedclearance;
-finalfixture/door/retentionCADdependsmeasurements. InheritedB.Cukeepout
-partial165,32..235,68onlyvias/fill;noenlargementclaimed.
-L1chargerHOLD4.2+/-1%upper4.242V vsunqualifiedP1835J4.20Vmax;
-500mAdoesnotresolve. Proposed1sharedcharger/inputsetquotequantityassumption.
-U2mask0.10/stencil0.100mm,socketring0.25vsnormal0.254,TDK0805land
-choice,panelrails/fiducials/tooling/depanel/THTacceptance;current-limited
-batteryandUSBbench/firstarticle/all5functionaltestsremain. Noactualquote.
-Old$67.54 onlysetup/stencilexample. No runtimeorhardware successclaimed.
-
-## UI
-
-ExactrootPCBEditorrunningIPCapi.sock. GerbViewclosedafteroldreview;
-getAppafterquitwouldreopen. CloseKiCadsessionsafterunneeded/stopping.
-UseCUAonlyforUI;restorecua.rewriteDocumentation aftercontextcompaction.
+Konnectv0.13.0 /tmp/make-music-pcbway/mcp_call.py; guarded21-test identity
+adapter /tmp/music-konnect-identity-adapter. No pcbnew/SWIG/text-native edits.
+Stable bundled Python at /Users/johnodell/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.
+Final raw /tmp/make-music-pcbway/raw-held-rear-edge-20261009 (18 originals);
+final stage /tmp/make-music-pcbway/final-visually-reviewed-package-20261009.
+IPC2581 supplemental; IPC-D356 unavailable. Restore CUA documentation after
+compaction; getApp after quit reopens apps, so use process checks.
