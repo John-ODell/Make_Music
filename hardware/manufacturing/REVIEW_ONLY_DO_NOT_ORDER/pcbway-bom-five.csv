@@ -7,8 +7,20 @@ D2,1,5,Vishay,SS14-E3/61T,SS14-E3/61T,MakeMusicCarrier:Vishay_SS14_SMA_K1_A2,SMT
 D3,1,5,Littelfuse,SMAJ5.0CA,SMAJ5.0CA,MakeMusicPower:Littelfuse_SMAJ5-0CA_DO-214AC,SMT,Top
 F1,1,5,SCHURTER,3403.0275.23,1.25A T,MakeMusicPower:Schurter_UMT-H_3403-0275-23,SMT,Top
 H1,1,5,JST,B2B-PH-K-S(LF)(SN),JST PH battery,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,THT,Bottom
-"J1,J2",2,10,Samtec,SSQ-120-01-G-S,LEFT / Pico 1-20,MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm,THT,Top
-"J3,J4,J5,J6,J7,J8,J9,J10,J11,J12,J13,J14",12,60,Harwin,M20-9990346,C4 / GP16,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J1,1,5,Samtec,SSQ-120-01-G-S,LEFT / Pico 1-20,MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm,THT,Top
+J2,1,5,Samtec,SSQ-120-01-G-S,RIGHT / Pico 21-40,MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm,THT,Top
+J3,1,5,Harwin,M20-9990346,C4 / GP16,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J4,1,5,Harwin,M20-9990346,D4 / GP17,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J5,1,5,Harwin,M20-9990346,E4 / GP18,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J6,1,5,Harwin,M20-9990346,F4 / GP19,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J7,1,5,Harwin,M20-9990346,G4 / GP20,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J8,1,5,Harwin,M20-9990346,A4 / GP21,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J9,1,5,Harwin,M20-9990346,B4 / GP22,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J10,1,5,Harwin,M20-9990346,C5 / GP26,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J11,1,5,Harwin,M20-9990346,Semitone up / GP27,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J12,1,5,Harwin,M20-9990346,Octave up / GP28,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J13,1,5,Harwin,M20-9990346,Buzzer 1 / PWM / GP13,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
+J14,1,5,Harwin,M20-9990346,Buzzer 2 / PWM / GP12,MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm,THT,Top
 J15,1,5,Harwin,M20-9991646,GPIO / Harwin 16-way,MakeMusicCarrier:Harwin_M20-9991646_1x16_P2.54mm,THT,Top
 "R1,R2",2,10,Yageo,RC0603FR-0710KL,10k,Resistor_SMD:R_0603_1608Metric,SMT,Top
 R3,1,5,Yageo,RC0603FR-07649KL,649k,Resistor_SMD:R_0603_1608Metric,SMT,Top

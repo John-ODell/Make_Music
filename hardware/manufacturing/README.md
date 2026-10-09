@@ -38,7 +38,10 @@ are satisfied. No script here uploads files or grants release.
    Inputs are the complete MCP result files, not stdout summaries. This checks
    sources stayed unchanged, native origin agreement and BOM/placement identity.
    It produces exact per-reference BOM, grouped five-unit BOM, SMT-only centroid,
-   separate manual THT positions, copied evidence and SHA-256 manifest.
+   separate manual THT positions, copied evidence and SHA-256 manifest. Grouping
+   includes the functional Value so a connector group cannot inherit another
+   reference's function. It also bundles the quote draft and supporting review
+   documents/assets under support/, rebasing relative links within the package.
 7. Inspect actual Gerbers and both drill sets in a local viewer, inspect
    placements/rotation/polarity and render every final PDF. Confirm all managed
    outputs are nonempty and hashes agree. Only then replace the old held
@@ -65,9 +68,11 @@ PM confirmed the final rear edge at native y18.5: machine board corners are
 (20,-18.5)..(350,-140) mm, 330×121.5 mm. The strict origin guard rejects both
 the superseded y20 and interim y19 edge exports. Placements, native(0,0)
 position origin and service datums remain fixed. Fresh source-bound checks and
-exports are required after root's CAD change; do not reuse or alter806457b
-source hashes to force a pass. The full pipeline was checked against frozen
-806457b before this outline update; the final outline also has targeted tests.
+exports are required after a CAD change; do not reuse or alter806457b
+source hashes to force a pass. The final pipeline passes against current
+21b2108 native sources and rear-edge-20261009 evidence. Later document/BOM
+presentation changes regenerate the ordinary package and manifest while retaining
+identical source-bound native Gerber/drill/position/drawing payloads.
 
 ## Coordinate and assembly convention
 

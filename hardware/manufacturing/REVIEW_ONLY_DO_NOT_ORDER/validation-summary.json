@@ -9,6 +9,8 @@
   "reviewed_metadata_warnings": 4,
   "schematic_parity_issues": 4,
   "purchased_carrier_parts": 47,
+  "custom_field_metadata_parity_warnings": 4,
+  "electrical_connectivity_identity_mismatches": 0,
   "smt_centroid_parts": 30,
   "manual_tht_parts": 17,
   "assembled_instruments_requested": 5,

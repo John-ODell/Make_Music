@@ -31,4 +31,12 @@ Revision-1 source path: protected-cell external + -> H1 circuit1 -> F1 -> BAT_FU
 
 Battery OFF permits USB power. Remove the cell for external charging; no onboard charger is present. Source changes may reboot: stop playing and let the instrument restart before resuming. No polymer hold-up additions are fitted. Hardware UVLO/overload protection is implemented, while assembly-specific protection response, PCM thresholds, actual cell/holder fit and power/load/thermal validation remain open. Adopted limits are ≤0.70A battery branch, ≤350mA total3V3 including Pico, ≤250mA external3V3 and ≤100µF total VSYS capacitance including Pico. The user corrected the battery format to **18650** on 2026-10-09; the primary power/mechanical review owns updated exact cell/holder/charger choices. R1/R2 bias GP13/12 HIGH while pins are high impedance; firmware must idle HIGH and ST0238 startup/current/PWM still need testing. C1–C12 remain100nF at the carrier headers; native C5/C6 are retained and are unrelated to the removed power-document polymer C5/C6. C17/C18 add 10µF each at J13/J14 on 3V3_OUT; qualify effective capacitance and 3V3 startup/inrush.
 
-The held package and previous routing checks predate C17/C18 and the corrected long 18650 cassette/H1 move. Electrical integration and fresh ERC/DRC/pad checks are complete; PM must finish reviewing the new held exports/manifest. Current exact findings are in PCB_STATUS.md. Complete actual component/polarity/engagement checks, final mechanical CAD, bench/thermal/fit validation and fabricator/assembler acceptance before manufacturing approval. See ../assembly/FIT_CHECKLIST.md and ../manufacturing/README.md. The retired export_review.py refuses to run; all new CAD exports use Konnect MCP.
+The current held package includes C17/C18 and the corrected long18650
+cassette/H1 move. Electrical integration and saved/refilled checks agree with
+the source-bound exports. Native parity retains four metadata warnings; actual
+pad nets, values and full footprint IDs agree. All drawing pages and actual
+Gerber/drill whole/detail reviews are recorded. Current findings are in
+PCB_STATUS.md. Complete exact-part fit, final mechanical CAD, bench/thermal
+qualification and factory acceptance before manufacturing release. See
+../assembly/FIT_CHECKLIST.md and ../manufacturing/README.md. The retired
+export_review.py refuses to run; native exports use Konnect MCP.

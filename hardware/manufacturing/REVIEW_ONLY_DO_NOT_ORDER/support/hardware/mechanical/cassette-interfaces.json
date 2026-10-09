@@ -1,0 +1,93 @@
+{
+  "status": "REVIEW_ONLY_NOT_MACHINING_RELEASE",
+  "units": "mm",
+  "xy_frame": "original_mechanical_top_view_native_offset_20_20",
+  "legacy_native_offset": [
+    20,
+    20
+  ],
+  "proposed_outline_native_min": [
+    20,
+    18.5
+  ],
+  "proposed_outline_size": [
+    330,
+    121.5
+  ],
+  "new_outline_local_native_offset": [
+    20,
+    18.5
+  ],
+  "new_outline_local_y_from_legacy": "y_new_equals_y_legacy_plus_1_5_only_when_physical_top_left_frame_explicitly_adopted",
+  "dxf_frame": "x_mechanical_y_negative_mechanical",
+  "z_frame": "positive_down_from_carrier_underside",
+  "root_review_commit": "806457b",
+  "cassette": {
+    "x": 145,
+    "y": 12,
+    "width": 112,
+    "depth": 36,
+    "height": 44
+  },
+  "carrier_holes": [
+    [
+      150,
+      17
+    ],
+    [
+      210,
+      17
+    ],
+    [
+      150,
+      43
+    ],
+    [
+      210,
+      43
+    ]
+  ],
+  "carrier_hole_diameter": 3.2,
+  "carrier_hardware_diameter": 8,
+  "backplate": {
+    "z": 3,
+    "thickness": 2
+  },
+  "platform": {
+    "x": 154,
+    "y": 17,
+    "width": 94,
+    "depth": 26,
+    "z": 14,
+    "thickness": 2
+  },
+  "holder": {
+    "mpn": "MPD_BH-18650-W",
+    "source_revision": "G_2024-08-21",
+    "center": [
+      201,
+      30
+    ],
+    "body_nominal": [
+      77.7,
+      20.9,
+      21.31
+    ],
+    "decimal_tolerance": 0.5,
+    "first_mount_from_left": 10.68,
+    "mount_pitch": 55.61,
+    "mount_diameter": 3.2,
+    "recess_diameter": 5.08,
+    "mount_status": "NOMINAL_CASSETTE_ONLY_CONFIRM_TOLERANCES_AND_FASTENER_BEFORE_DRILLING"
+  },
+  "carrier_bolt_tip_nominal_z": 9.9,
+  "carrier_hardware_review_z": 12,
+  "fitted_loaded_limit_z": 40,
+  "door": {
+    "z": 42,
+    "thickness": 2,
+    "closure_status": "RETENTION_AND_FASTENERS_PENDING"
+  },
+  "support_surface_min_z": 47,
+  "minimum_loaded_clearance": 2
+}

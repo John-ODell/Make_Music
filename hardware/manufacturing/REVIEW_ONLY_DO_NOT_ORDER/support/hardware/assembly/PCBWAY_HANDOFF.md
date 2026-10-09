@@ -39,7 +39,7 @@ first-article work, rather than supplied as unspecified user assembly.
 | Insulating cassette, raised module fixture, support feet | 1 set | 5 sets | Final machining drawings and loaded clearance after actual-part metrology |
 | External charger + required input accessory | Shared accessory | 1 shared set proposed; HOLD | Quantity is a quote assumption; exact cell/charger compatibility must be established before inclusion |
 
-The [instrument parts list](support/hardware/assembly/instrument-parts.csv) gives candidate hardware,
+The [instrument parts list](instrument-parts.csv) gives candidate hardware,
 wire allowances and mechanical quantities. These allowances are not installed
 wire lengths. The purchased carrier BOM excludes TP1 copper and 17 NPTH
 mounting holes. It also excludes the removable Pico and external modules.
@@ -47,7 +47,7 @@ mounting holes. It also excludes the removable Pico and external modules.
 Carrier J3–J14 use **1 signal / 2 regulated 3V3 / 3 ground**. The unkeyed Harwin
 housing needs a visible signal-end mark, retention and continuity inspection.
 ST0238 module order differs from the carrier order; cables are adapted, not
-assumed straight through. Follow [module harnesses](support/hardware/assembly/MODULE_HARNESSES.md).
+assumed straight through. Follow [module harnesses](MODULE_HARNESSES.md).
 Do not apply battery voltage to touch/buzzer power pins or exposed GPIO.
 
 H1 is the **bottom-mounted THT** JST-PH, positive circuit1. Verify by cavity
@@ -99,13 +99,13 @@ viewed through the top must be labeled that way, not called an underside view.
 
 ## Acceptance and release gates
 
-Complete the [precise fit checklist](support/hardware/assembly/FIT_CHECKLIST.md) and
-[mechanical readiness record](support/hardware/mechanical/BUILD_READINESS.md) using actual
+Complete the [precise fit checklist](FIT_CHECKLIST.md) and
+[mechanical readiness record](../mechanical/BUILD_READINESS.md) using actual
 parts and suitable metric measurement tools. The user's tape measure and
-[paper fit print](support/output/pdf/make-music-paper-fit-letter.pdf) can check
+[paper fit print](../../output/pdf/make-music-paper-fit-letter.pdf) can check
 overall size and reach; they cannot certify pad pitch or connector engagement.
 
-Complete the staged [power and functional procedure](support/hardware/power/prototype-validation.md)
+Complete the staged [power and functional procedure](../power/prototype-validation.md)
 with a current-limited cell emulator before real-cell use. Record per-unit
 polarity, source isolation, normal load, fault behavior, temperature, all ten
 touch inputs and two variable-pitch outputs. Use
@@ -128,7 +128,7 @@ metrology, first-article qualification, five-unit programming/testing,
 Picos/cells/charger, shipping/tax and optional sixth bare board as separate
 lines. Price a five-carrier SMT-only alternative as a comparison, clearly
 identifying every remaining soldering/mechanical operation. The selected
-delivery remains five complete instruments. See [budget worksheet](support/hardware/ASSEMBLY_BUDGET.md).
+delivery remains five complete instruments. See [budget worksheet](../ASSEMBLY_BUDGET.md).
 
 Sources checked 2026-10-09: [PCBWay assembly file requirements](https://www.pcbway.com/assembly-file-requirements.html),
 [PCBWay capabilities](https://www.pcbway.com/capabilities.html),

@@ -1,0 +1,365 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="-12 -32 358 358">
+<style>text{font:3.2px sans-serif;fill:#243449}.title{font-size:5px;font-weight:bold}.small{font-size:2.6px}.dim{fill:none;stroke:#64748b;stroke-width:.25}.dash{stroke-dasharray:1.5 1}</style>
+<rect x="-12" y="-32" width="358" height="358" fill="#f8fafc"/>
+<text x="0" y="-24" class="title" text-anchor="start">Raised insulating module fixture — proposed dimensions</text>
+<text x="0" y="-17" class="" text-anchor="start">330 x 121.5 proposed; legacy datum (+20,+20), rear y=-1.5. All native mounts fixed.</text>
+<text x="0" y="-10" class="small" text-anchor="start">Actual-part support lands, headers, components, touch response and retention require fit checks.</text>
+<rect x="0" y="-1.5" width="330" height="121.5" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="145" y="12" width="112" height="36" fill="#ffedd5" fill-opacity="0.6" stroke="#64748b" stroke-width=".25" class="dash"/>
+<text x="201" y="30" class="small" text-anchor="middle">18650 cassette 112 x 36</text>
+<rect x="216" y="44" width="48" height="24" fill="#fde68a" fill-opacity="0.6" stroke="#64748b" stroke-width=".25" class="dash"/>
+<text x="240" y="57" class="small" text-anchor="middle">Power / switch</text>
+<rect x="104.5" y="0" width="31" height="56" fill="none" fill-opacity="1" stroke="#64748b" stroke-width=".25" class="dash"/>
+<text x="120" y="29" class="small" text-anchor="middle">Pico + access</text>
+<rect x="45" y="8" width="13" height="47.1" fill="#a7f3d0" fill-opacity="0.6" stroke="#64748b" stroke-width=".25" class="dash"/>
+<text x="51.5" y="32" class="small" text-anchor="middle">J15</text>
+<path d="M2 36H42V56H120V68H326V119H2Z" fill="#cbd5e1" stroke="#334155" stroke-width=".4"/>
+<circle cx="6" cy="114" r="4" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<circle cx="324" cy="114" r="4" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<rect x="11.7" y="41.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="11.7" y="41.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="11.7" y="63.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="11.5" y="64.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="14.5" cy="68" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="14.5" cy="68" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="33.3" y="41.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="30.5" y="37.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="33.5" cy="40" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="33.5" cy="40" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="33.3" y="63.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="12.0" y="42.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="24" y="55" class="small" text-anchor="middle">Semi+</text>
+<rect x="10.0" y="45.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="10.0" y="60.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="36.3" y="45.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="36.3" y="60.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="15.0" y="40.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="30.0" y="66.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="11.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="11.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="11.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="11.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="14.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="14.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="33.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="30.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="33.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="33.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="33.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="12.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="24" y="95" class="small" text-anchor="middle">Oct+</text>
+<rect x="10.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="10.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="36.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="36.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="15.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="30.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="57.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="57.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="57.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="57.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="60.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="60.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="79.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="76.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="79.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="79.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="79.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="58.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="70" y="95" class="small" text-anchor="middle">C4</text>
+<rect x="56.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="56.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="82.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="82.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="61.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="76.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="91.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="91.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="91.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="91.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="94.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="94.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="113.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="110.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="113.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="113.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="113.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="92.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="104" y="95" class="small" text-anchor="middle">D4</text>
+<rect x="90.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="90.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="116.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="116.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="95.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="110.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="125.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="125.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="125.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="125.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="128.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="128.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="147.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="144.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="147.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="147.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="147.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="126.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="138" y="95" class="small" text-anchor="middle">E4</text>
+<rect x="124.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="124.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="150.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="150.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="129.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="144.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="159.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="159.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="159.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="159.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="162.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="162.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="181.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="178.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="181.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="181.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="181.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="160.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="172" y="95" class="small" text-anchor="middle">F4</text>
+<rect x="158.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="158.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="184.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="184.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="163.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="178.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="193.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="193.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="193.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="193.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="196.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="196.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="215.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="212.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="215.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="215.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="215.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="194.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="206" y="95" class="small" text-anchor="middle">G4</text>
+<rect x="192.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="192.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="218.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="218.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="197.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="212.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="227.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="227.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="227.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="227.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="230.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="230.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="249.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="246.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="249.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="249.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="249.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="228.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="240" y="95" class="small" text-anchor="middle">A4</text>
+<rect x="226.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="226.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="252.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="252.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="231.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="246.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="261.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="261.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="261.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="261.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="264.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="264.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="283.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="280.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="283.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="283.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="283.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="262.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="274" y="95" class="small" text-anchor="middle">B4</text>
+<rect x="260.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="260.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="286.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="286.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="265.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="280.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="295.7" y="81.7" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="295.7" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="295.7" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="295.5" y="104.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="298.5" cy="108" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="298.5" cy="108" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="317.3" y="81.7" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="314.5" y="77.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="317.5" cy="80" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="317.5" cy="80" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="317.3" y="103.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="296.0" y="82.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="308" y="95" class="small" text-anchor="middle">C5</text>
+<rect x="294.0" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="294.0" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="320.3" y="85.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="320.3" y="100.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="299.0" y="80.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="314.0" y="106.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="43.7" y="60.2" width="32.6" height="14.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="43.7" y="60.2" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="43.7" y="71.8" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="46" y="73.0" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="49" cy="76.5" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="49" cy="76.5" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="71.3" y="60.2" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="68" y="56.0" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="71" cy="58.5" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="71" cy="58.5" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="71.3" y="71.8" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="44.0" y="60.5" width="32" height="14" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="60" y="68.5" class="small" text-anchor="middle">BZ1</text>
+<rect x="42.0" y="62.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="42.0" y="69.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="76.3" y="62.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="76.3" y="69.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="49.5" y="58.5" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="67.5" y="74.8" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="81.7" y="60.2" width="32.6" height="14.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="81.7" y="60.2" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="81.7" y="71.8" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="84" y="73.0" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="87" cy="76.5" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="87" cy="76.5" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="109.3" y="60.2" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="106" y="56.0" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="109" cy="58.5" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="109" cy="58.5" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="109.3" y="71.8" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="82.0" y="60.5" width="32" height="14" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="98" y="68.5" class="small" text-anchor="middle">BZ2</text>
+<rect x="80.0" y="62.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="80.0" y="69.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="114.3" y="62.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="114.3" y="69.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="87.5" y="58.5" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="105.5" y="74.8" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="64" y="74" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="98" y="74" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="132" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="166" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="200" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="234" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="268" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="302" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="18" y="31" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="18" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="55" y="45" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="93" y="45" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<circle cx="8.0" cy="74.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="8.0" cy="74.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="-2" y="74.0" class="small" text-anchor="end">F1</text>
+<circle cx="45.0" cy="83.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="45.0" cy="83.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="45.0" y="91.0" class="small" text-anchor="middle">F2</text>
+<circle cx="50.0" cy="114.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="50.0" cy="114.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="50.0" y="125" class="small" text-anchor="middle">F3</text>
+<circle cx="155.0" cy="114.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="155.0" cy="114.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="155.0" y="125" class="small" text-anchor="middle">F4</text>
+<circle cx="257.0" cy="114.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="257.0" cy="114.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="257.0" y="125" class="small" text-anchor="middle">F5</text>
+<circle cx="291.0" cy="114.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="291.0" cy="114.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="291.0" y="125" class="small" text-anchor="middle">F6</text>
+<circle cx="155.0" cy="73.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="155.0" cy="73.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="155.0" y="68.0" class="small" text-anchor="middle">F7</text>
+<circle cx="189.0" cy="73.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="189.0" cy="73.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="189.0" y="68.0" class="small" text-anchor="middle">F8</text>
+<circle cx="291.0" cy="73.0" r="4" fill="none" stroke="#334155" stroke-width=".25" class="dash"/>
+<circle cx="291.0" cy="73.0" r="1.6" fill="white" stroke="#334155" stroke-width=".25" class=""/>
+<text x="291.0" y="68.0" class="small" text-anchor="middle">F9</text>
+<path d="M2 130v5 M326 130v5 M2 133H326" class="dim"/>
+<text x="164" y="132" class="" text-anchor="middle">324 plate width</text>
+<path d="M333 36h5 M333 119h5 M336 36V119" class="dim"/>
+<text x="338" y="79" class="small" text-anchor="start">83</text>
+<text x="0" y="143" class="small" text-anchor="start">Gray plate; blue bodies; pink keepers; green header service boxes; dark four-direction fences.</text>
+<text x="0" y="151" class="" text-anchor="start">Details use local module coordinates. Corner tabs support the underside; open windows relieve components.</text>
+<g transform="translate(45 187) scale(1.6)">
+<rect x="-16.5" y="-16.5" width="33" height="33" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-12.3" y="-12.3" width="24.6" height="24.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-12.3" y="-12.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-12.3" y="9.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-12.5" y="10.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="-9.5" cy="14" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="-9.5" cy="14" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="9.3" y="-12.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="6.5" y="-16.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="9.5" cy="-14" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="9.5" cy="-14" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="9.3" y="9.3" width="3" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-12.0" y="-12.0" width="24" height="24" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="0" y="1" class="small" text-anchor="middle"></text>
+<rect x="-14.0" y="-9.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-14.0" y="6.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="12.3" y="-9.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="12.3" y="6.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-9.0" y="-14.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="6.0" y="12.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+</g>
+<text x="45" y="219" class="small" text-anchor="middle">Touch: 24.6 square opening</text>
+<text x="45" y="225" class="small" text-anchor="middle">4 tabs 3 x 3; 2 diagonal keepers</text>
+<text x="45" y="231" class="small" text-anchor="middle">Keeper 6 x 6; 2.2 drill</text>
+<text x="45" y="237" class="small" text-anchor="middle">Pedestal height = measured PCB t</text>
+<g transform="translate(160 187) scale(1.6)">
+<rect x="-18" y="-11.5" width="36" height="23" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-16.3" y="-7.3" width="32.6" height="14.6" fill="white" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-16.3" y="-7.3" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-16.3" y="4.3" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-14" y="5.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="-11" cy="9" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="-11" cy="9" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="11.3" y="-7.3" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="8" y="-11.5" width="6" height="6" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<circle cx="11" cy="-9" r="2.5" fill="none" stroke="#9d174d" stroke-width=".25" class=""/>
+<circle cx="11" cy="-9" r="1.1" fill="white" stroke="#9d174d" stroke-width=".25" class=""/>
+<rect x="11.3" y="4.3" width="5" height="3" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-16.0" y="-7.0" width="32" height="14" fill="#93c5fd" fill-opacity="0.2" stroke="#2563eb" stroke-width=".25" class="dash"/>
+<text x="0" y="1" class="small" text-anchor="middle"></text>
+<rect x="-18.0" y="-5.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-18.0" y="2.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="16.3" y="-5.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="16.3" y="2.0" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="-10.5" y="-9.0" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<rect x="7.5" y="7.3" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+</g>
+<text x="160" y="215" class="small" text-anchor="middle">Buzzer: 32.6 x 14.6 opening</text>
+<text x="160" y="221" class="small" text-anchor="middle">4 tabs 5 x 3; 2 diagonal keepers</text>
+<text x="160" y="227" class="small" text-anchor="middle">Keeper 6 x 6; 2.2 drill</text>
+<text x="160" y="233" class="small" text-anchor="middle">Sound can / components: measure</text>
+<text x="240" y="161" class="small" text-anchor="start">Section: z above carrier top</text>
+<rect x="236" y="211" width="90" height="1.6" fill="#93c5fd" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<text x="282" y="220" class="small" text-anchor="middle">Carrier: top z0; thickness1.6 assumed</text>
+<rect x="240" y="187" width="8" height="24" fill="#e2e8f0" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<text x="259" y="205" class="small" text-anchor="start">24 spacer</text>
+<rect x="236" y="183" width="90" height="4" fill="#cbd5e1" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<text x="281" y="228" class="small" text-anchor="middle">Plate: z24..28</text>
+<rect x="268" y="181.4" width="40" height="1.6" fill="#93c5fd" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<text x="286" y="177" class="small" text-anchor="middle">PCB: z28 + measured t</text>
+<rect x="266" y="179.9" width="8" height="1.5" fill="#fbcfe8" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
+<text x="278" y="170" class="small" text-anchor="start">Keeper: upper1.5 on t pedestal</text>
+<path d="M275 183v6 M275 189H300" class="dim"/>
+<text x="298" y="194" class="small" text-anchor="middle">Window / underside relief</text>
+<text x="0" y="255" class="" text-anchor="start">Retainers and tabs bear only on confirmed bare lands. No module drilled or solder joint used as a support.</text>
+<text x="0" y="263" class="" text-anchor="start">F1..F9: 3.2 NPTH in carrier/plate, 8 diameter keepouts on both carrier faces; exact coordinates in CSV.</text>
+<text x="0" y="271" class="" text-anchor="start">Pico/GPIO access remains open. Keep PM’s 26 x 26 touch-body copper/via exclusions. Fixture dimensions proposed.</text>
+<text x="0" y="279" class="" text-anchor="start">Factory scope includes fixture metrology/machining, 24 keepers, 12 flexible harnesses, strain relief and inspection.</text>
+<text x="0" y="287" class="" text-anchor="start">Require ≥2 mm measured component/wire clearance after tolerances and deflection. No physical fit/load test performed.</text>
+<text x="0" y="295" class="" text-anchor="start">See MODULE_FIXTURE.md for fences, measured-thickness pedestals, hardware, assembly and acceptance targets.</text>
+<text x="0" y="307" class="small" text-anchor="start">PM-reported move: J3/C4 and J4/D4 header centres y75 to y78; seats, keepers and nine mounts stay fixed.</text>
+<text x="0" y="315" class="small" text-anchor="start">Header/cap detail and cable-height limits: header-clearance-review.svg and BUILD_READINESS.md. No edited-PCB readback.</text>
+</svg>

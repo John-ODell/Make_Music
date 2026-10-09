@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1500" viewBox="0 0 300 300">
+<style>text{font:3.2px sans-serif;fill:#243449}.title{font-size:6px;font-weight:bold}.head{font-size:4px;font-weight:bold}.small{font-size:2.7px}.plantext{font-size:2.3px}.dim{fill:none;stroke:#64748b;stroke-width:.25}.dash{stroke-dasharray:1.4 1}</style>
+<rect width="300" height="300" fill="#f8fafc"/>
+<text x="12" y="12" class="title">Protected 18650 wired cassette — review proposal</text>
+<text x="12" y="21">MPD BH-18650-W drawing G, 2024-08-21. Updated 2026-10-09; units mm.</text>
+<text x="12" y="28" class="small">Factory metrology/CAD/load/cell fit remain pending. Four carrier mounts stay; H1 move appears in root 806457b held export.</text>
+<text x="12" y="38" class="head">Plan — carrier top-view coordinates; components on opposite faces</text>
+<g transform="translate(12 43) scale(1.4) translate(-145 -5)">
+ <rect x="216" y="44" width="48" height="24" fill="#fef3c7" stroke="#d97706" stroke-width=".25" class="dash"/>
+ <text x="240" y="61" text-anchor="middle" class="plantext">Top power / switch</text>
+ <rect x="145" y="12" width="112" height="36" fill="#ffedd5" fill-opacity=".55" stroke="#334155" stroke-width=".35" class="dash"/>
+ <rect x="154" y="17" width="94" height="26" fill="white" fill-opacity=".75" stroke="#94a3b8" stroke-width=".2" class="dash"/>
+ <rect x="161.9" y="19.3" width="78.2" height="21.4" fill="none" stroke="#059669" stroke-width=".25" class="dash"/>
+ <rect x="162.15" y="19.55" width="77.7" height="20.9" fill="#bbf7d0" fill-opacity=".6" stroke="#047857" stroke-width=".35"/>
+ <text x="201" y="29" class="plantext" text-anchor="middle">BH-18650-W body 77.70 x 20.90</text>
+ <text x="201" y="35" class="plantext" text-anchor="middle">Protected cell fit / lead bends: measure</text>
+ <text x="165" y="26" class="plantext">−</text><text x="234" y="26" class="plantext">+</text>
+ <g fill="none" stroke="#64748b" stroke-width=".25" class="dash"><circle cx="150" cy="17" r="4"/><circle cx="210" cy="17" r="4"/><circle cx="150" cy="43" r="4"/><circle cx="210" cy="43" r="4"/></g>
+ <g fill="white" stroke="#334155" stroke-width=".3"><circle cx="150" cy="17" r="1.6"/><circle cx="210" cy="17" r="1.6"/><circle cx="150" cy="43" r="1.6"/><circle cx="210" cy="43" r="1.6"/></g>
+ <g fill="white" stroke="#047857" stroke-width=".2"><circle cx="172.83" cy="30" r="1.6"/><circle cx="228.44" cy="30" r="1.6"/></g>
+ <rect x="265" y="15" width="10" height="12" fill="#bfdbfe" stroke="#2563eb" stroke-width=".25" class="dash"/><text x="270" y="22" class="plantext" text-anchor="middle">PH</text>
+ <path d="M257 9H265M257 7V11M265 7V11" class="dim"/><text x="261" y="7" class="plantext" text-anchor="middle">8</text>
+ <path d="M145 50V54M257 50V54M145 52H257" class="dim"/><text x="201" y="51" class="plantext" text-anchor="middle">112</text>
+ <path d="M141 12H144M141 48H144M142 12V48" class="dim"/><text x="139" y="31" class="plantext" text-anchor="middle">36</text>
+</g>
+<text x="218" y="48" class="head">Retain carrier mounts</text>
+<text x="218" y="56" class="small">(150,17), (210,17)</text>
+<text x="218" y="63" class="small">(150,43), (210,43)</text>
+<text x="218" y="70" class="small">3.2 NPTH / Ø8 exclusions</text>
+<text x="218" y="81" class="head">H1 +40 mm right</text>
+<text x="218" y="89" class="small">Pad1 (229,20) → (269,20)</text>
+<text x="218" y="96" class="small">Native (249,40) → (289,40)</text>
+<text x="218" y="103" class="small">Same side / rotation / nets</text>
+<text x="218" y="114" class="small">Pico/GPIO/modifiers stay.</text>
+<text x="12" y="132" class="small">330 x 121.5 proposed; retained service datum native(20,20), physical rear native y18.5.</text>
+<text x="12" y="139" class="small">Right bolt/holder plan projections overlap: separate vertically, then measure loaded clearance.</text>
+<text x="12" y="147" class="small">Maximum body 78.20 x 21.40. Wire/retainer region 94 x 26 is an allowance; no cell-length limit inferred.</text>
+<text x="12" y="157" class="head">Section — schematic; z positive down from carrier underside</text>
+<rect x="20" y="164" width="188" height="3.2" fill="#93c5fd" stroke="#2563eb" stroke-width=".25"/>
+<rect x="20" y="173.2" width="188" height="4" fill="#cbd5e1" stroke="#64748b" stroke-width=".25"/>
+<path d="M38 167.2V187M122 167.2V187" stroke="#9d174d" stroke-width="1.5"/>
+<rect x="56" y="177.2" width="4" height="18" fill="#cbd5e1"/><rect x="182" y="177.2" width="4" height="18" fill="#cbd5e1"/>
+<rect x="48" y="195.2" width="150" height="4" fill="#cbd5e1" stroke="#64748b" stroke-width=".25"/>
+<rect x="48" y="199.2" width="150" height="43.62" fill="#bbf7d0" stroke="#047857" stroke-width=".3"/>
+<text x="123" y="216" class="small" text-anchor="middle">Holder body max height 21.81</text>
+<text x="123" y="224" class="small" text-anchor="middle">Fitted cell / lead / screw stack: measure</text>
+<path d="M20 247.2H208" stroke="#dc2626" stroke-width=".4" class="dash"/>
+<rect x="20" y="251.2" width="188" height="4" fill="#cbd5e1" stroke="#64748b" stroke-width=".25"/>
+<path d="M16 261.2H212" stroke="#334155" stroke-width=".5"/>
+<text x="218" y="167" class="small">Carrier 1.6 assumed</text>
+<text x="218" y="175" class="small">Backplate z3..5</text>
+<text x="218" y="184" class="small">M3 tip z9.9 nominal</text>
+<text x="218" y="196" class="small">Platform z14..16</text>
+<text x="218" y="205" class="small">Holder mounting plane z16</text>
+<text x="218" y="231" class="small">Body ends z37.81 max</text>
+<text x="218" y="244" class="small">Fitted loaded limit z40</text>
+<text x="218" y="253" class="small">Door z42..44</text>
+<text x="218" y="263" class="small">Support surface ≥47</text>
+<text x="12" y="278" class="small">Require ≥2 mm internal loaded clearance and stable supports; stiffen the cassette's right overhang.</text>
+<text x="12" y="286" class="small">WIRED_HOLDER_PROPOSAL.md / cassette-18650-geometry.csv: sources, exact PM delta and pending gates.</text>
+</svg>

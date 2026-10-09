@@ -1,99 +1,53 @@
 # Make Music working checkpoint
 
-Updated 2026-10-09 at usage guard. Root branch codex/pcbway-prototype-package.
-Published/pushed package commit d987896; native CAD commit21b2108 remains current.
-PR28 open/draft: https://github.com/John-ODell/Make_Music/pull/28
-Title/body updated to final held five-instrument scope. PR34 reviewed/merged
-484b73e on master; root merged it in0fc598b (paper script/PDF conflicts resolved
-with reviewed PR34 versions). CSV line endings abea01d; PR31/32/33 already merged.
+Updated2026-10-09 at final held-package review, before the PR28 merge.
+Root branch:codex/pcbway-prototype-package. Prior pushed headaf535ce9a10861c251338a6552fdcb82a1200956 is the reviewed PR35 power-document merge.
+PR34 merged484b73e on master and was integrated by0fc598b; PR31/32/33 were already merged.
+Native CAD remains21b2108d8f4a187647004e995a4c40368172f565. Old package d987896 is superseded by the corrected package accompanying this checkpoint.
 
-## Stop/resume status
+PR28:https://github.com/John-ODell/Make_Music/pull/28
+Final independent review accepts integration **as a held review project**. Root will merge this final contribution after pushing it. A later continuation must fetch and verify actual PR/master status rather than repeat completed work.
 
-Five-hour limit96% used/4% remaining; substantive work stopped. Actual
-resetsAt1791587978 =2026-10-09 18:19:38 America/Chicago. Same heartbeat
-resume-make-music-pcb-at-1-am rearmed18:21 Central. Check actual limits on wake;
-no reset credits. All three authorized helpers asked to checkpoint/stop.
-Konnect save_project returned Board saved successfully; bounded hash check
-confirmed protected source/package inputs unchanged. KiCad/Viewer quit.
+## Completed independent work
 
-## Completed this continuation
+Editable native KiCad carrier:330x121.5 mm, outline native(20,18.5)..(350,140), service datum(20,20) retained.65 footprints/405 traces/33vias;48 electrical parts/166 endpoints;38 connected nets and6 NC nets.
+Saved/refilled all-severity ERC0, copper/layout DRC0, unconnected0. Native parity is4 reviewed custom-field metadata warnings(C17/C18 Header,J1/J2 MPN); live pad nets, values and full footprint identities have0 discrepancies. Identity synchronization is a no-op. No rules/results suppressed.
+Current evidence:review/rear-edge-20261009; older integration evidence is historical.
 
-330x121.5 native outline(20,18.5)..(350,140), service datum(20,20) unchanged.
-48 electrical parts/166 physical endpoints; board65 footprints/405 tracks/33vias.
-Fresh saved/refilled ERC0; copper/layout DRC0; unconnected/parity0; exact four
-metadata warnings retained (C17/C18 Header, J1/J2 MPN). Full live net/value/
-footprint identity checks pass and identity preview is a no-op. Source-bound
-hardware/review/rear-edge-20261009 is current; older integration evidence is
-historical and must not be used to validate current sources.
+Current manufacturing/REVIEW_ONLY_DO_NOT_ORDER contains109 hashed outputs plus manifest.61 durable input hashes and43 support-input hashes pass;128 package-local links resolve;47 purchased carrier references,30 top SMT/17 THT,31 functional BOM groups,235 carrier parts across five instruments.
+Quote draft/support documents/assets/nominal DXFs/SVGs/paper-fit PDF/provisional firmware are bundled.17 raw export artifacts and17 native hashes are unchanged after ordinary presentation corrections.
+All15 placement guard tests pass; wrong nets/new warnings/stale sources,reversed U2 and displaced C17 reject before output. Final audit/follow-up:review/final-package-20261009. No supplier contact or upload.
 
-Final managed hardware/manufacturing/REVIEW_ONLY_DO_NOT_ORDER replaced as one
-coherent held revision:65 hashed outputs plus manifest,47 purchased parts,
-30 top SMT/17 THT, five-board235 carrier-part total. All durable input/output
-hashes pass; all15 placement guard tests pass after LF table writer change.
-Independent helper checked47 coordinates/angles/sides,8 layer aperture/macro
-references, closed outline,130 PTH(97 component+33via) and17 NPTH3.2mm hits.
-Actual U2rotation/C17displacement negative controls reject before output.
-Whole final Gerber/drill front/back registration and paste reviewed. Actual
-Gerber Viewer vector prints resolved navigation trouble: enlarged front Cu,
-mask,paste,legend checked. All5 native PDF pages and both revised Letter
-paper-fit pages rendered/inspected. Scope in review/manufacturing-20261009
-and package/export-review.md; fit-to-page inspection PDFs are not fab drawings.
-Mechanical PR34 adds corrected datums/socket margins/nominal cassette DXFs,
-SVG and 330x121.5 actual-size paper fit. Generator reproduction agrees; no
-physical/toleranced machining approval. No native edits by helpers.
+Actual final Gerber/drill whole registration, enlarged front copper/mask/paste/legend/polarity, all5 native PDF pages and both revised actual-size paper-fit pages were inspected. Placement/aperture/drill inventories agree:97 component PTH+33via hits and17 NPTH3.2mm. Native drawing payloads unchanged by this refresh. See review/manufacturing-20261009. IPC2581 is supplemental; unavailable IPC-D356 is recorded.
 
-## Next independent work
+## Scope and exact external requirements
 
-1. Read final schematic helper report (final read-only review of d987896 was
-started just before limit guard; may be incomplete). Resolve any actionable
-manifest/reference issue without repeating completed CAD/export work.
-2. Finish final PR28 review and authorized merge as a HELD review project;
-retain all external gates. Verify actual GitHub head/master on wake.
-3. Once no independent work remains, pause this heartbeat and report exact
-external measurement/process requirements. No purchases/uploads/suppliers.
+Five complete factory-built instruments plus optional sixth bare keepsake: original Pico H SC0917 in female sockets,8 notes+2 left modifiers,2 ST0238,exposed GPIO,protected removable LONG18650/external charging. Screen/keypad/percussion/other Pico variants deferred.
+Factory scope includes soldering,crimping,mechanical work,programming,first-article/all-five tests.
 
-## Helper state
+1. Exact touch/ST0238 dimensions,header order,thickness,bare support lands,component heights and dressed harnesses; Pico/socket engagement,removal,USB/BOOTSEL access. User has no parts/precision tools; quote assembler metrology. Paper comfort test does not prove part fit.
+2. Exact opposite-end-terminal protected P1835J/BH18650W cold fit/retention/contact/lead capability(.70A normal,>=1.2A continuous),AWG24 TR64 OD.8..1.5,qualified JST crimp/tool/strip/polarity/strain relief. Cell/charger pairing held: published L1 upper4.242V versus unqualified P1835J4.20Vmax; documentary voltage/current/termination/temp/bay-fit acceptance needed. One shared charger/input set is only a quote assumption.
+3. Final measured/toleranced fixture/cassette/door/feet CAD. Nominal cassette112x36x44,z16 platform,>=47supports,>=2mm actual loaded clearance; keep playing load off cell/holder. Partial underside rule area is not a full enlarged-cassette keepout. Nominal socket body/yard rear margins1.275/.77mm are not measured acceptance.
+4. Factory acceptance of U2 mask.10/stencil.100,nominal socket ring.25 versus normal.254,C17/C18 TDK0805 lands,panel rails/fiducials/depanel/THT sequence,both-side access,orientation/polarity preview and scope/itemized price.
+5. Qualified first article within the five, then acceptance records for all five. Battery and USB branches need separate power/isolation/inrush/thermal/fault/UVLO tests; effective capacitance,touch polarity/momentary behavior,reset silence,buzzers,current/runtime remain unmeasured.
 
-Schematic01a11931-3d20-7733-8e7e-296b88ba9abd: final minimal package review
-started; stop requested at guard. Power01a11931-cb05-7f20-8e09-075ef0c4c9c1:
-independent final export audit complete, no discrepancies, idle/stop requested.
-Mechanical01a11931-eed2-7820-85eb-496cfc97903b: PR34 merged, print/nominal
-cassette work complete, idle/stop requested. Read statuses, do not restart.
+assembly/QUOTE_REQUEST.md and the package copy are concrete for owner review. Earlier$67.54 was a setup/stencil example, not the project total. No accepted price,physical fit,tested hardware,fabrication release,purchase or upload exists. Independent design work is complete; external gates are next.
 
-## Scope and external holds
+## Helpers, usage and automation
 
-Protected removable LONG18650/external charging, original Pico H SC0917 in
-female sockets,8 notes+2 left modifiers,2 ST0238,exposedGPIO,FIVE fully
-factory-built instruments plus optional sixth bare keepsake. Expansions deferred.
-No actual parts/coarse tape: assembler metrology can be priced. Preserve MOV
-and hardware/kicad/.history; all native mutations only Konnect, root sole owner.
+Schematic01a11931-3d20-7733-8e7e-296b88ba9abd:final review/bounded follow-up complete,accepted held integration,idle.
+Mechanical01a11931-eed2-7820-85eb-496cfc97903b:PR34/final read-only review complete,idle; root corrected stale paper/parity prose.
+Power01a11931-cb05-7f20-8e09-075ef0c4c9c1:PR35 reviewed/merged af535ce,complete,idle. Do not restart helpers without actionable inputs.
 
-Exact touch/ST0238 outlines/header order/support lands/dressed harnesses;
-Pico engagement/removal/USB/BOOTSEL; P1835J protected button-top opposite-end
-cell/BH18650W cold fit/contacts/ampacity; JST AWG24 TR64 OD0.8..1.5/crimps;
-112x36x44 cassette,z16 platform,>=47supports,>=2 loaded clearance/retention;
-final toleranced fixture/door/feet depend measurements. Partial underside rule
-area unchanged. L1 charger pairing HELD:4.2+/-1% upper4.242V vs unqualified
-P1835J4.20Vmax;500mA does not resolve it. One shared charger/input set is a
-proposed quote assumption. U2 mask0.10/stencil0.100, socket ring0.25 vs normal
-0.254, TDK0805 lands, panel rails/fiducials/depanel/THT/orientation need factory
-acceptance. First-article and all-five powered tests remain. No actual quote,
-runtime, hardware success or fabrication release. $67.54 was only setup/example.
+Latest five-hour check28% used/72% remaining; weekly89% used. Actual five-hour resetsAt1791607325. No reset credits consumed. Same heartbeat resume-make-music-pcb-at-1-am was rearmed00:44 Central as interruption recovery; pause after final integration because only external gates remain.
+On future authorized continuation verify actual usage; at<=5% five-hour remaining perform bounded save/checkpoint/push/helper stop/rearm only.
 
-## Tooling
+## Tooling and preservation
 
-Konnectv0.13.0 /tmp/make-music-pcbway/mcp_call.py; guarded21-test identity
-adapter /tmp/music-konnect-identity-adapter. No pcbnew/SWIG/text-native edits.
-Stable bundled Python at /Users/johnodell/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.
-Final raw /tmp/make-music-pcbway/raw-held-rear-edge-20261009 (18 originals);
-final stage /tmp/make-music-pcbway/final-visually-reviewed-package-20261009.
-IPC2581 supplemental; IPC-D356 unavailable. Restore CUA documentation after
-compaction; getApp after quit reopens apps, so use process checks.
-
-## Early wake, 2026-10-09 18:17 Central
-
-Wake arrived before the actual reset. Account99% used/1% remaining;
-resetsAt1791587979 =18:19:39 Central. No substantive work resumed.
-Same heartbeat rearmed18:21 Central; final review/PR28 merge remain pending.
-Native CAD already saved and sessions closed; no native changes on this wake.
-Prior pushed checkpoint384fc3e; package d987896.
+All native CAD/config/library mutations use Konnect MCP; root sole owner. No pcbnew/SWIG or protected text edits. KiCad/Viewer closed; no CAD mutation in final presentation refresh.
+Preserve unrelated ScreenRecording_05-01-2026 09-25-05_1.mov and hardware/kicad/.history.
+Stable Python:/Users/johnodell/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.
+Raw:/tmp/make-music-pcbway/raw-held-rear-edge-20261009.
+Corrected stage:/tmp/make-music-pcbway/final-quote-review-20261009.
+Prior package backup:/tmp/make-music-pcbway/previous-d987896-package-20261009.
+Before future CUA work restore documentation; getApp after quit reopens apps.

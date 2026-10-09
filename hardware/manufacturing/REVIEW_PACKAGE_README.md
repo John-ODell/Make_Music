@@ -9,12 +9,19 @@ The mechanical/service datum remains native(20,20). Do not mix with obsolete exp
 
 47 purchased carrier parts: 30 top SMT and 17 THT. Use pcbway-centroid-smt.csv
 for machine placement; manual-tht-positions.csv describes the THT assembly.
-pcbway-bom-five.csv requests five complete instruments. Modules, Pico, holder,
-battery, harnesses and mechanical work are additional scope in PCBWAY_HANDOFF.md.
+pcbway-bom-five.csv contains 235 carrier parts for five instruments. Modules, Pico, holder,
+battery, harnesses and mechanical work are additional scope in [PCBWAY_HANDOFF.md](PCBWAY_HANDOFF.md).
 An optional sixth bare keepsake is separate.
 
+[QUOTE_REQUEST.md](QUOTE_REQUEST.md) is an owner-review draft for an itemized,
+conditional five-instrument quote, including metrology and final mechanical work.
+Linked supporting documents, nominal DXFs/SVGs, paper-fit PDF and provisional
+firmware are bundled under support/. Relative document links are rebased within
+this package; manifest.json records both original support-input and output hashes.
+No supplier has been contacted and this package does not authorize an upload.
+
 Read validation-summary.json and verification/ for the actual check scope.
-Overall DRC retains the reviewed connector metadata warnings; electrical
+Overall DRC and native schematic parity retain four reviewed custom-field metadata warnings; electrical
 integration has zero ERC/copper/layout/unconnected findings. No DRC categories
 or findings are hidden. Nominal socket body/courtyard rear margins are 1.275/0.77 mm. Physical
 fit, socket engagement/lip acceptance, final

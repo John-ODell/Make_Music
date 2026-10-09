@@ -10,11 +10,13 @@ import csv
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import re
 import shutil
 import sys
 import xml.etree.ElementTree as ET
+from urllib.parse import unquote, urlsplit
 
 HW = Path(__file__).resolve().parents[1]
 KD = HW / 'kicad'
@@ -36,6 +38,64 @@ def table(path, rows):
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def handoff_support():
+    """Collect review documents without copying or changing native CAD."""
+    root = HW.parent
+    todo = [HW / 'assembly/PCBWAY_HANDOFF.md', HW / 'assembly/QUOTE_REQUEST.md',
+            HW / 'mechanical/cassette-backplate-review.dxf',
+            HW / 'mechanical/cassette-platform-review.dxf',
+            HW / 'mechanical/paper-fit-template.svg',
+            HW / 'mechanical/placement-proposal.svg',
+            root / 'Pico_Synth/carrier_prototype.py']
+    seen = set()
+    while todo:
+        path = todo.pop().resolve()
+        if path in seen:
+            continue
+        if path.is_relative_to(HW / 'manufacturing/REVIEW_ONLY_DO_NOT_ORDER'):
+            continue  # These artifacts are supplied by this new package itself.
+        assert path.is_relative_to(root) and path.is_file(), 'Missing support: ' + str(path)
+        assert path.suffix in ('.md', '.csv', '.svg', '.pdf', '.dxf', '.json', '.py', '.jpg', '.png'), path
+        seen.add(path)
+        if path.suffix == '.md':
+            for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)', path.read_text()):
+                url = urlsplit(target)
+                if not url.scheme and url.path:
+                    todo.append(path.parent / unquote(url.path))
+    return sorted(seen)
+
+
+def copy_handoff_support(destination, sources):
+    root = HW.parent
+    generated = HW / 'manufacturing/REVIEW_ONLY_DO_NOT_ORDER'
+
+    def copy_document(source, target):
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if source.suffix != '.md':
+            shutil.copyfile(source, target)
+            return
+
+        def rebase(match):
+            url = urlsplit(match.group(2))
+            if url.scheme or not url.path:
+                return match.group(0)
+            linked = (source.parent / unquote(url.path)).resolve()
+            if linked.is_relative_to(generated):
+                linked_copy = destination / linked.relative_to(generated)
+            else:
+                linked_copy = destination / 'support' / linked.relative_to(root)
+            relative = Path(os.path.relpath(linked_copy, target.parent)).as_posix()
+            return match.group(1) + relative + ('#' + url.fragment if url.fragment else '') + ')'
+
+        target.write_text(re.sub(r'(\[[^\]]*\]\()([^)]+)\)', rebase, source.read_text()))
+
+    for source in sources:
+        target = destination / 'support' / source.relative_to(root)
+        copy_document(source, target)
+    for name in ('PCBWAY_HANDOFF.md', 'QUOTE_REQUEST.md'):
+        copy_document(HW / 'assembly' / name, destination / name)
 
 
 def design_inputs():
@@ -174,13 +234,14 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, elec
     # All geometry uses the served native export origin, NOT the old held
     # package's auxiliary origin. No Gerber/drill coordinates are rewritten.
     verify_native_origin(native_dir)
+    support_sources = handoff_support()
     shutil.copytree(native_dir, destination)
     table(destination / 'carrier-bom.csv', parts)
     table(destination / 'pcbway-centroid-smt.csv', smt)
     table(destination / 'manual-tht-positions.csv', tht)
     grouped = {}
     for p in parts:
-        key = (p['Manufacturer'], p['MPN'], p['Footprint'], p['Assembly'], p['Side'])
+        key = (p['Manufacturer'], p['MPN'], p['Footprint'], p['Assembly'], p['Side'], p['Value'])
         if key not in grouped:
             grouped[key] = {'Reference Designator': p['Reference'], 'Quantity Per Board': 1,
                 'Quantity For Five': 5, 'Manufacturer': p['Manufacturer'],
@@ -197,12 +258,15 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, elec
                          (HW / 'assembly/PCBWAY_HANDOFF.md', 'PCBWAY_HANDOFF.md'),
                          (HW / 'manufacturing/REVIEW_PACKAGE_README.md', 'README.md')]:
         shutil.copyfile(source, destination / name)
+    copy_handoff_support(destination, support_sources)
     (destination / 'validation-summary.json').write_text(json.dumps({
         'status': 'REVIEW ONLY - DO NOT ORDER', 'kicad_version': '10.0.6',
         'export_transport': 'Konnect MCP; native saved-file evidence',
         'erc_violations': 0, 'drc_violations': drc['total_violations'], 'unconnected_items': 0,
         'copper_layout_drc_violations': 0, 'reviewed_metadata_warnings': metadata_warnings,
         'schematic_parity_issues': drc['schematic_parity'], 'purchased_carrier_parts': len(parts),
+        'custom_field_metadata_parity_warnings': metadata_warnings,
+        'electrical_connectivity_identity_mismatches': 0,
         'smt_centroid_parts': len(smt), 'manual_tht_parts': len(tht),
         'assembled_instruments_requested': 5, 'optional_additional_bare_carriers': 1,
         'machine_origin': 'native (0,0); x right/y up; board (20,-18.5)..(350,-140) mm; 330x121.5 mm',
@@ -215,6 +279,7 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, elec
         'assembly/PCBWAY_HANDOFF.md', 'manufacturing/prepare_pcbway_review.py',
         'manufacturing/REVIEW_PACKAGE_README.md', 'kicad/verify_board.py')]
     inputs += [netlist, erc_path, drc_path]
+    inputs += [p for p in support_sources if p not in inputs and p.is_relative_to(HW)]
     evidence = destination / 'verification'
     evidence.mkdir()
     shutil.copytree(electrical_evidence, evidence / 'electrical-integration')
@@ -231,6 +296,7 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, elec
     (destination / 'manifest.json').write_text(json.dumps({
         'status': 'REVIEW ONLY - DO NOT ORDER', 'generator': 'Konnect MCP / KiCad 10.0.6',
         'input_sha256': {str(p.relative_to(HW)): digest(p) for p in inputs if p.is_relative_to(HW)},
+        'support_input_sha256': {str(p.relative_to(HW.parent)): digest(p) for p in support_sources},
         'output_sha256': outputs
     }, indent=2) + '\n')
     print(f'Prepared {len(parts)} carrier parts, {len(smt)} SMT, {len(tht)} THT; {len(outputs)} held files.')
