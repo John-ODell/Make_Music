@@ -1,0 +1,9 @@
+Quantity per instrument,Quantity for five instruments,Category,Manufacturer,Part,Status,Assembly scope
+1,5,Holder,MPD,BH-18650-W,Protected button-top 18650 candidate; exact-cell fit/contact ampacity pending,Included factory 24AWG TR64 leads 150+/-5mm each; factory PH termination and strain relief
+1,5,Battery plug housing,JST,PHR-2,Matched to carrier H1; completed harness polarity test required,Factory termination of included holder leads
+2,10,Battery contacts,JST,SPH-002T-P0.5S,AWG24 conductor matches; measure lead insulation OD against 0.8-1.5mm and qualify exact crimp process,Factory lead preparation/crimp inspection/polarity test
+Included with holder,Included with 5 holders,Battery leads,MPD,Two factory 24AWG TR64 leads 150+/-5mm each,No separate-wire allocation; actual OD/crimp and dressed length pending,Factory re-prepares stripped ends to JST process; strain relief; any extension needs review
+1,5,Cassette,Custom,Insulating BH-18650-W cassette,Proposed 112x36x44 and >=47mm supports; H1 integration verified in root806457b; final measured CAD pending,Factory mechanical subassembly after fit and loaded-clearance validation
+1,5,Cell,Keeppower,P1835J standard opposite-end button-top version,Confirm delivered terminal variant/current-lot limits; holder fit and matched charging qualification held,Separate protected cell; user insertion only after per-unit electrical and cell-release gate
+TBD by PM,Separate accessory quantity; HOLD,External charger,Keeppower,L1 at initial 500mA qualification setting,Compatibility HOLD; 4.2V+/-1% exceeds unqualified 4.20V cell maximum; bay/termination/temperature evidence pending,Separate external charger after accepted pairing; no onboard charging
+TBD with charger quantity,TBD by PM; HOLD,Charger input supply/cable,To be selected,Suitable 5V 1A input supply and matching cable,Exact SKU/revision pending accepted L1 revision and PM accessory distribution,Separate accepted charger accessory; include in quote

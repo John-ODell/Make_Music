@@ -1,8 +1,8 @@
 # Battery and USB power proposal
 
-**2026-10-09 correction:** the user intended **long protected 18650**, superseding the 18350 cell/holder selection. The [current 18650 handoff](18650-handoff.md) recommends exact cell **Keeppower P1835J** and holds external-charger approval pending current-lot voltage/current/termination and fit evidence. Mechanical helper owns the new wired holder/cassette; the old Keystone 1101 reservation is superseded.
+**2026-10-09 correction:** the user intended **long protected 18650**, superseding the 18350 cell/holder selection. The [current 18650 handoff](18650-handoff.md) recommends exact cell **Keeppower P1835J**, requiring a confirmed opposite-end **button-top** version for mechanical PR #30's **MPD BH-18650-W** holder. External-charger approval remains held pending current-lot voltage/current/termination and fit evidence. Included factory 24 AWG leads need measured insulation OD and qualified JST termination. Mechanical owns cassette fit/CAD; PM owns H1 relocation and the main procurement CSV, with ready replacement rows in [instrument-parts-handoff.csv](instrument-parts-handoff.csv).
 
-The [fuse/eFuse branch](branch-protection.md) is already integrated in the routed carrier. Prior ERC/DRC/parity and package checks are recorded in the dated [checkpoint audit](pcbway-readiness.md); those results do not qualify the new cell/holder or PM's ongoing header/bulk changes. **No physical parts, fit measurements, bench validation or manufacturing release are available.**
+The [fuse/eFuse branch](branch-protection.md) is integrated in the routed carrier. The [bounded root PR #28 review](pr28-power-review.md) at `806457b` verifies the source-bound 166-endpoint electrical evidence after H1/C17/C18 integration and records a manufacturing placement-guard gap for PM to fix. Four exact metadata warnings remain. The older [checkpoint audit](pcbway-readiness.md) is historical. **No physical parts, fit measurements, bench validation or manufacturing release are available.**
 
 ## Recommendation
 
