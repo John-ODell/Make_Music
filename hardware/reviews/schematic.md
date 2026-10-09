@@ -1,8 +1,27 @@
-# Schematic review - prototype carrier P4
+# Schematic review — buzzer bulk bypass and native socket parts
 
-Reviewed 2026-10-08 using KiCad CLI 10.0.6. This assignment is complete as a provisional editable carrier schematic, with a readable two-page A3 PDF; the integrated instrument is not ready for fabrication.
+Updated 2026-10-09. The saved schematic follow-up passes native ERC through Konnect with KiCad 10.0.6: zero errors/warnings. PCB integration and fabrication qualification remain with the primary chat.
 
-## Independent held-package review — 6155ca0
+## C17/C18 and socket fields — delivered schematic follow-up
+
+C17/J13 and C18/J14 each add **10µF±10%, 10V X7R TDK C2012X7R1A106K125AC** from regulated **3V3_OUT to GND**, beside the respective buzzer blocks on the root sheet. Existing C11/C12 100nF remain fitted in parallel. Each new nonpolar capacitor has pin1=3V3_OUT, pin2=GND, a hidden Header association, exact MPN, TDK characterization-sheet URL and `Capacitor_SMD:C_0805_2012Metric`. Physical end terminations are interchangeable; the numbered pad convention follows the circuit. The [carrier register](../kicad/carrier-interfaces.md#buzzer-bulk-capacitors--c17c18) records TDK body/land guidance and the standard footprint's larger pad-length/width deviation. Solder-process acceptance and measured 3V3 startup/inrush/effective capacitance remain open. These parts add 20µF nominal to 3V3, not directly to VSYS.
+
+J1/J2 now contain native **SSQ-120-01-G-S** MPN fields and the Samtec manufacturer drawing URL. Their symbols, UUIDs, pin/net mapping, values and footprints remain unchanged. Socket purchasing identity is available to generic native BOM exporters without the previous hidden identity substitution. The primary chat owns removal of redundant hard-coded overrides in the held-package generator.
+
+All CAD mutations used Konnect MCP over its stdio transport; no direct source editing or pcbnew/SWIG was used. Konnect reserialized the root sheet, producing a large textual formatting diff. Exported before/after evidence confirms **all 162 original endpoints and all 46 existing component UUIDs/footprints/values are preserved**; only the four C17/C18 endpoints and the requested socket purchasing fields are added. The battery child sheet, PCB, project and libraries are unchanged.
+
+Actual checks:
+
+- Native root ERC, including both sheets, reports **0 errors, 0 warnings, 0 total violations**. Annotation dry-run finds no unannotated or duplicate references and no unresolved hierarchy records.
+- Fresh exported XML passes the updated contract checker: **166 physical endpoints, 48 physical components, 47 purchased parts, 38 connected nets and six intentional NC nets**. Every 41 branch-protection endpoint is unchanged. TP1 alone is excluded from BOM; no DNP population flag is present. All purchased components have their expected native MPNs, values and assigned footprint pad numbers.
+- Five temporary negative XML cases are rejected: bulk on VSYS, absent socket MPN, substituted bulk MPN, wrong buzzer Header association, and bulk excluded from purchasing.
+- Root and child MCP checks each report zero floating wire ends, unconnected pins, shorts, orphans and symbol/label overlaps, with all embedded bounds resolved. Both exported A3 PDF pages were rasterized and visually inspected, including new capacitor labels/notes and page boundaries.
+
+**PM handoff:** synchronize the PCB from the saved root schematic, add/place C17 beside J13 and C18 beside J14 with short 3V3/GND paths while retaining C11/C12, then route/fill and run native DRC/parity. Regenerate the held BOM/CPL/PDFs/Gerbers/drills and manifest for 47 purchased parts. No current-board DRC or revised manufacturing export is claimed by this schematic PR. Outputs remain **REVIEW ONLY — DO NOT ORDER**.
+
+The user clarified the battery format as **18650** on 2026-10-09. The electrical 3V3 addition is unchanged; primary power/mechanical helpers own the revised cell/holder/charger qualification. Earlier 18350/1101 references in the historical record below are not current selections.
+
+## Independent held-package review — 6155ca0 (historical)
 
 The P4 delivery record below describes the schematic PR before PCB integration. Master `6155ca0` subsequently integrates the routed carrier and its [held review package](../manufacturing/REVIEW_ONLY_DO_NOT_ORDER/README.md). This independent follow-up reviews that checkpoint; it does not grant fabrication release.
 
@@ -18,7 +37,7 @@ Fresh Konnect ERC/DRC/netlist/review handlers were unavailable to call despite t
 
 The remaining physical/process gates are actual Pico/socket and cell/holder cold fit, NKK case/panel clearance, delivered-module header measurements and mapped termination/polarity, measured loads and protection behavior, and fabricator/assembler acceptance of copper, mask and stencil requirements. The chosen carrier-end Harwin housing/contact set is already documented in [MODULE_HARNESSES.md](../assembly/MODULE_HARNESSES.md); module-end termination is still conditional. Keep the package **REVIEW ONLY — DO NOT ORDER**.
 
-## Delivered
+## P4 delivery record (historical)
 
 Native root/child schematics, local symbols and socket/carrier/power footprint libraries, physical socket CSV, reproducible connectivity checker and two-page A3 `schematic-review.pdf`. P4 implements the merged power contract: upstream fuse, TPS259474L protection, divider/current/turn-on parts, ceramic bypass and shunt clamps. It removes carrier series D1, adds TP1's 2mm test pad, and preserves every instrument/expansion/reset-bias/header-bypass assignment. Pico H SC0917 is the selected prototype module. All 46 physical components have assigned native footprints. The PM must update PCB from this root schematic; PCB/project settings and firmware are unchanged. No manufacturing exports are included.
 
