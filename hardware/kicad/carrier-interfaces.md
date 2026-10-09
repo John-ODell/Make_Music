@@ -1,6 +1,6 @@
 # Carrier connectors, reset bias and bypass contract
 
-Reviewed 2026-10-08. These are carrier-mounted cable headers and circuit parts. They do not establish touch/buzzer module mounting holes or approve the cell/holder fit. The PM owns placement and updating the existing PCB from this schematic.
+Updated 2026-10-09 for C17/C18 and native socket purchasing fields. These are carrier-mounted cable headers and circuit parts. They do not establish touch/buzzer module mounting holes or approve the cell/holder fit. The PM owns placement and updating the existing PCB from this schematic. The user's corrected battery format is 18650; earlier 18350/1101 mechanical references below are historical pending the separate holder review.
 
 P4 preserves the P3 connectors/bias/bypass below and implements the revised [native power integration](power-integration.md). S1 common2 now joins BAT_FUSED_PLUS downstream of F1. The former series D1 is removed; the same SS14 footprint is assigned to shunt D2.
 
@@ -8,6 +8,7 @@ P4 preserves the P3 connectors/bias/bypass below and implements the revised [nat
 
 | References | Qty | Exact MPN | Assigned footprint | Function |
 |---|---:|---|---|---|
+| J1, J2 | 2 | Samtec SSQ-120-01-G-S | MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm | Removable Pico sockets; native MPN and Samtec drawing fields |
 | J3–J14 | 12 | Harwin M20-9990346 | MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm | Carrier cable header, 1=SIG, 2=3V3_OUT, 3=GND |
 | J15 | 1 | Harwin M20-9991646 | MakeMusicCarrier:Harwin_M20-9991646_1x16_P2.54mm | Exposed unused GPIO and regulated supply |
 | H1 | 1 | JST B2B-PH-K-S(LF)(SN) | Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical | Underside battery harness; 1=BAT_PROT_PLUS, 2=GND |
@@ -15,6 +16,7 @@ P4 preserves the P3 connectors/bias/bypass below and implements the revised [nat
 | D2 | 1 | Vishay SS14-E3/61T | MakeMusicCarrier:Vishay_SS14_SMA_K1_A2 | Shunt clamp: K1=VSYS, A2=GND |
 | R1, R2 | 2 | Yageo RC0603FR-0710KL | Resistor_SMD:R_0603_1608Metric | 10k, 1%, 0.1W; R1 GP13/R2 GP12 pull-up to 3V3_OUT |
 | C1–C12 | 12 | KEMET C0603C104K5RACTU | MakeMusicCarrier:KEMET_C0603_1608_LevelB | 100nF, 10%, 50V, X7R, 0603; 3V3_OUT to GND |
+| C17, C18 | 2 | TDK C2012X7R1A106K125AC | Capacitor_SMD:C_0805_2012Metric | 10µF, 10%, 10V, X7R, 0805; 3V3_OUT to GND at J13/J14 |
 
 J1/J2 retain the reviewed Samtec SSQ-120-01-G-S socket candidates and existing pad numbering for the selected Pico H SC0917. TP1 USB-VBUS measurement access now uses `TestPoint:TestPoint_Pad_D2.0mm`, a bare copper pad excluded from BOM. This table is a circuit assignment, not an orderable complete assembly BOM or manufacturing approval. Standard libraries use `${KICAD10_FOOTPRINT_DIR}`; custom carrier parts are in registered project-local `MakeMusicCarrier.pretty`. Additional power parts are listed in the P4 contract.
 
@@ -43,6 +45,12 @@ The [official ST0238 circuit](https://docs.sunfounder.com/projects/ultimate-sens
 At nominal 3.3V, each 10k consumes 0.33mA when its GPIO is LOW, 0.66mA for both; 1% minimum resistance gives at most approximately 0.667mA total at exactly 3.3V. Each resistor dissipates about 1.1mW. These numbers describe the added resistors only, not driver/base current, module current or a verified load budget. Locate R1/R2 near the carrier's buzzer signal connections and confirm HIGH/reset/startup silence and PWM behavior on actual hardware.
 
 C1/J3, C2/J4, C3/J5, C4/J6, C5/J7, C6/J8, C7/J9, C8/J10, C9/J11, C10/J12, C11/J13 and C12/J14. Each capacitor is across the corresponding carrier header's 3V3/GND. Place it physically beside that header with short supply/ground paths; the grouped schematic drawing is not a centralized placement recommendation. These parts bypass the carrier end of each cable. They do not replace adequate module-local bypassing at the far end of a long cable. Cable length/noise and actual module decoupling still need testing.
+
+### Buzzer bulk capacitors — C17/C18
+
+C17 is associated with J13 and C18 with J14 through their hidden Header fields. Each nonpolar capacitor uses pin1=3V3_OUT/pin2=GND; the physical end terminations are interchangeable, and native footprint pads1/2 preserve that circuit convention. They add 20µF nominal on the **regulated 3V3 rail**, retaining C11/C12 100nF in parallel. They are separate from the C13/C14/C16 VSYS/input power-sheet ceramics. The existing 41 branch-protection endpoints are unchanged. PM should place each bulk capacitor beside its buzzer carrier header, with a short supply/ground path, then qualify 3V3 startup/inrush and actual effective capacitance at bias. No measured transient improvement is claimed.
+
+Manufacturer evidence: [TDK exact-part page](https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC) and [characterization sheet](https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf). These identify 10µF±10%, 10V X7R and a 2.00±0.20×1.25±0.20mm body, height1.25±0.20mm. The indexed TDK part page gives reflow recommendations PA (inner gap)=0.90–1.20mm, PB (pad length)=0.70–0.90mm and PC (pad width)=0.90–1.20mm. Konnect readback of the assigned KiCad IPC nominal footprint gives pads1.00×1.45mm at x±0.95, inner gap0.90mm, overall span2.90mm, body2.00×1.25mm and courtyard3.40×1.96mm. Body/terminal arrangement and inner gap agree; **pad length and width exceed TDK's recommended reflow ranges**. The explicitly selected standard footprint is retained as an engineering land choice, not claimed to reproduce TDK's recommendation. Assembler acceptance of the larger lands/paste and solder process remains open. Live TDK PDF downloads returned access errors; the manufacturer-indexed part/characterization data was available.
 
 ## Footprint evidence and limits
 
