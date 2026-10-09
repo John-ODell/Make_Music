@@ -71,8 +71,9 @@ source hashes to force a pass. The full pipeline was checked against frozen
 
 ## Coordinate and assembly convention
 
-Served native exports use (0,0), x right/y up; board (20,-20)..(350,-140) mm.
-The mechanical proposal uses top-left x/y down: machine x=x_mechanical+20,
+Served native exports use (0,0), x right/y up; board (20,-18.5)..(350,-140) mm.
+The mechanical proposal retains service datum native(20,20), x/y down
+(the new physical rear edge is service y=-1.5): machine x=x_mechanical+20,
 machine y=-(y_mechanical+20). J3=(87.46,-98), J4=(121.46,-98),
 H1=(289,-40) mm in the revised placement file. Do not translate Gerbers,
 drills or positions independently. The older held package uses a different

@@ -1,6 +1,6 @@
 # First-prototype carrier — final integration / manufacturing hold
 
-Updated 2026-10-09, KiCad 10.0.6 / Konnect 0.13.0. The proposed 330 ×120 mm
+Updated 2026-10-09, KiCad 10.0.6 / Konnect 0.13.0. The proposed 330 ×121.5 mm
 carrier retains eight notes, two left modifiers, removable original Pico H,
 two ST0238 module interfaces and exposed GPIO. The corrected cell is **long
 protected 18650**, externally charged. Five complete instruments and an
@@ -31,7 +31,7 @@ identity preview returns noop, with no conflicts, reassigned pads or missing
 footprints. Custom fields remain a [Konnect788](https://github.com/mixelpixx/Konnect/issues/788)
 limitation; all native schematic MPNs remain intact and authoritative.
 
-The [source-bound review evidence](../review/integration-20261009/README.md)
+The [source-bound review evidence](../review/rear-edge-20261009/README.md)
 contains fresh native XML, ERC/DRC and live IPC readback. Every one of 166 pads
 agrees with XML; all 48 values and full footprint IDs agree. The new board
 verifier uses these exports and does not load pcbnew/SWIG. Tests reject wrong
@@ -61,12 +61,16 @@ electrical integration only, not blanket fabrication approval.
 
 ## Geometry, rules and assembly
 
-Native PCB coordinates are mechanical top-left/y down plus(20,20). Socket
+The established mechanical/service datum remains native(20,20), with x/y
+down. Native coordinates add(20,20); the new rear edge is mechanical y=-1.5.
+Do not redefine that datum to the new physical corner. Socket
 rows remain17.78 mm apart; actual Pico H SC0917/socket engagement, rear lip,
-USB/BOOTSEL access and removal remain physical/process gates. The placement
-scorer flags both socket courtyards at y19.27, extending 0.73 mm beyond the
-y20 rear edge. This is an unresolved physical edge/lip acceptance requirement;
-no placement-score pass is claimed. The internal cable-header edge-distance
+USB/BOOTSEL access and removal remain physical/process gates. The rear edge was extended through Konnect to native y18.5, giving a
+330 ×121.5 mm board without moving components, tracks or mounting holes.
+Nominal socket bodies have 1.275 mm rear margin; courtyards have 0.77 mm.
+The final scorer reports zero hard failures. A first y19 trial clipped the
+J1 pin-1 marking; the final y18.5 outline clears the marking with no edge
+DRC finding. Actual engagement/lip and factory handling still need acceptance. The internal cable-header edge-distance
 heuristic does not establish a defect in this carrier arrangement. Ten26 ×26 mm
 both-face touch exclusions and seventeen3.2 mm NPTH mounts remain fixed.
 Four cassette mounts stay at mechanical(150,17),(210,17),(150,43),(210,43).
@@ -102,7 +106,7 @@ refuses to run. Follow [fresh Konnect export procedure](../manufacturing/README.
 only after final PCB sync/placement/routing and independent review.
 
 New native Gerbers, drills and positions must agree on(0,0), x right/y up,
-board(20,-20)..(350,-140) mm. Do not mix older auxiliary-bottom-left files.
+board(20,-18.5)..(350,-140) mm. Do not mix older auxiliary-bottom-left files.
 Expected new BOM is47 purchased parts:30 top SMT and17 THT; Pico/modules/
 harnesses/mechanics are separate in the [five-unit handoff](../assembly/PCBWAY_HANDOFF.md).
 

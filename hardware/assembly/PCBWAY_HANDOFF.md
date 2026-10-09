@@ -37,7 +37,7 @@ first-article work, rather than supplied as unspecified user assembly.
 | Protected conventional 18650 + holder | 1 each | 5 each | Candidate matching/fit gate; MPD BH-18650-W factory wire leads |
 | Battery harness | 1 | 5 | JST PHR-2 + two SPH-002T-P0.5S; positive circuit1, ground circuit2 |
 | Insulating cassette, raised module fixture, support feet | 1 set | 5 sets | Final machining drawings and loaded clearance after actual-part metrology |
-| External charger | Per user | Separate line | Exact cell/charger compatibility must be established before inclusion |
+| External charger + required input accessory | Shared accessory | 1 shared set proposed; HOLD | Quantity is a quote assumption; exact cell/charger compatibility must be established before inclusion |
 
 The [instrument parts list](instrument-parts.csv) gives candidate hardware,
 wire allowances and mechanical quantities. These allowances are not installed
@@ -60,7 +60,7 @@ physical terminals and no pad11. Do not substitute an active fixed-tone buzzer.
 
 ## Fabrication and assembly process review
 
-Proposal: 330 × 120 mm, two layers, 1.6 mm FR4, at least 35 µm finished copper
+Proposal: 330 × 121.5 mm, two layers, 1.6 mm FR4, at least 35 µm finished copper
 on both layers, green solder mask, white legend, lead-free assembly. ENIG is a
 proposed finish for the small U2 lands; request the fabricator's stackup and
 assembler's accepted finish/stencil process. No controlled impedance,
@@ -76,7 +76,8 @@ Process questions to resolve before release:
 - C17/C18 use standard KiCad 0805 lands. Their pad length/width exceed TDK's
   example ranges, while the gap agrees. The documented engineering land choice
   needs assembly acceptance or a reviewed footprint revision.
-- Copper approaches the board edge and sockets slightly overhang it. Factory
+- The new rear edge clears nominal socket bodies by 1.275 mm and their
+  courtyards by 0.77 mm; actual fit remains unmeasured. Factory
   panel/handling rails need fiducials and tooling holes. Agree depaneling and
   THT order so the sockets remain undamaged; carrier holes are mounting holes,
   not an approved substitute for factory tooling.
@@ -88,8 +89,10 @@ Process questions to resolve before release:
 
 The centroid contains **only the 30 SMT parts**. Separate manual THT positions
 cover sockets, headers, switch and bottom H1. Native exports use (0,0), x right
-and y up: board corners (20,-20) to (350,-140) mm. Mechanical drawings use
-top-left/y down: add20 to x and negate y+20 for machine coordinates. Never
+and y up: board corners (20,-18.5) to (350,-140) mm. Mechanical drawings use
+the retained service datum native(20,20), x right/y down: add20 to x and
+negate y+20 for machine coordinates. The rear edge is service y=-1.5; do not
+shift placements to a new top-left origin. Never
 mix the earlier bottom-left-origin package with this revision. Check rotations
 against pin1 marks, particularly U2, D2 and bottom H1. A bottom-layer drawing
 viewed through the top must be labeled that way, not called an underside view.

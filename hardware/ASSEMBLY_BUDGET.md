@@ -51,14 +51,14 @@ Obtain the following lines for both complete and SMT-only alternatives:
 
 | Cost line | Complete five | SMT-only five | Evidence needed |
 |---|---|---|---|
-| Five 330 × 120 mm, two-layer carriers | Pending | Pending | Accepted stackup, finish, panel rails and process |
+| Five 330 × 121.5 mm, two-layer carriers | Pending | Pending | Accepted stackup, finish, panel rails and process |
 | SMT setup/stencil/parts/labor | Pending | Pending | Exact MPN BOM, 30 SMT/board, U2 stencil and C17/C18 lands |
 | THT parts/labor | Pending | Excluded or separately priced | 17 THT/board, bottom H1, socket fit/edge handling |
 | Ten ST0238 + fifty exact touch modules | Pending | Separate | Delivered revision, stock and module-end geometry |
 | Five Pico H SC0917 | Pending | Separate | Original Pico H; other models deferred |
 | Sixty module harnesses + five battery harnesses | Pending | Separate | Qualified crimps, adapted ends, measured lengths |
 | Five holder/cassette/fixture/support sets | Pending | Separate | MPD BH-18650-W and final measured mechanical CAD |
-| Five protected 18650 cells + external charger | Pending | Separate | Exact ordinary-terminal cell lot, fit and charging tolerance |
+| Five protected 18650 cells + one proposed shared charger/input set | Pending | Separate | Exact button-top opposite-end cell lot, fit and charging tolerance; shared quantity assumption HOLD |
 | First-article metrology/qualification | Pending | Separate | Fit and current-limited bench record |
 | Programming and all-five functional testing | Pending | Separate | Accepted firmware and per-unit records |
 | Shipping/tax | Pending | Pending | Battery shipping and delivery terms |

@@ -2,10 +2,10 @@ Quantity per instrument,Quantity for five instruments,Category,Manufacturer,Part
 1,5,Controller,Raspberry Pi,Pico H SC0917,Selected prototype candidate; male/socket engagement untested,"Factory temporary insertion, programming and test; removable shipping arrangement agreed"
 10,50,Touch modules,HiLetgo,TTP223-BA6 reference 1915450,User supplied 24x24x7.2 body; actual revision and header termination pending,Factory fixture mounting and adapted module cables
 2,10,Buzzer modules,SunFounder,ST0238,Selected; 32x14 outline verified; height/header engagement pending,Factory fixture mounting and adapted module cables
-1,5,Holder,MPD,BH-18650-W,Protected-18650 candidate; factory AWG24 leads included; exact fit/current qualification pending,"Factory PH lead termination, strain relief and lowered insulating cassette installation"
-1,5,Battery plug housing,JST,PHR-2,Manufacturer matched to carrier H1,Factory crimped harness and polarity test
-2,10,Battery contacts,JST,SPH-002T-P0.5S,"Manufacturer matched; AWG24 conductor range fits, actual MPD lead insulation OD/crimp qualification pending",Factory crimped harness
-Included with holder,Included with 5 holders,Battery leads,MPD,"Two AWG24 TR64 leads, 150 +/-5mm each",Included with BH-18650-W; OD/crimp and installed length pending; no duplicate wire procurement,Factory re-prepares stripped ends to JST process; trims only after fit
+1,5,Holder,MPD,BH-18650-W,Protected button-top 18650 candidate; exact-cell fit/contact ampacity pending,Included factory 24AWG TR64 leads 150+/-5mm each; factory PH termination and strain relief
+1,5,Battery plug housing,JST,PHR-2,Matched to carrier H1; completed harness polarity test required,Factory termination of included holder leads
+2,10,Battery contacts,JST,SPH-002T-P0.5S,AWG24 conductor matches; measure lead insulation OD against 0.8-1.5mm and qualify exact crimp process,Factory lead preparation/crimp inspection/polarity test
+Included with holder,Included with 5 holders,Battery leads,MPD,Two factory 24AWG TR64 leads 150+/-5mm each,No separate-wire allocation; actual OD/crimp and dressed length pending,Factory re-prepares stripped ends to JST process; strain relief; any extension needs review
 12,60,Module cable housings,Harwin,M20-1060300,Verified carrier-end candidate; unkeyed orientation control required,Factory twelve 3-wire carrier connectors
 36,180,Module cable contacts,Harwin,M20-1180046,Verified AWG26-compatible loose tin contact,Factory crimp qualification and harness continuity
 3.60 m,"18.00 m, before scrap",Module cable wire,Assembler specification,AWG26 white red black stranded,100mm per conductor engineering allowance; not measured installed length,Factory twelve adapted module cables
@@ -13,10 +13,10 @@ Included with holder,Included with 5 holders,Battery leads,MPD,"Two AWG24 TR64 l
 4,20,Cassette nuts,Essentra,04M030050HNDIN34814,Verified M3 nylon dimensional candidate,Factory mechanical assembly
 8,40,Cassette washers,Essentra,MFW030A,Verified ID3.2 OD7 thickness0.5 nylon,Factory mechanical assembly
 4,20,Cassette spacers,Essentra,13ME036,Verified ID3.2 OD8 length3 nylon,Factory mechanical assembly
-1,5,Cassette,Custom,Insulating BH-18650-W cassette,Proposed 112x36x44; lowered platform z16 and final retention/door CAD require actual fit,Factory mechanical subassembly after fit validation
+1,5,Cassette,Custom,Insulating BH-18650-W cassette,Proposed 112x36x44 and >=47mm supports; H1 integration verified in root806457b; final measured CAD pending,Factory mechanical subassembly after fit and loaded-clearance validation
 1,5,Module fixture,Custom,Raised insulating module fixture,Dimensioned proposal pending final actual-part fit,Factory mechanical subassembly after fit validation
-1,5,Cell,Keeppower,"P1835J, ordinary opposite-end terminals",Protected long 18650 candidate; lot/terminal ratings and holder/charger compatibility pending,Separate cell; user insertion only after tested polarity and branch load
-1 per user,Separate accessory quantity; HOLD,External charger,Keeppower,"L1 evaluation target, initial 500mA",HOLD: 4.242V upper tolerance exceeds unqualified cell-page 4.20V maximum; no approved pair,Separate external charger; no onboard charging
+1,5,Cell,Keeppower,P1835J standard opposite-end button-top version,Confirm delivered terminal variant/current-lot limits; holder fit and matched charging qualification held,Separate protected cell; user insertion only after per-unit electrical and cell-release gate
+Shared accessory; not one per instrument,1 shared set proposed; HOLD,External charger,Keeppower,L1 at initial 500mA qualification setting,"Compatibility HOLD; 4.2V+/-1% exceeds unqualified 4.20V cell maximum; bay/termination/temperature evidence pending; shared-set quantity is a quote assumption, not an approved pairing",Separate external charger after accepted pairing; no onboard charging
 9,45,Fixture bolts,Essentra,50M030050P035,Verified M3x35 nylon dimensional candidate,Factory fixture assembly
 9,45,Fixture nuts,Essentra,04M030050HNDIN34814,Verified M3 nylon dimensional candidate,Factory fixture assembly
 18,90,Fixture washers,Essentra,MFW030A,Verified ID3.2 OD7 thickness0.5 nylon,Factory fixture assembly
@@ -26,3 +26,4 @@ Included with holder,Included with 5 holders,Battery leads,MPD,"Two AWG24 TR64 l
 48,240,Keeper washers,Essentra,MFW010A,Verified ID2.2 OD5 thickness0.3 nylon,Factory module retention
 24,120,Module keepers,Custom,Stepped insulating keeper,20 touch and4 buzzer; pedestal thickness measured per module lot,Factory custom machining and assembly
 4,20,Corner support feet,Custom,Insulating supports at corner holes,Engineering reservation >=47mm below underside; final loaded clearance/fasteners/enclosure pending,Factory mechanical assembly; cell must carry no playing load
+Shared accessory; not one per instrument,1 shared set proposed; HOLD,Charger input supply/cable,To be selected,Suitable 5V 1A input supply and matching cable,"Exact SKU/revision pending accepted L1 revision and PM accessory distribution; shared-set quantity is a quote assumption, not an approved pairing",Separate accepted charger accessory; include in quote

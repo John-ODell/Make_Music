@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import patch
 import verify_board
 
-EVIDENCE = Path(__file__).resolve().parents[1] / 'review/integration-20261009'
+EVIDENCE = Path(__file__).resolve().parents[1] / 'review/rear-edge-20261009'
 
 
 class EvidenceTests(unittest.TestCase):

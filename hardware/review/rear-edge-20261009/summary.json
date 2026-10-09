@@ -1,0 +1,28 @@
+{
+  "status": "ELECTRICAL INTEGRATION VERIFIED; PHYSICAL FIT/PROCESS/RELEASE HELD",
+  "board_bounds_native_mm": [
+    20,
+    18.5,
+    350,
+    140
+  ],
+  "dimensions_mm": [
+    330,
+    121.5
+  ],
+  "service_datum_native_mm": [
+    20,
+    20
+  ],
+  "footprints": 65,
+  "electrical_parts": 48,
+  "pad_endpoints": 166,
+  "trace_segments": 405,
+  "erc": 0,
+  "copper_layout_drc": 0,
+  "unconnected": 0,
+  "metadata_warnings": 4,
+  "placement_hard_failures": 0,
+  "placements_and_routing_unchanged": true,
+  "reload_metadata_note": "C17/C18 inactive chamfer default and zero-size SMT drill metadata became explicit after editor reload; operative lands/positions/nets unchanged."
+}
