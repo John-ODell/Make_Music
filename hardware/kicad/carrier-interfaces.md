@@ -20,7 +20,7 @@ J1/J2 retain the reviewed Samtec SSQ-120-01-G-S socket candidates and existing p
 
 ## Cable mapping
 
-Carrier numbering is now defined independently of module order. Harwin headers are unshrouded and unpolarized; the square pad and silkscreen identify the carrier's chosen pin1. A female mating connector/housing and complete cable specification remain to be selected. Verify continuity and orientation with power removed, then verify supply polarity before connecting modules. A three-wire cable need not be straight-through.
+Carrier numbering is defined independently of module order. Harwin headers are unshrouded and unpolarized; the square pad and silkscreen identify the carrier's chosen pin1. The selected carrier-end mating set is Harwin M20-1060300 with three M20-1180046 contacts per cable, as specified in [MODULE_HARNESSES.md](../assembly/MODULE_HARNESSES.md). Module-end termination remains conditional on measured header pitch, contact size, engagement and actual labels. Verify continuity and orientation with power removed, then verify supply polarity before connecting modules. A three-wire cable need not be straight-through.
 
 | Carrier contact | Touch module destination | ST0238 destination |
 |---|---|---|
