@@ -89,3 +89,11 @@ Final raw /tmp/make-music-pcbway/raw-held-rear-edge-20261009 (18 originals);
 final stage /tmp/make-music-pcbway/final-visually-reviewed-package-20261009.
 IPC2581 supplemental; IPC-D356 unavailable. Restore CUA documentation after
 compaction; getApp after quit reopens apps, so use process checks.
+
+## Early wake, 2026-10-09 18:17 Central
+
+Wake arrived before the actual reset. Account99% used/1% remaining;
+resetsAt1791587979 =18:19:39 Central. No substantive work resumed.
+Same heartbeat rearmed18:21 Central; final review/PR28 merge remain pending.
+Native CAD already saved and sessions closed; no native changes on this wake.
+Prior pushed checkpoint384fc3e; package d987896.
