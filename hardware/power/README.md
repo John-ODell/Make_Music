@@ -8,7 +8,10 @@ Review date: 2026-10-07. **Architecture A selected by the user for the first rev
 
 Implement **A: removable protected conventional 4.2 V-charge 18350 cell, externally charged, switched through the specified fuse/eFuse into Pico VSYS**. The eFuse supplies the battery with reverse-current blocking alongside the Pico's existing USB diode, preserving an unmodified removable Pico. **B: separate USB charge input + BQ24074 power path + protected cell** remains reference material for a future revision, not part of the first-revision BOM. Exact cell, holder, switch and compatible external charger still require verification. The Pico USB port is for programming and USB power; it does not charge the battery.
 
+Updated quote preference (2026-10-08): **five fully assembled instruments**, including populated SMT/THT carriers, harnesses and mechanical work, plus an **optional sixth bare carrier keepsake**. Fit measurements and supplier scope/pricing remain pending; the optional bare board does not replace any of the five assembled units. See the readiness audit for exact remaining holds.
+
 - [Factory assembly and staged prototype validation record](prototype-validation.md)
+- [PCBWay power and assembly readiness audit](pcbway-readiness.md)
 - [Revision 1 exact parts and schematic integration handoff](rev1-handoff.md)
 - [Circuit connections and operating states](circuits.md)
 - [Candidate BOM and verification evidence](BOM.md)
