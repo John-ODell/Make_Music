@@ -6,14 +6,16 @@ The [factory assembly and current-limited bring-up record](prototype-validation.
 
 ## Selected architecture and remaining decisions
 
-User corrected the intended cell to long **protected 18650**. Option A remains removable external charging; option B is not populated. Recommend **Keeppower P1835J**, standard opposite-end-terminal product, pending lot/terminal confirmation. **L1 charger approval is held** because its published voltage tolerance exceeds the cell page's unqualified maximum; a 500 mA qualification setting does not resolve that gap.
+User corrected the intended cell to long **protected 18650**. Option A remains removable external charging; option B is not populated. Recommend **Keeppower P1835J**, standard opposite-end-terminal **button-top** version, pending delivered-lot/terminal confirmation for **MPD BH-18650-W**. **L1 charger approval is held** because its published voltage tolerance exceeds the cell page's unqualified maximum; a 500 mA qualification setting does not resolve that gap.
 
 | Decision | Recommended starting point | Release dependency |
 |---|---|---|
 | Charging | A external charging selected | Verify compatible external charger; no onboard charger in revision 1 |
-| Battery form | Protected 18650; Keeppower P1835J exact review candidate | Confirm standard terminal version, current-lot charge/discharge limits, PCM/recovery and mechanical measurements |
+| Battery form | Protected 18650; Keeppower P1835J opposite-end button-top review candidate | Confirm delivered terminal version, current-lot charge/discharge limits, PCM/recovery and actual fit |
 | Pico | Original non-wireless Pico H SC0917, removable in female sockets | Actual engagement/USB access and regulator/current validation |
-| Holder/connector | Mechanical helper selects protected-18650 wired holder/longer cassette; retain JST-PH H1.1+/2GND interface | Contact travel/removal/ampacity, final cassette CAD and actual harness polarity; anonymous flat-top holder is not frozen |
+| Holder/connector | Mechanical PR #30 selects MPD BH-18650-W with included 24 AWG leads; retain JST-PH H1.1+/2GND | Exact-cell fit/contact travel/removal/ampacity; lead OD 0.8–1.5 mm and qualified crimp process; actual harness polarity |
+| Cassette / H1 | Mechanical PR #30 proposes 112×36×44 mm cassette, ≥47 mm supports and H1 native (249,40)→(289,40) | Final loaded fit/toleranced CAD and PM native relocation/routing/parity/exports; proposed placement is not completed CAD |
+| Instrument parts CSV | PM integrates [instrument-parts-handoff.csv](instrument-parts-handoff.csv) replacement rows | Replace seven matching categories, add charger-input accessory; included holder leads get no separate wire purchasing quantity |
 | Switch behavior | Battery branch OFF; USB remains on | Preserve adopted behavior and qualify actual startup/current/low-load switching |
 | Switch low-load endurance | MN12SS1W03 silver contacts retained | NKK recommends 0.1 A at 2 V minimum; actual idle/startup current and low-load contact endurance remain unverified. Gold logic contacts cannot carry the 0.70 A branch. See prototype-validation.md. |
 | Isolation/protection | TPS259474LRPWR + 1.25 A upstream fuse specified | Integrate exact contract; validate current/reversal/transients on assembled circuit |
@@ -21,7 +23,7 @@ User corrected the intended cell to long **protected 18650**. Option A remains r
 | Charge/input/termination/timer settings | Not applicable to carrier revision 1 | Verify external charger against selected cell limits |
 | Module supply and buzzers | Pico 3V3 for compatible modules | TTP223 touch supply supports 3.3 V per merged PM reference; measure full module LED loads, confirm polarity; SunFounder ST0238 selected at 3.3 V; driver/load current and peaks still unverified |
 | Low battery shutdown | Hardware UVLO nominal 3.221 V off /3.546 V restart | Adopted in branch-protection.md with tolerances; no firmware ADC changes |
-| Added buzzer bulk | PM integrates C17/C18, 10 µF each on 3V3_OUT | Final netlist/PCB/BOM/parity, effective capacitance and measured startup/transients |
+| Added buzzer bulk | Merged schematic PR #27 added C17/C18, 10 µF each on 3V3_OUT | Final PCB synchronization/netlist/BOM/parity, effective capacitance and measured startup/transients |
 | Factory scope | Five fully assembled instruments; optional sixth bare keepsake | Accepted complete SMT/THT/harness/mechanical scope and per-unit records; no actual parts for fit metrology yet |
 
 ## Schematic integration instructions
