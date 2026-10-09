@@ -33,7 +33,8 @@ are satisfied. No script here uploads files or grants release.
    IPC-2581 XML is supplemental; it is not IPC-D-356. The installed
    `export_netlist(format="ipc")` fails and must not be reported as produced.
 6. Run `prepare_pcbway_review.py NATIVE_DIR NETLIST_XML ERC_MCP_JSON
-   DRC_MCP_JSON NEW_OUTPUT_DIR --source-snapshot SOURCE_CHECKPOINT_JSON`.
+   DRC_MCP_JSON NEW_OUTPUT_DIR --source-snapshot SOURCE_CHECKPOINT_JSON
+   --electrical-evidence SOURCE_BOUND_EVIDENCE_DIR`.
    Inputs are the complete MCP result files, not stdout summaries. This checks
    sources stayed unchanged, native origin agreement and BOM/placement identity.
    It produces exact per-reference BOM, grouped five-unit BOM, SMT-only centroid,
@@ -44,10 +45,13 @@ are satisfied. No script here uploads files or grants release.
    directory as a complete revision, preserving its hold status. Commit the
    reviewed sources and regenerated package together via a PR.
 
-The postprocessor currently requires zero unreviewed check findings. If a
-connector limitation leaves metadata-only diagnostics, do not disable DRC or
-silently erase them. Record the exact limitation, independent verification and
-reviewed scope before changing that gate.
+The postprocessor requires source-bound live pad/identity evidence and retains
+the exact four reviewed Konnect custom-field warnings from the current PCB.
+It refuses other findings, wrong connections, mismatched evidence or stale
+sources before creating output. The real 47-part/30-SMT/17-THT pipeline passed;
+wrong-net, unreviewed-warning and stale-source negative cases refused. Overall
+DRC remains four warnings in the manifest; no DRC rule or result is suppressed.
+This electrical review does not grant fabrication release.
 
 ## Coordinate and assembly convention
 

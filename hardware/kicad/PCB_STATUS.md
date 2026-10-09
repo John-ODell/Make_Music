@@ -15,23 +15,36 @@ endpoints and exact assigned footprint pads. All 162 original endpoints and
 46 component identities/values/footprints were independently retained in the
 capacitor update.
 
-**PCB integration is not yet complete.** The saved/refilled PCB currently has
-46 electrical footprints plus 17 board-only mounts. Fresh all-severity DRC
-reports **0 copper/layout violations, 0 unconnected items, and 4 schematic
-parity warnings**: missing C17 and C18 footprints, and missing custom MPN fields
-on J1/J2. No check was disabled, excluded or silently treated as passed.
-Do not claim zero overall DRC/parity or regenerate a passing package yet.
+**Electrical PCB integration is complete; manufacturing release remains held.**
+The saved/refilled board has 48 electrical footprints plus 17 mounting holes,
+405 trace segments and the inherited 33 vias. Fresh all-severity DRC reports
+**0 copper/layout violations, 0 unconnected items, and 4 metadata parity
+warnings**: missing Header fields on C17/C18 and missing MPN fields on J1/J2.
+No DRC rule was disabled or excluded. Overall DRC is four warnings, not zero.
 
-The installed Konnect PCB sync refuses existing root-prefixed symbol paths
-because of [upstream issue723](https://github.com/mixelpixx/Konnect/issues/723).
-The refused dry run changed no components. Custom schematic fields also need
-explicit review because of [issue788](https://github.com/mixelpixx/Konnect/issues/788).
-Any task-local compatibility normalization must match exact independently
-verified identities; it must not relink by reference alone, change native
-source files directly, or suppress the checks. PM owns the PCB update.
+A task-local exported-netlist adapter resolves the exact current-root identity
+compatibility defect in [Konnect723](https://github.com/mixelpixx/Konnect/issues/723).
+PM reviewed the code and reran all 21 refusal/passthrough tests. The apply added
+only C17/C18; all 63 existing footprint placements/values/library IDs remained
+unchanged. Library refresh, moves and routing used Konnect MCP only. A fresh
+identity preview returns noop, with no conflicts, reassigned pads or missing
+footprints. Custom fields remain a [Konnect788](https://github.com/mixelpixx/Konnect/issues/788)
+limitation; all native schematic MPNs remain intact and authoritative.
+
+The [source-bound review evidence](../review/integration-20261009/README.md)
+contains fresh native XML, ERC/DRC and live IPC readback. Every one of 166 pads
+agrees with XML; all 48 values and full footprint IDs agree. The new board
+verifier uses these exports and does not load pcbnew/SWIG. Tests reject wrong
+nets/values, saved readback, pending identity changes, unreviewed warnings,
+copper errors and stale sources; disabling the pad guard makes its negative
+control fail as expected. These four exact metadata warnings are reviewed for
+electrical integration only, not blanket fabrication approval.
 
 ## Changes saved and verified
 
+- C17 is native (87.46,65.50), C18 (125.46,65.50), both top/0 degrees.
+  Their power and ground branches use 0.30 mm copper beside C11/C12; all pad
+  geometry/nets were read back and the exported detail was visually inspected.
 - J3/C4 and J4/D4 anchors moved only from native y95 to y98, mechanical y75
   to y78, retaining x/rotation. Their copper/captions were updated. This clears
   the two buzzer body projections; dressed cable fit is still unmeasured.
@@ -50,7 +63,11 @@ source files directly, or suppress the checks. PM owns the PCB update.
 
 Native PCB coordinates are mechanical top-left/y down plus(20,20). Socket
 rows remain17.78 mm apart; actual Pico H SC0917/socket engagement, rear lip,
-USB/BOOTSEL access and removal remain physical/process gates. Ten26 ×26 mm
+USB/BOOTSEL access and removal remain physical/process gates. The placement
+scorer flags both socket courtyards at y19.27, extending 0.73 mm beyond the
+y20 rear edge. This is an unresolved physical edge/lip acceptance requirement;
+no placement-score pass is claimed. The internal cable-header edge-distance
+heuristic does not establish a defect in this carrier arrangement. Ten26 ×26 mm
 both-face touch exclusions and seventeen3.2 mm NPTH mounts remain fixed.
 Four cassette mounts stay at mechanical(150,17),(210,17),(150,43),(210,43).
 Their Ø8 bolt exclusions remain enforced.
@@ -89,7 +106,11 @@ board(20,-20)..(350,-140) mm. Do not mix older auxiliary-bottom-left files.
 Expected new BOM is47 purchased parts:30 top SMT and17 THT; Pico/modules/
 harnesses/mechanics are separate in the [five-unit handoff](../assembly/PCBWAY_HANDOFF.md).
 
-Finish capacitor integration, all fresh checks and source-bound exports.
+Finish the held export postprocessor, drawings and actual Gerber/drill viewer
+review. Fresh native raw exports exist, but their final package is not yet
+accepted or published; the source-bound postprocessor now accepts only the four exact reviewed
+metadata warnings and retains them in the report. Its real 47-part pipeline
+passed; wrong-net, new-warning and stale-source cases refused before output.
 Then complete the [actual-part fit checklist](../assembly/FIT_CHECKLIST.md),
 cell/charger matching, final mechanical CAD, supplier acceptance and
 [current-limited bench qualification](../power/prototype-validation.md).

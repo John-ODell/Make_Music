@@ -12,10 +12,13 @@ import json
 from pathlib import Path
 import re
 import shutil
+import sys
 import xml.etree.ElementTree as ET
 
 HW = Path(__file__).resolve().parents[1]
 KD = HW / 'kicad'
+sys.path.insert(0, str(KD))
+import verify_board
 
 
 def natural(ref):
@@ -55,14 +58,21 @@ def response(path):
     return json.loads(''.join(p['text'] for p in raw['content'] if p['type'] == 'text'))
 
 
-def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot):
+def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, electrical_evidence):
     assert not destination.exists(), 'Output must be a fresh directory'
     before = json.loads(snapshot.read_text())
     assert before['design_sha256'] == design_hashes(), 'Native sources changed since export checkpoint'
     erc, drc = response(erc_path), response(drc_path)
+    # Exact source-bound live pad/identity checks adjudicate only the four
+    # documented connector metadata warnings. No DRC category is suppressed.
+    _, metadata_warnings = verify_board.verify(electrical_evidence)
+    for source, name in ((netlist, 'netlist.xml'), (erc_path, 'erc-mcp.json'), (drc_path, 'drc-mcp.json')):
+        assert digest(source) == digest(electrical_evidence / name), 'Electrical evidence differs: ' + name
+    assert response(electrical_evidence / 'source-checkpoint.json')['design_sha256'] == before['design_sha256']
     assert erc['total'] == 0, erc
-    assert drc['total_violations'] == 0 and not drc['categories_not_reported'], drc
-    assert drc['schematic_parity'] == drc['unconnected_items'] == 0, drc
+    assert drc['total_violations'] == metadata_warnings and not drc['categories_not_reported'], drc
+    assert drc['schematic_parity'] == metadata_warnings and drc['unconnected_items'] == 0, drc
+    assert drc['design_rule_violations'] == 0, drc
     assert drc['source'] == 'saved_file' and drc['live_board_synced'], drc
     assert drc['zones_refilled'] and drc['zone_refill_source'] == 'ipc', drc
     assert not drc['truncated'] and drc['severity_filter'] == 'info', drc
@@ -140,13 +150,14 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot):
     (destination / 'bom.csv').unlink()  # Generic export replaced by exact BOM.
     for source, name in [(HW / 'assembly/instrument-parts.csv', 'instrument-parts.csv'),
                          (HW / 'assembly/PCBWAY_HANDOFF.md', 'PCBWAY_HANDOFF.md'),
-                         (HW / 'manufacturing/REVIEW_ONLY_DO_NOT_ORDER/README.md', 'README.md')]:
+                         (HW / 'manufacturing/REVIEW_PACKAGE_README.md', 'README.md')]:
         shutil.copyfile(source, destination / name)
     (destination / 'validation-summary.json').write_text(json.dumps({
         'status': 'REVIEW ONLY - DO NOT ORDER', 'kicad_version': '10.0.6',
         'export_transport': 'Konnect MCP; native saved-file evidence',
-        'erc_violations': 0, 'drc_violations': 0, 'unconnected_items': 0,
-        'schematic_parity_issues': 0, 'purchased_carrier_parts': len(parts),
+        'erc_violations': 0, 'drc_violations': drc['total_violations'], 'unconnected_items': 0,
+        'copper_layout_drc_violations': 0, 'reviewed_metadata_warnings': metadata_warnings,
+        'schematic_parity_issues': drc['schematic_parity'], 'purchased_carrier_parts': len(parts),
         'smt_centroid_parts': len(smt), 'manual_tht_parts': len(tht),
         'assembled_instruments_requested': 5, 'optional_additional_bare_carriers': 1,
         'machine_origin': 'native (0,0); x right/y up; board (20,-20)..(350,-140) mm',
@@ -156,10 +167,12 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot):
     inputs = design_inputs()
     inputs += [HW / p for p in ('assembly/instrument-parts.csv',
         'assembly/MODULE_HARNESSES.md', 'assembly/FIT_CHECKLIST.md',
-        'assembly/PCBWAY_HANDOFF.md', 'manufacturing/prepare_pcbway_review.py')]
+        'assembly/PCBWAY_HANDOFF.md', 'manufacturing/prepare_pcbway_review.py',
+        'manufacturing/REVIEW_PACKAGE_README.md', 'kicad/verify_board.py')]
     inputs += [netlist, erc_path, drc_path]
     evidence = destination / 'verification'
     evidence.mkdir()
+    shutil.copytree(electrical_evidence, evidence / 'electrical-integration')
     for source, name in ((netlist, 'netlist.xml'), (erc_path, 'erc-mcp.json'), (drc_path, 'drc-mcp.json')):
         shutil.copyfile(source, evidence / name)
     shutil.copyfile(snapshot, evidence / 'source-checkpoint.json')
@@ -184,5 +197,8 @@ if __name__ == '__main__':
         parser.add_argument(name, type=Path)
     parser.add_argument('--source-snapshot', required=True, type=Path,
         help='Hash checkpoint taken after saved/refilled checks and before native exports')
+    parser.add_argument('--electrical-evidence', required=True, type=Path,
+        help='Source-bound XML/live IPC/ERC/DRC evidence checked by verify_board.py')
     args = parser.parse_args()
-    prepare(args.native_dir, args.netlist, args.erc, args.drc, args.output_dir, args.source_snapshot)
+    prepare(args.native_dir, args.netlist, args.erc, args.drc, args.output_dir,
+            args.source_snapshot, args.electrical_evidence)

@@ -1,0 +1,1895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/johnodell/Desktop/Make_Music/hardware/kicad/make_music.kicad_sch</source>
+    <date>2026-10-09T09:02:26</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Make Music - provisional Pico carrier</title>
+        <company>Prototype review - fit and bench validation pending</company>
+        <rev>P4</rev>
+        <date>2026-10-08</date>
+        <source>make_music.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/">
+      <title_block>
+        <title>Make Music - fused battery power</title>
+        <company>Prototype review - fit and bench validation pending</company>
+        <rev>P4</rev>
+        <date>2026-10-08</date>
+        <source>battery_power.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J3</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J3"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4528bd3-f8f9-4951-a9d4-cdaabc21e1c4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J4</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J4"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ee36cee-8fe6-49c4-82c9-5e772bc0e6c2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J5</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J5"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>16779cdc-b0b6-45b9-b95a-c766a497f305</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J6</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J6"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d216a796-632f-4464-9251-bb0cfd76f129</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J7</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J7"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4943735c-a1a8-4339-b499-d5cddd5d7b02</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J8</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J8"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9939c50b-4f3f-4000-9eb1-69a3e6f1617a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J9</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J9"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2f01505f-dd9b-46bf-b51e-32190721d9d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J10</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J10"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d5a5f1c-3dd7-4833-bf7b-c26fd6a04974</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J11</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J11"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>33ec2e42-011c-478c-84bd-00f7c924dd08</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J12</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J12"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d3ff53d5-6a8d-4acd-96e8-4be65b0a9923</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J13</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J13"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>69b70d43-dfd3-4310-a2b0-ebaf8d6d5e23</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>100n</value>
+      <footprint>MakeMusicCarrier:KEMET_C0603_1608_LevelB</footprint>
+      <datasheet>https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</datasheet>
+      <fields>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Header">J14</field>
+        <field name="Footprint">MakeMusicCarrier:KEMET_C0603_1608_LevelB</field>
+        <field name="Datasheet">https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Bypass_Capacitor" description="100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Header" value="J14"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f08aace1-0e6e-4a05-9753-c6658b1df5c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C17">
+      <value>10u / 10V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Header">J13</field>
+        <field name="MPN">C2012X7R1A106K125AC</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Header" value="J13"/>
+      <property name="MPN" value="C2012X7R1A106K125AC"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92637cec-4259-435d-a7bb-4f57ed3d8521</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C18">
+      <value>10u / 10V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Header">J14</field>
+        <field name="MPN">C2012X7R1A106K125AC</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Header" value="J14"/>
+      <property name="MPN" value="C2012X7R1A106K125AC"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bc7c7b07-7a96-4cbc-b6cf-556412fd43b9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>LEFT / Pico 1-20</value>
+      <footprint>MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm</footprint>
+      <datasheet>https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf</datasheet>
+      <fields>
+        <field name="MPN">SSQ-120-01-G-S</field>
+        <field name="Footprint">MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Pico_Socket_Left" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="SSQ-120-01-G-S"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e670b481-f767-4b9f-bc49-c65d1501c150</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>RIGHT / Pico 21-40</value>
+      <footprint>MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm</footprint>
+      <datasheet>https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf</datasheet>
+      <fields>
+        <field name="MPN">SSQ-120-01-G-S</field>
+        <field name="Footprint">MakeMusic:Samtec_SSQ-120-01-G-S_1x20_P2.54mm</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Pico_Socket_Right" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="SSQ-120-01-G-S"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db122867-a5f6-4bc1-a0a8-6df9d4df27ca</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="20"/>
+            <pin num="19"/>
+            <pin num="18"/>
+            <pin num="17"/>
+            <pin num="16"/>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="10"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>C4 / GP16</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5be5d9b-11d5-405c-aea0-1bad421bf6cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>D4 / GP17</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59291b10-2ef9-4550-8b07-5c99c617fa30</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>E4 / GP18</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c0339b6a-86f7-4523-9173-0f37f7919572</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J6">
+      <value>F4 / GP19</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6335c485-d065-4949-9f3c-08789197e2f1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J7">
+      <value>G4 / GP20</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4498df22-4b0f-42de-8a43-88d0b418d5b1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J8">
+      <value>A4 / GP21</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e6739ff-b67e-4382-8ec8-8b98ca99ceb2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J9">
+      <value>B4 / GP22</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2f50fd5f-7bb4-418b-9add-089e12d1432e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J10">
+      <value>C5 / GP26</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d567b216-cd45-47e3-9703-a01d2bceab1e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J11">
+      <value>Semitone up / GP27</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cfeeeca9-ef29-4091-a858-af212e6e4803</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J12">
+      <value>Octave up / GP28</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1d9b810-a38c-4050-8325-80dd3e538003</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J13">
+      <value>Buzzer 1 / PWM / GP13</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46c55faf-d882-43f5-911f-ba9591ebf4c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J14">
+      <value>Buzzer 2 / PWM / GP12</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9990346</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9990346_1x3_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Carrier_Cable_Header_3" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9990346"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9509c185-74fa-4fb3-88bc-05eca5a80a47</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J15">
+      <value>GPIO / Harwin 16-way</value>
+      <footprint>MakeMusicCarrier:Harwin_M20-9991646_1x16_P2.54mm</footprint>
+      <fields>
+        <field name="MPN">M20-9991646</field>
+        <field name="Footprint">MakeMusicCarrier:Harwin_M20-9991646_1x16_P2.54mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Expansion_16" description="Carrier interface; no inserted module electronics modeled"/>
+      <property name="MPN" value="M20-9991646"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>998b75c2-1e99-4d7a-b022-d5773fb28bbd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Bias_Resistor" description="Buzzer reset pull-up; 10k 1% Yageo RC0603FR-0710KL"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>569eeef5-b958-46ca-b1d8-b558c11cb28c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Bias_Resistor" description="Buzzer reset pull-up; 10k 1% Yageo RC0603FR-0710KL"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff5c33c1-7a1d-45a6-a18c-071a40ef4a66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>USB VBUS only</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="VBUS_Test_Point" description="USB VBUS test point; not a battery/VSYS connection"/>
+      <property name="Sheetname" value="make_music"/>
+      <property name="Sheetfile" value="make_music.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7cd4f914-a9d1-43b4-bf89-481250b5df09</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>4u7 / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1E475K125AB</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Capacitor" description="Nonpolar ceramic bypass/timing capacitor; exact MPN in instance"/>
+      <property name="MPN" value="C2012X7R1E475K125AB"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>280493d2-8492-4dcc-bbf4-22e8e15a55eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>4u7 / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1E475K125AB</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Capacitor" description="Nonpolar ceramic bypass/timing capacitor; exact MPN in instance"/>
+      <property name="MPN" value="C2012X7R1E475K125AB"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>94eb3b99-0114-4c04-a271-90349d17a9f2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>10n / 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H103J080AA</datasheet>
+      <fields>
+        <field name="MPN">C1608C0G1H103J080AA</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H103J080AA</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Capacitor" description="Nonpolar ceramic bypass/timing capacitor; exact MPN in instance"/>
+      <property name="MPN" value="C1608C0G1H103J080AA"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>9c2b7620-b3d1-4aa1-9efd-74188e7d5c91</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>4u7 / 25V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1E475K125AB</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Capacitor" description="Nonpolar ceramic bypass/timing capacitor; exact MPN in instance"/>
+      <property name="MPN" value="C2012X7R1E475K125AB"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>55b788bc-b2fc-4305-a18f-bea674b06c6c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>SS14-E3/61T</value>
+      <footprint>MakeMusicCarrier:Vishay_SS14_SMA_K1_A2</footprint>
+      <datasheet>https://www.vishay.com/docs/88746/ss12.pdf</datasheet>
+      <fields>
+        <field name="MPN">SS14-E3/61T</field>
+        <field name="Footprint">MakeMusicCarrier:Vishay_SS14_SMA_K1_A2</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88746/ss12.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="SS14_K1_A2" description="SS14 Schottky; terminal1=K band, terminal2=A by KiCad convention"/>
+      <property name="MPN" value="SS14-E3/61T"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>a88c54b9-9877-4adf-814b-e598155cacac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>SMAJ5.0CA</value>
+      <footprint>MakeMusicPower:Littelfuse_SMAJ5-0CA_DO-214AC</footprint>
+      <datasheet>https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="MPN">SMAJ5.0CA</field>
+        <field name="Footprint">MakeMusicPower:Littelfuse_SMAJ5-0CA_DO-214AC</field>
+        <field name="Datasheet">https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="D_TVS" description="Bidirectional transient-voltage-suppression diode"/>
+      <property name="MPN" value="SMAJ5.0CA"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <property name="ki_keywords" value="diode TVS thyrector"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>2a8a7a8d-5352-4285-ad88-4cb9b7184e96</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>1.25A T</value>
+      <footprint>MakeMusicPower:Schurter_UMT-H_3403-0275-23</footprint>
+      <datasheet>https://www.schurter.com/en/datasheet/typ_UMT-H.pdf</datasheet>
+      <fields>
+        <field name="MPN">3403.0275.23</field>
+        <field name="Footprint">MakeMusicPower:Schurter_UMT-H_3403-0275-23</field>
+        <field name="Datasheet">https://www.schurter.com/en/datasheet/typ_UMT-H.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Fuse_UMT_H" description="Symmetric backup fuse; carrier convention1 input2 fused output"/>
+      <property name="MPN" value="3403.0275.23"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>336c77c4-892f-4e74-9a4a-0c7a33360779</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H1">
+      <value>JST PH battery</value>
+      <footprint>Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/ePH.pdf</datasheet>
+      <fields>
+        <field name="MPN">B2B-PH-K-S(LF)(SN)</field>
+        <field name="Footprint">Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</field>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/ePH.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="JST_PH_Battery_Harness" description="JST B2B-PH-K-S harness; carrier assignment circuit1 protected positive, circuit2 GND; not direct holder contacts"/>
+      <property name="MPN" value="B2B-PH-K-S(LF)(SN)"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>74de205e-ee7b-454c-90ba-bdf51bdac4cd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>649k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07649KL</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-07649KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07649KL</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Resistor" description="Nonpolar programming resistor; exact MPN/value in instance"/>
+      <property name="MPN" value="RC0603FR-07649KL"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>ec5f724e-2724-41c9-a5d2-6fcda1845acf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>332k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-07332KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Resistor" description="Nonpolar programming resistor; exact MPN/value in instance"/>
+      <property name="MPN" value="RC0603FR-07332KL"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>2a19a9b9-f26f-4db4-931c-b8ee4564ffee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>1.05M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071M05L</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-071M05L</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071M05L</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Resistor" description="Nonpolar programming resistor; exact MPN/value in instance"/>
+      <property name="MPN" value="RC0603FR-071M05L"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>a688c813-48db-4728-9db0-0d75938b131e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>332k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-07332KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07332KL</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Resistor" description="Nonpolar programming resistor; exact MPN/value in instance"/>
+      <property name="MPN" value="RC0603FR-07332KL"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>a64f014e-df66-45b3-aeb2-697e8c9a8fd3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>3.32k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-073K32L</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-073K32L</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-073K32L</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Resistor" description="Nonpolar programming resistor; exact MPN/value in instance"/>
+      <property name="MPN" value="RC0603FR-073K32L"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>01bde884-4d79-4272-904a-268f82870ea3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100RL</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="Power_Resistor" description="Nonpolar programming resistor; exact MPN/value in instance"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>a23a8b4f-da59-495c-8aa3-7486406cde67</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="S1">
+      <value>MN12SS1W03</value>
+      <footprint>MakeMusicCarrier:NKK_MN12SS1W03_TerminalPattern_Candidate</footprint>
+      <datasheet>https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf</datasheet>
+      <fields>
+        <field name="MPN">MN12SS1W03</field>
+        <field name="Footprint">MakeMusicCarrier:NKK_MN12SS1W03_TerminalPattern_Candidate</field>
+        <field name="Datasheet">https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="NKK_MN12_Common2" description="NKK MN12 SPDT ON-ON: common2, throws1/3; no internal static connection modeled"/>
+      <property name="MPN" value="MN12SS1W03"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>fff96066-99c8-4494-a2c2-a8eca774191f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>TPS259474LRPWR</value>
+      <footprint>MakeMusicPower:TI_RPW0010A_TPS259474_2x2mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps25947.pdf</datasheet>
+      <fields>
+        <field name="MPN">TPS259474LRPWR</field>
+        <field name="Footprint">MakeMusicPower:TI_RPW0010A_TPS259474_2x2mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps25947.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="MakeMusic" part="TPS259474LRPWR" description="TI TPS259474L circuit breaker/latch off; RPW0010A ten physical terminals, IN5/OUT6; no pad11"/>
+      <property name="MPN" value="TPS259474LRPWR"/>
+      <property name="Sheetname" value="Battery protection"/>
+      <property name="Sheetfile" value="battery_power.kicad_sch"/>
+      <sheetpath names="/Battery protection/" tstamps="/651cdef3-5948-45fc-af76-1af6b33bcc1a/"/>
+      <tstamps>212f3880-6efe-4f17-b8a9-0c11b7945586</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Bias_Resistor">
+      <description>Buzzer reset pull-up; 10k 1% Yageo RC0603FR-0710KL</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">Bias_Resistor</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Buzzer reset pull-up; 10k 1% Yageo RC0603FR-0710KL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Carrier_Bypass_Capacitor">
+      <description>100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">Carrier_Bypass_Capacitor</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">100nF 50V X7R KEMET C0603C104K5RACTU; place at associated carrier header</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Carrier_Cable_Header_3">
+      <description>Carrier interface; no inserted module electronics modeled</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Carrier_Cable_Header_3</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Carrier interface; no inserted module electronics modeled</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SIG_/_carrier" type="passive"/>
+        <pin num="2" name="3V3_/_carrier" type="passive"/>
+        <pin num="3" name="GND_/_carrier" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="D_TVS">
+      <description>Bidirectional transient-voltage-suppression diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_TVS</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Bidirectional transient-voltage-suppression diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Expansion_16">
+      <description>Carrier interface; no inserted module electronics modeled</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Expansion_16</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Carrier interface; no inserted module electronics modeled</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GP0" type="passive"/>
+        <pin num="2" name="GP1" type="passive"/>
+        <pin num="3" name="GP2" type="passive"/>
+        <pin num="4" name="GP3" type="passive"/>
+        <pin num="5" name="GP4" type="passive"/>
+        <pin num="6" name="GP5" type="passive"/>
+        <pin num="7" name="GP6" type="passive"/>
+        <pin num="8" name="GP7" type="passive"/>
+        <pin num="9" name="GP8" type="passive"/>
+        <pin num="10" name="GP9" type="passive"/>
+        <pin num="11" name="GP10" type="passive"/>
+        <pin num="12" name="GP11" type="passive"/>
+        <pin num="13" name="GP14" type="passive"/>
+        <pin num="14" name="GP15" type="passive"/>
+        <pin num="15" name="3V3_OUT" type="passive"/>
+        <pin num="16" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Fuse_UMT_H">
+      <description>Symmetric backup fuse; carrier convention1 input2 fused output</description>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse_UMT_H</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Symmetric backup fuse; carrier convention1 input2 fused output</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="JST_PH_Battery_Harness">
+      <description>JST B2B-PH-K-S harness; carrier assignment circuit1 protected positive, circuit2 GND; not direct holder contacts</description>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">JST_PH_Battery_Harness</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">JST B2B-PH-K-S harness; carrier assignment circuit1 protected positive, circuit2 GND; not direct holder contacts</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PROTECTED_PLUS" type="passive"/>
+        <pin num="2" name="PROTECTED_MINUS" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="NKK_MN12_Common2">
+      <description>NKK MN12 SPDT ON-ON: common2, throws1/3; no internal static connection modeled</description>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">NKK_MN12_Common2</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">NKK MN12 SPDT ON-ON: common2, throws1/3; no internal static connection modeled</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BAT_OFF" type="passive"/>
+        <pin num="2" name="COM" type="passive"/>
+        <pin num="3" name="BAT_ON" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Pico_Socket_Left">
+      <description>Carrier interface; no inserted module electronics modeled</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Pico_Socket_Left</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Carrier interface; no inserted module electronics modeled</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pico01_/_GP0" type="passive"/>
+        <pin num="2" name="Pico02_/_GP1" type="passive"/>
+        <pin num="3" name="Pico03_/_GND" type="passive"/>
+        <pin num="4" name="Pico04_/_GP2" type="passive"/>
+        <pin num="5" name="Pico05_/_GP3" type="passive"/>
+        <pin num="6" name="Pico06_/_GP4" type="passive"/>
+        <pin num="7" name="Pico07_/_GP5" type="passive"/>
+        <pin num="8" name="Pico08_/_GND" type="passive"/>
+        <pin num="9" name="Pico09_/_GP6" type="passive"/>
+        <pin num="10" name="Pico10_/_GP7" type="passive"/>
+        <pin num="11" name="Pico11_/_GP8" type="passive"/>
+        <pin num="12" name="Pico12_/_GP9" type="passive"/>
+        <pin num="13" name="Pico13_/_GND" type="passive"/>
+        <pin num="14" name="Pico14_/_GP10" type="passive"/>
+        <pin num="15" name="Pico15_/_GP11" type="passive"/>
+        <pin num="16" name="Pico16_/_GP12" type="passive"/>
+        <pin num="17" name="Pico17_/_GP13" type="passive"/>
+        <pin num="18" name="Pico18_/_GND" type="passive"/>
+        <pin num="19" name="Pico19_/_GP14" type="passive"/>
+        <pin num="20" name="Pico20_/_GP15" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Pico_Socket_Right">
+      <description>Carrier interface; no inserted module electronics modeled</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Pico_Socket_Right</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Carrier interface; no inserted module electronics modeled</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pico21_/_GP16" type="passive"/>
+        <pin num="2" name="Pico22_/_GP17" type="passive"/>
+        <pin num="3" name="Pico23_/_GND" type="passive"/>
+        <pin num="4" name="Pico24_/_GP18" type="passive"/>
+        <pin num="5" name="Pico25_/_GP19" type="passive"/>
+        <pin num="6" name="Pico26_/_GP20" type="passive"/>
+        <pin num="7" name="Pico27_/_GP21" type="passive"/>
+        <pin num="8" name="Pico28_/_GND" type="passive"/>
+        <pin num="9" name="Pico29_/_GP22" type="passive"/>
+        <pin num="10" name="Pico30_/_RUN" type="passive"/>
+        <pin num="11" name="Pico31_/_GP26" type="passive"/>
+        <pin num="12" name="Pico32_/_GP27" type="passive"/>
+        <pin num="13" name="Pico33_/_AGND" type="passive"/>
+        <pin num="14" name="Pico34_/_GP28" type="passive"/>
+        <pin num="15" name="Pico35_/_ADC_VREF" type="passive"/>
+        <pin num="16" name="Pico36_/_3V3_OUT" type="passive"/>
+        <pin num="17" name="Pico37_/_3V3_EN" type="passive"/>
+        <pin num="18" name="Pico38_/_GND" type="passive"/>
+        <pin num="19" name="Pico39_/_VSYS" type="passive"/>
+        <pin num="20" name="Pico40_/_VBUS_USB" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Power_Capacitor">
+      <description>Nonpolar ceramic bypass/timing capacitor; exact MPN in instance</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">Power_Capacitor</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Nonpolar ceramic bypass/timing capacitor; exact MPN in instance</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="Power_Resistor">
+      <description>Nonpolar programming resistor; exact MPN/value in instance</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">Power_Resistor</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Nonpolar programming resistor; exact MPN/value in instance</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="SS14_K1_A2">
+      <description>SS14 Schottky; terminal1=K band, terminal2=A by KiCad convention</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS14_K1_A2</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">SS14 Schottky; terminal1=K band, terminal2=A by KiCad convention</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="TPS259474LRPWR">
+      <description>TI TPS259474L circuit breaker/latch off; RPW0010A ten physical terminals, IN5/OUT6; no pad11</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS259474LRPWR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">TI TPS259474L circuit breaker/latch off; RPW0010A ten physical terminals, IN5/OUT6; no pad11</field>
+      </fields>
+      <pins>
+        <pin num="1" name="EN/UVLO" type="input"/>
+        <pin num="2" name="OVLO" type="input"/>
+        <pin num="3" name="PG" type="open_collector"/>
+        <pin num="4" name="PGTH" type="input"/>
+        <pin num="5" name="IN" type="power_in"/>
+        <pin num="6" name="OUT" type="power_out"/>
+        <pin num="7" name="DVDT" type="output"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="ILM" type="output"/>
+        <pin num="10" name="ITIMER" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="MakeMusic" part="VBUS_Test_Point">
+      <description>USB VBUS test point; not a battery/VSYS connection</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VBUS_Test_Point</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">USB VBUS test point; not a battery/VSYS connection</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="MakeMusic">
+      <uri>${KIPRJMOD}/MakeMusic.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/3V3_OUT" class="Power">
+      <node ref="C1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C11" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C12" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C9" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J11" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J12" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J13" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J14" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J15" pin="15" pinfunction="3V3_OUT_15" pintype="passive"/>
+      <node ref="J2" pin="16" pinfunction="Pico36_/_3V3_OUT_16" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="3V3_/_carrier_2" pintype="passive"/>
+      <node ref="R1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="2" name="/Battery protection/BAT_FUSED_PLUS" class="Power">
+      <node ref="F1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="S1" pin="2" pinfunction="COM_2" pintype="passive"/>
+    </net>
+    <net code="3" name="/Battery protection/BAT_PROT_PLUS" class="Power">
+      <node ref="F1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="H1" pin="1" pinfunction="PROTECTED_PLUS_1" pintype="passive"/>
+    </net>
+    <net code="4" name="/Battery protection/BAT_SW_PLUS" class="Power">
+      <node ref="C13" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="A1_1" pintype="passive"/>
+      <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="S1" pin="3" pinfunction="BAT_ON_3" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="IN_5" pintype="power_in"/>
+    </net>
+    <net code="5" name="/Battery protection/DVDT" class="Control">
+      <node ref="R8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="DVDT_7" pintype="output"/>
+    </net>
+    <net code="6" name="/Battery protection/DVDT_CAP" class="Control">
+      <node ref="C15" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R8" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="7" name="/Battery protection/EN_UVLO" class="Control">
+      <node ref="R3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="EN/UVLO_1" pintype="input"/>
+    </net>
+    <net code="8" name="/Battery protection/ILM" class="Control">
+      <node ref="R7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="ILM_9" pintype="output"/>
+    </net>
+    <net code="9" name="/Battery protection/OVLO" class="Control">
+      <node ref="R5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="OVLO_2" pintype="input"/>
+    </net>
+    <net code="10" name="/GND" class="Default">
+      <node ref="C1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C12" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C13" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C14" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C15" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C16" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C8" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C9" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A2_2" pintype="passive"/>
+      <node ref="H1" pin="2" pinfunction="PROTECTED_MINUS_2" pintype="passive"/>
+      <node ref="J1" pin="13" pinfunction="Pico13_/_GND_13" pintype="passive"/>
+      <node ref="J1" pin="18" pinfunction="Pico18_/_GND_18" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pico03_/_GND_3" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="Pico08_/_GND_8" pintype="passive"/>
+      <node ref="J10" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J11" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J12" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J13" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J14" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J15" pin="16" pinfunction="GND_16" pintype="passive"/>
+      <node ref="J2" pin="13" pinfunction="Pico33_/_AGND_13" pintype="passive"/>
+      <node ref="J2" pin="18" pinfunction="Pico38_/_GND_18" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pico23_/_GND_3" pintype="passive"/>
+      <node ref="J2" pin="8" pinfunction="Pico28_/_GND_8" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J6" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J7" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J8" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="J9" pin="3" pinfunction="GND_/_carrier_3" pintype="passive"/>
+      <node ref="R4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="PGTH_4" pintype="input"/>
+      <node ref="U2" pin="8" pinfunction="GND_8" pintype="power_in"/>
+    </net>
+    <net code="11" name="/GP0" class="Default">
+      <node ref="J1" pin="1" pinfunction="Pico01_/_GP0_1" pintype="passive"/>
+      <node ref="J15" pin="1" pinfunction="GP0_1" pintype="passive"/>
+    </net>
+    <net code="12" name="/GP1" class="Default">
+      <node ref="J1" pin="2" pinfunction="Pico02_/_GP1_2" pintype="passive"/>
+      <node ref="J15" pin="2" pinfunction="GP1_2" pintype="passive"/>
+    </net>
+    <net code="13" name="/GP2" class="Default">
+      <node ref="J1" pin="4" pinfunction="Pico04_/_GP2_4" pintype="passive"/>
+      <node ref="J15" pin="3" pinfunction="GP2_3" pintype="passive"/>
+    </net>
+    <net code="14" name="/GP3" class="Default">
+      <node ref="J1" pin="5" pinfunction="Pico05_/_GP3_5" pintype="passive"/>
+      <node ref="J15" pin="4" pinfunction="GP3_4" pintype="passive"/>
+    </net>
+    <net code="15" name="/GP4" class="Default">
+      <node ref="J1" pin="6" pinfunction="Pico06_/_GP4_6" pintype="passive"/>
+      <node ref="J15" pin="5" pinfunction="GP4_5" pintype="passive"/>
+    </net>
+    <net code="16" name="/GP5" class="Default">
+      <node ref="J1" pin="7" pinfunction="Pico07_/_GP5_7" pintype="passive"/>
+      <node ref="J15" pin="6" pinfunction="GP5_6" pintype="passive"/>
+    </net>
+    <net code="17" name="/GP6" class="Default">
+      <node ref="J1" pin="9" pinfunction="Pico09_/_GP6_9" pintype="passive"/>
+      <node ref="J15" pin="7" pinfunction="GP6_7" pintype="passive"/>
+    </net>
+    <net code="18" name="/GP7" class="Default">
+      <node ref="J1" pin="10" pinfunction="Pico10_/_GP7_10" pintype="passive"/>
+      <node ref="J15" pin="8" pinfunction="GP7_8" pintype="passive"/>
+    </net>
+    <net code="19" name="/GP8" class="Default">
+      <node ref="J1" pin="11" pinfunction="Pico11_/_GP8_11" pintype="passive"/>
+      <node ref="J15" pin="9" pinfunction="GP8_9" pintype="passive"/>
+    </net>
+    <net code="20" name="/GP9" class="Default">
+      <node ref="J1" pin="12" pinfunction="Pico12_/_GP9_12" pintype="passive"/>
+      <node ref="J15" pin="10" pinfunction="GP9_10" pintype="passive"/>
+    </net>
+    <net code="21" name="/GP10" class="Default">
+      <node ref="J1" pin="14" pinfunction="Pico14_/_GP10_14" pintype="passive"/>
+      <node ref="J15" pin="11" pinfunction="GP10_11" pintype="passive"/>
+    </net>
+    <net code="22" name="/GP11" class="Default">
+      <node ref="J1" pin="15" pinfunction="Pico15_/_GP11_15" pintype="passive"/>
+      <node ref="J15" pin="12" pinfunction="GP11_12" pintype="passive"/>
+    </net>
+    <net code="23" name="/GP12" class="Default">
+      <node ref="J1" pin="16" pinfunction="Pico16_/_GP12_16" pintype="passive"/>
+      <node ref="J14" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="24" name="/GP13" class="Default">
+      <node ref="J1" pin="17" pinfunction="Pico17_/_GP13_17" pintype="passive"/>
+      <node ref="J13" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="25" name="/GP14" class="Default">
+      <node ref="J1" pin="19" pinfunction="Pico19_/_GP14_19" pintype="passive"/>
+      <node ref="J15" pin="13" pinfunction="GP14_13" pintype="passive"/>
+    </net>
+    <net code="26" name="/GP15" class="Default">
+      <node ref="J1" pin="20" pinfunction="Pico20_/_GP15_20" pintype="passive"/>
+      <node ref="J15" pin="14" pinfunction="GP15_14" pintype="passive"/>
+    </net>
+    <net code="27" name="/GP16" class="Default">
+      <node ref="J2" pin="1" pinfunction="Pico21_/_GP16_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+    </net>
+    <net code="28" name="/GP17" class="Default">
+      <node ref="J2" pin="2" pinfunction="Pico22_/_GP17_2" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+    </net>
+    <net code="29" name="/GP18" class="Default">
+      <node ref="J2" pin="4" pinfunction="Pico24_/_GP18_4" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+    </net>
+    <net code="30" name="/GP19" class="Default">
+      <node ref="J2" pin="5" pinfunction="Pico25_/_GP19_5" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+    </net>
+    <net code="31" name="/GP20" class="Default">
+      <node ref="J2" pin="6" pinfunction="Pico26_/_GP20_6" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+    </net>
+    <net code="32" name="/GP21" class="Default">
+      <node ref="J2" pin="7" pinfunction="Pico27_/_GP21_7" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+    </net>
+    <net code="33" name="/GP22" class="Default">
+      <node ref="J2" pin="9" pinfunction="Pico29_/_GP22_9" pintype="passive"/>
+      <node ref="J9" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+    </net>
+    <net code="34" name="/GP26" class="Default">
+      <node ref="J10" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+      <node ref="J2" pin="11" pinfunction="Pico31_/_GP26_11" pintype="passive"/>
+    </net>
+    <net code="35" name="/GP27" class="Default">
+      <node ref="J11" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+      <node ref="J2" pin="12" pinfunction="Pico32_/_GP27_12" pintype="passive"/>
+    </net>
+    <net code="36" name="/GP28" class="Default">
+      <node ref="J12" pin="1" pinfunction="SIG_/_carrier_1" pintype="passive"/>
+      <node ref="J2" pin="14" pinfunction="Pico34_/_GP28_14" pintype="passive"/>
+    </net>
+    <net code="37" name="/VBUS_USB" class="Default">
+      <node ref="J2" pin="20" pinfunction="Pico40_/_VBUS_USB_20" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="VBUS_1" pintype="passive"/>
+    </net>
+    <net code="38" name="/VSYS" class="Power">
+      <node ref="C14" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C16" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="J2" pin="19" pinfunction="Pico39_/_VSYS_19" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+    </net>
+    <net code="39" name="unconnected-(J2-Pico30_{slash}_RUN-Pad10)" class="Default">
+      <node ref="J2" pin="10" pinfunction="Pico30_/_RUN_10" pintype="passive+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(J2-Pico35_{slash}_ADC_VREF-Pad15)" class="Default">
+      <node ref="J2" pin="15" pinfunction="Pico35_/_ADC_VREF_15" pintype="passive+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(J2-Pico37_{slash}_3V3_EN-Pad17)" class="Default">
+      <node ref="J2" pin="17" pinfunction="Pico37_/_3V3_EN_17" pintype="passive+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(S1-BAT_OFF-Pad1)" class="Default">
+      <node ref="S1" pin="1" pinfunction="BAT_OFF_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(U2-ITIMER-Pad10)" class="Default">
+      <node ref="U2" pin="10" pinfunction="ITIMER_10" pintype="output+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(U2-PG-Pad3)" class="Default">
+      <node ref="U2" pin="3" pinfunction="PG_3" pintype="open_collector+no_connect"/>
+    </net>
+  </nets>
+</export>

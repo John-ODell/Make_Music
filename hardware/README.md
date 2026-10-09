@@ -1,6 +1,6 @@
 # Make Music PCB
 
-The first-prototype project is an editable KiCad10 carrier with protected battery power, removable Pico H sockets, eight notes/two left-hand modifiers, two passive buzzer module connectors and exposed GPIO. The schematic has passed independent ERC/connectivity review. Final capacitor/18650 PCB integration is in progress; see current PCB status for the actual remaining findings. Exact-part fit and built-hardware tests remain pending; fabrication is held.
+The first-prototype project is an editable KiCad10 carrier with protected battery power, removable Pico H sockets, eight notes/two left-hand modifiers, two passive buzzer module connectors and exposed GPIO. The schematic has passed independent ERC/connectivity review. Capacitor/18650 PCB integration has passed all 166 live pad comparisons, with zero copper/layout violations and unrouted connections; four exact metadata warnings remain visible. See current PCB status for the scope and physical edge/fit findings. Exact-part fit and built-hardware tests remain pending; fabrication is held.
 
 Open [kicad/make_music.kicad_pro](kicad/make_music.kicad_pro) in KiCad10. Keep the entire hardware directory so project-local symbols/footprints resolve. The two editable schematic sheets and routed PCB are sources; PDFs/SVGs are review aids.
 
