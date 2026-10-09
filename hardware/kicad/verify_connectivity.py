@@ -62,6 +62,9 @@ for ref, net in [('R1', 'GP13'), ('R2', 'GP12')]:
 for n in range(1, 13):
     expected[(f'C{n}', '1')] = '3V3_OUT'
     expected[(f'C{n}', '2')] = 'GND'
+for ref in ['C17', 'C18']:
+    expected[(ref, '1')] = '3V3_OUT'
+    expected[(ref, '2')] = 'GND'
 # Preserve electrical polarity as well as endpoint numbers.
 roles = {('D2', '1'): 'K', ('D2', '2'): 'A', ('S1', '2'): 'COM', ('S1', '3'): 'BAT_ON', ('S1', '1'): 'BAT_OFF',
          **{('U2', str(n)): role for n, role in enumerate(['EN/UVLO', 'OVLO', 'PG', 'PGTH', 'IN', 'OUT', 'DVDT', 'GND', 'ILM', 'ITIMER'], 1)}}
@@ -87,11 +90,13 @@ footprints = {
     'R1': 'Resistor_SMD:R_0603_1608Metric', 'R2': 'Resistor_SMD:R_0603_1608Metric',
     **{f'C{i}': 'MakeMusicCarrier:KEMET_C0603_1608_LevelB' for i in range(1, 13)},
     **{f'R{i}': 'Resistor_SMD:R_0603_1608Metric' for i in range(3, 9)},
-    **{f'C{i}': 'Capacitor_SMD:C_0805_2012Metric' for i in [13, 14, 16]},
+    **{f'C{i}': 'Capacitor_SMD:C_0805_2012Metric' for i in [13, 14, 16, 17, 18]},
     'C15': 'Capacitor_SMD:C_0603_1608Metric',
 }
-mpns = {**{f'J{i}': 'M20-9990346' for i in range(3, 15)}, 'J15': 'M20-9991646',
+mpns = {'J1': 'SSQ-120-01-G-S', 'J2': 'SSQ-120-01-G-S',
+        **{f'J{i}': 'M20-9990346' for i in range(3, 15)}, 'J15': 'M20-9991646',
         'H1': 'B2B-PH-K-S(LF)(SN)', 'R1': 'RC0603FR-0710KL', 'R2': 'RC0603FR-0710KL',
+        'C17': 'C2012X7R1A106K125AC', 'C18': 'C2012X7R1A106K125AC',
         **{f'C{i}': 'C0603C104K5RACTU' for i in range(1, 13)}}
 power_parts = {
     'F1': ('1.25A T', '3403.0275.23'), 'U2': ('TPS259474LRPWR', 'TPS259474LRPWR'),
@@ -134,14 +139,25 @@ for n in range(1, 13):
     comp = components[f'C{n}']
     assert comp.findtext('value') == '100n', f'Unexpected bypass value on C{n}'
     assert comp.findtext('./fields/field[@name="Header"]') == f'J{n+2}', f'Incorrect header association on C{n}'
+for ref, header in [('C17', 'J13'), ('C18', 'J14')]:
+    comp = components[ref]
+    assert comp.findtext('value') == '10u / 10V', f'Unexpected buzzer bulk value on {ref}'
+    assert comp.findtext('./fields/field[@name="Header"]') == header, f'Incorrect header association on {ref}'
+    assert comp.findtext('datasheet') == 'https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf', f'Incorrect TDK datasheet on {ref}'
+for ref in ['J1', 'J2']:
+    assert components[ref].findtext('datasheet') == 'https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf', f'Incorrect socket datasheet on {ref}'
 for ref, (value, mpn) in power_parts.items():
     assert components[ref].findtext('value') == value, f'Unexpected power component value on {ref}'
-assert len(actual) == 162
-assert len(components) == 46
+assert len(actual) == 166
+assert len(components) == 48
+excluded = {ref for ref, comp in components.items() if comp.find('./property[@name="exclude_from_bom"]') is not None}
+assert excluded == {'TP1'}, f'Unexpected BOM exclusions: {excluded}'
+assert not any(comp.find('./property[@name="dnp"]') is not None for comp in components.values()), 'Unexpected DNP population flag'
+assert len(components) - len(excluded) == 47
 assert len(root.findall('./nets/net')) == 44
 assert len(connected_names) == 38
-print('PASS: all 162 physical endpoints and 46 components match; 38 connected nets and 6 intentional NC nets.')
+print('PASS: all 166 physical endpoints and 48 components match; 38 connected nets and 6 intentional NC nets.')
 print('PASS: all 41 power-contract endpoints with R3-R8/C13-C16 mapping; U2 ten pin roles/types; no pad11 or carrier D1.')
 print('PASS: upstream fuse, switch common2/ON3/OFF1, shunt D2 K1/A2 and bidirectional D3; VBUS/battery/VSYS/3V3 separation.')
-print('PASS: physical JST H1 polarity, GP13/12 reset pull-ups and twelve 3V3/GND bypass capacitors.')
-print('PASS: all 46 components have exact assigned footprint files/pad numbers; exact part MPNs/values; TP1 2mm pad.')
+print('PASS: physical JST H1 polarity, GP13/12 reset pull-ups, twelve 100nF bypass capacitors and C17/C18 10uF buzzer bulk.')
+print('PASS: all 48 components have exact assigned footprint files/pad numbers; 47 purchased parts with native MPNs; TP1 2mm pad excluded.')

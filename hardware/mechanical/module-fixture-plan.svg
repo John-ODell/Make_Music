@@ -244,8 +244,8 @@
 <rect x="114.3" y="69.5" width="1.7" height="3" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
 <rect x="87.5" y="58.5" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
 <rect x="105.5" y="74.8" width="3" height="1.7" fill="#64748b" fill-opacity="1" stroke="#64748b" stroke-width=".25" class=""/>
-<rect x="64" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
-<rect x="98" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="64" y="74" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
+<rect x="98" y="74" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
 <rect x="132" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
 <rect x="166" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
 <rect x="200" y="71" width="12" height="8" fill="none" fill-opacity="1" stroke="#059669" stroke-width=".25" class="dash"/>
@@ -360,4 +360,6 @@
 <text x="0" y="279" class="" text-anchor="start">Factory scope includes fixture metrology/machining, 24 keepers, 12 flexible harnesses, strain relief and inspection.</text>
 <text x="0" y="287" class="" text-anchor="start">Require ≥2 mm measured component/wire clearance after tolerances and deflection. No physical fit/load test performed.</text>
 <text x="0" y="295" class="" text-anchor="start">See MODULE_FIXTURE.md for fences, measured-thickness pedestals, hardware, assembly and acceptance targets.</text>
+<text x="0" y="307" class="small" text-anchor="start">PM-reported move: J3/C4 and J4/D4 header centres y75 to y78; seats, keepers and nine mounts stay fixed.</text>
+<text x="0" y="315" class="small" text-anchor="start">Header/cap detail and cable-height limits: header-clearance-review.svg and BUILD_READINESS.md. No edited-PCB readback.</text>
 </svg>
