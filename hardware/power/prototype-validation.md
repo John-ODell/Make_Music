@@ -2,7 +2,9 @@
 
 Prepared 2026-10-08 for the [selected fuse/eFuse circuit](branch-protection.md). **Procedure only: no assembly or bench results have been obtained.** Use only the final reviewed U2/F1 schematic/netlist/BOM, reconcile references before testing, and record its commit below; root owns manufacturing outputs.
 
-Quote **five fully assembled instruments**, including all small components, THT, harnesses and mechanical work, plus an optional sixth bare carrier keepsake. Keep a separate bring-up/acceptance record for each assembled unit; a passing first unit does not populate the other four records. No actual parts are available for metrology yet. See [power/assembly readiness](pcbway-readiness.md) for pending fit and supplier-process acceptance.
+**2026-10-09 correction:** qualify the **protected 18650** candidate/new holder and [current charger HOLD](18650-handoff.md). The former P1835C2/1101 selection is superseded. The 1S emulator test voltages and all current/thermal acceptance limits below remain; these are not new-cell test results.
+
+Quote **five fully assembled instruments**, including all small components, THT, harnesses and mechanical work, plus an optional sixth bare carrier keepsake. Keep a separate bring-up/acceptance record for each assembled unit; a passing first unit does not populate the other four records. No actual parts are available for metrology yet. See [current 18650 readiness](18650-handoff.md) for pending fit, lot/charger and supplier-process acceptance.
 
 Unit/serial: ______  PCB revision/commit: ______  native schematic commit: ______
 Tester/date: ______  Pico model/firmware: ______  ambient: ______°C
@@ -14,7 +16,9 @@ Factory-populate F1 **SCHURTER 3403.0275.23**, U2 **TPS259474LRPWR**, S1 **MN12S
 
 Use the final reviewed RPW0010A land/stencil pattern and inspect U2 joints/pin1 orientation, D2 band toward VSYS, D3 **CA** bidirectional suffix, F1 value/continuity, S1 common2/ON3/OFF1, and underside H1 circuit1 positive/circuit2 GND. Native netlist/PCB parity, ERC/DRC and assembly-side drawings must have passed root review before assembly release; a BOM alone is insufficient.
 
-Separately factory-build the [1101 cassette/harness](../mechanical/WIRED_HOLDER_PROPOSAL.md): AWG24, JST PHR-2/SPH-002T-P0.5S, insulated solder lugs and strain relief. With **no cell**, trace positive holder contact to H1 circuit1 and negative to circuit2; no wire-color inference. Complete exact protected-cell cold fit/retention and solder-process qualification before manufacturing the integrated cassette; do not force spring travel or damage the wrapper. Holder ampacity must support 0.70 A normal and at least 1.2 A continuous branch capability. Record cold-fit evidence separately; PCB tests do not certify it.
+Separately factory-build the **new protected-18650 wired-holder/cassette**, after mechanical helper selects exact parts/CAD and supersedes the [earlier holder proposal](../mechanical/WIRED_HOLDER_PROPOSAL.md). Retain AWG24, JST PHR-2/SPH-002T-P0.5S, insulated terminations and strain relief unless reviewed integration changes them; record actual lead lengths. With **no cell**, trace positive holder contact to H1 circuit1 and negative to circuit2; no wire-color inference. Complete exact protected-cell cold fit/retention/removal and solder-process qualification before manufacturing the integrated cassette; do not force spring travel or damage the wrapper. Holder ampacity must support 0.70 A normal and at least 1.2 A continuous branch capability. Record cold-fit evidence separately; PCB tests do not certify it.
+
+PM is adding **C17/C18 10 µF/10 V/X7R**, candidate TDK C2012X7R1A106K125AC, at the buzzer supplies. Reconcile their final 3V3_OUT/GND endpoints, footprints, purchased BOM and parity before assembly; they are separate from the C13–C16 eFuse support map. Check effective capacitance and include their regulator startup demand in USB/battery tests. No completed CAD/export or transient result is inferred here.
 
 ## Bench sequence and acceptance
 
@@ -30,7 +34,7 @@ Keep the real cell and external charger out of all tests below. Connect/disconne
 6. **Reverse insertion / USB isolation:** no Pico initially. S1 OFF; configure the isolated emulator so H1.1 is negative relative to H1.2, magnitude 4.25 V, limit 20 mA; then switch ON. IN is negative, VSYS must not become negative or supply a load. Record leakage; engineering screening bound <2 mA steady, no CC. Restore positive polarity with sources OFF. For USB testing, install the verified Pico with modules absent and use a separately current-limited 5 V USB fixture, initially 100 mA limit; stop if CC and set a larger source budget only after Pico load/inrush is accounted. Confirm USB powers VSYS with S1 OFF, battery-positive emulator at 4.25/3.70 V, and reverse emulator at −4.25 V only after the isolated reverse test passed. Record signed battery-terminal current and look for unexpected USB-dependent battery backfeed; investigate a repeatable charging current rather than treating it as a charger. USB bypasses F1/U2, so battery fault tests cannot approve host current or output-short behavior. Never test a USB output short from a computer port.
 7. **Pico/modules, then cell gate:** sources OFF, positive emulator, USB unplugged. Install verified firmware and Pico alone; start at 4.20 V/0.20 A limit. Add mapped touch/buzzer cables one at a time with power OFF, accounting for measured current before any limit increase, and cap normal battery input at 0.70 A. Check HIGH buzzer idle/reset silence, notes/releases/modifiers, all touch LEDs, both ST0238 modules sounding and intended expansion. Require ≤250 mA external 3V3 and ≤350 mA total including Pico; measure at the correct rail, not infer from battery current. Engineering steady 3V3 screening range is **3.14–3.46 V**, plus successful actual module operation. Repeat load and thermal checks at 3.70 V and just above this unit's measured UVLO. Stop playing before USB source changes; reset/reboot is allowed, settle before resuming. Capture IN/VSYS/3V3 startup and transients against actual part limits; typical TI timing is not a maximum guarantee.
 
-**First real-cell operation is held until** cold fit, harness polarity, all normal-load/rail checks and reverse/fault tests above pass, and the exact P1835C2 lot/L1-at-500 mA charging compatibility gaps in [rev1-handoff.md](rev1-handoff.md) are resolved. Then, with every source OFF, verify actual polarity/voltage at the disconnected harness before carrier connection. Record cell/charger lot and limits; first operation is attended. Remove the cell for external charging. UVLO stopping is the instruction to switch OFF/recharge, not to continue through repeated rebounds; cell is removed for storage.
+**First real-cell operation is held until** the new 18650 cold fit, harness polarity, all normal-load/rail checks and reverse/fault tests above pass, and the exact **P1835J lot/terminal and external-charger compatibility** gaps in [18650-handoff.md](18650-handoff.md) are resolved. Then, with every source OFF, verify actual polarity/voltage at the disconnected harness before carrier connection. Record cell/charger lot and limits; first operation is attended. Remove the cell for external charging. UVLO stopping is the instruction to switch OFF/recharge, not to continue through repeated rebounds; cell is removed for storage.
 
 ## Blank measured results — retain failures and scope captures
 
@@ -52,6 +56,9 @@ Keep the real cell and external charger out of all tests below. Connect/disconne
 | 3V3 steady minimum/maximum; startup/transient captures | ____ /____ V | ____ |
 | Reset silence/touch polarity/sound; source-change restart | ____ | ____ |
 | Cell/charger qualification; first-cell release/result | ____ | ____ |
+| 18650 maker/model/lot, terminal form and measured envelope | ____ | ____ |
+| New holder/cassette/lead lengths and removal/retention | ____ | ____ |
+| Charger revision, CC/CV tolerances, termination and cell-temperature policy | ____ | ____ |
 
 ## Analysis completed without physical parts
 

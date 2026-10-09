@@ -1,6 +1,6 @@
 # Power candidate and budget comparison
 
-Observed 2026-10-07 (America/Chicago). **Historical comparison: revision 1 now selects removable protected 18350/external charging. See [current exact-target handoff](rev1-handoff.md) for P1835C2 + L1 at 500 mA and stricter test-report limits.** These are published USD retail listing prices, not a factory quotation or purchasing recommendation. Prices/stock can change; taxes, shipping, tariffs, power supplies, cables, carrier parts, assembly and enclosure are excluded unless stated. No parts were ordered, supplier contacted, charger instantiated or battery footprint assigned.
+Observed 2026-10-07 (America/Chicago). **Historical 18350/pouch comparison, superseded by the user's 18650 correction on 2026-10-09.** Use [the current 18650 handoff](18650-handoff.md); the old prices, capacities and charger limits below are not a quote or specification for the new five-instrument scope. These were published USD retail listing prices, not a factory quotation or purchasing recommendation. Taxes, shipping, tariffs, power supplies, cables, carrier parts, assembly and enclosure were excluded unless stated. No parts were ordered or supplier contacted.
 
 ## Comparable protected battery candidates
 

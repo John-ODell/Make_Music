@@ -1,33 +1,25 @@
-# Candidate BOM — no purchasing or assembly release
+# Current power candidate BOM — protected 18650
 
-**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+Updated **2026-10-09** for **five fully assembled instruments** and an optional sixth bare carrier keepsake. The user's corrected long **18650** selection supersedes P1835C2/18350 and Keystone 1101. This is a candidate specification, not purchase or manufacturing approval. Exact lot, terminal form, holder fit and charger compatibility remain held in [18650-handoff.md](18650-handoff.md).
 
-Exact core part candidates below are electrically researched. Unselected interfaces and footprints remain explicitly TBD.
+The active carrier protection BOM/pins are in [branch-protection.md](branch-protection.md) and [branch-endpoints.csv](branch-endpoints.csv): F1 **3403.0275.23**, S1 **MN12SS1W03**, U2 **TPS259474LRPWR**, six exact resistors, four ceramic capacitors, shunt D2 **SS14-E3/61T** and bidirectional D3 **SMAJ5.0CA**. Native references are power R3–R8/C13–C16; original R1/R2 and C1–C12 serve buzzer bias/header bypass. Carrier series D1 is removed. PM owns the final exported purchased-part BOM after ongoing CAD integration.
 
-The active exact carrier BOM and pin connections are the table in [branch-protection.md](branch-protection.md). It selects F1 **3403.0275.23**, S1 **MN12SS1W03**, U2 **TPS259474LRPWR**, six specified 0603 resistors, four specified ceramic capacitors, D2 **SS14-E3/61T** as a shunt clamp and D3 **SMAJ5.0CA**. The old series D_EXT/PCB D1 is removed. No branch protection part/value is left TBD.
+| Item | Exact candidate / specification | Per instrument | Five assembled units | Status |
+|---|---|---:|---:|---|
+| Protected conventional 18650 cell | **Keeppower P1835J**, standard opposite-end-terminal product, [manufacturer page id510](https://www.keeppower.com.cn/products_detail.php?id=510) | 1 | 5 | Confirm delivered terminal configuration, current-lot ratings and fit; 18.8×69.3 mm tolerance envelope before clearance |
+| External charger | **Keeppower L1** evaluation target; initially 500 mA qualification setting | Shared accessory | PM to specify distribution | **Compatibility HOLD**: 4.242 V upper charger tolerance versus unqualified 4.20 V cell maximum; no approved pair |
+| Charger input supply/cable | Delivered L1 revision needs suitable 5 V/1 A supply and matching USB cable | Per accepted charger | TBD with charger quantity | Supply SKU/revision remains unselected; do not omit from quote |
+| Wired holder and insulating cassette | Protected-18650-compatible, exact holder selected by mechanical helper | 1 | 5 | Longer cassette/contact travel/removal/ampacity/CAD required; old 1101 and anonymous flat-top holder are not frozen |
+| Carrier battery header H1 | **JST B2B-PH-K-S(LF)(SN)**, circuit1 positive/circuit2 GND | 1 | 5 | Existing carrier interface; underside THT orientation and actual harness continuity must pass |
+| Factory harness | **JST PHR-2** housing + two **SPH-002T-P0.5S** contacts, AWG24; lengths set by new cassette | 1 housing, 2 contacts | 5 housings, 10 contacts | Crimp/solder/insulation/strain relief/polarity qualification; holder ampacity is separate |
+| Added buzzer supply bulk | PM-directed native **C17/C18**, each **TDK C2012X7R1A106K125AC**, 10 µF/10 V/X7R/0805 on 3V3_OUT | 2 | 10 | CAD/BOM/export and effective capacitance/startup/transients pending; retain existing 100 nF |
 
-| Offboard / interface item | Exact review target | Status |
-|---|---|---|
-| Protected cell | Keeppower P1835C2 | Current-lot ratings/charging compatibility and actual fit pending |
-| Charger | Keeppower L1 at 500 mA only | External equipment; complete compatibility pending as documented |
-| Holder | Keystone 1101 in insulated cassette | PM-approved candidate; ampacity/fit unverified; no direct PCB footprint |
-| Carrier battery header | JST B2B-PH-K-S(LF)(SN), circuit1 positive /2 GND | PM-directed candidate; 2 A harness design basis, assembled polarity must be checked |
+The optional sixth bare PCB gets no populated-component, cell or harness allocation. Include all small SMT parts, all THT sockets/headers/switch/H1, harness/module installation and accepted mechanical work for each of the five complete instruments. Confirm how accepted cells/chargers are supplied and fitted; no supplier exclusion should silently become user soldering. Fit/process and unit acceptance remain required. Main instrument procurement CSV is PM-owned and must be reconciled to the new cell/holder before quoting.
 
-BQ24074, NTC, charge-input connector and configuration parts are **omitted from revision 1**. Option B in circuits.md is future research only. Charger USB cable is external equipment; its 5 V adapter is separately required. No ordering or assembly release is authorized by this candidate BOM.
+**No change to carrier load/protection limits:** ≤0.70 A battery input; ≤350 mA total and ≤250 mA external 3V3; ≤100 µF total VSYS. Higher cell capacity does not increase these limits. BQ24074, NTC and dedicated charging-input parts are omitted from revision 1. A real cell is fitted only after [the bring-up gate](prototype-validation.md) and cell/charger qualification pass.
 
-## Primary evidence
+## Primary evidence and history
 
-- [Vishay SS12–SS16 datasheet, document 88746](https://www.vishay.com/docs/88746/ss12.pdf): ratings, polarity band, SMA package and E3/61T ordering scheme. [SS14 product page](https://www.vishay.com/en/product/88746/) is the family entry point. Verify final landing pattern against its mechanical drawing.
-- [NKK MN toggle drawing](https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf): MN12SS1W03 terminal arrangement, 4 A / 30 VDC resistive rating and straight PC terminal geometry.
-- Historical / future-option references: [C&K JS datasheet](https://www.ckswitches.com/media/1422/js.pdf), revised 2026-01-14: rating and JS102011SAQN drawing on page 4. No switch footprint has been assigned.
-- [TI BQ24074 datasheet](https://www.ti.com/lit/ds/symlink/bq24074.pdf), SLUS810N, October 2021: pin mapping, RGT package, charger programming and thermal/layout requirements. NTC identification is from TI's application example; cell-temperature compatibility remains unverified.
-- [Semitec AT thermistor datasheet](https://www.semitec-global.com/uploads/2022/01/P12-13-AT-Thermistor.pdf): 103AT-2 is 10 kΩ at 25°C, with the AT-2 mechanical form; thermal mounting and cell limits still need review.
-- [Keeppower China P1835C2](https://www.keeppower.com.cn/products_detail.php?id=566) and [Keeppower P1835C2](https://www.keeppower.com/product/keeppower-18350-1200mah-protected-li-ion-rechargeable-battery-p1835c2/): candidate properties checked on review date. Both list standard charge 220 mA and maximum 1.1 A, but the older model-specific test report gives a stricter 770 mA maximum; the L1 review target uses 500 mA only. Obtain a lot-specific specification before use.
-
-## Battery evidence conflict
-
-The two manufacturer pages disagree on length: **39.1 ±0.2 mm** versus **38.5 ±0.2 mm**, both at diameter 18.5 ±0.2 mm. For mechanical investigation reserve at least the larger published envelope (39.3 mm length, 18.7 mm diameter), then add holder-contact travel and assembly clearance based on the actual holder. This is not a released holder dimension. A holder sized for an unprotected 35 mm-long cell may fail to fit this candidate.
-
-The pages advertise 1200 mAh nominal but describe 1150 mAh typical and 1100 mAh minimum. Do not promise runtime from the headline capacity. Protection's published 2.5 V endpoint is not our desired normal-use shutdown threshold. Published protection features do not establish charge-temperature monitoring; B needs the reviewed NTC implementation.
-
-If a pouch is preferred, select a documented protected 1S 4.2 V pack with its own exact MPN, connector polarity, capacity, charge rate, protection/recovery and mechanical constraints. No bare pouch cell substitution is authorized by this BOM. Board-level protection is not designed here because A/B deliberately require protected cells; a bare-cell choice triggers a separate protection circuit review.
+- [Current 18650 handoff](18650-handoff.md) links the standard/global P1835J pages, explicitly dated current-rating catalogue and L1 manufacturer documents, with unresolved voltage/termination/lot/terminal evidence.
+- [TI TPS25947](https://www.ti.com/lit/ds/symlink/tps25947.pdf), [SCHURTER UMT-H](https://www.schurter.com/en/datasheet/typ_UMT-H.pdf), [NKK MN12SS1W03 drawing](https://www.nkkswitches.com/pdf/MN_ToggleSections_DP.pdf), [Vishay SS14](https://www.vishay.com/docs/88746/ss12.pdf) and [TDK added 10 µF part](https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC) support carrier component choices; their mechanical/electrical limits are not measured assembly results.
+- [Superseded 18350 handoff](rev1-handoff.md), [historical budget comparison](candidate-comparison.md) and [dated PCBWay audit](pcbway-readiness.md) retain the earlier research/checkpoint. Those sources do not qualify the new 18650 assembly or charger.

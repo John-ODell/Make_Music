@@ -1,26 +1,28 @@
 # PM decisions and integration handoff
 
-**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+**2026-10-09 update:** [Current protected 18650 handoff](18650-handoff.md) supersedes the 18350/P1835C2/1101 selection. Keep the integrated [fuse/eFuse branch contract](branch-protection.md), voltage thresholds and current limits. Five complete instruments plus an optional sixth bare carrier remain the quote scope. Current-lot cell/charger compatibility, new holder/cassette fit and final exports/tests are open.
 
 The [factory assembly and current-limited bring-up record](prototype-validation.md) provides staged tests and a blank measurement table. No bench results are available; qualify reset dwell, 1S fault response and source isolation on the actual assembly.
 
 ## Selected architecture and remaining decisions
 
-User selected removable protected 18350 and external charging for the first design on 2026-10-07. Integrate option A; option B charging circuitry is not populated in this revision. The [revision 1 handoff](rev1-handoff.md) narrows review to P1835C2 and L1 at 500 mA, with explicit evidence gaps; this does not approve holder fit or complete charging compatibility.
+User corrected the intended cell to long **protected 18650**. Option A remains removable external charging; option B is not populated. Recommend **Keeppower P1835J**, standard opposite-end-terminal product, pending lot/terminal confirmation. **L1 charger approval is held** because its published voltage tolerance exceeds the cell page's unqualified maximum; a 500 mA qualification setting does not resolve that gap.
 
 | Decision | Recommended starting point | Release dependency |
 |---|---|---|
 | Charging | A external charging selected | Verify compatible external charger; no onboard charger in revision 1 |
-| Battery form | Protected 18350 selected; P1835C2 remains an exact-cell candidate | Exact cell/lot datasheet, protection thresholds, current limits, recovery and mechanical measurements |
-| Pico | Non-wireless Pico/Pico 2 supported by reviewed interface | Exact model, header sockets, regulator/current validation |
-| Holder/connector | Leave unassigned | Actual protected-cell envelope; two manufacturer length values conflict; connector polarity verified by measurement; B requires reverse-insertion safeguard |
-| Switch behavior | Battery branch off; USB remains on | Decide whether instrument-off during USB needs 3V3_EN pole; current/inrush rating verified |
+| Battery form | Protected 18650; Keeppower P1835J exact review candidate | Confirm standard terminal version, current-lot charge/discharge limits, PCM/recovery and mechanical measurements |
+| Pico | Original non-wireless Pico H SC0917, removable in female sockets | Actual engagement/USB access and regulator/current validation |
+| Holder/connector | Mechanical helper selects protected-18650 wired holder/longer cassette; retain JST-PH H1.1+/2GND interface | Contact travel/removal/ampacity, final cassette CAD and actual harness polarity; anonymous flat-top holder is not frozen |
+| Switch behavior | Battery branch OFF; USB remains on | Preserve adopted behavior and qualify actual startup/current/low-load switching |
 | Switch low-load endurance | MN12SS1W03 silver contacts retained | NKK recommends 0.1 A at 2 V minimum; actual idle/startup current and low-load contact endurance remain unverified. Gold logic contacts cannot carry the 0.70 A branch. See prototype-validation.md. |
 | Isolation/protection | TPS259474LRPWR + 1.25 A upstream fuse specified | Integrate exact contract; validate current/reversal/transients on assembled circuit |
 | Onboard USB charging | Deferred to a future revision | B is research only; omit charger IC, charging receptacle and related circuitry from revision 1 |
 | Charge/input/termination/timer settings | Not applicable to carrier revision 1 | Verify external charger against selected cell limits |
 | Module supply and buzzers | Pico 3V3 for compatible modules | TTP223 touch supply supports 3.3 V per merged PM reference; measure full module LED loads, confirm polarity; SunFounder ST0238 selected at 3.3 V; driver/load current and peaks still unverified |
 | Low battery shutdown | Hardware UVLO nominal 3.221 V off /3.546 V restart | Adopted in branch-protection.md with tolerances; no firmware ADC changes |
+| Added buzzer bulk | PM integrates C17/C18, 10 µF each on 3V3_OUT | Final netlist/PCB/BOM/parity, effective capacitance and measured startup/transients |
+| Factory scope | Five fully assembled instruments; optional sixth bare keepsake | Accepted complete SMT/THT/harness/mechanical scope and per-unit records; no actual parts for fit metrology yet |
 
 ## Schematic integration instructions
 
@@ -28,7 +30,7 @@ A/B are alternatives, not two battery paths to populate simultaneously. The sele
 
 For the selected A require protected-cell/pack terminals, F1, S1 and U2 with the support parts in branch-protection.md; U2 OUT connects directly to VSYS and the former series D_EXT is removed. D2 is a shunt clamp, cathode to VSYS. For future B add U1, dedicated charge input and cell temperature sensing as circuits.md specifies; protected battery output is connected to BAT, OUT passes through S1/D_EXT. Do not make an unreviewed connector-pin-order choice. Footprints for diode/IC/switch must be checked against mechanical drawings during integration, and unresolved components must remain unassigned.
 
-## Validation performed for this proposal
+## Historical proposal validation (2026-10-07)
 
 - Read power assignment and checked the primary chat's current requirements; used existing supplied power worktree on codex/pcb-power.
 - Fetched origin; checked clean assigned worktree and compared guidance to origin/master.
@@ -40,6 +42,8 @@ For the selected A require protected-cell/pack terminals, F1, S1 and U2 with the
 ## Checks required after selection and integration
 
 For revision 1, apply battery/USB and external-charger checks below; onboard charger, NTC, dedicated charge USB, timer and thermal-pad checks apply only to future option B.
+
+The earlier [checkpoint audit](pcbway-readiness.md) does not cover the corrected cell/holder or later header/bulk changes. PM must reconcile final instrument parts/assembly scope and regenerate checks/exports. No physical results are available; current source research and qualified calculations are in [18650-handoff.md](18650-handoff.md).
 
 1. Review connector/holder polarity, Pico power pin numbers, diode cathode, protected-pack return, charger pin mapping and all populated configuration resistors. Review USB source budget and cell/NTC/timer settings before enabling charging.
 2. Complete electrical current worksheet. Check switched input/inrush against S1 rating, regulator and GPIO limits, diode voltage/heat/leakage, fuse/wiring fault coordination if required by the selected assembly, and charger thermal layout.

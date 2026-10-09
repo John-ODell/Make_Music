@@ -1,0 +1,44 @@
+# Current revision 1 power handoff — protected 18650
+
+Updated **2026-10-09 America/Chicago** from `origin/master` **1a054f8**. The user corrected the intended cell to **long 18650**; this supersedes the 18350/P1835C2/Keystone 1101 selection. Continue removable conventional **1S 4.2 V-charge Li-ion with external charging**, F1/S1/TPS259474L protection and unmodified Pico H SC0917. No onboard charger. **Five fully assembled instruments**, plus an optional sixth bare carrier keepsake, remain the quote scope. No physical parts, fit measurements, bench results or manufacturing release are available.
+
+## Exact cell recommendation and evidence limits
+
+Recommend **Keeppower P1835J**, the standard protected 18650 product identified by the [manufacturer's standard product page](https://www.keeppower.com.cn/products_detail.php?id=510), with conventional positive/negative ends. The [global product page](https://www.keeppower.com/product/keeppower-18650-3500mah-protected-li-ion-rechargeable-battery-3-7v-p1835j/) corroborates the model; it also lists customizable terminal forms. Confirm the delivered terminal configuration and lot before procurement/fit release.
+
+| Property | Published evidence | Use in this design |
+|---|---|---|
+| Chemistry/voltage | Protected Li-ion, nominal 3.7 V; 4.20 V maximum and 2.5 V cutoff | Existing 1S voltage architecture applies; no raw cell to 3V3/GPIO/VBUS |
+| Capacity | 3500 mAh typical, 3350 mAh minimum | Capacity planning only; usable capacity at our loaded UVLO is unmeasured |
+| Standard product size | Diameter 18.6 mm, length 69.1 mm, ±0.2 mm | Reserve at least **18.8 mm diameter ×69.3 mm length**, then add measured contact travel, insertion and insulation clearance |
+| Protection | Advertised overcharge/discharge/current/short protection | PCM thresholds, delay, leakage, recovery and fault coordination are not specified by those feature labels |
+| Temperatures | Charge 0–45°C; discharge −10–60°C | Retain the instrument's narrower 0–40°C ambient limit; cell temperature still needs control during external charging |
+| Current data | [Manufacturer catalogue, February 2016, PDF page 3](https://www.keeppower.com.cn/UploadFiles/20160227155232.pdf): P1835J standard charge 1 A, maximum discharge 8 A | Historical model evidence only. Current pages omit numeric charge/discharge limits; obtain current-lot ratings before approving operation or charging |
+
+The manufacturer also sells a [P1835J with both polarities at the positive end](https://www.keeppower.com.cn/products_detail.php?id=677). That is a different terminal arrangement and is not the conventional two-end candidate above; SKU alone does not close the procurement specification. Do not infer the underlying bare cell or its limits from “made in Japan.” **P1835R is a different model**, [withdrawn/recalled by Keeppower](https://keeppower.com.cn/news_detail.php?id=111); it is not an alternate part for this handoff.
+
+## External charger — compatibility HOLD
+
+Exact evaluation target **Keeppower L1**, initially **500 mA** as an engineering qualification setting, remains offboard equipment. The [current manufacturer page](https://www.keeppower.com/product/intelligent-li-ion-rechargeable-battery-charger-l1-with-lcd-display/) and [manufacturer-authored manual V1.0](https://www.tme.eu/Document/f545a63a03e51e3b3ea513f2f0317887/L1_KeepPower_EN.pdf) list 18650 support, 5 V/1 A input and selectable 500/1000 mA, with **4.2 V±1%** output. The manual recommends 1 A for the generic 18650 size; this does not approve that current for the delivered P1835J lot. Do not carry over the old P1835C2 770 mA/24 mA test-report limits to P1835J.
+
+Calculated L1 voltage range is **4.158–4.242 V**. The current P1835J pages state an unqualified **4.20 V maximum**, with no accepted positive tolerance. Therefore **no approved cell/charger pair is established**. Confirm a current-lot CC/CV voltage tolerance, maximum charge current, termination criterion and permitted temperature range; match measured charger limits/revision/current tolerance, cell-temperature handling, PCM recovery and usable bay travel to that specification. A 500 mA selection alone does not resolve voltage or termination. Include a suitable separate 5 V input supply/cable in the eventual charger quote. Quantity/accessory distribution is a PM order decision. Charger purchasing/use remains held while compatibility is unresolved.
+
+## Carrier and mechanical handoff
+
+Keep the [branch contract](branch-protection.md) and [41-endpoint CSV](branch-endpoints.csv): H1.1 positive → F1 **3403.0275.23** → S1 common2/ON3 **MN12SS1W03** → U2 IN5 **TPS259474LRPWR**; OUT6 → Pico VSYS39. H1.2 is GND. Pico VBUS40 and 3V3 pin36 remain distinct; onboard USB D1 stays. USB powers the instrument with S1 OFF and does not charge the cell. Battery eFuse protection does not limit the USB branch.
+
+Mechanical helper owns the **protected-18650-compatible wired holder and longer insulating cassette**, including insertion/removal access, opposite-end contact form, travel, retention, ampacity and final CAD/tolerances. The old 1101/18350 reservation is superseded. The anonymous flat-top holder with restricted removal is not a frozen part. Keep factory-assembled JST-PH **B2B-PH-K-S(LF)(SN)** / **PHR-2** / **SPH-002T-P0.5S** interface, with AWG24 unless mechanical integration justifies a reviewed change. Qualify contacts for 0.70 A normal and at least 1.2 A continuous branch capability; connector ratings do not prove holder ratings. Actual lead length, polarity and crimp/solder/strain relief must be specified and measured. Unfused lead sections depend on cell protection and require insulation/restraint.
+
+All five units need small SMT/THT parts, sockets, headers, switch, harnesses, module installation and accepted mechanical work in the assembly quote. Each gets its own inspection/bring-up record. The optional bare board gets no populated-part allocation. Cell/charger fitting and supply must follow the accepted cold-fit and cell-release procedure; supplier exclusions must be explicit.
+
+## Current, capacitance and qualification
+
+Retain **≤0.70 A battery input**, **≤350 mA total 3V3**, **≤250 mA external 3V3**, **≤100 µF total VSYS**, nominal **1.004 A** fault threshold and nominal **3.221 V falling /3.546 V restart at U2 IN**. A larger capacity cell does not authorize higher carrier current, different protection values or more expansion load.
+
+At the existing calculated low-end **2.992 V VSYS**, 350 mA at 3.3 V with assumed 75% regulator efficiency still needs **0.515 A**, leaving approximately 0.185 A below the battery design ceiling before leakage/startup/loss uncertainty. These are sizing assumptions, not measurements. At 0.70 A, the existing U2 45 mΩ conduction model remains **31.5 mV/22.1 mW**; fuse/contact/harness loss and thermal behavior must be measured with the new assembly. Recalculate harness loss if cassette lead lengths change. Greater energy/capacity does not establish fuse/PCM clearing or safe fault behavior.
+
+The [official Pico Rev3 schematic](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf), Figure 19, shows **47 µF at regulator input VSYS** and a separate **47 µF at output 3V3**. Pico's VSYS capacitor shares U2's output node with C14/C16 (9.4 µF nominal): the main VSYS-capacitor subtotal is **56.4 µF nominal**, before other final additions, within the 100 µF ceiling. U2's input C13 is on BAT_SW_PLUS. Check every final VSYS-connected capacitance and effective values; this subtotal is not a bias/startup measurement.
+
+PM is integrating recommended native **C17/C18, 10 µF each at the buzzer supplies**, candidate **C2012X7R1A106K125AC**, on **3V3_OUT**. Their additional 20 µF does not add directly to the VSYS total; it still increases regulator startup demand. No added-capacitor routing, final BOM/netlist/parity or test result is claimed here. The [2026-10-08 audit](pcbway-readiness.md) records its original 18350 checkpoint only; PM must check/export the final 18650/bulk/header checkpoint.
+
+Required evidence remains: delivered-cell/charger limits and terminal identity; actual holder/cassette/socket/module fit; final mechanical CAD and factory process/placement approval; effective capacitance; measured module currents and simultaneous buzzer/touch transients; USB isolation/source budget; 1S UVLO/fault/latch/reset/reversal/thermal checks. Use [prototype-validation.md](prototype-validation.md) before fitting a real cell. No live-cell short test or runtime claim follows from this paper review.
