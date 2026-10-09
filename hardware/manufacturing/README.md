@@ -53,6 +53,20 @@ wrong-net, unreviewed-warning and stale-source negative cases refused. Overall
 DRC remains four warnings in the manifest; no DRC rule or result is suppressed.
 This electrical review does not grant fabrication release.
 
+The postprocessor also compares every purchased placement with the verified
+live IPC inventory: exact references/coverage, side/value/package, X, negated
+native Y and rotation modulo360. Six-decimal native exports use a tolerance
+of1e-6 mm/degrees; nonfinite coordinates/angles are rejected. This runs before
+output creation, so a reversed U2 or displaced non-anchor component cannot
+enter the centroid under otherwise valid electrical evidence. Run
+`python3 -m unittest discover -s hardware/manufacturing -p test_prepare_pcbway_review.py`.
+
+This focused placement fix retains the806457b outline expectation until PM
+confirms the final rear edge. Any outline revision needs the matching Gerber
+corner expectation and machine-origin summary updated, followed by fresh
+source-bound checks/exports. Do not reuse the earlier806457b source hashes or
+alter them to force a pass. Placements and service datums remain fixed.
+
 ## Coordinate and assembly convention
 
 Served native exports use (0,0), x right/y up; board (20,-20)..(350,-140) mm.

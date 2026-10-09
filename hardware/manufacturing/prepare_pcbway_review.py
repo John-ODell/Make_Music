@@ -9,6 +9,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 import re
 import shutil
@@ -58,6 +59,44 @@ def response(path):
     return json.loads(''.join(p['text'] for p in raw['content'] if p['type'] == 'text'))
 
 
+def verify_placements(positions, purchased_refs, live_components):
+    """Bind every native (0,0), x-right/y-up placement to verified IPC data."""
+    refs = [p['Ref'] for p in positions]
+    assert len(refs) == len(set(refs)), 'Duplicate placement reference'
+    assert set(refs) == set(purchased_refs), 'BOM/placement coverage disagreement'
+    live = {p['reference']: p for p in live_components}
+    assert len(live) == len(live_components), 'Duplicate live reference'
+    assert set(purchased_refs) <= set(live), 'Purchased part missing from live inventory'
+
+    def number(value, label):
+        try:
+            result = float(value)
+        except (TypeError, ValueError):
+            raise AssertionError('Invalid placement number: ' + label) from None
+        assert math.isfinite(result), 'Nonfinite placement number: ' + label
+        return result
+
+    # Native exports print six decimal places; allow one nanometre/one
+    # microdegree for rounding, not a board or rotation adjustment.
+    tolerance = 1e-6
+    for p in positions:
+        ref = p['Ref']
+        fp = live[ref]
+        assert fp['layer'] in ('F.Cu', 'B.Cu'), 'Invalid live side: ' + ref
+        side = 'top' if fp['layer'] == 'F.Cu' else 'bottom'
+        assert p['Side'].lower() == side, 'Live placement side differs: ' + ref
+        assert p['Val'] == fp['value'], 'Live placement value differs: ' + ref
+        assert p['Package'] == fp['footprint'].split(':')[-1], 'Live placement footprint differs: ' + ref
+        x, y = number(p['PosX'], ref + ' X'), number(p['PosY'], ref + ' Y')
+        native_x, native_y = number(fp['x'], ref + ' live X'), number(fp['y'], ref + ' live Y')
+        assert abs(x - native_x) <= tolerance, 'Live placement X differs: ' + ref
+        assert abs(y + native_y) <= tolerance, 'Live placement Y differs: ' + ref
+        angle = number(p['Rot'], ref + ' rotation')
+        native_angle = number(fp['rotation'], ref + ' live rotation')
+        difference = (angle - native_angle + 180) % 360 - 180
+        assert abs(difference) <= tolerance, 'Live placement rotation differs: ' + ref
+
+
 def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, electrical_evidence):
     assert not destination.exists(), 'Output must be a fresh directory'
     before = json.loads(snapshot.read_text())
@@ -103,9 +142,10 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, elec
     parts.sort(key=lambda p: natural(p['Reference']))
     assert len(parts) == 47, 'Current revision expects 47 purchased parts'
     by_ref = {p['Reference']: p for p in parts}
-    positions = list(csv.DictReader((native_dir / 'positions.csv').open()))
-    assert len(positions) == len(by_ref)
-    assert {p['Ref'] for p in positions} == set(by_ref), 'BOM/placement disagreement'
+    with (native_dir / 'positions.csv').open(newline='') as stream:
+        positions = list(csv.DictReader(stream))
+    live_components = response(electrical_evidence / 'live-board.json')['inventory']['components']
+    verify_placements(positions, by_ref, live_components)
     smt, tht = [], []
     for p in positions:
         part = by_ref[p['Ref']]
