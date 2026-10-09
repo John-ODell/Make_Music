@@ -2,6 +2,8 @@
 
 Prepared 2026-10-08 for the [selected fuse/eFuse circuit](branch-protection.md). **Procedure only: no assembly or bench results have been obtained.** Use only the final reviewed U2/F1 schematic/netlist/BOM, reconcile references before testing, and record its commit below; root owns manufacturing outputs.
 
+Quote **five fully assembled instruments**, including all small components, THT, harnesses and mechanical work, plus an optional sixth bare carrier keepsake. Keep a separate bring-up/acceptance record for each assembled unit; a passing first unit does not populate the other four records. No actual parts are available for metrology yet. See [power/assembly readiness](pcbway-readiness.md) for pending fit and supplier-process acceptance.
+
 Unit/serial: ______  PCB revision/commit: ______  native schematic commit: ______
 Tester/date: ______  Pico model/firmware: ______  ambient: ______°C
 Supply/load/meter/scope identifiers and current-calibration limits: ______
