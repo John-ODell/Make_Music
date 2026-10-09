@@ -1,0 +1,41 @@
+Prepared 47 carrier parts, 30 SMT, 17 THT; 59 held files.
+{
+  "placements": 47,
+  "sides": {
+    "bottom": 1,
+    "top": 46
+  },
+  "aperture_definitions": {
+    "make_music-F_Paste.gtp": 11,
+    "make_music-F_Mask.gts": 24,
+    "make_music-Edge_Cuts.gm1": 1,
+    "make_music-F_Cu.gtl": 35,
+    "make_music-B_Silkscreen.gbo": 2,
+    "make_music-B_Mask.gbs": 8,
+    "make_music-B_Cu.gbl": 14,
+    "make_music-F_Silkscreen.gto": 4
+  },
+  "pth_holes_by_diameter_mm": {
+    "0.4": 30,
+    "0.6": 3,
+    "0.75": 2,
+    "1.02": 92,
+    "1.8": 3
+  },
+  "npth_holes": 17,
+  "component_drills_match_live_pads": 97,
+  "via_drill_hits": 33,
+  "closed_outline_mm": [
+    20,
+    -18.5,
+    350,
+    -140
+  ],
+  "pipeline": [
+    47,
+    30,
+    17
+  ],
+  "hashed_stage_files": 59,
+  "negative_controls": "U2 rotation and C17 displacement rejected before output creation"
+}

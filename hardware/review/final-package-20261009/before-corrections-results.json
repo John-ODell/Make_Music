@@ -1,0 +1,106 @@
+{
+  "package_commit": "d987896dbdd8cb6059bc102323f3ea0d89e263e1",
+  "current_head": "23a23b6237898ece736c14430cfd86f4a77c5c58",
+  "inputs_verified": 24,
+  "outputs_verified": 65,
+  "files_including_manifest": 66,
+  "native_inputs_match_21b2108": 17,
+  "pads": 166,
+  "parts": 48,
+  "purchased": 47,
+  "smt": 30,
+  "tht": 17,
+  "five_unit_parts": 235,
+  "metadata_warnings": 4,
+  "identity_sync": "noop",
+  "LF_generator_roundtrip": "pass",
+  "holds_preserved": true,
+  "grouped_description_aliases": [
+    {
+      "reference": "J2",
+      "grouped_description": "LEFT / Pico 1-20",
+      "native_value": "RIGHT / Pico 21-40"
+    },
+    {
+      "reference": "J4",
+      "grouped_description": "C4 / GP16",
+      "native_value": "D4 / GP17"
+    },
+    {
+      "reference": "J5",
+      "grouped_description": "C4 / GP16",
+      "native_value": "E4 / GP18"
+    },
+    {
+      "reference": "J6",
+      "grouped_description": "C4 / GP16",
+      "native_value": "F4 / GP19"
+    },
+    {
+      "reference": "J7",
+      "grouped_description": "C4 / GP16",
+      "native_value": "G4 / GP20"
+    },
+    {
+      "reference": "J8",
+      "grouped_description": "C4 / GP16",
+      "native_value": "A4 / GP21"
+    },
+    {
+      "reference": "J9",
+      "grouped_description": "C4 / GP16",
+      "native_value": "B4 / GP22"
+    },
+    {
+      "reference": "J10",
+      "grouped_description": "C4 / GP16",
+      "native_value": "C5 / GP26"
+    },
+    {
+      "reference": "J11",
+      "grouped_description": "C4 / GP16",
+      "native_value": "Semitone up / GP27"
+    },
+    {
+      "reference": "J12",
+      "grouped_description": "C4 / GP16",
+      "native_value": "Octave up / GP28"
+    },
+    {
+      "reference": "J13",
+      "grouped_description": "C4 / GP16",
+      "native_value": "Buzzer 1 / PWM / GP13"
+    },
+    {
+      "reference": "J14",
+      "grouped_description": "C4 / GP16",
+      "native_value": "Buzzer 2 / PWM / GP12"
+    }
+  ],
+  "copied_document_missing_local_links": [
+    {
+      "file": "PCBWAY_HANDOFF.md",
+      "link": "MODULE_HARNESSES.md"
+    },
+    {
+      "file": "PCBWAY_HANDOFF.md",
+      "link": "FIT_CHECKLIST.md"
+    },
+    {
+      "file": "PCBWAY_HANDOFF.md",
+      "link": "../mechanical/BUILD_READINESS.md"
+    },
+    {
+      "file": "PCBWAY_HANDOFF.md",
+      "link": "../../output/pdf/make-music-paper-fit-letter.pdf"
+    },
+    {
+      "file": "PCBWAY_HANDOFF.md",
+      "link": "../power/prototype-validation.md"
+    },
+    {
+      "file": "PCBWAY_HANDOFF.md",
+      "link": "../ASSEMBLY_BUDGET.md"
+    }
+  ]
+}

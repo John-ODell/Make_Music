@@ -3,7 +3,6 @@
 import argparse
 import csv
 import os
-import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -130,9 +129,8 @@ for ref, comp in components.items():
         library, name = expected_footprint.split(':', 1)
         footprint_path = library_paths[library] / (name + '.kicad_mod')
         assert footprint_path.is_file(), f'Assigned footprint missing: {footprint_path}'
-        pads = re.findall(r'\(pad\s+"([^"]+)"', footprint_path.read_text())
-        assert len(pads) == len(set(pads)), f'Duplicate footprint pad numbers: {footprint_path}'
-        assert set(pads) == {pin for component, pin in expected if component == ref}, f'Footprint pads do not match {ref} contacts'
+        # Physical pad coverage is checked from Konnect live readback by
+        # verify_board.py, rather than parsing protected footprint sources.
 for ref in ['R1', 'R2']:
     assert components[ref].findtext('value') == '10k', f'Unexpected reset bias value on {ref}'
 for n in range(1, 13):
@@ -160,4 +158,4 @@ print('PASS: all 166 physical endpoints and 48 components match; 38 connected ne
 print('PASS: all 41 power-contract endpoints with R3-R8/C13-C16 mapping; U2 ten pin roles/types; no pad11 or carrier D1.')
 print('PASS: upstream fuse, switch common2/ON3/OFF1, shunt D2 K1/A2 and bidirectional D3; VBUS/battery/VSYS/3V3 separation.')
 print('PASS: physical JST H1 polarity, GP13/12 reset pull-ups, twelve 100nF bypass capacitors and C17/C18 10uF buzzer bulk.')
-print('PASS: all 48 components have exact assigned footprint files/pad numbers; 47 purchased parts with native MPNs; TP1 2mm pad excluded.')
+print('PASS: all 48 components have exact assigned footprint files; 47 purchased parts with native MPNs; TP1 2mm pad excluded.')

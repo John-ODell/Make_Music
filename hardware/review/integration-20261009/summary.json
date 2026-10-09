@@ -1,0 +1,115 @@
+{
+  "parts": 48,
+  "live_footprints": 65,
+  "endpoints": 166,
+  "tracks": 405,
+  "pad_source": "ipc",
+  "erc": 0,
+  "copper_layout_drc": 0,
+  "unconnected": 0,
+  "overall_drc_findings": 4,
+  "parity_metadata_warnings": [
+    {
+      "description": "Missing symbol field 'Header' in footprint",
+      "items": [
+        {
+          "description": "Footprint C17",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          },
+          "ownership_status": "resolved",
+          "pos": {
+            "x": 87.46,
+            "y": 65.5
+          },
+          "uuid": "803cbb59-146e-48b1-aeda-4595b89d458a"
+        }
+      ],
+      "pos": {
+        "x": 87.46,
+        "y": 65.5
+      },
+      "rule": "footprint_symbol_field_mismatch",
+      "severity": "warning"
+    },
+    {
+      "description": "Missing symbol field 'Header' in footprint",
+      "items": [
+        {
+          "description": "Footprint C18",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          },
+          "ownership_status": "resolved",
+          "pos": {
+            "x": 125.46,
+            "y": 65.5
+          },
+          "uuid": "17f86661-a1a8-44cc-a63e-d7c0643710a5"
+        }
+      ],
+      "pos": {
+        "x": 125.46,
+        "y": 65.5
+      },
+      "rule": "footprint_symbol_field_mismatch",
+      "severity": "warning"
+    },
+    {
+      "description": "Missing symbol field 'MPN' in footprint",
+      "items": [
+        {
+          "description": "Footprint J1",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          },
+          "ownership_status": "resolved",
+          "pos": {
+            "x": 131.11,
+            "y": 21.3
+          },
+          "uuid": "4402266d-929c-484b-8b94-d96b7d71e403"
+        }
+      ],
+      "pos": {
+        "x": 131.11,
+        "y": 21.3
+      },
+      "rule": "footprint_symbol_field_mismatch",
+      "severity": "warning"
+    },
+    {
+      "description": "Missing symbol field 'MPN' in footprint",
+      "items": [
+        {
+          "description": "Footprint J2",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          },
+          "ownership_status": "resolved",
+          "pos": {
+            "x": 148.89,
+            "y": 69.56
+          },
+          "uuid": "c78dc07c-3fca-42d6-80f0-9c8ed7f1fb4d"
+        }
+      ],
+      "pos": {
+        "x": 148.89,
+        "y": 69.56
+      },
+      "rule": "footprint_symbol_field_mismatch",
+      "severity": "warning"
+    }
+  ],
+  "existing_placements_retained": 63,
+  "physical_fit_verified": false
+}

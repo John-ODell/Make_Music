@@ -1,79 +1,100 @@
 #!/usr/bin/env python3
-"""Verify PCB/schematic identity and every pad net from a fresh KiCad XML netlist.
+"""Verify exported XML against Konnect live readback, without pcbnew/SWIG.
 
-Run with KiCad's pcbnew-enabled Python. This supplements native ERC/DRC;
-physical fit, component ratings and built hardware are separate validations.
+All evidence must be regenerated after CAD changes. This verifies electrical
+integration only; physical fit and manufacturing release remain pending.
 """
 import argparse
-import re
-import sys
+import hashlib
+import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
-try:
-    import pcbnew as pcb
-except ImportError:
-    sys.exit('Use the Python shipped with KiCad; pcbnew is required.')
 
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('netlist', type=Path)
-parser.add_argument('--board', type=Path, default=Path(__file__).with_name('make_music.kicad_pcb'))
-args = parser.parse_args()
-xml = ET.parse(args.netlist).getroot()
-board = pcb.LoadBoard(str(args.board))
-components = {c.attrib['ref']: c for c in xml.findall('components/comp')}
-footprints = {}
-errors = []
-for fp in board.GetFootprints():
-    ref = fp.GetReference()
-    if ref in footprints:
-        errors.append('Duplicate footprint ' + ref)
-    footprints[ref] = fp
-    if fp.GetAttributes() & pcb.FP_BOARD_ONLY:
-        if ref in components:
-            errors.append('Schematic part incorrectly marked board-only: ' + ref)
-    elif ref not in components:
-        errors.append('PCB-only electrical part: ' + ref)
-expected = {}
-for net in xml.findall('nets/net'):
-    for node in net.findall('node'):
-        key = (node.attrib['ref'], node.attrib['pin'])
-        if key in expected:
-            errors.append('Repeated schematic endpoint: ' + str(key))
-        expected[key] = net.attrib['name']
-actual = {}
-for ref, comp in components.items():
-    fp = footprints.get(ref)
-    if fp is None:
-        errors.append('Missing PCB part: ' + ref)
-        continue
-    if fp.GetFPIDAsString() != comp.findtext('footprint', ''):
-        errors.append('Footprint assignment differs: ' + ref)
-    if fp.GetValue() != comp.findtext('value', ''):
-        errors.append('Value differs: ' + ref)
-    path = fp.GetPath().AsString().rstrip('/').split('/')[-1]
-    if path != comp.findtext('tstamps'):
-        errors.append('Schematic UUID differs: ' + ref)
-    for pad in fp.Pads():
-        key = (ref, pad.GetNumber())
-        # Repeated numbered pads are legal (e.g. power packages), but must agree.
-        name = pad.GetNetname()
-        if key in actual and actual[key] != name:
-            errors.append('Split net across duplicate-number pads: ' + str(key))
-        actual[key] = name
-for key in sorted(set(expected) | set(actual)):
-    if actual.get(key) != expected.get(key):
-        errors.append(f'{key}: PCB={actual.get(key)!r}, schematic={expected.get(key)!r}')
-if board.GetCopperLayerCount() != 2:
-    errors.append('Expected two copper layers')
-tracks = [t for t in board.GetTracks() if not isinstance(t, pcb.PCB_VIA)]
-vias = [t for t in board.GetTracks() if isinstance(t, pcb.PCB_VIA)]
-if not tracks:
-    errors.append('Board has no routed copper tracks')
-if not any(not z.GetIsRuleArea() for z in board.Zones()):
-    errors.append('Board has no copper zones')
-if errors:
-    print('\n'.join('FAIL: ' + e for e in errors))
-    sys.exit(1)
-print(f'PASS: {len(components)} schematic parts and {len(actual)} pad endpoints agree by reference, footprint, value, UUID and net.')
-print(f'PASS: two-layer board; {len(tracks)} tracks, {len(vias)} vias, {len(list(board.Zones()))} copper zones/rule areas.')
-print('Native ERC/DRC and physical component/assembly validation remain required.')
+HW = Path(__file__).resolve().parents[1]
+BOARD = HW / 'kicad/make_music.kicad_pcb'
+METADATA = {
+    ('C17', "Missing symbol field 'Header' in footprint"): '803cbb59-146e-48b1-aeda-4595b89d458a',
+    ('C18', "Missing symbol field 'Header' in footprint"): '17f86661-a1a8-44cc-a63e-d7c0643710a5',
+    ('J1', "Missing symbol field 'MPN' in footprint"): '4402266d-929c-484b-8b94-d96b7d71e403',
+    ('J2', "Missing symbol field 'MPN' in footprint"): 'c78dc07c-3fca-42d6-80f0-9c8ed7f1fb4d',
+}
+
+
+def response(path):
+    raw = json.loads(path.read_text())
+    if 'content' not in raw:
+        return raw
+    assert not raw.get('isError'), 'MCP error'
+    return json.loads(''.join(c['text'] for c in raw['content'] if c['type'] == 'text'))
+
+
+def verify(evidence):
+    source = response(evidence / 'source-checkpoint.json')['design_sha256']
+    assert source and 'kicad/make_music.kicad_pcb' in source
+    for name, expected_hash in source.items():
+        assert hashlib.sha256((HW / name).read_bytes()).hexdigest() == expected_hash, 'Stale source: ' + name
+    live = response(evidence / 'live-board.json')
+    info = live['board_info']
+    assert info['source'] == 'ipc' and Path(info['file']).resolve() == BOARD.resolve()
+    assert info['copper_layer_count'] == 2
+    sync = live['identity_sync']
+    assert sync['status'] == 'noop' and not sync['changes'] and not sync['diagnostics']
+    assert not sync['unassigned_footprints']
+    assert sync['coverage']['transport'] == 'live_kicad_ipc'
+    assert sync['coverage']['hierarchy_files'] == 2
+    xml = ET.parse(evidence / 'netlist.xml').getroot()
+    components = {c.attrib['ref']: c for c in xml.findall('./components/comp')}
+    assert len(components) == 48
+    inventory = live['inventory']['components']
+    by_ref = {c['reference']: c for c in inventory}
+    assert len(by_ref) == len(inventory) == 65
+    assert set(by_ref) - set(components) == {f'MH{i}' for i in range(1, 18)}
+    assert set(live['pads']) == set(components)
+    expected, actual = {}, {}
+    for net in xml.findall('./nets/net'):
+        for node in net.findall('node'):
+            key = (node.attrib['ref'], node.attrib['pin'])
+            assert key not in expected
+            expected[key] = net.attrib['name']
+    for ref, comp in components.items():
+        fp = by_ref[ref]
+        assert fp['value'] == comp.findtext('value'), 'Value differs: ' + ref
+        assert fp['footprint'] == comp.findtext('footprint'), 'Footprint differs: ' + ref
+        pads = live['pads'][ref]
+        assert pads['source'] == 'ipc' and pads['reference'] == ref
+        assert pads['pad_count'] == len(pads['pads'])
+        for pad in pads['pads']:
+            key = (ref, pad['number'])
+            assert key not in actual and pad['net'] is not None
+            actual[key] = pad['net']
+    assert actual == expected and len(actual) == 166, 'PCB/XML pad-net mismatch'
+    assert live['traces']['count'] == len(live['traces']['traces']) > 0
+    erc = response(evidence / 'erc-mcp.json')
+    assert erc['total'] == 0 and not erc['violations']
+    drc = response(evidence / 'drc-mcp.json')
+    assert not drc['categories_not_reported'] and not drc['truncated']
+    assert drc['severity_filter'] == 'info'
+    assert drc['source'] == 'saved_file' and drc['live_board_synced']
+    assert drc['zones_refilled'] and drc['zone_refill_source'] == 'ipc'
+    assert drc['design_rule_violations'] == drc['unconnected_items'] == drc['errors'] == 0
+    assert drc['schematic_parity'] == drc['total_violations'] == len(drc['violations'])
+    seen = set()
+    for item in drc['violations']:
+        assert item['rule'] == 'footprint_symbol_field_mismatch' and item['severity'] == 'warning'
+        assert len(item['items']) == 1
+        fp = item['items'][0]
+        ref = fp['description'].removeprefix('Footprint ')
+        key = (ref, item['description'])
+        assert key in METADATA and key not in seen and fp['uuid'] == METADATA[key], 'Unreviewed DRC finding'
+        seen.add(key)
+    return len(actual), len(drc['violations'])
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('evidence', type=Path)
+    args = parser.parse_args()
+    endpoints, metadata = verify(args.evidence)
+    print(f'PASS electrical integration: {endpoints} live pad nets; 48 values/footprints; identity sync noop.')
+    print(f'ERC 0; copper/layout DRC 0; unconnected 0; {metadata} reviewed metadata warnings retained.')
+    print('Physical fit, bench qualification and manufacturing release remain pending.')

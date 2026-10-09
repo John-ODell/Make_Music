@@ -15,6 +15,8 @@ C13,1,TDK,C2012X7R1E475K125AB,4u7 / 25V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,
 C14,1,TDK,C2012X7R1E475K125AB,4u7 / 25V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB
 C15,1,TDK,C1608C0G1H103J080AA,10n / 50V,Capacitor_SMD:C_0603_1608Metric,SMT,Top,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H103J080AA
 C16,1,TDK,C2012X7R1E475K125AB,4u7 / 25V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1E475K125AB
+C17,1,TDK,C2012X7R1A106K125AC,10u / 10V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf
+C18,1,TDK,C2012X7R1A106K125AC,10u / 10V,Capacitor_SMD:C_0805_2012Metric,SMT,Top,https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf
 D2,1,Vishay,SS14-E3/61T,SS14-E3/61T,MakeMusicCarrier:Vishay_SS14_SMA_K1_A2,SMT,Top,https://www.vishay.com/docs/88746/ss12.pdf
 D3,1,Littelfuse,SMAJ5.0CA,SMAJ5.0CA,MakeMusicPower:Littelfuse_SMAJ5-0CA_DO-214AC,SMT,Top,https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf
 F1,1,SCHURTER,3403.0275.23,1.25A T,MakeMusicPower:Schurter_UMT-H_3403-0275-23,SMT,Top,https://www.schurter.com/en/datasheet/typ_UMT-H.pdf

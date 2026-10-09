@@ -1,0 +1,20 @@
+{
+  "assembly-bottom-through-top.pdf": "1e8fb3363c2147e741913749bd830053e0f2d1eb39895829cfe6bef153c680ef",
+  "assembly-top.pdf": "2cae185b3300e28274cf46f0968e24790c086c1d4a9c5909f1d3b310957f153e",
+  "bom.csv": "00b509fdb14a32b3d7a82d01f745b6d4a240409b6d85139b9a218cfe9f43ad1c",
+  "copper-layout.pdf": "ecbbe9e08a0438d0250ece54c2bc4993cf6cde6f3e5a6ccdec65f82024f67cd5",
+  "gerbers/make_music-B_Cu.gbl": "f790eb75ae97e540750a10dd06cd8f785d96a9637803e46d4b614d1226aae7e8",
+  "gerbers/make_music-B_Mask.gbs": "641e4b67e12fd03f19c01345899141e65e8366f68291a8fb339a555c292973a3",
+  "gerbers/make_music-B_Silkscreen.gbo": "d337c8c562061695d0a29dd443e9d685cdb4c75a712afaa7671c086ed43beac1",
+  "gerbers/make_music-Edge_Cuts.gm1": "737fe16ab2f74145a4e323566207f7925369da21c83f93185710839d2c9813c1",
+  "gerbers/make_music-F_Cu.gtl": "fc7e93f9cfa29cc26dc0195201fee01f33342eed3d9f15ea7a7863c82dbe72c6",
+  "gerbers/make_music-F_Mask.gts": "fddc04d8aa7fd1ec85ac9dcf2419ba42a91b755b84707d660dc8e03a5922387b",
+  "gerbers/make_music-F_Paste.gtp": "d1c16ef57fd48c85acd9571621524bdd17c17c334500b2e8674fae010caaecd4",
+  "gerbers/make_music-F_Silkscreen.gto": "8e1b1c57d2c707c3f16d0f19882ff59230180d5d46c2fc17ff2c596ac24a9eb9",
+  "gerbers/make_music-NPTH.drl": "f53b18316e7a244d176c5e41bb8abc5be2a51be26e52667946b813e81cfcdd38",
+  "gerbers/make_music-PTH.drl": "eeb80e6351be1ae48de3cea446c6944dabce2efee44066441a5ab12ee485800e",
+  "gerbers/make_music-job.gbrjob": "025157c257ec5c251143dcf063077ad1b8d8388db32bec4194360b1d863ecabf",
+  "make_music-ipc2581.xml": "58d4220ca90d564b631affe7155baff989edbfb671e50852d8d543fefba6239e",
+  "positions.csv": "2e5f7a593d076ce41df79cc7f12f8b6fc978cd284a5c471d3c38b9b6a53638ee",
+  "schematic.pdf": "6d54c69f1a7521951b20471ac2eefd64a7e5e9a2cdf69b666b684d69b31d27d3"
+}

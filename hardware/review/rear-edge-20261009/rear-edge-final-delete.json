@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "text": "{\"count\":4,\"deleted\":4,\"dry_run\":false,\"fallback_reason\":null,\"graphics\":[{\"layer\":\"Edge.Cuts\",\"type\":\"line\",\"uuid\":\"20210e84-f096-4271-b533-1e526fc13a85\",\"x\":20.0,\"y\":140.0},{\"layer\":\"Edge.Cuts\",\"type\":\"line\",\"uuid\":\"e4859a74-9e9a-4c2d-9acb-38e825d1dd59\",\"x\":350.0,\"y\":140.0},{\"layer\":\"Edge.Cuts\",\"type\":\"line\",\"uuid\":\"ed7b6451-85aa-4c1b-9424-d07178b21fd0\",\"x\":350.0,\"y\":19.0},{\"layer\":\"Edge.Cuts\",\"type\":\"line\",\"uuid\":\"03a88a8b-4578-4ef8-addb-404d4b151f8a\",\"x\":20.0,\"y\":19.0}],\"source\":\"ipc\",\"warning\":null}",
+      "type": "text"
+    }
+  ],
+  "isError": false
+}
