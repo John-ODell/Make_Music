@@ -53,6 +53,22 @@ wrong-net, unreviewed-warning and stale-source negative cases refused. Overall
 DRC remains four warnings in the manifest; no DRC rule or result is suppressed.
 This electrical review does not grant fabrication release.
 
+The postprocessor also compares every purchased placement with the verified
+live IPC inventory: exact references/coverage, side/value/package, X, negated
+native Y and rotation modulo360. Six-decimal native exports use a tolerance
+of1e-6 mm/degrees; nonfinite coordinates/angles are rejected. This runs before
+output creation, so a reversed U2 or displaced non-anchor component cannot
+enter the centroid under otherwise valid electrical evidence. Run
+`python3 -m unittest discover -s hardware/manufacturing -p test_prepare_pcbway_review.py`.
+
+PM confirmed the final rear edge at native y18.5: machine board corners are
+(20,-18.5)..(350,-140) mm, 330×121.5 mm. The strict origin guard rejects both
+the superseded y20 and interim y19 edge exports. Placements, native(0,0)
+position origin and service datums remain fixed. Fresh source-bound checks and
+exports are required after root's CAD change; do not reuse or alter806457b
+source hashes to force a pass. The full pipeline was checked against frozen
+806457b before this outline update; the final outline also has targeted tests.
+
 ## Coordinate and assembly convention
 
 Served native exports use (0,0), x right/y up; board (20,-20)..(350,-140) mm.
