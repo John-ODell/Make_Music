@@ -19,7 +19,10 @@ integration has zero ERC/copper/layout/unconnected findings. No DRC categories
 or findings are hidden. Nominal socket body/courtyard rear margins are 1.275/0.77 mm. Physical
 fit, socket engagement/lip acceptance, final
 mechanical CAD, charger matching, factory process/orientation acceptance and
-bench qualification remain required. Gerber/drill and all drawing viewer
-review must finish before this package can be accepted for the next stage.
+bench qualification remain required. Whole Gerber/drill layers and all five
+native drawing pages have been inspected; exported placement/aperture/hole
+inventories pass. Enlarged front copper/mask/paste/polarity review and all
+native drawing pages are complete within export-review.md scope. This does
+not establish physical fit or factory process acceptance.
 
 No fabrication release, complete quote, runtime or hardware success is claimed.

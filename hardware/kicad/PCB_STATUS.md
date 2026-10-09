@@ -120,3 +120,10 @@ cell/charger matching, final mechanical CAD, supplier acceptance and
 [current-limited bench qualification](../power/prototype-validation.md).
 No physical fit, bench result, runtime, complete quote or fabrication release
 has been established. The paper-fit PDF checks overall comfort only.
+
+Final held export package refreshed 2026-10-09 after source-bound checks and
+independent placement/aperture/drill review: 47 purchased carrier parts,
+30 SMT/17 THT, five-unit BOM total235. Current package is
+manufacturing/REVIEW_ONLY_DO_NOT_ORDER; see review/manufacturing-20261009 for
+visual coverage and external release holds.
+This replaces obsolete managed exports and does not grant fabrication release.

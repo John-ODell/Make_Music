@@ -91,3 +91,10 @@ User supplied official datasheets in `/Users/johnodell/Desktop/pico_datasheets/`
 ## Assembly preference
 
 Quote five complete instruments, including all small components, THT soldering, 60 complete module harnesses, five holder harnesses/cassettes, module attachment, precision fit work, programming and acceptance testing. Agree removable Pico/cell shipping condition and external charger supply after qualification; normal-use removal/external charging does not make missing factory assembly a user task. Qualify the first instrument within the five before repeating its accepted build on the other four. A partial-assembly price may be compared, with remaining work explicit, but the selected delivery must not depend on user soldering or crimping. Price the optional sixth bare carrier separately. See [assembly and budget comparison](ASSEMBLY_BUDGET.md); complete pricing and supplier process acceptance remain pending.
+
+Final held export package refreshed 2026-10-09 after source-bound checks and
+independent placement/aperture/drill review: 47 purchased carrier parts,
+30 SMT/17 THT, five-unit BOM total235. Current package is
+manufacturing/REVIEW_ONLY_DO_NOT_ORDER; see review/manufacturing-20261009 for
+visual coverage and external release holds.
+This replaces obsolete managed exports and does not grant fabrication release.

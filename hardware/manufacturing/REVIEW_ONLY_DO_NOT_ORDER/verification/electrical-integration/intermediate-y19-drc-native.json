@@ -1,0 +1,148 @@
+{
+  "violations": [
+    {
+      "severity": "warning",
+      "description": "Silkscreen clipped by board edge (board setup constraints silk clearance 0.1000 mm; actual 0.0400 mm)",
+      "rule": "silk_edge_clearance",
+      "pos": {
+        "x": 20.0,
+        "y": 19.0
+      },
+      "items": [
+        {
+          "description": "Segment on Edge.Cuts",
+          "pos": {
+            "x": 20.0,
+            "y": 19.0
+          },
+          "uuid": "03a88a8b-4578-4ef8-addb-404d4b151f8a",
+          "ownership_status": "resolved",
+          "item_kind": "gr_line",
+          "layer": "Edge.Cuts",
+          "owner": {
+            "kind": "board"
+          }
+        },
+        {
+          "description": "Segment of J1 on F.Silkscreen",
+          "pos": {
+            "x": 129.61,
+            "y": 18.9
+          },
+          "uuid": "86a40154-3d14-4646-a9e2-c013985edee5",
+          "ownership_status": "resolved",
+          "item_kind": "fp_line",
+          "layer": "F.SilkS",
+          "owner": {
+            "kind": "footprint",
+            "reference": "J1",
+            "uuid": "4402266d-929c-484b-8b94-d96b7d71e403"
+          }
+        }
+      ]
+    }
+  ],
+  "unconnected_items": [],
+  "schematic_parity": [
+    {
+      "severity": "warning",
+      "description": "Missing symbol field 'Header' in footprint",
+      "rule": "footprint_symbol_field_mismatch",
+      "pos": {
+        "x": 87.46,
+        "y": 65.5
+      },
+      "items": [
+        {
+          "description": "Footprint C17",
+          "pos": {
+            "x": 87.46,
+            "y": 65.5
+          },
+          "uuid": "803cbb59-146e-48b1-aeda-4595b89d458a",
+          "ownership_status": "resolved",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "description": "Missing symbol field 'Header' in footprint",
+      "rule": "footprint_symbol_field_mismatch",
+      "pos": {
+        "x": 125.46,
+        "y": 65.5
+      },
+      "items": [
+        {
+          "description": "Footprint C18",
+          "pos": {
+            "x": 125.46,
+            "y": 65.5
+          },
+          "uuid": "17f86661-a1a8-44cc-a63e-d7c0643710a5",
+          "ownership_status": "resolved",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "description": "Missing symbol field 'MPN' in footprint",
+      "rule": "footprint_symbol_field_mismatch",
+      "pos": {
+        "x": 131.11,
+        "y": 21.3
+      },
+      "items": [
+        {
+          "description": "Footprint J1",
+          "pos": {
+            "x": 131.11,
+            "y": 21.3
+          },
+          "uuid": "4402266d-929c-484b-8b94-d96b7d71e403",
+          "ownership_status": "resolved",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "description": "Missing symbol field 'MPN' in footprint",
+      "rule": "footprint_symbol_field_mismatch",
+      "pos": {
+        "x": 148.89,
+        "y": 69.56
+      },
+      "items": [
+        {
+          "description": "Footprint J2",
+          "pos": {
+            "x": 148.89,
+            "y": 69.56
+          },
+          "uuid": "c78dc07c-3fca-42d6-80f0-9c8ed7f1fb4d",
+          "ownership_status": "resolved",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -29,7 +29,7 @@ def natural(ref):
 def table(path, rows):
     assert rows, f'Empty table: {path}'
     with path.open('w', newline='') as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 

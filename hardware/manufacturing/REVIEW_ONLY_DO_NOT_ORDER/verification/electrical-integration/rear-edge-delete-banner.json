@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "text": "{\"count\":1,\"deleted\":1,\"dry_run\":false,\"fallback_reason\":null,\"graphics\":[{\"layer\":\"Dwgs.User\",\"type\":\"text\",\"uuid\":\"e0ac45df-8c32-4850-bdcf-f901a3ee337b\",\"x\":205.0,\"y\":18.0}],\"source\":\"ipc\",\"warning\":null}",
+      "type": "text"
+    }
+  ],
+  "isError": false
+}
