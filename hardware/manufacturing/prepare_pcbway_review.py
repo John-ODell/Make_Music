@@ -97,6 +97,16 @@ def verify_placements(positions, purchased_refs, live_components):
         assert abs(difference) <= tolerance, 'Live placement rotation differs: ' + ref
 
 
+def verify_native_origin(native_dir):
+    """Require the reviewed y18.5 rear edge and unchanged native export datum."""
+    edge = (native_dir / 'gerbers/make_music-Edge_Cuts.gm1').read_text()
+    for point in ('X20000000Y-18500000', 'X350000000Y-18500000',
+                  'X20000000Y-140000000', 'X350000000Y-140000000'):
+        assert point in edge, 'Unexpected outline or Gerber origin'
+    drill = (native_dir / 'gerbers/make_music-NPTH.drl').read_text()
+    assert 'METRIC' in drill and 'X26.0Y-26.0' in drill, 'Drill/placement origin disagreement'
+
+
 def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, electrical_evidence):
     assert not destination.exists(), 'Output must be a fresh directory'
     before = json.loads(snapshot.read_text())
@@ -163,12 +173,7 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, elec
     assert (float(pos['H1']['PosX']), float(pos['H1']['PosY'])) == (289, -40)
     # All geometry uses the served native export origin, NOT the old held
     # package's auxiliary origin. No Gerber/drill coordinates are rewritten.
-    edge = (native_dir / 'gerbers/make_music-Edge_Cuts.gm1').read_text()
-    for point in ('X20000000Y-20000000', 'X350000000Y-20000000',
-                  'X20000000Y-140000000', 'X350000000Y-140000000'):
-        assert point in edge, 'Unexpected outline or Gerber origin'
-    drill = (native_dir / 'gerbers/make_music-NPTH.drl').read_text()
-    assert 'METRIC' in drill and 'X26.0Y-26.0' in drill, 'Drill/placement origin disagreement'
+    verify_native_origin(native_dir)
     shutil.copytree(native_dir, destination)
     table(destination / 'carrier-bom.csv', parts)
     table(destination / 'pcbway-centroid-smt.csv', smt)
@@ -200,7 +205,7 @@ def prepare(native_dir, netlist, erc_path, drc_path, destination, snapshot, elec
         'schematic_parity_issues': drc['schematic_parity'], 'purchased_carrier_parts': len(parts),
         'smt_centroid_parts': len(smt), 'manual_tht_parts': len(tht),
         'assembled_instruments_requested': 5, 'optional_additional_bare_carriers': 1,
-        'machine_origin': 'native (0,0); x right/y up; board (20,-20)..(350,-140) mm',
+        'machine_origin': 'native (0,0); x right/y up; board (20,-18.5)..(350,-140) mm; 330x121.5 mm',
         'physical_fit_verified': False, 'bench_validation_complete': False,
         'supplier_acceptance_complete': False, 'fabrication_release': False
     }, indent=2) + '\n')

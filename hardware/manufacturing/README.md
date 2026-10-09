@@ -61,11 +61,13 @@ output creation, so a reversed U2 or displaced non-anchor component cannot
 enter the centroid under otherwise valid electrical evidence. Run
 `python3 -m unittest discover -s hardware/manufacturing -p test_prepare_pcbway_review.py`.
 
-This focused placement fix retains the806457b outline expectation until PM
-confirms the final rear edge. Any outline revision needs the matching Gerber
-corner expectation and machine-origin summary updated, followed by fresh
-source-bound checks/exports. Do not reuse the earlier806457b source hashes or
-alter them to force a pass. Placements and service datums remain fixed.
+PM confirmed the final rear edge at native y18.5: machine board corners are
+(20,-18.5)..(350,-140) mm, 330×121.5 mm. The strict origin guard rejects both
+the superseded y20 and interim y19 edge exports. Placements, native(0,0)
+position origin and service datums remain fixed. Fresh source-bound checks and
+exports are required after root's CAD change; do not reuse or alter806457b
+source hashes to force a pass. The full pipeline was checked against frozen
+806457b before this outline update; the final outline also has targeted tests.
 
 ## Coordinate and assembly convention
 

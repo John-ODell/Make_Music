@@ -138,5 +138,30 @@ class PlacementTests(unittest.TestCase):
                 self.test_u2_rotation_rejected()
 
 
+class ExportOriginTests(unittest.TestCase):
+    def check_origin(self, rear_y):
+        with tempfile.TemporaryDirectory() as tmp:
+            native = Path(tmp)
+            gerbers = native / 'gerbers'
+            gerbers.mkdir()
+            rear = round(rear_y * 1_000_000)
+            (gerbers / 'make_music-Edge_Cuts.gm1').write_text(
+                f'X20000000Y-{rear}D02*\nX350000000Y-{rear}D01*\n'
+                'X350000000Y-140000000D01*\nX20000000Y-140000000D01*\n')
+            (gerbers / 'make_music-NPTH.drl').write_text('METRIC\nX26.0Y-26.0\n')
+            prepare.verify_native_origin(native)
+
+    def test_final_y18_5_and_unchanged_drill_datum(self):
+        self.check_origin(18.5)
+
+    def test_superseded_y20_rejected(self):
+        with self.assertRaisesRegex(AssertionError, 'Unexpected outline or Gerber origin'):
+            self.check_origin(20)
+
+    def test_interim_y19_rejected(self):
+        with self.assertRaisesRegex(AssertionError, 'Unexpected outline or Gerber origin'):
+            self.check_origin(19)
+
+
 if __name__ == '__main__':
     unittest.main()
