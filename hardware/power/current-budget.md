@@ -2,6 +2,8 @@
 
 Active prototype constraints: **0.70 A normal battery branch; 350 mA total 3V3 including Pico; 250 mA external ceiling; 100 µF total VSYS capacitance.** These are design limits from [branch-protection.md](branch-protection.md), not measured consumption. The active eFuse path replaces the carrier series diode.
 
+**2026-10-09 cell correction:** use the protected **18650 P1835J candidate** and unresolved lot/charger/holder conditions in [18650-handoff.md](18650-handoff.md). Conventional 1S voltage is unchanged, so all current/protection limits and the 515 mA sizing calculation below remain. Larger capacity does not permit more carrier load. The published 3350 mAh minimum is not usable capacity at our loaded UVLO, and no runtime is inferred from it. Repeat resistance/thermal calculations if the longer cassette changes wire length/contact path.
+
 No component current has been measured. Blank values are **unknown**, not zero. Populate from the actual selected hardware at 3V3 with both buzzers operating, all touch LEDs active, expansion load connected and the intended firmware/clock. Record steady average, startup and coincident peak separately.
 
 | 3V3 load | Quantity | Per-unit average mA | Per-unit peak mA | Evidence / measurement |
@@ -37,7 +39,7 @@ The carrier's two 10 kΩ buzzer pull-ups add at most approximately **0.66 mA** a
 
 The [Tontek TTP223-BA6 datasheet](https://www.tontek.com.tw/uploads/product/243/TTP223-BA6_V2.1_EN.pdf) supports 2.0–5.5 V IC supply. Its no-load low-power current at 3 V is 1.5 µA typical / 3 µA maximum; these values exclude the module indicator LED and output load and must not be used as the module budget. Its application circuit requires 100 nF between VDD/VSS with very short traces. Confirm that capacitor on each actual module: a carrier capacitor before a 100 mm cable does not meet that placement instruction. Test false touches during USB/battery changes, as the datasheet warns about rapidly shifting supplies.
 
-Pico already has regulator output bulk capacitance; the [readiness audit](pcbway-readiness.md#bulk-capacitance-and-review-heuristics) recommends two additional 10 µF capacitors at the buzzer supply headers for load transients. This is a proposed PM-owned CAD change, not populated hardware or established transient margin. Measure module-end 3V3/GND during simultaneous buzzer edges and touch LED transitions, and include capacitor startup in the source-current tests.
+Pico already has regulator output bulk capacitance; the [historical readiness audit](pcbway-readiness.md#bulk-capacitance-and-review-heuristics) recommended two additional 10 µF capacitors at the buzzer supply headers. PM is integrating C17/C18; this worksheet does not claim completed routing/parity or established transient margin. Their 20 µF nominal total is on 3V3_OUT, not directly on VSYS, but still contributes to regulator startup demand. Measure module-end 3V3/GND during simultaneous buzzer edges and touch LED transitions, and include startup in source-current tests.
 
 ## USB and future-option charging budget
 
@@ -53,4 +55,4 @@ U1's input limit only constrains its own branch. Measure and enforce the aggrega
 
 Record charger worst-case heat at low V_BAT/high V_IN, enclosure temperature, switch/diode temperatures, 3V3 minimum during hot-plug and buzzing, and ripple affecting touch detection. Off current must be measured with switch off, with/without USB, and with the optional charger populated. A BQ-connected cell is not electrically disconnected by S1 after OUT.
 
-The historical [comparison](candidate-comparison.md) used a provisional 1 A input allowance. The active normal branch ceiling is **0.70 A**, with the selected NKK switch and fuse/eFuse in branch-protection.md. See [PCBWay power/assembly readiness](pcbway-readiness.md) for the current package audit and remaining acceptance evidence.
+The historical [comparison](candidate-comparison.md) used a provisional 1 A input allowance. The active normal branch ceiling is **0.70 A**, with the selected NKK switch and fuse/eFuse in branch-protection.md. See [current 18650 qualification](18650-handoff.md) and the explicitly dated [historical package audit](pcbway-readiness.md); final package/fit/bench acceptance remains outstanding.

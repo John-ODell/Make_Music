@@ -1,5 +1,7 @@
 # PCBWay power and assembly readiness audit
 
+**2026-10-09 status:** this is historical evidence for the explicitly dated **18350** checkpoint below. The user has corrected the intended cell to protected **18650**; see [the current handoff](18650-handoff.md). Original audit results and counts are preserved. They do not claim a review of the new holder/cassette, PM's header changes or C17/C18 integration.
+
 Reviewed 2026-10-08 at fetched `origin/master` **6155ca0**. **Release verdict: INCOMPLETE.** No concrete electrical topology defect was found in the audited power block; this does not establish tested hardware or an accepted production package. PM owns CAD changes, final package generation and integration.
 
 Rechecked fetched master **3af4ace** before submitting this report: its changes since the audited baseline are schematic-review documentation only; the audited CAD and held manufacturing files are identical. PM's subsequent live header changes and any adopted capacitor additions require a fresh final package/checkpoint.

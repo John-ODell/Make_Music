@@ -1,5 +1,7 @@
 # Revision 1 power integration handoff
 
+**Historical 18350 research — superseded 2026-10-09.** The user corrected the intended cell to long protected 18650. Use [18650-handoff.md](18650-handoff.md) for current exact parts, limits and charger HOLD. The original 18350 sources, numerical limits and fit proposals below are retained as history and do not qualify P1835J or its holder/charger.
+
 **2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
 
 Reviewed 2026-10-07 against origin/master including PRs #10 and #11. User selected removable protected 18350 with external charging. **Exact review targets: Keeppower P1835C2 cell and Keeppower L1 external charger at 500 mA. Electrical ratings support this candidate pairing subject to the gaps below; neither physical fit nor complete charging compatibility has been verified.** No onboard charging parts belong in revision 1.

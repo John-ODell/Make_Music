@@ -1,21 +1,22 @@
 # Battery and USB power proposal
 
-**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+**2026-10-09 correction:** the user intended **long protected 18650**, superseding the 18350 cell/holder selection. The [current 18650 handoff](18650-handoff.md) recommends exact cell **Keeppower P1835J** and holds external-charger approval pending current-lot voltage/current/termination and fit evidence. Mechanical helper owns the new wired holder/cassette; the old Keystone 1101 reservation is superseded.
 
-Review date: 2026-10-07. **Architecture A selected by the user for the first revision: removable protected 18350 with external charging. P1835C2 cell and L1 at 500 mA are exact review targets; holder and complete charger compatibility remain unverified; no fabrication release, routed PCB, or bench validation.** The basic branch was integrated in PR #14; the protected replacement now needs integration.
+The [fuse/eFuse branch](branch-protection.md) is already integrated in the routed carrier. Prior ERC/DRC/parity and package checks are recorded in the dated [checkpoint audit](pcbway-readiness.md); those results do not qualify the new cell/holder or PM's ongoing header/bulk changes. **No physical parts, fit measurements, bench validation or manufacturing release are available.**
 
 ## Recommendation
 
-Implement **A: removable protected conventional 4.2 V-charge 18350 cell, externally charged, switched through the specified fuse/eFuse into Pico VSYS**. The eFuse supplies the battery with reverse-current blocking alongside the Pico's existing USB diode, preserving an unmodified removable Pico. **B: separate USB charge input + BQ24074 power path + protected cell** remains reference material for a future revision, not part of the first-revision BOM. Exact cell, holder, switch and compatible external charger still require verification. The Pico USB port is for programming and USB power; it does not charge the battery.
+Implement **A: removable protected conventional 4.2 V-charge 18650 cell, externally charged, switched through the specified fuse/eFuse into Pico VSYS**. The eFuse supplies the battery with reverse-current blocking alongside the Pico's existing USB diode, preserving an unmodified removable original Pico H **SC0917**. Retain 0.70 A battery input, 350 mA total/250 mA external 3V3 and all existing protection values. **B: separate USB charge input + BQ24074 power path + protected cell** remains future research and is omitted from revision 1. The Pico USB port supplies programming/USB power and does not charge the battery.
 
-Updated quote preference (2026-10-08): **five fully assembled instruments**, including populated SMT/THT carriers, harnesses and mechanical work, plus an **optional sixth bare carrier keepsake**. Fit measurements and supplier scope/pricing remain pending; the optional bare board does not replace any of the five assembled units. See the readiness audit for exact remaining holds.
+Updated quote preference (2026-10-08): **five fully assembled instruments**, including populated SMT/THT carriers, harnesses and mechanical work, plus an **optional sixth bare carrier keepsake**. Fit measurements and supplier scope/pricing remain pending; the optional bare board does not replace any of the five assembled units. See the current 18650 handoff for exact remaining holds.
 
 - [Factory assembly and staged prototype validation record](prototype-validation.md)
-- [PCBWay power and assembly readiness audit](pcbway-readiness.md)
-- [Revision 1 exact parts and schematic integration handoff](rev1-handoff.md)
+- [Current protected 18650 parts and integration handoff](18650-handoff.md)
+- [Historical PCBWay audit of the 18350 checkpoint](pcbway-readiness.md)
+- [Superseded 18350 cell/charger research](rev1-handoff.md)
 - [Circuit connections and operating states](circuits.md)
 - [Candidate BOM and verification evidence](BOM.md)
-- [Protected battery budget comparison and stronger switch](candidate-comparison.md)
+- [Historical battery budget comparison and switch research](candidate-comparison.md)
 - [Current and runtime worksheet](current-budget.md)
 - [Open decisions and integration checks](decisions.md)
 
@@ -39,4 +40,4 @@ Evidence: Raspberry Pi [Pico datasheet](https://datasheets.raspberrypi.com/pico/
 
 ## What this review establishes
 
-Manufacturer documents support the circuit topology, power pin mapping and candidate component limits. They do not establish holder fit, real current draw, PCB thermal performance, USB compliance, or a tested instrument. No ERC/DRC was run because this deliverable contains connection drawings and research, not an instantiated KiCad schematic or board. Integration must instantiate the selected option, then run the project checks and prototype tests listed in decisions.md.
+Manufacturer documents support the conventional 1S circuit topology, power pin mapping and identified cell candidate. They do not establish current-lot charging compatibility, holder fit, real current draw, PCB thermal performance, USB compliance or a tested instrument. This 18650 update changes documentation only. PM must validate/export the final CAD checkpoint and complete the physical checks in decisions.md and prototype-validation.md.

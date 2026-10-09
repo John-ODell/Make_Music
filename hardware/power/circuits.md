@@ -1,29 +1,30 @@
 # Proposed circuit connections
 
-**2026-10-08 update:** [Concrete branch protection contract](branch-protection.md) supersedes the previous carrier series SS14 connection and fault/low-battery TBDs: upstream 1.25 A fuse, TPS259474 latch-off eFuse with nominal 1 A threshold, reverse insertion/USB isolation and hardware UVLO. Use its exact BOM and endpoint CSV for the next schematic integration. Prior charger/holder qualification remains applicable.
+**2026-10-09 update:** revision 1 uses the corrected **protected 18650** candidate in [18650-handoff.md](18650-handoff.md), removable for external charging. The active A diagram below uses the integrated [fuse/eFuse contract](branch-protection.md). Charger/holder/lot acceptance remains open; future B is research only.
 
-These editable text drawings specify functional connections. Connector numbering and final footprints are intentionally not assigned. `|>|` means anode on the left, cathode/bar on the right. Use a **protected cell/pack output** for BAT_PROT+ and GND; never bypass its protection by grounding an internal cell negative terminal.
+These editable text drawings specify functional connections; the endpoint CSV and final native project govern exact references/footprints. `|>|` means anode on the left, cathode/bar on the right. Use the **protected cell/pack output**, not an internal bare-cell negative connection that bypasses its protection.
 
-## A — external charging, baseline
+## A — selected 18650 external charging
 
 ```text
-Protected cell/pack + -- S1 battery ON/OFF -- D_EXT (SS14) --+-- Pico VSYS (39)
-                                                          |
-Pico USB VBUS ---------------- Pico onboard D1 ------------+
-   (40)                 anode VBUS / cathode VSYS
-Protected cell/pack - ---------------------------------------- GND (38)
+Protected 18650 + -- H1.1 -- F1 -- S1 common2/ON3 -- U2 IN5
+                                            TPS259474L OUT6 --+-- Pico VSYS (39)
+                                                             |
+Pico USB VBUS ------------------ Pico onboard D1 -------------+
+   (40)                     anode VBUS / cathode VSYS
+Protected 18650 - -- H1.2 ----------------------------- GND (38)
 
 Pico 3V3(OUT) (36) ----- compatible touch/buzzer modules + expansion 3V3
 GND ------------------- all module/expansion returns
 ```
 
-D_EXT anode is S1 output; cathode is VSYS. The cell's protection supplies overcharge, overdischarge and fault-current cutoff; the diode and switch do not supply cell protection. Only a conventional single 4.2 V-charge cell is covered; no LiFePO4, 4.35 V cell or series battery substitution.
+U2 supplies reverse-insertion/reverse-current blocking and adjustable voltage/fault disconnect; upstream F1 backs up input faults. Carrier series D_EXT/D1 is removed. D2 is a shunt clamp (cathode VSYS/anode GND); D3 is bidirectional input TVS. Support pins/parts and limits are in the branch contract. Independent cell protection is still required, including ahead of F1. Only a conventional single 4.2 V-charge cell is covered; no LiFePO4, 4.35 V cell or series substitution.
 
 S1 disconnects the **battery branch**. USB still powers the instrument when S1 is off. For instrument-off even during USB connection, use a second switch pole that grounds 3V3_EN (37) in OFF and releases it in ON. Do not drive this pin high from 3V3 or BAT. The Pico has its own pull-up to VSYS. This stops the regulator, but is not complete isolation of USB/charger circuitry. Signal lines from externally powered expansion must not back-power the disabled 3V3 rail.
 
-Follow-up candidate S1 is **NKK MN12SS1W03**, a 4 A/30 VDC resistive-rated SPDT ON–ON switch with straight PC terminals and panel bushing. Common 2 connects to D_EXT anode, terminal 3 to battery positive in A (charger OUT in B), and terminal 1 is unconnected to make that throw OFF; verify physical orientation. See [comparison and provisional 1 A sizing allowance](candidate-comparison.md). Capacitive inrush and mechanical fit remain unverified. The original C&K JS102011SAQN is only 0.3 A at 6 VDC and is not the preferred power-branch switch under that allowance. Do not parallel poles to claim a higher rating. The optional two-pole control function needs a separately checked switch and footprint.
+Selected S1 is **NKK MN12SS1W03**, 4 A/30 VDC resistive-rated SPDT ON–ON with straight PC terminals and panel bushing. Common2 connects to BAT_FUSED_PLUS; ON3 to BAT_SW_PLUS/U2 IN5; OFF1 is NC. Verify final physical orientation, low-load endurance and capacitive startup. The selected branch's normal limit is **0.70 A**, not the switch's 4 A rating. Do not parallel poles to claim a higher rating. A future two-pole control function would need a separately checked switch/footprint.
 
-SS14 has 40 V reverse and 1 A average forward ratings (with manufacturer thermal conditions), and 0.50 V maximum forward drop at 1 A/25°C. At 3.0 V cell voltage this gives a 2.5 V illustrative VSYS value before other losses. This is not a temperature-wide guaranteed operating margin; include cold diode loss, switch/contact resistance, battery sag and load steps in prototype checks. Leakage also matters during USB-powered or stored operation.
+The active path has no continuous series SS14 drop. Account for F1, holder/contact/harness, switch, U2 and copper loss and cell sag; use [current-budget.md](current-budget.md), not the superseded diode calculation. Leakage, UVLO rebound, 1S latch/reset behavior and source-change transients remain bench checks with the new assembly. External charger approval is held as the current handoff specifies.
 
 ## B — optional onboard charging with separate charge input
 
@@ -39,7 +40,7 @@ Pico programming USB VBUS ---------------- onboard D1 --------------+
 
 The dedicated charge input and Pico VBUS are **not electrically joined**. Grounds are common. The external diode prevents the higher Pico USB supply from feeding U1 OUT/BAT. Do not connect OUT directly to VSYS: the charger's normal battery-supplement path is not a guaranteed blocker for externally driven OUT. This option uses two USB receptacles unless a later reviewed connector/data design replaces it.
 
-Place S1 after OUT so a cell can charge while the instrument is off. The charger remains connected to the cell; off-state consumption must be included in storage expectations. D_EXT applies in both options, not just A. A removable holder in B also needs a reviewed reverse-insertion safeguard: cell protection does not make U1 BAT tolerant of negative voltage. A mechanically constrained pack connector must have verified polarity, or add a charger-compatible reverse-polarity circuit before release. No extra diode between protected cell and BAT: it would interfere with charging and sensing. U1 is a **charger/power-path IC**, not a replacement for independent cell protection.
+Place S1 after OUT so a cell can charge while the instrument is off. The charger remains connected to the cell; off-state consumption must be included in storage expectations. D_EXT belongs to this future B drawing; selected A uses U2 instead. A removable holder in B also needs a reviewed reverse-insertion safeguard: cell protection does not make U1 BAT tolerant of negative voltage. A mechanically constrained pack connector must have verified polarity, or add a charger-compatible reverse-polarity circuit before release. No extra diode between protected cell and BAT: it would interfere with charging and sensing. U1 is a **charger/power-path IC**, not a replacement for independent cell protection.
 
 ### U1 implementation specification (conditional; charging default disabled)
 
@@ -62,7 +63,7 @@ Capacitor values are starting candidates within TI's specified ranges (IN 1–10
 
 TI §9.3.5 gives `I_CHG = K_ISET / R_ISET`; typical `K_ISET = 890 AΩ`. Use electrical-table worst-case factor and resistor tolerance, not just the typical equation. For illustration **only**, 4.53 kΩ gives about 196 mA typical; with 975 AΩ maximum factor and a 1% resistor, the illustrative maximum is about 217 mA. This is not a selected charging current. Input limiting and system load can reduce actual charge current. Supported programming range is 590 Ω–8.9 kΩ; a cell needing less than the IC's supported charge range needs another charger.
 
-`I_IN_LIMIT = K_ILIM / R_ILIM` in EN2=1, EN1=0 resistor mode. K_ILIM depends on current range; use TI's electrical table. USB100 mode is EN2=0/EN1=0; USB500 is EN2=0/EN1=1; both high suspend input. Do not enable USB500 or resistor mode solely because a cable is plugged in. A dedicated charge port has no USB enumeration here. USB-C would require correct CC sink resistors, connector wiring and a current-advertisement policy; these are not yet designed. Default 100 mA limits charging speed, and requires reviewing timer compatibility once the cell is chosen. For the 1100 mAh minimum candidate capacity, even 100 mA needs at least 11 hours before CV taper and system demand; internal default timers must not be assumed suitable.
+`I_IN_LIMIT = K_ILIM / R_ILIM` in EN2=1, EN1=0 resistor mode. K_ILIM depends on current range; use TI's electrical table. USB100 mode is EN2=0/EN1=0; USB500 is EN2=0/EN1=1; both high suspend input. Do not enable USB500 or resistor mode solely because a cable is plugged in. A dedicated charge port has no USB enumeration here. USB-C would require correct CC sink resistors, connector wiring and a current-advertisement policy; these are not yet designed. Default 100 mA limits charging speed, and requires reviewing timer compatibility against the future option's actual cell/rate, CV taper and simultaneous system demand. Internal default timers must not be assumed suitable for a larger-capacity cell.
 
 BQ24074 OUT is nominally 4.4 V (4.3–4.5 V specified under regulation conditions), then tracks the battery without valid IN. This suits VSYS after D_EXT. Linear charger heat estimate is `(V_IN - V_BAT) × I_CHG + (V_IN - V_OUT) × I_OUT` plus internal losses. Evaluate low battery, highest input and simultaneous playing/charging on the actual two-layer layout. Thermal regulation can reduce charge rate; it is not proof of adequate enclosure cooling.
 
@@ -78,12 +79,12 @@ This option is viable only after a reviewed shared-port input policy and total c
 
 | State | A | B |
 |---|---|---|
-| Battery only, switch on | Cell → D_EXT → VSYS | Cell → U1 battery path → OUT → D_EXT → VSYS |
+| Battery only, switch on | Protected cell → F1/S1/U2 → VSYS, within UVLO/fault limits | Cell → U1 battery path → OUT → D_EXT → VSYS |
 | Pico USB only, battery absent | USB → onboard D1 → VSYS | Same; charger isolated by D_EXT |
-| Pico USB + battery | Higher post-diode source supplies VSYS; nominal USB wins; no intended charging | Nominal Pico USB supplies VSYS; D_EXT prevents feeding charger OUT; no charge without dedicated charge input |
+| Pico USB + battery | Nominal USB wins; U2 blocks ordinary reverse current into battery; no intended charging | Nominal Pico USB supplies VSYS; D_EXT prevents feeding charger OUT; no charge without dedicated charge input |
 | Dedicated charge input + cell, no Pico USB | Not applicable | U1 prioritizes OUT load, reduces charging under input limit, supplements from battery when needed |
 | Both USB inputs + cell | Not applicable | Pico typically supplies VSYS; U1 charges cell if enabled; supplies remain diode-isolated, source sharing possible at close voltages |
 | Switch off + USB | Pico still on unless 3V3_EN switch added | Same; dedicated charging can continue |
 | Protection opens / depleted cell | Battery stops supplying; USB can still run | USB can still run; protection reset/recovery depends on actual pack |
 
-Loss of one source can cause a transient. Verify hot-plug/unplug behavior at load; diode ORing is not a measured brownout guarantee. USB host mode (powering a peripheral from Pico VBUS) is excluded.
+Loss of one source can cause a transient. Selected A permits a reset/reboot: stop playing before a source change and settle before resuming. Verify hot-plug/unplug at actual load; source ORing is not a measured brownout guarantee. USB host mode (powering a peripheral from Pico VBUS) is excluded.

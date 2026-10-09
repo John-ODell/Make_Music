@@ -2,6 +2,8 @@
 
 Review date 2026-10-08; based on master PR #15 and PM's offboard-holder/JST-PH decision. This replaces the unprotected carrier switch/SS14 branch from PR #14. **Implement the parts and limits below for the prototype.** No cell PCM trip current, measured load, assembled fit or production qualification is inferred.
 
+**2026-10-09 cell correction:** apply this voltage-based contract to the protected conventional **18650** candidate in [18650-handoff.md](18650-handoff.md). Existing current limits, protection values and UVLO/OVLO calculations remain unchanged; new holder/charger/lot qualification is required. The previous 18350 holder is superseded.
+
 ## Selected topology and load limits
 
 ```text
@@ -25,7 +27,7 @@ Adopt these prototype design constraints now:
 | All VSYS capacitance, including Pico and external additions | **≤100 µF** for the selected turn-on slope |
 | Operating environment | 0–40°C ambient; resistor local temperature ≤70°C |
 | Connector / harness | PM's 2 A JST-PH/AWG24 candidate; do not equate connector rating with unknown holder-contact ampacity |
-| Protected cell | P1835C2 conventional 1S only; existing cell/charger qualifications remain in rev1-handoff.md |
+| Protected cell | Keeppower **P1835J** conventional protected 18650 candidate; current-lot/terminal/holder/charger qualification in [18650-handoff.md](18650-handoff.md) |
 
 At minimum computed cutoff 3.053 V on U2 IN, 0.70 A ×45 mΩ U2 on-resistance loss and 30 mV additional branch allowance give approximately 2.992 V at VSYS. With a conservative **assumed** 75% Pico efficiency, 350 mA total 3V3 requires about `1.155/(0.75*2.992)=0.515 A`. This supports the 0.70 A limit as a design allowance; efficiency and module current are unmeasured. It does not guarantee the Pico's regulator output. If ST0238/touch/expansion measurements exceed either current constraint, reduce loads or revise the power design before use. USB-mode current remains a separate Pico/host limit; this battery eFuse cannot limit Pico USB's onboard path.
 
@@ -61,7 +63,7 @@ All resistors are 0603, 0.1 W, ±100 ppm/°C; dissipation here is far below rati
 
 ITIMER open selects the shortest blanking. Overload disconnects/latches; clear the fault, disconnect USB and switch OFF until input/enable falls below the reset threshold before switching ON. See [staged validation](prototype-validation.md) for measured reset-dwell qualification. During startup the chip controls inrush/current. The nominal DVDT slope with 10 nF is 0.20 V/ms; 100 µF would add about 20 mA capacitive current. Datasheet timing includes approximately 2 µs breaker response and 500 ns severe-short response, **typical**, not maximum peak-current guarantees. Transient current can exceed ILIM; do not label this an instantaneous 1 A limiter or promise a bounded I²t from typical timing.
 
-F1 is upstream of the switch, input capacitor and TVS, so it backs up input-component shorts and an eFuse failure. It is intentionally separate from electronic overload control. Published UMT-H data support 1.25 A/250 VDC and **1500 A breaking capacity**, greatly above common small chip-fuse interrupt ratings; 0.70 A is below its 0.60×In=0.75 A published 70°C endurance condition. F1 does not open at exactly 1.25 A: its series permits up to 120 s pre-arcing at 2×In and 10–100 ms at 10×In. Its opening time at a real cell fault is not established by the cell's 8 A operating rating. This proposal does not claim single-fault certification or coordinated clearing I²t for every conductor.
+F1 is upstream of the switch, input capacitor and TVS, so it backs up input-component shorts and an eFuse failure. It is intentionally separate from electronic overload control. Published UMT-H data support 1.25 A/250 VDC and **1500 A breaking capacity**, greatly above common small chip-fuse interrupt ratings; 0.70 A is below its 0.60×In=0.75 A published 70°C endurance condition. F1 does not open at exactly 1.25 A: its series permits up to 120 s pre-arcing at 2×In and 10–100 ms at 10×In. A cell's published discharge rating does not establish its prospective short current or fuse opening time. This proposal does not claim single-fault certification or coordinated clearing I²t for every conductor.
 
 For layout/harness integration, qualify holder contacts for **0.70 A normal and at least 1.2 A continuous branch capability**; connector/harness 2 A and switch 4 A exceed that envelope. Route power copper for ≥2 A continuous with local temperature rise reviewed, and use **5 mm-wide /35 µm copper lands at F1**, matching the manufacturer's fuse test-board condition. Keep holder-to-F1 unfused conductors insulated, mechanically restrained and as short as the cassette allows. Put F1 at the board entry before any branches. Neither F1 nor U2 protects a short inside the cell/holder lead before F1; the protected cell's PCM remains required there, with no invented trip threshold. Unknown holder ampacity is a concrete qualification against the chosen limits, not a reason to defer the carrier circuit.
 
