@@ -1,6 +1,12 @@
 # Make Music P1 — held manufacturing review
 
-REVIEW ONLY — DO NOT ORDER OR UPLOAD.
+CONDITIONAL QUOTE / REVIEW ONLY — DO NOT FABRICATE OR ORDER.
+
+The owner authorized final team review followed by PCBWay quote-only uploads
+and contact on October9,2026. This is permission to price the documented
+alternatives and engineering work, not acceptance of a price or production.
+Historical verification documents retain their original release restrictions;
+the current quote-only authorization waives no physical or factory release gate.
 
 This package derives from the revised long protected 18650 carrier, including
 C17/C18, moved J3/J4 and underside H1. It uses native (0,0), x right/y up;
@@ -13,12 +19,13 @@ pcbway-bom-five.csv contains 235 carrier parts for five instruments. Modules, Pi
 battery, harnesses and mechanical work are additional scope in [PCBWAY_HANDOFF.md](PCBWAY_HANDOFF.md).
 An optional sixth bare keepsake is separate.
 
-[QUOTE_REQUEST.md](QUOTE_REQUEST.md) is an owner-review draft for an itemized,
+[QUOTE_REQUEST.md](QUOTE_REQUEST.md) requests an itemized,
 conditional five-instrument quote, including metrology and final mechanical work.
 Linked supporting documents, nominal DXFs/SVGs, paper-fit PDF and provisional
 firmware are bundled under support/. Relative document links are rebased within
 this package; manifest.json records both original support-input and output hashes.
-No supplier has been contacted and this package does not authorize an upload.
+Supplier contact/upload status is recorded separately in the submission receipt.
+This package does not grant fabrication release or permission to purchase.
 
 Read validation-summary.json and verification/ for the actual check scope.
 Overall DRC and native schematic parity retain four reviewed custom-field metadata warnings; electrical

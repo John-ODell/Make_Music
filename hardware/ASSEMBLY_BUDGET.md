@@ -10,6 +10,7 @@ The battery is the long **protected 18650**, externally charged. The earlier
 | Route | Factory supplies | Work remaining outside the quote | Status |
 |---|---|---|---|
 | Five complete instruments | All 47 purchased carrier parts per board; 30 top SMT, 17 THT; twelve adapted module cables; ten touch/two passive buzzer modules; fixture, cassette, supports; Pico programming and specified testing | Removable cell insertion/external charging; unpacking or Pico insertion if agreed for shipping | **Selected quote scope**; assembly/metrology availability needs acceptance |
+| Five fully populated carriers | PCB plus all47 purchased carrier parts supplied and soldered, including all30 SMT and17 THT parts | Picos, touch/buzzer modules, cells/charger, adapted harnesses, mechanical assembly, programming and final instrument tests | Main price comparison; assembled carrier is not a complete instrument |
 | Five SMT-populated carriers | All 30 top SMT parts per board | Seventeen THT parts including sockets/headers/switch/bottom JST; 60 module harnesses and all mechanical work; Picos/modules/cells and final tests | Price comparison only; requires a capable assembler for the remainder |
 | Five bare carriers | PCB fabrication only | Every chip, capacitor, resistor, diode, fuse, socket, header and switch must be soldered; all harness/mechanical work remains | Not selected; user does not want this task |
 | One extra bare carrier | Additional unpopulated PCB | None if kept as a design souvenir | Optional sixth board, priced separately |
@@ -47,7 +48,14 @@ Do not use $67.54 as the price for five assembled instruments.
 
 ## Quote worksheet
 
-Obtain the following lines for both complete and SMT-only alternatives:
+The main quote compares five complete instruments, five fully populated
+carriers and five bare carriers using one board design. These are alternatives,
+not a fifteen-board order. Request the optional sixth bare keepsake separately.
+The table below also supports an additional SMT-only breakdown. For a fully
+populated carrier, include both SMT and THT parts/labor, then explicitly exclude
+the remaining external instrument items and tests.
+
+Obtain the following itemized lines:
 
 | Cost line | Complete five | SMT-only five | Evidence needed |
 |---|---|---|---|
@@ -77,6 +85,7 @@ order reduces the chance of repeating an unverified fit in all five units.
 PCBWay describes [through-hole assembly](https://www.pcbway.com/pcb_prototype/Through_Hole_Assembly.html)
 and [turnkey/consigned sourcing](https://www.pcbway.com/quotesmt.aspx).
 Those services do not establish acceptance of our custom instrument assembly.
-No shopping, automatic upload, supplier messaging or purchasing is authorized
-by this worksheet. It is ready for the owner's review; manufacturing release
-still requires the named fit/process evidence.
+This worksheet alone authorizes no action. On October9,2026 the owner separately
+authorized a final team review followed by PCBWay uploads/contact solely for
+conditional quotation. No purchase or fabrication release is authorized;
+release still requires the named fit/process evidence and separate approval.

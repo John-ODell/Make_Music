@@ -1,5 +1,53 @@
 # Make Music working checkpoint
 
+## Current checkpoint — conditional quote handoff
+
+October9,2026. Root branch `codex/pcbway-conditional-quote-20261009`, based on
+07f0e03b4d69f809a0e0871b89afc9e052754bba. PR36 merged that previous checkpoint.
+Native CAD remains21b2108. The owner now explicitly authorizes PCBWay
+quote-only uploads/contact after final team review; previous no-upload/no-contact
+language below is historical. No purchase or production release is authorized.
+
+Electrical, mechanical and power helpers completed the requested last review.
+Fresh saved-file Konnect ERC0/layout DRC0/unconnected0; exactly4 known metadata
+warnings retained. Only actionable finding was stale socket-clearance prose in
+one ordinary SVG. Root corrected labels; mechanical helper accepted the readable
+panel with all non-text geometry unchanged. Durable evidence:
+`review/prequote-20261009/`. All helpers are idle. No native edits this turn.
+
+Managed package refreshed coherently:61 input/43 support hashes,109 outputs,
+17 native hashes,128 package-local links and47 placements/235 five-unit parts
+pass. All17 raw native exports unchanged. Alternative quote scopes now explicitly
+cover A5 bare, B5 with all47 parts supplied/soldered, C5 complete instruments,
+optional sixth bare. No fifteen-board order. Fit/charger/mechanical/process/test
+holds remain exactly as described below and in the current quote request.
+
+The PCBWay calculator returned an incomplete service estimate; Save to Cart
+did not create an entry. No cart-based quote submission is claimed. A1950-char
+message to assigned representative Cici is prepared, email reply selected.
+Two exact ZIPs under1MB each are prepared and byte-verified; filenames/hashes and
+scope are in `assembly/PCBWAY_QUOTE_STATUS.md`. Neither attached nor sent yet:
+Chrome extension requires “Allow access to file URLs.” User has been asked to
+enable it. Do not repeat Save to Cart or send a duplicate RFQ. On permission
+completion, upload both ZIPs to the prepared message, verify successful filenames,
+send once, and verify an actual sent-message confirmation. Keep receipts local,
+account/email/session identifiers out of this public repository.
+
+Latest five-hour usage60% used/40% remaining; weekly94% used. Reset1791607325.
+No reset credits consumed. Automation view was requested by its known ID;
+its prior local TOML is currently absent, so do not claim a verified local schedule
+without checking the app. Pause the existing continuation after confirmed quote
+submission; no repeated supplier follow-up is authorized automatically.
+
+KiCad is closed. Preserve unrelated MOV/history. Stable bundled Python remains
+the selected runtime. Chrome message tab1631995892; quote tab1631995889.
+CUA alert/file picker in background needs foreground activation via native Chrome
+when CDP focus times out. Browser file upload requires explicit extension setting;
+do not bypass permissions. The former12MB failed call did not execute and was
+recovered without deleting project/browser state.
+
+## Historical completed-design checkpoint
+
 Updated 2026-10-09 after final held-package integration.
 Root branch: codex/pcbway-prototype-package. Final package commit 2305833d4127fe2808075e858281b6a5a89fc47b merged through PR28 as 4fcd2ca516da457d9ea7e52da39c101ddac27d68 on master; local root fast-forwarded to that merge. Prior af535ce9a10861c251338a6552fdcb82a1200956 is the reviewed PR35 power-document merge.
 PR34 merged484b73e on master and was integrated by0fc598b; PR31/32/33 were already merged.

@@ -13,9 +13,9 @@
     <marker id="arrow" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto"><path d="M0 0L4 2L0 4" fill="#059669"/></marker>
   </defs>
   <rect width="360" height="260" fill="#f8fafc"/>
-  <text x="10" y="13" class="title">J3/J4 header move - mechanical review</text>
-  <text x="10" y="21">PM-reported move; audit from master 6155ca0. Units mm; rear-left mechanical origin.</text>
-  <text x="10" y="28" class="small">Only headers move y75 to y78. Seats, C1/C2, keepers and all nine fixture mounts stay fixed. Not machining CAD.</text>
+  <text x="10" y="13" class="title">J3/J4 header clearance - current mechanical review</text>
+  <text x="10" y="21">Current native CAD21b2108; rear edge native y18.5 / service y-1.5. Units mm; service datum(20,20).</text>
+  <text x="10" y="28" class="small">Headers moved y75 to y78. Seats, C1/C2, keepers and all nine fixture mounts stay fixed. Not machining CAD.</text>
 
   <g transform="translate(12 36) scale(3) translate(-42 -55)">
     <g clip-path="url(#planclip)">
@@ -113,12 +113,12 @@
     <text x="174" y="173" class="small">z24 plate bottom</text>
     <text x="25" y="209" class="small">Carrier top z0; spacer24; plate4; deflection0.5; measured clearance must be at least2.</text>
   </g>
-  <text x="244" y="177" class="heading">Rear socket edge</text>
-  <text x="244" y="187">Plastic overhang: 0.225 nominal</text>
-  <text x="244" y="195">Courtyard overhang: about 0.73</text>
-  <text x="244" y="203">Pad copper to edge: 0.54</text>
-  <text x="244" y="211">Drill edge to edge: 0.79</text>
-  <text x="244" y="221" class="small">Keep intentional geometry pending</text>
+  <text x="244" y="177" class="heading">Rear socket edge - native y18.5</text>
+  <text x="244" y="187">Body support margin: 1.275 nominal</text>
+  <text x="244" y="195">Courtyard margin: 0.77 nominal</text>
+  <text x="244" y="203">Pad copper to edge: 2.04 nominal</text>
+  <text x="244" y="211">Drill edge to edge: 2.29 nominal</text>
+  <text x="244" y="221" class="small">Nominal geometry remains pending</text>
   <text x="244" y="228" class="small">fabricator, case and Pico fit acceptance.</text>
   <text x="12" y="251" class="small">Sources, tolerances, equations and release gates: BUILD_READINESS.md. No carrier CAD changed or actual fit approved.</text>
 </svg>
