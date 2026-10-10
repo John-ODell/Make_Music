@@ -25,8 +25,9 @@ first-article/all-five tests and separate owner production approval. Five comple
 instruments preferred; A/B alternatives/optional sixth bare separately.
 
 All helpers idle. KiCad closed. PCBWay message tab1631995892 is the deliverable;
-intermediate quote tab1631995889 closed. Preserve unrelated MOV/history. Pause
-the existing continuation after this receipt checkpoint; no automatic supplier
+intermediate quote tab1631995889 closed. Preserve unrelated MOV/history. The app
+confirmed that the previous continuation automation no longer exists; its pause
+request could not apply. No schedule was recreated. No automatic supplier
 follow-up or new design work without actionable inputs. Five-hour reset1791607325;
 last usage75% used/25% remaining, weekly97% used, no credits consumed.
 
