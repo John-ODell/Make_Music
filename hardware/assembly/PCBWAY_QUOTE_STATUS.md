@@ -19,18 +19,38 @@ remain held; see [full quote request](QUOTE_REQUEST.md).
 
 ## Current transmission state
 
+**SENT and confirmed in PCBWay Message History on October9,2026 at8:40:22 p.m.
+America/Chicago** (site displays October10,09:40:22 China time). The1759-character
+RFQ went once to the account's assigned representative, Cici. Email reply was
+selected. An itemized A/B/C quotation is pending; receipt does not establish that
+the representative has read or accepted the engineering scope.
+
 The signed-in online assembly form produced an indicative estimate but did not
-save a cart entry. No cart-based submission is claimed. A1950-character message
-to the assigned representative is prepared in PCBWay's message center, requesting
-an itemized nonbinding A/B/C quotation. Upload is waiting for the browser
-extension's file-access permission; **the message has not been sent yet**.
+save a cart entry. No cart-based submission or order number exists. The message
+center was used instead. Browser file upload required a permission not enabled;
+no attachment was uploaded. The RFQ supplied exact revision-pinned public links
+to the reviewed packet and repository ZIP, with instructions to use only
+`hardware/manufacturing/REVIEW_ONLY_DO_NOT_ORDER`:
+
+- [Exact reviewed packet](https://github.com/John-ODell/Make_Music/tree/0d6191a0e0217e7140bbceed22aa4e59db78747e/hardware/manufacturing/REVIEW_ONLY_DO_NOT_ORDER)
+- [Exact revision download](https://github.com/John-ODell/Make_Music/archive/0d6191a0e0217e7140bbceed22aa4e59db78747e.zip)
+
+The packet was pushed and integrated through
+[PR37](https://github.com/John-ODell/Make_Music/pull/37), merge
+bc986a28121235c059e4859eb6203bb539a0c00a. GitHub's content API confirmed the
+specified committed packet directory exists. Native CAD and exports unchanged.
+The sent-message screenshot and exact RFQ text are local operational records
+in `output/pcbway-quote-20261009/`; no account/session data is committed here.
+Chrome permissions need not be changed for this completed link-based RFQ.
+
+No payment, fabrication, first-article build or production release was approved.
 
 The web calculator showed $97.80 PCB fabrication, $29 assembly service,
 $40.28 estimated US/DHL shipping and a $30 promotion, yielding $137.08.
 This excludes component purchasing, custom services/engineering and duties/tax;
 it is **not the price of five complete instruments** and is subject to review.
 
-## Exact prepared attachments
+## Exact prepared attachments — not transmitted
 
 Both files are in `output/pcbway-quote-20261009/`. Each is below the message
 center's1MB limit. Extract both into one folder; their disjoint contents cover

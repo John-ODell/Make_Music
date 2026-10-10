@@ -1,6 +1,37 @@
 # Make Music working checkpoint
 
-## Current checkpoint — conditional quote handoff
+## Current checkpoint — quotation sent
+
+October9,2026,8:40:22 p.m. America/Chicago. Root branch
+`codex/pcbway-quote-receipt-20261009` starts at PR37 merge
+bc986a28121235c059e4859eb6203bb539a0c00a. PR37 integrated quote-packet commit
+0d6191a0e0217e7140bbceed22aa4e59db78747e. All17 native hashes/raw exports remain
+unchanged. Final team review and hashes are complete; no independent CAD work
+remains before external engineering/measurement inputs.
+
+One1759-character conditional RFQ was sent to assigned representative Cici and
+verified in PCBWay Message History. Email reply selected. Actual quote pending.
+No attachment upload, cart entry/order number, purchase or production release.
+The RFQ supplies exact0d6191a GitHub packet/download links, avoiding the browser
+file-permission blocker. No Chrome settings change is needed. Do not resend a
+duplicate RFQ or treat the calculator's partial137.08USD as an instrument price.
+Exact scope/receipt/archive hashes: `assembly/PCBWAY_QUOTE_STATUS.md`.
+Local sent proof/text: `output/pcbway-quote-20261009/sent-rfq-confirmation.jpg`
+and `sent-rfq.txt`. Keep private account/session/contact data out of GitHub.
+
+External requirements remain exact-part metrology, qualified cell/charger pair,
+final toleranced fixtures/cassette, factory process/orientation acceptance,
+first-article/all-five tests and separate owner production approval. Five complete
+instruments preferred; A/B alternatives/optional sixth bare separately.
+
+All helpers idle. KiCad closed. PCBWay message tab1631995892 is the deliverable;
+intermediate quote tab1631995889 closed. Preserve unrelated MOV/history. The app
+confirmed that the previous continuation automation no longer exists; its pause
+request could not apply. No schedule was recreated. No automatic supplier
+follow-up or new design work without actionable inputs. Five-hour reset1791607325;
+last usage75% used/25% remaining, weekly97% used, no credits consumed.
+
+## Historical prepared quote checkpoint
 
 October9,2026. Root branch `codex/pcbway-conditional-quote-20261009`, based on
 07f0e03b4d69f809a0e0871b89afc9e052754bba. PR36 merged that previous checkpoint.
