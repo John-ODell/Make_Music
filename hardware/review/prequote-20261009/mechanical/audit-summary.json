@@ -1,0 +1,154 @@
+{
+  "review_commit": "07f0e03",
+  "scope": "Read-only current exported PDF/SVG and source-bound data; no live CAD/physical checks",
+  "module_body_edges": [
+    {
+      "name": "ST0238 1",
+      "native_min": [
+        64,
+        80.5
+      ],
+      "size": [
+        32,
+        14
+      ]
+    },
+    {
+      "name": "ST0238 2",
+      "native_min": [
+        102,
+        80.5
+      ],
+      "size": [
+        32,
+        14
+      ]
+    },
+    {
+      "name": "C4",
+      "native_min": [
+        78,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "D4",
+      "native_min": [
+        112,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "E4",
+      "native_min": [
+        146,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "F4",
+      "native_min": [
+        180,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "G4",
+      "native_min": [
+        214,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "A4",
+      "native_min": [
+        248,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "B4",
+      "native_min": [
+        282,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "C5",
+      "native_min": [
+        316,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Semitone",
+      "native_min": [
+        32,
+        62
+      ],
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Octave",
+      "native_min": [
+        32,
+        102
+      ],
+      "size": [
+        24,
+        24
+      ]
+    }
+  ],
+  "fixture_mounts_match": true,
+  "packet_hashes_match": true,
+  "packet_handoff_quote_links_resolve": true,
+  "quantity": "five complete instruments; optional additional sixth bare",
+  "nominal_conflicts": [],
+  "actionable_documentation": [
+    "Packaged header-clearance-review.svg still shows superseded rear socket overhang and old copper/drill edge margins; label that panel historical/superseded or update to y18.5 margins before quote submission."
+  ],
+  "external_holds": [
+    "Actual module/header/support/bend/strain-relief metrology",
+    "Pico H male socket engagement, USB/BOOTSEL/removal trial",
+    "Exact protected 18650/BH-18650-W cold fit/holder contacts/wire termination",
+    "Final toleranced fixture, cassette retention/overhang/door/feet and >=2mm loaded clearance",
+    ">=47mm support proposal and playing-height/stability approval",
+    "Factory process/panel/THT acceptance and first-article/all-five tests"
+  ]
+}

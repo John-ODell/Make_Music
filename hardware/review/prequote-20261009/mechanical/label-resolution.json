@@ -1,0 +1,15 @@
+{
+  "finding": "Superseded rear socket panel",
+  "status": "RESOLVED",
+  "review_scope": "Corrected source SVG labels and full visual render only; root regenerates packet/manifest",
+  "source_sha256": "63e4743aa09e2c3b6e3da09a8e8c3f936686ba5ee2278aabe5e18de779221e9d",
+  "non_text_geometry_unchanged_from": "07f0e03",
+  "corrected_nominal_mm": {
+    "body_margin": 1.275,
+    "courtyard_margin": 0.77,
+    "copper_edge": 2.04,
+    "drill_edge": 2.29
+  },
+  "labels_legible": true,
+  "verdict": "QUOTE_ONLY_ACCEPTANCE; physical metrology/process/manufacturing holds retained"
+}

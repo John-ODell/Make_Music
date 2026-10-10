@@ -1,0 +1,5 @@
+PASS: all 166 physical endpoints and 48 components match; 38 connected nets and 6 intentional NC nets.
+PASS: all 41 power-contract endpoints with R3-R8/C13-C16 mapping; U2 ten pin roles/types; no pad11 or carrier D1.
+PASS: upstream fuse, switch common2/ON3/OFF1, shunt D2 K1/A2 and bidirectional D3; VBUS/battery/VSYS/3V3 separation.
+PASS: physical JST H1 polarity, GP13/12 reset pull-ups, twelve 100nF bypass capacitors and C17/C18 10uF buzzer bulk.
+PASS: all 48 components have exact assigned footprint files; 47 purchased parts with native MPNs; TP1 2mm pad excluded.

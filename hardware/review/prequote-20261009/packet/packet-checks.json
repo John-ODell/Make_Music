@@ -1,0 +1,125 @@
+{
+  "reviewed_head": "07f0e03b4d69f809a0e0871b89afc9e052754bba",
+  "errors": [],
+  "packet_hashes": {
+    "input_sha256": 61,
+    "support_input_sha256": 43,
+    "output_sha256": 109
+  },
+  "native_source_hashes": 17,
+  "package_local_links": 128,
+  "bom": {
+    "purchased": 47,
+    "groups": 31,
+    "five_unit_parts": 235
+  },
+  "power_part_orientation": [
+    {
+      "ref": "U2",
+      "mpn": "TPS259474LRPWR",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 240.0,
+      "machine_y": -76.0
+    },
+    {
+      "ref": "F1",
+      "mpn": "3403.0275.23",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 250.0,
+      "machine_y": -50.0
+    },
+    {
+      "ref": "S1",
+      "mpn": "MN12SS1W03",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 270.0,
+      "machine_y": -75.0
+    },
+    {
+      "ref": "D2",
+      "mpn": "SS14-E3/61T",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 246.0,
+      "machine_y": -83.5
+    },
+    {
+      "ref": "D3",
+      "mpn": "SMAJ5.0CA",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 248.0,
+      "machine_y": -71.5
+    },
+    {
+      "ref": "H1",
+      "mpn": "B2B-PH-K-S(LF)(SN)",
+      "side": "bottom",
+      "angle": 0.0,
+      "machine_x": 289.0,
+      "machine_y": -40.0
+    },
+    {
+      "ref": "C13",
+      "mpn": "C2012X7R1E475K125AB",
+      "side": "top",
+      "angle": 180.0,
+      "machine_x": 238.8,
+      "machine_y": -71.5
+    },
+    {
+      "ref": "C14",
+      "mpn": "C2012X7R1E475K125AB",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 241.2,
+      "machine_y": -80.5
+    },
+    {
+      "ref": "C15",
+      "mpn": "C1608C0G1H103J080AA",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 247.0,
+      "machine_y": -78.0
+    },
+    {
+      "ref": "C16",
+      "mpn": "C2012X7R1E475K125AB",
+      "side": "top",
+      "angle": 180.0,
+      "machine_x": 239.0,
+      "machine_y": -87.0
+    },
+    {
+      "ref": "C17",
+      "mpn": "C2012X7R1A106K125AC",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 87.46,
+      "machine_y": -65.5
+    },
+    {
+      "ref": "C18",
+      "mpn": "C2012X7R1A106K125AC",
+      "side": "top",
+      "angle": 0.0,
+      "machine_x": 125.46,
+      "machine_y": -65.5
+    }
+  ],
+  "placements": {
+    "all": 47,
+    "smt": 30,
+    "tht": 17,
+    "bottom": [
+      "H1"
+    ]
+  },
+  "historical_auditor_note_superseded_by_current_quote_table": "QUOTE_REQUEST and ASSEMBLY_BUDGET at reviewed commit list SMT-only as the intermediate alternative; add the newly requested five carriers with all47 parts (150SMT+85THT) soldered, with Pico/modules/holder/cell/harness/mechanics excluded or separately priced.",
+  "head_after": "07f0e03b4d69f809a0e0871b89afc9e052754bba",
+  "acceptance": "CONDITIONAL QUOTE REVIEW ONLY; NO FABRICATION RELEASE"
+}

@@ -1,0 +1,23 @@
+{
+  "commit": "07f0e03b4d69f809a0e0871b89afc9e052754bba",
+  "native_hashes_unchanged": 17,
+  "recorded_IPC_pad_nets_verified": 166,
+  "values_full_footprint_IDs": 48,
+  "purchased_references": 47,
+  "SMT": 30,
+  "THT": 17,
+  "five_unit_quantity": 235,
+  "all47_native_placements": "match recorded IPC",
+  "native_metadata_parity_warnings": 4,
+  "electrical_discrepancies": 0,
+  "assembly_evidence_matches_accepted_followup": true,
+  "fabrication_release": false,
+  "fresh_saved_file_ERC": 0,
+  "fresh_saved_file_layout_DRC": 0,
+  "fresh_saved_file_unconnected": 0,
+  "fresh_exact_native_metadata_warnings": 4,
+  "live_sync_performed": false,
+  "zone_refill_performed": false,
+  "physical_GPIO_contract_and_firmware_unchanged": true,
+  "quote_only_verdict": "ACCEPTED"
+}

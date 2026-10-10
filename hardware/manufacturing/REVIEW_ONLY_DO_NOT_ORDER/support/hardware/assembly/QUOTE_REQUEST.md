@@ -1,7 +1,7 @@
 # Quote request draft — five complete Make Music instruments
 
-**For owner review. QUOTE ONLY — DO NOT FABRICATE OR ORDER.** No supplier
-has been contacted, no files uploaded, and no project price accepted.
+**Authorized for conditional quotation on October 9, 2026. QUOTE ONLY — DO NOT
+FABRICATE OR ORDER.** No project price or fabrication release is approved.
 
 Please provide an itemized, nonbinding quotation and identify operations your
 team cannot supply. The selected delivery is **five complete instruments**,
@@ -36,10 +36,22 @@ first-article qualification; programming/all-five testing; shipping/tax;
 and the optional sixth bare keepsake. List assumed or provisional items
 separately from firm prices, quote validity, lead time and minimum quantities.
 
-Also quote five SMT-populated carriers as a comparison. Clearly exclude and
-identify all17 THT parts per carrier, harnesses, external modules, Picos,
-mechanical work and tests if absent from that price. The selected delivery
-remains five complete instruments. See the [budget comparison](../ASSEMBLY_BUDGET.md).
+Please compare three alternative scopes for the **same physical board design**:
+
+| Option | Quantity | Included scope |
+|---|---|---|
+| A — bare carrier | Five | PCB fabrication only; no components supplied or soldered |
+| B — populated carrier | Five | PCB plus all47 purchased carrier components per board supplied and soldered:30 SMT and17 THT, including capacitors, female sockets, headers, switch and bottom H1 |
+| C — complete instrument | Five | Option B plus Pico, touch/buzzer modules, adapted harnesses, battery/holder, final mechanical work, programming and specified tests described above |
+
+These are alternative prices, **not an order for fifteen boards**. Option C is
+the selected delivery preference. Price the optional sixth bare keepsake
+separately. In Option B, identify external modules, Picos, cells/charger,
+harnesses, mechanical work and final instrument tests as excluded.
+
+If useful, provide an additional SMT-only breakdown for30 top parts per board;
+identify all17 THT parts and remaining operations as excluded. See the
+[budget comparison](../ASSEMBLY_BUDGET.md).
 The earlier$67.54 setup/stencil example is not a complete-build price.
 
 ## Engineering work and production holds
