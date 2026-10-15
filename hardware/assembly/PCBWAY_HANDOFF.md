@@ -1,5 +1,11 @@
 # Five complete Make Music prototypes — assembly planning handoff
 
+**Historical quantity. The October 15
+[revised quote](REVISED_QUOTE_2_COMPLETE_3_CARRIERS.md) requests two complete
+instruments and three populated carriers. It also permits generic external
+module candidates subject to fit and behavior verification.**
+Technical procedures below remain references; the new request controls quantities.
+
 Updated 2026-10-09. **REVIEW ONLY — DO NOT ORDER.** This is a concrete scope for
 an eventual quotation, not an accepted order or fabrication release. No files
 have been uploaded and no supplier has been contacted.

@@ -1,6 +1,38 @@
 # Make Music working checkpoint
 
-## Current checkpoint — quotation sent
+## Current checkpoint — mixed delivery quote prepared October 15, 2026
+
+The user completed website upload of the four reviewed files on October 10.
+PCBWay requested a grouped carrier BOM; PR39 merged the supplied-template XLSX
+on October 12 (a497f7a, merge b31f0fc3ad19fb9ae095e7f39243ba05a570ea10).
+The supplier returned a five-carrier price on October 15: $199.85 parts +
+$29 assembly + $97.80 PCB = $326.65. Its 19 groups and 47 parts per board
+match the submitted workbook; no production release or payment was made.
+
+The user's new scope is **two complete instruments plus three populated
+carriers**, five carriers total. Generic external touch/passive-buzzer modules
+are allowed as priced candidates, with actual fit/behavior still held.
+The carrier BOM/CAD remain unchanged. See
+[revised request and price references](assembly/REVISED_QUOTE_2_COMPLETE_3_CARRIERS.md).
+Branch: `codex/two-complete-three-carriers-20261015`, based on origin/master
+b31f0fc. The final commit/PR are available through the branch's Git history.
+Local sendable supplement and reply are in `output/pcbway-revised-quote-20261015/`.
+No supplier message or upload was made by the agent for this revision.
+
+Retail reference research gives $46.80 main extras for two (sale touch-pack
+price needs checkout confirmation), $57.25 including bare carrier-end harness
+connectors. These are partial budgets, not the cost to finish both instruments.
+Wire, module ends, battery plug parts, mechanics, charger/input supply, metrology,
+labor, firmware/test work, shipping/tax and procurement charges need quotations.
+The L1 charger price is a budget reference only; the existing 4.242V tolerance
+conflict has not been resolved. Smaller generic modules need final fixture
+design using actual measured parts. First article is one of the two completed
+instruments, followed by the second; inspect all five populated carriers.
+No KiCad session was opened. Existing helpers remain idle; no new CAD or
+electrical checks are claimed. All production holds remain. User will format
+and send the revised ask; do not send it automatically.
+
+## Historical checkpoint — initial quotation sent
 
 October9,2026,8:40:22 p.m. America/Chicago. Root branch
 `codex/pcbway-quote-receipt-20261009` starts at PR37 merge
