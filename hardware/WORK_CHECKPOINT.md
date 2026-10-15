@@ -1,6 +1,26 @@
 # Make Music working checkpoint
 
-## Current checkpoint — mixed delivery quote prepared October 15, 2026
+## Current checkpoint — mixed delivery quote emailed October 15, 2026
+
+At the user's explicit instruction, a cordial HTML reply was sent to Grace
+in the existing PCBWay quotation email thread at **8:32 a.m. America/Chicago**.
+Gmail showed `Message sent` and the outgoing message in the same conversation.
+It explains the first-order learning curve, requests two complete instruments
+plus three populated carriers, asks confirmation of the $326.65 carrier base
+and pricing for extras, and retains quote-only/no-production authorization.
+The email contains exact revision-pinned links to the grouped XLSX BOM and
+the revised scope at fb8d1dae1861da73a01eb0fe8ad9ecf3521c0871 (PR40 merged
+as 89c7dd8c8be1387fa42e69c20d285bbaa5c2f957).
+
+No attachment was transmitted: the Gmail connector was rate-limited and
+Chrome's extension file-URL permission blocked local uploads. No browser
+permission was changed or bypassed. Direct file links were verified on GitHub
+and substituted for attachment claims before sending. Local HTML and screenshot
+receipts are in `output/pcbway-revised-quote-20261015/sent-reply.html` and
+`sent-reply-confirmation.png`; keep private email receipts out of GitHub.
+The supplier's revised quote/feasibility reply is now pending. Do not resend.
+
+### Preparation record
 
 The user completed website upload of the four reviewed files on October 10.
 PCBWay requested a grouped carrier BOM; PR39 merged the supplied-template XLSX
@@ -17,7 +37,8 @@ The carrier BOM/CAD remain unchanged. See
 Branch: `codex/two-complete-three-carriers-20261015`, based on origin/master
 b31f0fc. The final commit/PR are available through the branch's Git history.
 Local sendable supplement and reply are in `output/pcbway-revised-quote-20261015/`.
-No supplier message or upload was made by the agent for this revision.
+At preparation time no supplier message or upload had been made; the later
+sent-email receipt above supersedes that state.
 
 Retail reference research gives $46.80 main extras for two (sale touch-pack
 price needs checkout confirmation), $57.25 including bare carrier-end harness
@@ -29,8 +50,8 @@ conflict has not been resolved. Smaller generic modules need final fixture
 design using actual measured parts. First article is one of the two completed
 instruments, followed by the second; inspect all five populated carriers.
 No KiCad session was opened. Existing helpers remain idle; no new CAD or
-electrical checks are claimed. All production holds remain. User will format
-and send the revised ask; do not send it automatically.
+electrical checks are claimed. All production holds remain. The user later
+explicitly authorized the agent to send the revised ask; see the receipt above.
 
 ## Historical checkpoint — initial quotation sent
 

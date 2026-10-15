@@ -11,8 +11,14 @@ by that price. The returned 19 BOM groups match all 47 carrier parts per board.
 The user now requests **two complete instruments and three populated carriers**,
 with generic touch/passive-buzzer modules permitted as engineering candidates.
 The [revised scope and retail references](REVISED_QUOTE_2_COMPLETE_3_CARRIERS.md)
-are prepared for the user to send; no revised supplier submission or acceptance
-is claimed. The prior five-complete-instrument preference below is historical.
+were sent by email at the user's explicit instruction on October 15 at
+8:32 a.m. America/Chicago. Gmail confirmed sending in the existing quotation
+thread. The cordial reply supplied exact revision-pinned links to the XLSX BOM
+and revised request at fb8d1dae1861da73a01eb0fe8ad9ecf3521c0871. Local attachment
+upload was blocked by Chrome permission and the Gmail connector was rate-limited;
+no attachment was transmitted and no permission was changed. Supplier acceptance
+and revised complete-instrument pricing remain pending. The prior
+five-complete-instrument preference below is historical.
 No fabrication, payment or production release is authorized.
 
 ## Historical October 9 transmission record
