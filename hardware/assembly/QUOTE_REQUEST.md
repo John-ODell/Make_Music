@@ -1,5 +1,9 @@
 # Quote request draft — five complete Make Music instruments
 
+**Historical scope. Superseded October 15, 2026 by
+[two complete instruments plus three populated carriers](REVISED_QUOTE_2_COMPLETE_3_CARRIERS.md).**
+The frozen previously submitted manufacturing packet is retained unchanged.
+
 **Authorized for conditional quotation on October 9, 2026. QUOTE ONLY — DO NOT
 FABRICATE OR ORDER.** No project price or fabrication release is approved.
 

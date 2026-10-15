@@ -1,5 +1,22 @@
 # PCBWay conditional quote status
 
+## October 15 update
+
+The user completed the website upload on October 10, then supplied the
+grouped replacement BOM prepared in PR39. PCBWay has returned a quotation
+of $326.65 for five populated carriers: $199.85 parts, $29 assembly and
+$97.80 PCBs. Shipping/tax and completion of instruments are not established
+by that price. The returned 19 BOM groups match all 47 carrier parts per board.
+
+The user now requests **two complete instruments and three populated carriers**,
+with generic touch/passive-buzzer modules permitted as engineering candidates.
+The [revised scope and retail references](REVISED_QUOTE_2_COMPLETE_3_CARRIERS.md)
+are prepared for the user to send; no revised supplier submission or acceptance
+is claimed. The prior five-complete-instrument preference below is historical.
+No fabrication, payment or production release is authorized.
+
+## Historical October 9 transmission record
+
 Prepared October 9, 2026. **Quotation only; no fabrication or purchase release.**
 The owner authorized a final team review and PCBWay quotation submission.
 [Final review](../review/prequote-20261009/README.md) accepts conditional pricing.
