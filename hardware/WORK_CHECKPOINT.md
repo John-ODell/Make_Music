@@ -1,5 +1,31 @@
 # Make Music working checkpoint
 
+## October 16 factory-input handoff in progress
+
+Supplier confirmed the two-complete/three-populated split and requested wire,
+programming and test files. User explicitly authorized a cordial email reply.
+Issue #42 tracks this unit on `codex/42-factory-programming-test-handoff`.
+`assembly/factory-handoff/` contains the three requested documents and a compact
+ten-file supplier ZIP. It includes the unchanged canonical application as
+main.py and official stable MicroPython RP2040 v1.29.0 UF2 with exact hashes.
+The interpreter is not an application-embedded UF2; installation requires both
+UF2 flashing and copying configured main.py to the MicroPython filesystem.
+
+Checks: existing seven host tests pass; all 32 documented note/modifier targets
+match host-executed application behavior on both fake PWM channels; UF2 header,
+RP2040 family, block sequence and SHA256 checked; ZIP payloads/source identity
+and manifest verified. B4 with both modifiers is 1046 Hz under the application's
+rounded base-frequency constants, corrected during preparation. No hardware,
+MicroPython-on-Pico execution, mechanical fit or power result is claimed.
+No native CAD/export or 47-part carrier BOM change. Exact module-end fit,
+dressed lengths, touch polarity, fixture CAD and cell/charger remain gates.
+
+Git identity now uses the authenticated account's ID-based GitHub noreply
+address locally. Historical .local commits are flagged and are not rewritten.
+Repository merge policy is squash-only with automatic branch deletion, per
+the user-invoked GitHub bullseye skill. Email transmission status follows below
+when actually sent; prior receipts are historical.
+
 ## Current checkpoint — mixed delivery quote emailed October 15, 2026
 
 At the user's explicit instruction, a cordial HTML reply was sent to Grace
