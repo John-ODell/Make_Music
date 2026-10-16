@@ -1,6 +1,58 @@
 # Make Music working checkpoint
 
-## Current checkpoint — mixed delivery quote emailed October 15, 2026
+## Current checkpoint — factory inputs emailed October 16, 2026
+
+Sent at **9:23 a.m. America/Chicago** to Grace in the existing quotation email
+thread, after the user's explicit instruction. Gmail showed `Message sent` and
+the outgoing message. It warmly thanks the supplier, explains the first-order
+learning curve, confirms two complete instruments plus three populated carriers,
+and supplies three separate document links plus one direct ZIP download pinned
+to handoff commit afe55c4f9db64f1afb34ae8138d98cb3b9cbe795. PR43 covers the
+handoff and receipt; issue42 closes with its squash merge. Physical
+qualification is tracked separately in issue44.
+
+No attachment uploaded: Gmail connector remains rate-limited and Chrome's
+file-URL permission blocked the attempted local ZIP upload. No setting was
+changed or bypassed. The final email correctly says the files are available by
+links; it does not claim an attachment. Verified reply recipient and all four
+links before sending. Local HTML/screenshot receipt:
+`output/pcbway-factory-handoff-20261016/sent-reply.html` and `sent-confirmation.png`.
+Do not send a duplicate. Await supplier capability/pricing and technical reply.
+
+The handoff archive has ten files, 285642 bytes, SHA256
+`1f160925cbd5199579523005e3e67e17c0f498ea0ede797636f7225967723096`.
+No purchasing, fabrication or first-article start was authorized. One browser
+row-click unexpectedly archived the quotation conversation during navigation;
+it was undone and the Inbox label confirmed before replying. Private mailbox
+receipts stay local and are not committed.
+
+### Factory-input preparation and verification
+
+Supplier confirmed the two-complete/three-populated split and requested wire,
+programming and test files. User explicitly authorized a cordial email reply.
+Issue #42 tracks this unit on `codex/42-factory-programming-test-handoff`.
+`assembly/factory-handoff/` contains the three requested documents and a compact
+ten-file supplier ZIP. It includes the unchanged canonical application as
+main.py and official stable MicroPython RP2040 v1.29.0 UF2 with exact hashes.
+The interpreter is not an application-embedded UF2; installation requires both
+UF2 flashing and copying configured main.py to the MicroPython filesystem.
+
+Checks: existing seven host tests pass; all 32 documented note/modifier targets
+match host-executed application behavior on both fake PWM channels; UF2 header,
+RP2040 family, block sequence and SHA256 checked; ZIP payloads/source identity
+and manifest verified. B4 with both modifiers is 1046 Hz under the application's
+rounded base-frequency constants, corrected during preparation. No hardware,
+MicroPython-on-Pico execution, mechanical fit or power result is claimed.
+No native CAD/export or 47-part carrier BOM change. Exact module-end fit,
+dressed lengths, touch polarity, fixture CAD and cell/charger remain gates.
+
+Git identity now uses the authenticated account's ID-based GitHub noreply
+address locally. Historical .local commits are flagged and are not rewritten.
+Repository merge policy is squash-only with automatic branch deletion, per
+the user-invoked GitHub bullseye skill. The current email receipt is above;
+earlier receipts below are historical.
+
+## Historical checkpoint — mixed delivery quote emailed October 15, 2026
 
 At the user's explicit instruction, a cordial HTML reply was sent to Grace
 in the existing PCBWay quotation email thread at **8:32 a.m. America/Chicago**.
