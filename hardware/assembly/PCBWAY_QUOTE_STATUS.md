@@ -1,5 +1,23 @@
 # PCBWay conditional quote status
 
+## October 16 factory-input response
+
+The supplier confirmed the requested split and asked for wire specification,
+programming file and test file. A cordial, user-authorized reply was sent to
+Grace in the same quotation thread at 9:23 a.m. America/Chicago; Gmail confirmed
+sending. It supplied separate document links and a direct ten-file ZIP download
+pinned to afe55c4f9db64f1afb34ae8138d98cb3b9cbe795; see
+[factory handoff](factory-handoff/README.md). The ZIP includes the unchanged
+application, official stable RP2040 MicroPython runtime, wiring/programming/test
+procedures, source/license and checksums. No attachment was uploaded because
+local browser upload permission is disabled; no permission was changed.
+
+Seven host checks and 32 documented note/modifier cases pass on the computer.
+No real Pico/runtime, module, mechanical or power test is claimed. Exact module
+fit/ends/cut lengths, touch polarity, final mechanics, cell/charger and physical
+acceptance remain held; tracked in GitHub issue44. Await the supplier's revised
+price/capability/engineering response. No order or production release.
+
 ## October 15 update
 
 The user completed the website upload on October 10, then supplied the
