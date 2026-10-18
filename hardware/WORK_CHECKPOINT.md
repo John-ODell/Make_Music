@@ -1,6 +1,32 @@
 # Make Music working checkpoint
 
-## Current checkpoint — factory inputs emailed October 16, 2026
+## Current checkpoint — actual attachments sent October 18, 2026
+
+Grace reported she could not open the earlier links and requested attachments.
+At the user's instruction, a warm reply was sent in the existing quotation
+thread, again thanking her for her patience/help with a first PCB order.
+The Gmail connector worked for this transmission; no browser or permission
+change was needed. The outgoing message was read back with SENT label and
+all five actual MIME attachments verified:
+
+- MakeMusic_Wire_Spec.txt, 5119 bytes.
+- MakeMusic_Programming_Instructions.txt, 4282 bytes.
+- MakeMusic_Test_Procedure.txt, 10840 bytes.
+- MakeMusic_Factory_Inputs_QUOTE_ONLY.zip, 285642 bytes.
+- PCBWAY_GROUPED_BOM.xlsx, 23073 bytes.
+
+Text attachments are byte-identical copies of the reviewed .md documents;
+the original ZIP payloads/hash were checked again. The ZIP includes main.py
+and the official RP2040 runtime UF2. Native CAD, carrier BOM, firmware,
+procedures and two-complete/three-populated scope are unchanged.
+Private MIME metadata/HTML receipts are local under
+`output/pcbway-attachments-20261018/`; no email IDs/contact data are committed.
+Sent verification does not prove supplier receipt, acceptance or capability.
+Await revised quotation/engineering response; do not resend unless requested.
+No purchase, fabrication, assembly or first-article release. Physical
+qualification remains tracked in issue44. Issue49 records this delivery fix.
+
+## Historical checkpoint — links emailed October 16, 2026
 
 Sent at **9:23 a.m. America/Chicago** to Grace in the existing quotation email
 thread, after the user's explicit instruction. Gmail showed `Message sent` and

@@ -1,5 +1,21 @@
 # PCBWay conditional quote status
 
+## October 18 actual-attachment delivery
+
+Grace could not open the previously sent links and requested attachments.
+A user-authorized, thankful reply was sent through Gmail with five actual
+attachments: wire specification, programming instructions and test procedure
+as .txt files, the complete factory-input ZIP (including main.py and runtime
+UF2), and the unchanged grouped carrier BOM XLSX. The SENT message was read
+back and all five MIME filenames/types/sizes confirmed. The text files and
+ZIP contents match the reviewed inputs; no design/firmware changes were made.
+
+This transmission used the working Gmail connector; browser attachment
+permission remains unchanged. Private receipts remain local. Supplier receipt,
+acceptance and the revised quote are pending. Delivery remains two complete
+instruments plus three populated carriers, five total; production holds and
+quote-only status remain unchanged. See issue49 for the receipt update.
+
 ## October 16 factory-input response
 
 The supplier confirmed the requested split and asked for wire specification,
