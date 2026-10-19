@@ -1,5 +1,21 @@
 # PCBWay conditional quote status
 
+## October 19 cable drawing response
+
+PCBWay acknowledged the files and requested a cable drawing. A warm reply to
+Grace supplied the three-page cable PDF as an actual attachment; Gmail SENT
+readback confirms its filename, application/pdf type and 8955 bytes. See
+[cable drawings](../../output/pdf/MakeMusic_Cable_Drawings_RevA_QUOTE_ONLY.pdf).
+Each sheet was rendered/visually inspected and its mapping/quantities checked
+against the prior wire specification. Existing ZIP/programming/BOM/CAD unchanged.
+
+The attachment defines logical circuits, wire/contact specifications and initial
+allowances. It explicitly does not establish physical connector views or final
+fitted lengths. The email asks the supplier to return actual module revisions,
+module-end mating-face/wire-entry views and final dressed lengths for review.
+These are quoted engineering/metrology inputs, still held under issue44.
+No purchase, cable manufacture, carrier fabrication or assembly release.
+
 ## October 18 actual-attachment delivery
 
 Grace could not open the previously sent links and requested attachments.
