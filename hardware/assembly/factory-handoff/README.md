@@ -18,6 +18,15 @@ The three requested inputs are:
 3. [TEST_FILE.md](TEST_FILE.md): factory inspection/qualification procedure and
    a blank per-unit result form, including expected note frequencies.
 
+October 19 supplement: [cable connection drawings, Rev A](../../../output/pdf/MakeMusic_Cable_Drawings_RevA_QUOTE_ONLY.pdf)
+visually show the module and battery harness circuits. This three-sheet PDF is
+a separate supplement to the previously sent archive; the old ZIP is unchanged.
+It is for quotation/engineering review, not a dimensioned physical connector
+view or released cable build drawing. Supplier-selected module ends and final
+dressed lengths require measured parts and returned mating-face/wire-entry
+drawings. Rebuild with `draw_cables.py`; the builder reconciles header/GPIO
+mapping, connector names and quantities with WIRE_SPEC.md before rendering.
+
 The sendable archive includes these files, the unchanged current application
 as `main.py`, official stable MicroPython RP2040 runtime UF2, `SHA256SUMS.txt`,
 and the revised mixed-delivery quote request. The UF2 is the interpreter only:

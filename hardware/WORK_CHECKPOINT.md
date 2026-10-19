@@ -1,6 +1,31 @@
 # Make Music working checkpoint
 
-## Current checkpoint — actual attachments sent October 18, 2026
+## Current checkpoint — cable drawing attached October 19, 2026
+
+PCBWay acknowledged the prior files and requested a cable drawing. A cordial,
+user-authorized reply to Grace supplied the actual three-sheet PDF attachment
+`output/pdf/MakeMusic_Cable_Drawings_RevA_QUOTE_ONLY.pdf`. Gmail readback confirms
+SENT and one application/pdf attachment of 8955 bytes. Private receipt/HTML are
+local under `output/pcbway-cable-drawing-20261019/`; no email IDs/contact data
+are committed. Do not resend unless requested.
+
+The PDF shows module-harness logical circuits, all 12 harness assignments and
+quantities, and separate battery wiring. Its source builder reconciles the
+existing wire specification. All three pages rendered and visually inspected;
+PDF text/page/connector/gauge/polarity/length checks pass. SHA256:
+`0087c6be02da16510e337a5ca8bf6dd6bf7e4a99c800cc1a6386490ed1919a8d`.
+Issue51 / PR52 track the supplement. Prior ZIP, firmware, native CAD and carrier
+BOM are unchanged. No new physical checks were run.
+
+This is a quote/engineering connection drawing, not a released physical cable
+build drawing. Email explicitly asks supplier to confirm selected module
+revisions and propose mating-face/wire-entry views and final dressed lengths
+after actual-part fit. The 100mm module-conductor allowance is not an approved
+cut length; 150 +/-5mm describes supplied holder leads, not finished lengths.
+All scope/qualification/production holds remain in issue44. Await supplier
+technical response and revised price; two complete plus three populated remains.
+
+## Historical checkpoint — actual attachments sent October 18, 2026
 
 Grace reported she could not open the earlier links and requested attachments.
 At the user's instruction, a warm reply was sent in the existing quotation
