@@ -1,6 +1,6 @@
 # Helper sessions
 
-All helpers read `hardware/AGENTS.md` and `hardware/PCB_DESIGN_NOTES.md`. Use the assigned worktree and branch. Check scope against the current primary-chat decisions. Do not route a production board or finalize unidentified module footprints.
+All helpers read `hardware/PCB_DESIGN_NOTES.md`. Use the assigned worktree and branch. Check scope against the current primary-chat decisions. Do not route a production board or finalize unidentified module footprints.
 
 ## 1. Schematic — codex/pcb-schematic
 
